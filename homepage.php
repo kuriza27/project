@@ -12,6 +12,28 @@
 
     <div class="container">
       <!-- Example row of columns -->
+	  	  
+	   <div class="images-clips">
+		    <div class="col-md-2">
+				<a href="#"><img src="assets/images/src/Digital_Design.png"></a>
+			</div>
+			<div class="col-md-2">
+				<a href="#"><img src="assets/images/src/1Day_Production.png"></a>
+			</div>
+			<div class="col-md-2">
+				<a href="#"><img src="assets/images/src/PO.png"></a>
+			</div>
+			<div class="col-md-2">
+				<a href="#"><img src="assets/images/src/Eco_Friendly.png"></a>
+			</div>
+			<div class="col-md-2">
+				<a href="#"><img src="assets/images/src/Get_A_Quote.png"></a>
+			</div>
+			<div class="col-md-2">
+				<a href="#"><img src="assets/images/src/RushShipping.png"></a>
+			</div>
+				<div class="clearfix"></div>
+	   </div>
       <div id="main-content" class="row homecontent">
 			<div class="col-md-4">
 			  <div class="box-thumb"><img src="assets/images/src/Printed.png"></div>
@@ -62,25 +84,7 @@
 			  <p><a class="btn btn-default" href="blank.php" role="button">Order Now</a></p>
 			</div>
       </div>
-	  
-	   <div class="images-clips">
-		    <div class="col-md-3">
-				<a href="#"><img src="assets/images/src/Digital_Design.png"></a>
-			</div>
-			<div class="col-md-3">
-				<a href="#"><img src="assets/images/src/1Day_Production.png"></a>
-			</div>
-			<div class="col-md-3">
-				<a href="#"><img src="assets/images/src/PO.png"></a>
-			</div>
-			<div class="col-md-3">
-				<a href="#"><img src="assets/images/src/Eco_Friendly.png"></a>
-			</div>
-			<div class="col-md-3">
-				<a href="#"><img src="assets/images/src/Get_A_Quote.png"></a>
-			</div>
-				<div class="clearfix"></div>
-	   </div>
+
     </div>
 </div>
 

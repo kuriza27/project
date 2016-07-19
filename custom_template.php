@@ -63,7 +63,28 @@
 					  <div id="main-color-content">
 					  <div class="col-xs-4 box-color">
 							<img src="assets/images/src/custom.png"/>
-							<div class="custom_pick"><input type='text' class="my_color" /></div>
+							<button id="custom-color-button" data-toggle="modal" data-target="#ColorModal">Custom Color</button>
+							<!--------Modal---------->
+							<div class="modal fade" id="ColorModal" role="dialog">
+								<div class="modal-dialog">
+								  <!-- Modal content-->
+								  <div class="modal-content">
+									<div class="modal-header">
+									  <button type="button" class="close" data-dismiss="modal">&times;</button>
+									  <h4 class="modal-title">Pick Custom Color</h4>
+									</div>
+									<div class="modal-body">
+									  <?php include "solid-color-template.php";?>
+									   <div class="clearfix"></div>
+									</div>
+									<div class="modal-footer">
+									  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									</div>
+								  </div>
+								  <!---------End Modal Content-------------->
+								</div>
+							  </div>
+                               <!-----End Modal Div ---->
 							<div class="clearfix"></div>
 							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
 							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
@@ -500,10 +521,28 @@
 					  <div id="main-color-content">
 					     <div class="col-xs-4 box-color">
 							<img src="assets/images/src/custom.png"/>
-							<div class="custom_pick">
-								<input type='text' class='my_color1_segmented'/>
-								<input type='text' class='my_color2_segmented'/>
-							</div>
+							<button id="custom-color-button" data-toggle="modal" data-target="#ColorSegModal">Custom Color</button>
+							<!--------Modal---------->
+							<div class="modal fade" id="ColorSegModal" role="dialog">
+								<div class="modal-dialog">
+								  <!-- Modal content-->
+								  <div class="modal-content">
+									<div class="modal-header">
+									  <button type="button" class="close" data-dismiss="modal">&times;</button>
+									  <h4 class="modal-title">Pick Custom Color</h4>
+									</div>
+									<div class="modal-body">
+									  <?php include "segmented-color-template.php";?>
+									   <div class="clearfix"></div>
+									</div>
+									<div class="modal-footer">
+									  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									</div>
+								  </div>
+								  <!---------End Modal Content-------------->
+								</div>
+							  </div>
+                               <!-----End Modal Div ---->
 							<div class="clearfix"></div>
 							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
 							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
@@ -1160,8 +1199,41 @@
 					 </div>
 					</div>
 					<div id="swirls" class="tab-pane fade js-color" data-value="0.01" data-color="Swirls">
-					  <h3>Swirls</h3>
+					  <h3>Swirls Color</h3>
 					  <div id="main-color-content">
+						<div class="col-xs-4 box-color">
+							<img src="assets/images/src/custom.png"/>
+							<button id="custom-color-button" data-toggle="modal" data-target="#ColorSwirlModal">Custom Color</button>
+							<!--------Modal---------->
+							<div class="modal fade" id="ColorSwirlModal" role="dialog">
+								<div class="modal-dialog">
+								  <!-- Modal content-->
+								  <div class="modal-content">
+									<div class="modal-header">
+									  <button type="button" class="close" data-dismiss="modal">&times;</button>
+									  <h4 class="modal-title">Pick Custom Color</h4>
+									</div>
+									<div class="modal-body">
+									  <?php include "swirl-color-template.php";?>
+									   <div class="clearfix"></div>
+									</div>
+									<div class="modal-footer">
+									  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									</div>
+								  </div>
+								  <!---------End Modal Content-------------->
+								</div>
+							  </div>
+                               <!-----End Modal Div ---->
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<span class="view-more">View More Sizes</span>
+							<div class="show-content" style="display:none">
+								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="text" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
+								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="text" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
+							</div>
+						</div>
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/src/swirl/BlackGreen.png"/>
 							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
@@ -1600,11 +1672,10 @@
 							<div class="col-sm-5"   style="border-right:2px solid #154360;">
 								<span>Front Message:</span><input type="text" name="front-text" class="band-text" value=""  placeholder="Enter Front Message"> 
 								<div class="clip-sec col-xs-6">
-									<button class="fclip-1">Front Start Clip Art</button><br />
-									<a href="#">or Upload your own art</a>
+									<button class="fclip-1" data-toggle="modal" data-target="#ClipArtModal">Front Start Clip Art</button><br />		
 								</div>
 								<div class="clip-sec col-xs-6">
-									<button class="fclip-2">Front End Clip Art</button><br />
+									<button class="fclip-2" data-toggle="modal" data-target="#ClipArtModal">Front End Clip Art</button><br />
 									<a href="#">or Upload your own art</a>
 								</div>
 									<div class="clearfix"></div>
@@ -1612,15 +1683,35 @@
 							<div class="col-sm-5">
 								<span>Back Message:</span><input type="text" name="back-text" class="band-text" value="" placeholder="Enter Back Message">
 								<div class="clip-sec col-xs-6">
-									<button class="bclip-1">Back Start Clip Art</button><br />
+									<button class="bclip-1" data-toggle="modal" data-target="#ClipArtModal">Back Start Clip Art</button><br />
 									<a href="#">or Upload your own art</a>
 								</div>
 								<div class="clip-sec col-xs-6">
-									<button class="bclip-2">Back End Clip Art</button><br />
+									<button class="bclip-2" data-toggle="modal" data-target="#ClipArtModal">Back End Clip Art</button><br />
 									<a href="#">or Upload your own art</a>
 								</div>
 									<div class="clearfix"></div>
 							</div>
+							<div class="modal fade" id="ClipArtModal" role="dialog">
+								<div class="modal-dialog">
+								  <!-- Modal content-->
+								  <div class="modal-content">
+									<div class="modal-header">
+									  <button type="button" class="close" data-dismiss="modal">&times;</button>
+									  <h4 class="modal-title">Pick Clipart</h4>
+									</div>
+									<div class="modal-body">
+									  <?php include "clipart-template.php";?>
+									   <div class="clearfix"></div>
+									</div>
+									<div class="modal-footer">
+									  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									</div>
+								  </div>
+								  <!---------End Modal Content-------------->
+								</div>
+							  </div>
+                               <!-----End Modal Div ---->
 								<div class="clear"></div>
 						</div>
 						<div class="c-input" style="display:none">
@@ -1656,11 +1747,29 @@
 					</div>
 					<!--end preview pan -->
 					<div id="add-design">
-						<form id="font-form">
 								<!--<button>Clear</button>-->
 							<h3>Select Font Style</h3>
-							
-						</form>
+							<button id="font-button" data-toggle="modal" data-target="#FontModal">Choose Font Style</button><br />
+							<div class="modal fade" id="FontModal" role="dialog">
+								<div class="modal-dialog">
+								  <!-- Modal content-->
+								  <div class="modal-content">
+									<div class="modal-header">
+									  <button type="button" class="close" data-dismiss="modal">&times;</button>
+									  <h4 class="modal-title">Select Font Style</h4>
+									</div>
+									<div class="modal-body">
+									  <?php include "fonts-template.php";?>
+									   <div class="clearfix"></div>
+									</div>
+									<div class="modal-footer">
+									  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									</div>
+								  </div>
+								  <!---------End Modal Content-------------->
+								</div>
+							  </div>
+                               <!-----End Modal Div ---->
 					</div>
 
 				</div>

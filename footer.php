@@ -3,13 +3,13 @@
 
 			<div id="footer-link-main">
 				<ul class="footer-menu-item menu">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Order Now</a></li>
-					<li><a href="#">Prices</a></li>
-					<li><a href="#">Products</a></li>
-					<li><a href="#">Wristband Options</a></li>
-					<li><a href="#">Photo Gallery</a></li>
-					<li><a href="#">Contact Us</a></li>
+					<li><a href="homepage.php">Home</a></li>
+					<li><a href="order.php">Order Now</a></li>
+					<li><a href="price.php">Prices</a></li>
+					<li><a href="product-printed.php">Products</a></li>
+					<li><a href="fonts.php">Wristband Options</a></li>
+					<li><a href="gallery.php">Photo Gallery</a></li>
+					<li><a href="contact-us.php">Contact Us</a></li>
 					<li><a href="#">Live Chat</a></li>
 					 <div class="clearfix"></div>
 				</ul>
@@ -48,8 +48,9 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 
     <script type="text/javascript" src="assets/docs/spectrum.js"></script>
-    <script type='text/javascript' src='assets/docs/toc.js'></script>
+    <script type='text/javascript' src="assets/docs/toc.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.countdown.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/main-2.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

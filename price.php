@@ -1,25 +1,7 @@
 <?php include_once 'header.php'; ?>
 <div id="main-content" class="row homecontent">
 <div class="container">
-	<div class="col-lg-12 col-md-12 col-sm-12">
-	 <div class="images-clips">
-		    <div class="col-md-3">
-				<a href="#"><img src="assets/images/src/Digital_Design.png"></a>
-			</div>
-			<div class="col-md-3">
-				<a href="#"><img src="assets/images/src/1Day_Production.png"></a>
-			</div>
-			<div class="col-md-3">
-				<a href="#"><img src="assets/images/src/PO.png"></a>
-			</div>
-			<div class="col-md-3">
-				<a href="#"><img src="assets/images/src/Eco_Friendly.png"></a>
-			</div>
-			<div class="col-md-3">
-				<a href="#"><img src="assets/images/src/Get_A_Quote.png"></a>
-			</div>
-				<div class="clearfix"></div>
-	   </div>
+	<div class="col-lg-12 col-md-12 col-sm-12 price-cont">
 	  <div class="price-table table-responsive">
       		<table class="table" border="0" cellpadding="0" cellspacing="0" width="100%">
         		  <tbody>

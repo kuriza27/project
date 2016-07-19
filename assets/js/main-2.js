@@ -292,7 +292,7 @@ function resetDrpMenu(){
 	$('.wristForm .clipart li a').removeClass('open');
 	$('.wristForm .clipart li a').addClass('closex');
   }
-	$('').live('focus',function(){
+	$('[input]').live('focus',function(){
 	resetDrpMenu();
 	});
 

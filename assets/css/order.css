@@ -560,7 +560,7 @@ div#order-summary {
 	font-weight:bold;
 }
 
-.fclip-1, .fclip-2, .bclip-1, .bclip-2 {
+.fclip-1, .fclip-2, .bclip-1, .bclip-2, #custom-color-button, #font-button{
     background-color: #17a589;
     color: #fff;
     border: 1px solid  #117864 ;
@@ -568,6 +568,117 @@ div#order-summary {
     border-radius: 3px;
 }
 
+
 .fclip-1:hover,  .fclip-2:hover, .bclip-1:hover, .bclip-2:hover {
 	background-color: #1abc9c ;
+}
+
+
+button#custom-color-button {
+    margin: 0 56px;
+}
+
+.pick-color-list{
+	margin:0;
+	padding:0;
+}
+
+.pick-color-list li{
+	list-style:none;
+	float:left;
+	padding:4px;
+	width:12%;
+	
+}
+
+.clip-color-list li{
+	list-style:none;
+	float:left;
+	padding:4px;
+	width:10%;
+}
+
+.clip-color-list{
+	margin:0;
+	padding:0;
+}
+
+.box-opt-color{
+	margin-bottom:10px;
+}
+
+
+.box-opt-color h5{
+	color:#028072;
+}
+
+.box-opt-color ul{
+	margin:0;
+	padding:0;
+}
+
+.box-opt-color ul li{
+   list-style:none;
+   float:left;
+   width:20%;
+   margin:0;
+   padding:0;
+}
+
+.clip-color-list li img{
+	width:100%;
+}
+
+
+b {
+    font-size: 10px;
+}
+
+b:hover{
+	cursor:default;
+}
+
+.pick-color-list li:hover{
+	cursor:pointer;
+}
+
+.clip-color-list li:hover{
+	border:1px solid #17A589;
+}
+
+.font-style-list li{
+	list-style:none;
+	float:left;
+	padding:4px;
+	width: 25%;
+    height: 60px;
+}
+
+.font-style-list{
+	margin:0;
+	padding:0;
+}
+
+.font-style-list li img{
+	width:100%;
+}
+
+
+.font-style-list li:hover{
+	border:1px solid #17A589;
+}
+
+
+#add-design {
+    width: 344px;
+    padding: 8px;
+}
+
+
+.modal-header{
+	background-color:#325277;
+}
+
+.modal-header h4{
+	color:#fff;
 }
