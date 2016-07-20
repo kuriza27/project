@@ -51,10 +51,18 @@
 			<div id="wrist_color_container">
 
 				  <ul class="nav nav-pills js-colors">
-					<li class="active"><a data-toggle="pill" data-value="0" href="#home">Solid</a></li>
-					<li><a data-toggle="pill" href="#segmented" data-value="0.01">Segmented</a></li>
-					<li><a data-toggle="pill" href="#swirls" data-value="0.01">Swirls</a></li>
-					<li><a data-toggle="pill" href="#glow" data-value="0.03">Glow</a></li>
+					<li class="active" data-color-style="solid">
+						<a data-toggle="pill" data-value="0" href="#home">Solid</a>
+					</li>
+					<li data-color-style="segmented">
+						<a data-toggle="pill" href="#segmented" data-value="0.01">Segmented</a>
+					</li>
+					<li data-color-style="swirls">
+						<a data-toggle="pill" href="#swirls" data-value="0.01">Swirls</a>
+					</li>
+					<li data-color-style="glow">
+						<a data-toggle="pill" href="#glow" data-value="0.03">Glow</a>
+					</li>
 				  </ul>
 
 				  <div class="tab-content">
@@ -1722,28 +1730,58 @@
 							<div class="clearfix"></div>
 					</div>
 
+					<?php include_once 'preview_template.php'; ?>
+
 					<h3>PREVIEW</h3>
-					<div id="preview-pane">
-					 <div class="fb-select">
-						<div id="front-view" class="band">
-							<div class="preview-text faded" id="front-text">
-								Front Message
+						<div id="preview-pane">
+							<div class="fb-select">
+								<div id="front-view" class="band">
+									<div class="preview-text faded" id="front-text">
+										Front Message
+									</div>
+								</div>
+								<div id="back-view" class="band">
+									<div class="preview-text faded" id="back-text">
+										Back Message
+									</div>
+								</div>
+								<div class="clearfix"></div>
 							</div>
-						</div>
-						<div id="back-view" class="band">
-							<div class="preview-text faded" id="back-text">
-								Back Message
-							</div>
-						</div>
-						<div class="clearfix"></div>
-					 </div>
-					  <div class="c-select" style="display:none;">
-							<div id="inside-view" class="band">
-								<div class="preview-text faded" id="inside-text">
-									Preview Message
+							<div class="c-select" style="display:none;">
+								<div id="inside-view" class="band">
+									<div class="preview-text faded" id="inside-text">
+										Preview Message
+									</div>
 								</div>
 							</div>
-					 </div>
+						</div>
+						<div class="text-center">
+							<ul id="preview-pane-selection" class="nav nav-pills preview-pane-colors" style="width:100%;">
+							</ul>
+						</div>
+						<!-- <div id="preview_color_container">
+							<ul class="nav nav-pills js-colors">
+								<li class="active"><a data-toggle="pill" href="#preview1">1</a></li>
+								<li><a data-toggle="pill" href="#preview2" >2</a></li>
+								<li><a data-toggle="pill" href="#preview3">3</a></li>
+								<li><a data-toggle="pill" href="#preview4">4</a></li>
+							</ul>
+
+							<div class="tab-content">
+								<div id="preview1" class="tab-pane fade in active preview-color">
+									1
+								</div>
+								<div id="preview2" class="tab-pane fade preview-color">
+									2
+								</div>
+								<div id="preview3" class="tab-pane fade preview-color">
+									3
+								</div>
+								<div id="preview4" class="tab-pane fade preview-color">
+									4
+								</div>
+							</div>
+						</div> -->
 					</div>
 					<!--end preview pan -->
 					<div id="add-design">

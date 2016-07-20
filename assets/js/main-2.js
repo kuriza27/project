@@ -53,6 +53,14 @@ $(function(){
 		$('.c-input').css("display","block");
 	});
 	
+
+	$('body').on('click', '.preview-pill', function(e) {
+		$('.preview-pill').removeClass('active');
+		$(this).addClass('active');
+
+		$("#front-view").css('background', 'url(' + $(this).attr('data-image-link') + ')');
+		$("#back-view").css('background', 'url(' + $(this).attr('data-image-link') + ')');
+	});
 	
 	
 	//preview message
@@ -163,6 +171,24 @@ function get_style_size(type) {
 		var $style = $('input[name="wrist_style"]:checked').data('style');
 	}
 
+	color_type = $('#wrist_color_container ul.js-colors li.active').attr('data-color-style');
+	colors = [];
+	if(color_type === "solid") {
+		colors.push($("#solid-color-0").val());
+	} else if(color_type === "segmented") {
+		if($("#segmented-color-0").val() !== "") { colors.push($("#segmented-color-0").val()); }
+		if($("#segmented-color-1").val() !== "") { colors.push($("#segmented-color-1").val()); }
+		if($("#segmented-color-2").val() !== "") { colors.push($("#segmented-color-2").val()); }
+		if($("#segmented-color-3").val() !== "") { colors.push($("#segmented-color-3").val()); }
+		if($("#segmented-color-4").val() !== "") { colors.push($("#segmented-color-4").val()); }
+		if($("#segmented-color-5").val() !== "") { colors.push($("#segmented-color-5").val()); }
+	} else if(color_type === "swirls") {
+		if($("#swirl-color-0").val() !== "") { colors.push($("#swirl-color-0").val()); }
+		if($("#swirl-color-1").val() !== "") { colors.push($("#swirl-color-1").val()); }
+		if($("#swirl-color-2").val() !== "") { colors.push($("#swirl-color-2").val()); }
+	}
+
+	generatePreviewImage( color_type, colors );
 	get_price_data($style, $size, type);
 }
 
@@ -286,15 +312,15 @@ function formatCurrency(total) {
     return (neg ? "-$" : '$') + parseFloat(total, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString();
 }
 
-function resetDrpMenu(){
-
+function resetDrpMenu() {
 	$('.drpMenuItems_clipart').fadeOut(300);
 	$('.wristForm .clipart li a').removeClass('open');
 	$('.wristForm .clipart li a').addClass('closex');
-  }
-	$('[input]').live('focus',function(){
+}
+
+$('[input]').live('focus',function(){
 	resetDrpMenu();
-	});
+});
 
 $('.clipart .drpMenuItems').live('click',function(){
 	$('.clipart li').removeAttr('style');

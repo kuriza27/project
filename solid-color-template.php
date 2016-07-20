@@ -2,7 +2,7 @@
 		<h5>Select Solid Color</h5>
 		<ul>
 		  <li>
-			<input type="text" placeholder="PMS#" refid="0">
+			<input id="solid-color-0" type="text" placeholder="PMS#" refid="0">
 		   </li>
 		</ul>
 			<div class="clearfix"></div>

@@ -52,6 +52,12 @@
 	<script type="text/javascript" src="assets/js/jquery.countdown.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
+
+	<!-- Javascript for wristband previews -->
+	<script type="text/javascript" src="assets/js/canvg.js"></script>
+	<script type="text/javascript" src="assets/js/stackblur.js"></script>
+	<script type="text/javascript" src="assets/js/preview.js"></script>
+
 	<script src="assets/js/main-2.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   </body>

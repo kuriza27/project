@@ -2,9 +2,9 @@
     <div class="pick-swirl box-opt-color">
 		<h5>Select Swirl Color</h5>
 		<ul>
-			<li><input type="text" placeholder="PMS#" refid="0"></li>
-			<li><input type="text" placeholder="PMS#" refid="1"></li>
-			<li><input type="text" placeholder="PMS#" refid="2"></li>
+			<li><input id="swirl-color-0" type="text" placeholder="PMS#" refid="0"></li>
+			<li><input id="swirl-color-1" type="text" placeholder="PMS#" refid="1"></li>
+			<li><input id="swirl-color-2" type="text" placeholder="PMS#" refid="2"></li>
 		</ul>
 			<div class="clearfix"></div>
 	</div>

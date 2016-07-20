@@ -682,3 +682,20 @@ b:hover{
 .modal-header h4{
 	color:#fff;
 }
+
+.preview-pill {
+	border-radius: 50px!important;
+	cursor: pointer;
+	height: 30px;
+	line-height: 30px;
+	width: 30px;
+}
+
+#preview-pane #front-view, #preview-pane #back-view {
+	background-repeat: no-repeat!important;
+	background-size: 200% 100%!important;
+}
+
+#preview-pane #back-view {
+	background-position: 100%!important;
+}
