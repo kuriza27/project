@@ -20,6 +20,7 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/style_sheet.css" rel="stylesheet">
 	<link href="assets/css/order.css" rel="stylesheet">
+	<link href="assets/css/font_style.css" rel="stylesheet">
 	<link href="assets/css/magnific-popup.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -51,6 +52,9 @@
   </head>
 
 <body>
+<script>
+
+</script>
 <div id="main">
 <header>
     <nav class="navbar navbar-inverse navbar-default">
@@ -92,7 +96,7 @@
 							<li class="menu-item menu-item-type-post_type current-menu-item page_item"><a href="homepage.php">Home</a></li>
 							<li class="menu-item menu-item-type-post_type"><a href="order.php">Order Now</a></li>
 							<li class="menu-item menu-item-type-post_type"><a href="price.php">Prices</a></li>
-							<li class="dropdown menu-item menu-item-type-post_type"><a data-toggle="dropdown" class="dropdown-toggle" href="product-printed.php">Products</a>
+							<li class="dropdown menu-item menu-item-type-post_type"><a id="prod-main" data-toggle="dropdown" class="dropdown-toggle">Products</a>
 								<ul class="dropdown-menu">
 									<li><a href="product-printed.php">Printed</a></li>
 									<li><a href="product-debossed.php">Debossed</a></li>
@@ -104,7 +108,7 @@
 									<li><a href="product-blank.php">Blank</a></li>
 								</ul>
 							</li>
-							<li class="dropdown menu-item menu-item menu-item-type-post_type"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Wristband Options</a>
+							<li class="dropdown menu-item menu-item menu-item-type-post_type"><a id="prod-main2" href="#" data-toggle="dropdown" class="dropdown-toggle">Wristband Options</a>
 								<ul class="dropdown-menu">
 									<li><a href="fonts.php">Fonts</a></li>
 									<li><a href="cliparts.php">Cliparts</a></li>

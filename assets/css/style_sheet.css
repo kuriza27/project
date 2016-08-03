@@ -337,7 +337,9 @@ div#footer-text {
 }
 
 .nocustom_pick {
-    padding: 30px 0;
+    padding: 19px 0;
+    text-align: center;
+    font-size: 15px;
 }
 
 table.table-area-ink-injected-half.uk-table.uk-table-bordered.js-pricing-table {
@@ -377,6 +379,7 @@ table.table-area-ink-injected-half.uk-table.uk-table-bordered.js-pricing-table {
     margin-bottom: 20px;
     margin-top: 20px;
 }
+
 
 .price-table .table th:first-child {
     border: 0;
@@ -481,6 +484,16 @@ span.red {
     /* left: 6px; */
 }
 
+
+.colors-content ul li a img{
+	width:100%;
+	height:58px;
+}
+
+.colors-content ul li {
+    width: 16%;
+}
+
 .sizes-content ul{
 	margin:0;
 	padding:0;
@@ -493,7 +506,6 @@ span.red {
 
 .sizes-content ul li {
     width: 42%;
-    float: left;
     padding: 4px;
     margin-bottom: 30px;
     list-style: none;
@@ -509,7 +521,124 @@ span.red {
 	padding:0;
 }
 
+#prod-main{
+	cursor:pointer;
+}
 
+#prod-main2{
+	cursor:pointer;
+}
+
+
+.accordion{
+	margin:0 0 40px 0;
+	padding:0 0px 10px 0px;
+}
+
+.accordion li{
+	list-style:none;
+	padding-bottom:10px;
+}
+
+.accordion li a{
+	font-size:16px;
+}
+
+.col-sm-22.offerpv {
+    color: #fff;
+    background: #0a1a38;
+    text-align: center;
+    position: relative;
+    font-size: 39px;
+}
+
+.col-sm-101.offer-details{
+	color: #fff;
+	font-size: 24px;
+	padding-top: 13px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+
+.col-sm-101 {
+    width: 58%;
+}
+.col-sm-22 {
+    width: 26.667%;
+}
+
+.col-sm-22.offerpv::after {
+    content: '';
+    position: absolute;
+    border-left: 25px solid #0a1a38;
+    border-top: 27px solid transparent;
+    border-bottom: 28px solid transparent;
+    top: 0;
+    right: -25px;
+}
+
+.price-sidebar {
+    margin: 30px -1px;
+    padding: 0;
+}
+
+.price-sidebar li{
+	list-style:none;
+	margin-bottom:10px;
+}
+
+.cont-p{
+	background-color: #fff;
+}
+
+.col-xs-98 {
+    width: 39%;
+    float: left;
+    padding: 0 6px 0 37px;
+}
+
+.col-xs-99 {
+    width: 61%;
+    float: left;
+    padding: 0 36px;
+}
+
+.photo-stream-price{
+	margin:0;
+	padding:0;
+}
+
+.photo-stream-price li {
+    list-style: none;
+    width: 30%;
+    float: left;
+}
+
+.order-now-green {
+    padding: 34px 0px;
+    background: #8ab445;
+    text-align: center;
+    width: 373px;
+    font-size: 30px;
+}
+
+.order-now-green a{
+	color:#fff;
+}
+
+.checkmark {
+    display:inline-block;
+    width: 22px;
+    height:22px;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
+
+li.active.select-box-col {
+    border: 2px solid #00A29D;
+}
 
 /****
 **

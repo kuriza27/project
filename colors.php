@@ -1,7 +1,7 @@
 <?php include_once 'header.php'; ?>
 <div id="main-content" class="row homecontent">
   <div class="container">
-	<h1>Colors</h1>
+	<h1>Color Chart</h1>
 	<div class="colors-content">
 
 		<?php include_once 'solid-color-template.php'; ?>

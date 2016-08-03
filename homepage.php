@@ -14,24 +14,30 @@
       <!-- Example row of columns -->
 	  	  
 	   <div class="images-clips">
+			<div class="col-md-2">
+				<a href="order.php"><img src="assets/images/src/Get_A_Quote.jpg"></a>
+			</div>
+			
+			<div class="col-md-2">
+				<a href="contact-us.php"><img src="assets/images/src/PO.jpg"></a>
+			</div>
+			
 		    <div class="col-md-2">
-				<a href="#"><img src="assets/images/src/Digital_Design.png"></a>
+				<a href="#"><img src="assets/images/src/Digital_Design.jpg"></a>
 			</div>
+						
 			<div class="col-md-2">
-				<a href="#"><img src="assets/images/src/1Day_Production.png"></a>
+				<a href="#"><img src="assets/images/src/Rush_Shipping.jpg"></a>
 			</div>
+			
 			<div class="col-md-2">
-				<a href="#"><img src="assets/images/src/PO.png"></a>
+				<a href="#"><img src="assets/images/src/1Day_Production.jpg"></a>
 			</div>
+
 			<div class="col-md-2">
-				<a href="#"><img src="assets/images/src/Eco_Friendly.png"></a>
+				<a href="#"><img src="assets/images/src/Eco_Friendly.jpg"></a>
 			</div>
-			<div class="col-md-2">
-				<a href="#"><img src="assets/images/src/Get_A_Quote.png"></a>
-			</div>
-			<div class="col-md-2">
-				<a href="#"><img src="assets/images/src/RushShipping.png"></a>
-			</div>
+
 				<div class="clearfix"></div>
 	   </div>
       <div id="main-content" class="row homecontent">

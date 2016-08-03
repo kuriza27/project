@@ -20,14 +20,13 @@
 					<li><a href="#">Our Blog</a></li>
 					<li><a href="#">Privacy</a></li>
 					<li><a href="#">Return Policy</a></li>
-					<li><a href="#">FAQ</a></li>
+					<li><a href="faq.php">FAQ</a></li>
 					<li><a href="#">Terms and Conditions</a></li>
 				</ul>
 			</div>
 			<div id="footer-text">
 				<p>Monday - Sunday | 8am - 10pm CST</p>
-				<p>Sale Toll Free 1-333-333-0001</p>
-				<p>Customer Service 123-456-7890</p>
+				<p>Customer Service 1-800- 989-0440</p>
 			</div>
 				<div class="clearfix"></div>
 

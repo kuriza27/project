@@ -7,6 +7,10 @@
 			<li><input id="segmented-color-3" type="text" placeholder="PMS#" refid="3"></li>
 			<li><input id="segmented-color-4" type="text" placeholder="PMS#" refid="4"></li>
 			<li><input id="segmented-color-5" type="text" placeholder="PMS#" refid="5"></li>
+			<li>
+			<button class="done-s">Done</button>
+		   </li>
+			<div class="clearfix"></div>
 		</ul>
 			<div class="clearfix"></div>
 	</div>

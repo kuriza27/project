@@ -2,12 +2,13 @@
 /**
  *  Generate a preview image
  */
-function generatePreviewImage( style, colors ) {
+function generatePreviewImage(style, colors) {
 
 	$(".segmented").css("display", "block");
 	$(".solid").css("display", "block");
 	$(".swirl").css("display", "block");
-
+	$(".glow").css("display", "block");
+	
 	if(typeof colors !== "undefined" && typeof style !== "undefined") {
 
 		// Place colors on an array, for future use
@@ -18,6 +19,7 @@ function generatePreviewImage( style, colors ) {
 			// Hide SVG elements not used
 			$(".solid").css("display", "none");
 			$(".segmented").css("display", "none");
+			$(".glow").css("display", "none");
 
 			// Set colors
 			$("#swirl_1").css( "fill", "#" + colors[0]); // Set 1st color
@@ -48,6 +50,7 @@ function generatePreviewImage( style, colors ) {
 			// Hide SVG elements not used
 			$(".solid").css("display", "none");
 			$(".swirl").css("display", "none");
+			$(".glow").css("display", "none");
 
 			// Set colors
 			if(colors.length === 1) { // If 1 colors
@@ -128,19 +131,35 @@ function generatePreviewImage( style, colors ) {
 			}
 
 			// Render SVG into Canvas
-			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview");
+			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview", style);
 
 		} else if(style === "solid") {
 
 			// Remove SVG elements not used
 			$(".segmented").css("display", "none");
 			$(".swirl").css("display", "none");
+			$(".glow").css("display", "none");
 
 			// Set color
 			$(".solid").css( "fill", "#" + colors[0]);
 
 			// Render SVG into Canvas
-			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview");
+			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview", style);
+
+		}
+		
+		else if(style === "glow") {
+
+			// Remove SVG elements not used
+			$(".segmented").css("display", "none");
+			$(".swirl").css("display", "none");
+			$(".solid").css("display", "none");
+			
+			// Set color
+			$(".glow").css( "fill", "#" + colors[0]);
+
+			// Render SVG into Canvas
+			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview", style);
 
 		}
 
@@ -161,7 +180,7 @@ function generatePreviewImage( style, colors ) {
 /**
  *  SVG to canvas to image render function
  */
-function render(svg, canvas, image, preview) {
+function render(svg, canvas, image, preview, type) {
 
 	// Get needed elements
 	var can = document.getElementById(canvas);
@@ -176,7 +195,12 @@ function render(svg, canvas, image, preview) {
 	// Apply blur effect on image
 	setTimeout(function() {
 		stackBlurImage(image, "canvas", 50);
-		$("#preview-pane-selection").append('<li class="preview-pill" data-image-link="' + $("#canvas")[0].toDataURL() + '">?</li>');
+		var preview = $("#preview-pane-selection").find('.preview-pill[data-image-link="'+$("#canvas")[0].toDataURL()+'"]').length > 0;
+		var prevType = $("#preview-pane-selection").find('.preview-pill[data-type="'+type+'"]').length > 0;
+
+		if(!preview) {
+			$("#preview-pane-selection").append('<li class="preview-pill" data-type="'+type+'" data-image-link="' + $("#canvas")[0].toDataURL() + '" style="background-image:url(' + $("#canvas")[0].toDataURL() + ');background-size:30px;"></li>');
+		}
 		// console.log($("#canvas")[0].toDataURL());
 		// return $("#canvas")[0].toDataURL();
 	}, 1000);

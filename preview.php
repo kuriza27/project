@@ -65,7 +65,7 @@
                             // $(".segmented").remove();
                             $(".solid").css("display", "none");
                             $(".segmented").css("display", "none");
-
+							$(".glow").css("display", "none");
                             // Set COLORS
                             $("#swirl_1").css( "fill", "#" + $_COLOR[0]);
 
@@ -98,7 +98,8 @@
                             // Remove SVG elements not used
                             $(".solid").remove();
                             $(".swirl").remove();
-
+							$(".glow").css("display", "none");
+							
                             // Set colors
                             if($_COLOR.length === 1) { // If 1 colors
 
@@ -185,9 +186,25 @@
                             // Remove SVG elements not used
                             $(".segmented").remove();
                             $(".swirl").remove();
-
+							$(".glow").css("display", "none");
+							
                             // Set color
                             $(".solid").css( "fill", "#" + $_COLOR[0]);
+
+                            // Render SVG into Canvas
+                            render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview");
+
+                        }
+						
+						if($_GET["style"] === "glow") {
+
+                            // Remove SVG elements not used
+                            $(".segmented").remove();
+                            $(".swirl").remove();
+							 $(".solid").remove();
+
+                            // Set color
+                            $(".glow").css( "fill", "#" + $_COLOR[0]);
 
                             // Render SVG into Canvas
                             render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview");
@@ -308,7 +325,9 @@
                         <path d="M33.467,0H0l0.001,54h37.408c8.46-3.039,15.514-12.604,17.069-20.456C57.496,18.306,46.677,4.253,33.467,0z"/>
                         <path d="M950,19.304C943.232,9.9,924.541,6.087,910.336,10.5c-14.203,4.412-25.029,14.743-24.201,26.273 c0.488,6.794,8.611,14.312,14.783,17.227h49.083L950,19.304z"/>
                     </g>
-
+					
+					<rect id="glow" class="glow" x="0" width="950" height="54"/>
+					
                 </svg>
 
             </div>

@@ -1,82 +1,81 @@
 <ul class="font-style-list">
-	<li><a href="javascript:void(0)" data-font-name="aardvark_cafe.TTF" ref="Aarvarkcafe.png"><img  src="assets/images/src/fonts/Aarvarkcafe.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="Adobe_Garamond_Bold.otf" ref="Adobegaramondbold.png"><img  src="assets/images/src/fonts/Adobegaramondbold.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="Air_Stream.TTF" ref="Airstream.png"><img  src="assets/images/src/fonts/Airstream.png"/></a></li>	
-	<li><a href="javascript:void(0)" data-font-name="AkzidenzGroteskBQ-Cnd.otf" ref="Akzidenzgroteskbq-reg.png"><img  src="assets/images/src/fonts/Akzidenzgroteskbq-reg.png"/></a></li>	
-	<li><a href="javascript:void(0)" data-font-name="Aldo_PC.ttf" ref="Aldosemibold.png"><img  src="assets/images/src/fonts/Aldosemibold.png"/></a></li>	
-	<li><a href="javascript:void(0)" data-font-name="ANDY-BOLD.TTF" ref="Anybold.png"><img  src="assets/images/src/fonts/Anybold.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="ARIAL-BLACK.ttf" ref="Arialblack.png"><img  src="assets/images/src/fonts/Arialblack.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="arial-narrow.TTF" ref="Arialnarrow.png" ><img  src="assets/images/src/fonts/Arialnarrow.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="ARIAL-BOLD.ttf" ref="Arialold.png"><img  src="assets/images/src/fonts/Arialold.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="ARLRDBD.TTF" ref="Arialrounded.png"><img  src="assets/images/src/fonts/Arialrounded.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="ArnoPro-Regular.otf" ref="Arnopro.png"><img  src="assets/images/src/fonts/Arnopro.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="Artbrush.ttf" ref="Artbrush.png"><img  src="assets/images/src/fonts/Artbrush.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="Bauhaus.ttf" ref="Bauhaus.png"><img  src="assets/images/src/fonts/Bauhaus.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="BEACHTYP.TTF" ref="BeachTypeMedium.png"><img  src="assets/images/src/fonts/BeachTypeMedium.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="beansfont.ttf" ref="Beans.png"><img  src="assets/images/src/fonts/Beans.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="beatsvil.ttf" ref="Beatsvilleregular.png"><img  src="assets/images/src/fonts/Beatsvilleregular.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="BELLBOTT.TTF" ref="Bellbuttom.png"><img  src="assets/images/src/fonts/Bellbuttom.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="BRLNSR.TTF" ref="Berlinsansfb.png"><img  src="assets/images/src/fonts/Berlinsansfb.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="BlackWolf.ttf" ref="Blackwolf.png"><img  src="assets/images/src/fonts/Blackwolf.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="BLADRMF_.TTF" ref="BLADERUNNERMOVIE.png"><img  src="assets/images/src/fonts/BLADERUNNERMOVIE.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="Boisterb.ttf" ref="Boisterblack.png"><img  src="assets/images/src/fonts/Boisterblack.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="BOOKOS.TTF" ref="Bookmanoldstyle.png"><img  src="assets/images/src/fonts/Bookmanoldstyle.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="Candara.ttf" ref="Candara.png"><img  src="assets/images/src/fonts/Candara.png"/></a></li>
-	<!--- <li><a href="javascript:void(0)" data-font-name="" ref="Centurygothic.png"><img  src="assets/images/src/fonts/Centurygothic.png"/></a></li>--->
-	<li><a href="javascript:void(0)" data-font-name="CHERI___.TTF" ref="Cheri.png"><img  src="assets/images/src/fonts/Cheri.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="CHOWFUN.TTF" ref="Chowfun.png"><img  src="assets/images/src/fonts/Chowfun.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="Chunkfive.otf" ref="Chunkfive.png"><img  src="assets/images/src/fonts/Chunkfive.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="college.ttf" ref="COLLEGE.png"><img  src="assets/images/src/fonts/COLLEGE.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="Colony-Wars.ttf" ref="COLONYWARS.png"><img  src="assets/images/src/fonts/COLONYWARS.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="comic_0.ttf" ref="Comicsansms.png"><img  src="assets/images/src/fonts/Comicsansms.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="CooperBlackStd.otf" ref="Cooperblack.png"><img  src="assets/images/src/fonts/Cooperblack.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="Creepers.ttf" ref="CREEPERS.png"><img  src="assets/images/src/fonts/CREEPERS.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="Decker.ttf" ref="Decker.png"><img  src="assets/images/src/fonts/Decker.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="denmark.ttf" ref="Denmark.png"><img  src="assets/images/src/fonts/Denmark.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="dirty-bakers-dozen.ttf" ref="DIRTYBAKERSDOZEN.png"><img  src="assets/images/src/fonts/DIRTYBAKERSDOZEN.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="EASTMARK.TTF" ref="Eastmarket.png"><img  src="assets/images/src/fonts/Eastmarket.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="ELEPHNT.TTF" ref="Elephant.png"><img  src="assets/images/src/fonts/Elephant.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="FINALOLD.TTF" ref="FinalFrontieroldstyle.png"><img  src="assets/images/src/fonts/FinalFrontieroldstyle.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="framd.ttf" ref="Franklingothicmedium.png"><img  src="assets/images/src/fonts/Franklingothicmedium.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="freedomfighter.ttf" ref="FREEDOMFIGHTER.png"><img  src="assets/images/src/fonts/FREEDOMFIGHTER.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="FREESCPT.TTF" ref="Freestylescript.png"><img  src="assets/images/src/fonts/Freestylescript.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="Garamond-Regular.ttf" ref="Garamond.png"><img  src="assets/images/src/fonts/Garamond.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="" ref="Haettenschweiler.png"><img  src="assets/images/src/fonts/Haettenschweiler.png"/></a></li>
-	<!--- <li><a href="javascript:void(0)" data-font-name="" ref="Harrington.png"><img  src="assets/images/src/fonts/Harrington.png"/></a></li>
-		  <li><a href="javascript:void(0)" data-font-name="" ref="Hotrod.png"><img  src="assets/images/src/fonts/Hotrod.png"/></a></li>
-		  <li><a href="javascript:void(0)" data-font-name="" ref="Nextstar.png"><img  src="assets/images/src/fonts/Nextstar.png"/></a></li>
-		  <li><a href="javascript:void(0)" data-font-name="" ref="Ringer.png"><img  src="assets/images/src/fonts/Ringer.png"/></a></li>
-		  <li><a href="javascript:void(0)" data-font-name="" ref="Sfplanetaryorbiter.png"><img  src="assets/images/src/fonts/Sfplanetaryorbiter.png"/></a></li>
-		  <li><a href="javascript:void(0)" data-font-name="" ref="Spaceage.png"><img  src="assets/images/src/fonts/Spaceage.png"/></a></li>
-		  <li><a href="javascript:void(0)" data-font-name="" ref="Spacepontiff.png"><img  src="assets/images/src/fonts/Spacepontiff.png"/></a></li>
-		  <li><a href="javascript:void(0)" data-font-name="" ref="Terminaldosisregular.png"><img  src="assets/images/src/fonts/Terminaldosisregular.png"/></a></li>
-		  <li><a href="javascript:void(0)" data-font-name="" ref="Timepiece.png"><img  src="assets/images/src/fonts/Timepiece.png"/></a></li>
-	--->
-	<li><a href="javascript:void(0)" data-font-name="hotpizza.ttf" ref="Hotpizza.png"><img  src="assets/images/src/fonts/Hotpizza.png"/></a></li>	
-	<li><a href="javascript:void(0)" data-font-name="impact_0.ttf" ref="Impact.png"><img  src="assets/images/src/fonts/Impact.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="kingrichard.ttf" ref="Kingrichard.png"><img  src="assets/images/src/fonts/Kingrichard.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="KOMIKABG.ttf" ref="Komikaboogie.png"><img  src="assets/images/src/fonts/Komikaboogie.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="lucon_0.ttf" ref="Lucidaconsole.png"><img  src="assets/images/src/fonts/Lucidaconsole.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="metalstorm.ttf" ref="Metalstorm.png"><img  src="assets/images/src/fonts/Metalstorm.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="METROLOX.ttf" ref="Metrolox.png"><img  src="assets/images/src/fonts/Metrolox.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="MTCORSVA.TTF" ref="Monotypecorsiva.png"><img  src="assets/images/src/fonts/Monotypecorsiva.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="MyriadPro-Regular.otf" ref="Myriadpro.png"><img  src="assets/images/src/fonts/Myriadpro.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="NickelodeonNF.ttf" ref="Nikelodeon.png"><img  src="assets/images/src/fonts/Nikelodeon.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="Pacifico.ttf" ref="Pacifico.png"><img  src="assets/images/src/fonts/Pacifico.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="pala_0.ttf" ref="Palatinolinotype.png"><img  src="assets/images/src/fonts/Palatinolinotype.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="PermanentMarker.ttf" ref="Permanentmarker.png"><img  src="assets/images/src/fonts/Permanentmarker.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="SCRIPTBL.TTF" ref="Scriptmtstd.png"><img  src="assets/images/src/fonts/Scriptmtstd.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="SHOWG.TTF" ref="Showcardgothic.png"><img  src="assets/images/src/fonts/Showcardgothic.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="SpookyMagic.ttf" ref="Spookymagic.png"><img  src="assets/images/src/fonts/Spookymagic.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="Swagger.ttf" ref="Swagger.png"><img  src="assets/images/src/fonts/Swagger.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="tahoma_0.ttf" ref="Tahoma.png"><img  src="assets/images/src/fonts/Tahoma.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="times_0.ttf" ref="Timesroman.png"><img  src="assets/images/src/fonts/Timesroman.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="transfrm.ttf" ref="Transformersmovie.png"><img  src="assets/images/src/fonts/Transformersmovie.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="trebuc_0.ttf" ref="Trebuchetms.png"><img  src="assets/images/src/fonts/Trebuchetms.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="trekker-two-regular-1361513282.ttf" ref="Trekkertwo.png"><img  src="assets/images/src/fonts/Trekkertwo.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="tristan.ttf" ref="Tristan.png"><img  src="assets/images/src/fonts/Tristan.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="Tweedledee-Bold.ttf" ref="Tweedledee.png"><img  src="assets/images/src/fonts/Tweedledee.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="Victorian-LET.ttf" ref="Victorianlet.png"><img  src="assets/images/src/fonts/Victorianlet.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="WantedM54.ttf" ref="Wantedms4.png"><img  src="assets/images/src/fonts/Wantedms4.png"/></a></li>
-	<li><a href="javascript:void(0)" data-font-name="WickedScaryMovie.ttf" ref="Wickedscarymovie.png"><img  src="assets/images/src/fonts/Wickedscarymovie.png"/></a></li>
+	<li  name="aardvark cafe" ref="Aarvarkcafe.png"><img  src="assets/images/src/fonts/Aarvarkcafe.png"/></li>
+	<li  name="Adobe Garamond Bold" ref="Adobegaramondbold.png"><img  src="assets/images/src/fonts/Adobegaramondbold.png"/></li>
+	<li  name="Air Stream" ref="Airstream.png"><img  src="assets/images/src/fonts/Airstream.png"/></li>	
+	<li  name="AkzidenzGroteskBQ Cnd" ref="Akzidenzgroteskbq reg.png"><img  src="assets/images/src/fonts/Akzidenzgroteskbq-reg.png"/></li>	
+	<li  name="Aldo PC" ref="Aldosemibold.png"><img  src="assets/images/src/fonts/Aldosemibold.png"/></li>	
+	<li  name="ANDY BOLD" ref="Anybold.png"><img  src="assets/images/src/fonts/Anybold.png"/></li>
+	<li  name="ARIAL BLACK" ref="Arialblack.png"><img  src="assets/images/src/fonts/Arialblack.png"/></li>
+	<li  name="arial narrow" ref="Arialnarrow.png" ><img  src="assets/images/src/fonts/Arialnarrow.png"/></li>
+	<li  name="ARIAL BOLD" ref="Arialold.png"><img  src="assets/images/src/fonts/Arialold.png"/></li>
+	<li  name="ARLRDBD" ref="Arialrounded.png"><img  src="assets/images/src/fonts/Arialrounded.png"/></li>
+	<li  name="ArnoPro Regular" ref="Arnopro.png"><img  src="assets/images/src/fonts/Arnopro.png"/></li>
+	<li  name="Artbrush" ref="Artbrush.png"><img  src="assets/images/src/fonts/Artbrush.png"/></li>
+	<li  name="Bauhaus" ref="Bauhaus.png"><img  src="assets/images/src/fonts/Bauhaus.png"/></li>
+	<li  name="BEACHTYP" ref="BeachTypeMedium.png"><img  src="assets/images/src/fonts/BeachTypeMedium.png"/></li>
+	<li  name="beansfont" ref="Beans.png"><img  src="assets/images/src/fonts/Beans.png"/></li>
+	<li  name="beatsvil" ref="Beatsvilleregular.png"><img  src="assets/images/src/fonts/Beatsvilleregular.png"/></li>
+	<li  name="BELLBOTT" ref="Bellbuttom.png"><img  src="assets/images/src/fonts/Bellbuttom.png"/></li>
+	<li  name="BRLNSR" ref="Berlinsansfb.png"><img  src="assets/images/src/fonts/Berlinsansfb.png"/></li>
+	<li  name="BlackWolf" ref="Blackwolf.png"><img  src="assets/images/src/fonts/Blackwolf.png"/></li>
+	<li  name="BLADRMF " ref="BLADERUNNERMOVIE.png"><img  src="assets/images/src/fonts/BLADERUNNERMOVIE.png"/></li>
+	<li  name="Boisterb" ref="Boisterblack.png"><img  src="assets/images/src/fonts/Boisterblack.png"/></li>
+	<li  name="BOOKOS" ref="Bookmanoldstyle.png"><img  src="assets/images/src/fonts/Bookmanoldstyle.png"/></li>
+	<li  name="Candara" ref="Candara.png"><img  src="assets/images/src/fonts/Candara.png"/></li>
+	<!-----    <li  name="" ref="Centurygothic.png"><img  src="assets/images/src/fonts/Centurygothic.png"/></li>  ------>
+	<li  name="CHERI   " ref="Cheri.png"><img  src="assets/images/src/fonts/Cheri.png"/></li>
+	<li  name="CHOWFUN" ref="Chowfun.png"><img  src="assets/images/src/fonts/Chowfun.png"/></li>
+	<li  name="Chunkfive" ref="Chunkfive.png"><img  src="assets/images/src/fonts/Chunkfive.png"/></li>
+	<li  name="college" ref="COLLEGE.png"><img  src="assets/images/src/fonts/COLLEGE.png"/></li>
+	<li  name="Colony Wars" ref="COLONYWARS.png"><img  src="assets/images/src/fonts/COLONYWARS.png"/></li>
+	<li  name="comic 0" ref="Comicsansms.png"><img  src="assets/images/src/fonts/Comicsansms.png"/></li>
+	<li  name="CooperBlackStd" ref="Cooperblack.png"><img  src="assets/images/src/fonts/Cooperblack.png"/></li>
+	<li  name="Creepers" ref="CREEPERS.png"><img  src="assets/images/src/fonts/CREEPERS.png"/></li>
+	<li  name="Decker" ref="Decker.png"><img  src="assets/images/src/fonts/Decker.png"/></li>
+	<li  name="denmark" ref="Denmark.png"><img  src="assets/images/src/fonts/Denmark.png"/></li>
+	<li  name="dirty bakers dozen" ref="DIRTYBAKERSDOZEN.png"><img  src="assets/images/src/fonts/DIRTYBAKERSDOZEN.png"/></li>
+	<li  name="EASTMARK" ref="Eastmarket.png"><img  src="assets/images/src/fonts/Eastmarket.png"/></li>
+	<li  name="ELEPHNT" ref="Elephant.png"><img  src="assets/images/src/fonts/Elephant.png"/></li>
+	<li  name="FINALOLD" ref="FinalFrontieroldstyle.png"><img  src="assets/images/src/fonts/FinalFrontieroldstyle.png"/></li>
+	<li  name="framd" ref="Franklingothicmedium.png"><img  src="assets/images/src/fonts/Franklingothicmedium.png"/></li>
+	<li  name="freedomfighter" ref="FREEDOMFIGHTER.png"><img  src="assets/images/src/fonts/FREEDOMFIGHTER.png"/></li>
+	<li  name="FREESCPT" ref="Freestylescript.png"><img  src="assets/images/src/fonts/Freestylescript.png"/></li>
+	<li  name="Garamond Regular" ref="Garamond.png"><img  src="assets/images/src/fonts/Garamond.png"/></li>
+	<!-----<li  name="Haettenschweiler" ref="Haettenschweiler.png"><img  src="assets/images/src/fonts/Haettenschweiler.png"/></li>---->
+	<li  name="Harrington" ref="Harrington.png"><img  src="assets/images/src/fonts/Harrington.png"/></li> 
+	<!-----<li  name="" ref="Hotrod.png"><img  src="assets/images/src/fonts/Hotrod.png"/></li>
+	<li  name="" ref="Nextstar.png"><img  src="assets/images/src/fonts/Nextstar.png"/></li>
+	<li  name="" ref="Ringer.png"><img  src="assets/images/src/fonts/Ringer.png"/></li>
+	<li  name="" ref="Sfplanetaryorbiter.png"><img  src="assets/images/src/fonts/Sfplanetaryorbiter.png"/></li>
+	<li  name="" ref="Spaceage.png"><img  src="assets/images/src/fonts/Spaceage.png"/></li>
+	<li  name="" ref="Spacepontiff.png"><img  src="assets/images/src/fonts/Spacepontiff.png"/></li>
+	<li  name="" ref="Terminaldosisregular.png"><img  src="assets/images/src/fonts/Terminaldosisregular.png"/></li>
+    <li  name="" ref="Timepiece.png"><img  src="assets/images/src/fonts/Timepiece.png"/></li>----->
+	<li  name="hotpizza" ref="Hotpizza.png"><img  src="assets/images/src/fonts/Hotpizza.png"/></li>	
+	<li  name="impact 0" ref="Impact.png"><img  src="assets/images/src/fonts/Impact.png"/></li>
+	<li  name="kingrichard" ref="Kingrichard.png"><img  src="assets/images/src/fonts/Kingrichard.png"/></li>
+	<li  name="KOMIKABG" ref="Komikaboogie.png"><img  src="assets/images/src/fonts/Komikaboogie.png"/></li>
+	<li  name="lucon 0" ref="Lucidaconsole.png"><img  src="assets/images/src/fonts/Lucidaconsole.png"/></li>
+	<li  name="metalstorm" ref="Metalstorm.png"><img  src="assets/images/src/fonts/Metalstorm.png"/></li>
+	<li  name="METROLOX" ref="Metrolox.png"><img  src="assets/images/src/fonts/Metrolox.png"/></li>
+	<li  name="MTCORSVA" ref="Monotypecorsiva.png"><img  src="assets/images/src/fonts/Monotypecorsiva.png"/></li>
+	<li  name="MyriadPro Regular" ref="Myriadpro.png"><img  src="assets/images/src/fonts/Myriadpro.png"/></li>
+	<li  name="NickelodeonNF" ref="Nikelodeon.png"><img  src="assets/images/src/fonts/Nikelodeon.png"/></li>
+	<li  name="Pacifico" ref="Pacifico.png"><img  src="assets/images/src/fonts/Pacifico.png"/></li>
+	<li  name="pala 0" ref="Palatinolinotype.png"><img  src="assets/images/src/fonts/Palatinolinotype.png"/></li>
+	<li  name="PermanentMarker" ref="Permanentmarker.png"><img  src="assets/images/src/fonts/Permanentmarker.png"/></li>
+	<li  name="SCRIPTBL" ref="Scriptmtstd.png"><img  src="assets/images/src/fonts/Scriptmtstd.png"/></li>
+	<li  name="SHOWG" ref="Showcardgothic.png"><img  src="assets/images/src/fonts/Showcardgothic.png"/></li>
+	<li  name="SpookyMagic" ref="Spookymagic.png"><img  src="assets/images/src/fonts/Spookymagic.png"/></li>
+	<li  name="Swagger" ref="Swagger.png"><img  src="assets/images/src/fonts/Swagger.png"/></li>
+	<li  name="tahoma 0" ref="Tahoma.png"><img  src="assets/images/src/fonts/Tahoma.png"/></li>
+	<li  name="times 0" ref="Timesroman.png"><img  src="assets/images/src/fonts/Timesroman.png"/></li>
+	<li  name="transfrm" ref="Transformersmovie.png"><img  src="assets/images/src/fonts/Transformersmovie.png"/></li>
+	<li  name="trebuc 0" ref="Trebuchetms.png"><img  src="assets/images/src/fonts/Trebuchetms.png"/></li>
+	<li  name="trekker two regular 1361513282" ref="Trekkertwo.png"><img  src="assets/images/src/fonts/Trekkertwo.png"/></li>
+	<li  name="tristan" ref="Tristan.png"><img  src="assets/images/src/fonts/Tristan.png"/></li>
+	<li  name="Tweedledee Bold" ref="Tweedledee.png"><img  src="assets/images/src/fonts/Tweedledee.png"/></li>
+	<li  name="Victorian LET" ref="Victorianlet.png"><img  src="assets/images/src/fonts/Victorianlet.png"/></li>
+	<li  name="WantedM54" ref="Wantedms4.png"><img  src="assets/images/src/fonts/Wantedms4.png"/></li>
+	<li  name="WickedScaryMovie" ref="Wickedscarymovie.png"><img  src="assets/images/src/fonts/Wickedscarymovie.png"/></li>
 </ul>
