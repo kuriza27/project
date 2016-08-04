@@ -3507,27 +3507,6 @@
 								</div>
 									<div class="clearfix"></div>
 							</div>
-							<div class="modal fade" id="ClipArtModal" role="dialog">
-								<div class="modal-dialog">
-								  <!-- Modal content-->
-								  <div class="modal-content">
-									<div class="modal-header">
-									  <button type="button" class="close" data-dismiss="modal">&times;</button>
-									  <h4 class="modal-title">Pick Clipart</h4>
-									</div>
-									<div class="modal-body">
-									  <?php include "clipart-template.php";?>
-									   <div class="clearfix"></div>
-									</div>
-									<div class="modal-footer">
-									  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-									</div>
-								  </div>
-								  <!---------End Modal Content-------------->
-								</div>
-							  </div>
-                               <!-----End Modal Div ---->
-								<div class="clear"></div>
 						</div>
 						<div class="c-input" style="display:none">
 							<div class="col-sm-6" style="border-right:2px solid #474747;">
@@ -3535,14 +3514,17 @@
 							</div>
 							<div class="clearfix"></div>
 							<div class="clip-sec" style="float:left;width:20%;">
-								<button class="fclip-1" data-toggle="modal" data-target="#ClipArtModalC">Start Clipart</button><br />
+								<button class="cclip-1" data-toggle="modal" data-target="#ClipArtModal">Start Clipart</button><br />
 							</div>
 							<div class="clip-sec" style="float:left;width:20%;">
-								<button class="fclip-2" data-toggle="modal" data-target="#ClipArtModalC">End Clipart</button><br />
+								<button class="cclip-2" data-toggle="modal" data-target="#ClipArtModal">End Clipart</button><br />
 								<a href="#">or Upload your own art</a>
 							</div>
 								<div class="clearfix"></div>
-							<div class="modal fade" id="ClipArtModalC" role="dialog">
+						</div>
+							<div class="clearfix"></div>
+						<!-------start modal here---------->
+						<div class="modal fade" id="ClipArtModal" role="dialog">
 								<div class="modal-dialog">
 								  <!-- Modal content-->
 								  <div class="modal-content">
@@ -3560,11 +3542,9 @@
 								  </div>
 								  <!---------End Modal Content-------------->
 								</div>
-							  </div>
+					     </div>
                                <!-----End Modal Div ---->
 								<div class="clear"></div>
-						</div>
-							<div class="clearfix"></div>
 					</div>
 
 					<?php include_once 'preview_template.php'; ?>

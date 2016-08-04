@@ -118,9 +118,9 @@ $(function(){
 		get_style_size('price_table');
 	});
 	
-	$(".clip-color-list a").click(function(){
+	/*$(".clip-color-list a").click(function(){
 		var ref = clipArt.attr('ref');
-	});
+	});*/
 
 	//select wristband size
 	$('.js-size').click(function(){
@@ -335,6 +335,117 @@ $(function(){
 		}else{
 			$(this).closest('.modal').modal('toggle');
 		}
+	});
+	
+	//front message clipart button -------------------
+	$('.fclip-1').click(function(){
+			$(".clip-color-list li a").addClass('fsc');
+			$(".clip-color-list li a").removeClass('fec');
+			$(".clip-color-list li a").removeClass('bec');
+			$(".clip-color-list li a").removeClass('bsc');
+			$(".clip-color-list li a").removeClass('ces');
+			$(".clip-color-list li a").removeClass('ccs');
+	});	
+	
+	$('.fclip-2').click(function(){
+			$(".clip-color-list li a").addClass('fec');
+			$(".clip-color-list li a").removeClass('fsc');
+			$(".clip-color-list li a").removeClass('bec');
+			$(".clip-color-list li a").removeClass('bsc');
+			 $(".clip-color-list li a").removeClass('ces');
+			$(".clip-color-list li a").removeClass('ccs');
+	});
+	//front message clipart button end here -----------
+
+	//back message clipart button ---------------------
+	$('.bclip-1').click(function(){
+			$(".clip-color-list li a").addClass('bsc');
+			$(".clip-color-list li a").removeClass('fsc');
+			$(".clip-color-list li a").removeClass('fec');
+			$(".clip-color-list li a").removeClass('bec');
+		    $(".clip-color-list li a").removeClass('ces');
+			$(".clip-color-list li a").removeClass('ccs');
+	});
+	
+	$('.bclip-2').click(function(){
+			$(".clip-color-list li a").addClass('bec');
+			$(".clip-color-list li a").removeClass('fsc');
+			$(".clip-color-list li a").removeClass('fec');
+			$(".clip-color-list li a").removeClass('bsc');
+			$(".clip-color-list li a").removeClass('ces');
+			$(".clip-color-list li a").removeClass('ccs');
+	});
+	//back message clipart button end here --------------
+	
+	
+	//continous message clipart button ---------------------
+	$('.cclip-1').click(function(){
+			$(".clip-color-list li a").addClass('ccs');
+			$(".clip-color-list li a").removeClass('fsc');
+			$(".clip-color-list li a").removeClass('fec');
+			$(".clip-color-list li a").removeClass('bsc');
+			$(".clip-color-list li a").removeClass('bec');
+			$(".clip-color-list li a").removeClass('ces');
+	});
+	
+	$('.cclip-2').click(function(){
+			$(".clip-color-list li a").addClass('ces');
+			$(".clip-color-list li a").removeClass('fsc');
+			$(".clip-color-list li a").removeClass('fec');
+			$(".clip-color-list li a").removeClass('bsc');
+			$(".clip-color-list li a").removeClass('bec');
+			$(".clip-color-list li a").removeClass('ccs');
+	});
+	//continous message clipart button end here --------------
+	
+	//clipart front message button ------
+	$('.clip-color-list li a').click(function(){
+		var img = $(this).attr('ref');
+		
+		if(img!="none.jpg"){
+			if($( ".clip-color-list li a" ).hasClass( "fsc" )){
+				$(".start-fc").html("<img width='24' height='20' src='assets/images/src/clipart/"+img+"'/>");
+			}
+			else if($( ".clip-color-list li a" ).hasClass( "fec" )){
+				$(".end-fc").html("<img width='24' height='20' src='assets/images/src/clipart/"+img+"'/>");
+			}
+			else if($( ".clip-color-list li a" ).hasClass( "bsc" )){
+				$(".back-mc").html("<img width='24' height='20' src='assets/images/src/clipart/"+img+"'/>");
+			}
+			else if($( ".clip-color-list li a" ).hasClass( "bec" )){
+				$(".backend-mc").html("<img width='24' height='20' src='assets/images/src/clipart/"+img+"'/>");
+			}
+			else if($( ".clip-color-list li a" ).hasClass( "ccs" )){
+				$(".start-cc").html("<img width='24' height='20' src='assets/images/src/clipart/"+img+"'/>");
+			}
+			else{
+				$(".end-cc").html("<img width='24' height='24' src='assets/images/src/clipart/"+img+"'/>");
+			}
+		}
+		else{
+			
+			if($( ".clip-color-list li a" ).hasClass( "fsc" )){
+				$( ".start-fc" ).find("img").remove();
+			}
+			else if($( ".clip-color-list li a" ).hasClass( "fec" )){
+				$(".end-fc").find("img").remove();
+			}
+			else if($( ".clip-color-list li a" ).hasClass( "bsc" )){
+				$(".back-mc").find("img").remove();
+			}
+			else if($( ".clip-color-list li a" ).hasClass( "bec" )){
+				$(".backend-mc").find("img").remove();
+			}
+			else if($( ".clip-color-list li a" ).hasClass( "ccs" )){
+				$(".start-cc").find("img").remove();
+			}
+			else{
+				$(".end-cc").find("img").remove();
+			}
+		 }
+		
+		$("#ClipArtModal").modal('toggle');
+
 	});
 	
 });

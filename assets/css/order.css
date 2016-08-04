@@ -594,7 +594,7 @@ div#order-summary {
     font-weight:bold;
 }
 
-.fclip-1, .fclip-2, .bclip-1, .bclip-2, #custom-color-button, #font-button, .btn-add-custom-color{
+.fclip-1, .fclip-2, .bclip-1, .bclip-2, #custom-color-button, .cclip-1, .cclip-2, #font-button, .btn-add-custom-color{
     background-color: #17a589;
     color: #fff;
     border: 1px solid  #117864 ;
@@ -603,7 +603,7 @@ div#order-summary {
 }
 
 
-.fclip-1:hover,  .fclip-2:hover, .bclip-1:hover, .bclip-2:hover {
+.fclip-1:hover,  .fclip-2:hover, .bclip-1:hover, .bclip-2:hover .cclip-1:hover, .cclip-1:hover {
     background-color: #1abc9c ;
 }
 
@@ -863,4 +863,40 @@ input#font-color {
 
 .dynamic-pick-color-list li:hover{
     cursor:pointer;
+}
+
+span.start-fc {
+    float: left;
+    position: relative;
+    left: 186px;
+}
+
+span.end-fc {
+    float: left;
+    position: relative;
+    left: 356px;
+}
+
+span.back-mc {
+    float: left;
+    position: relative;
+    left: 186px;
+}
+
+span.backend-mc {
+    float: left;
+    position: relative;
+    left: 356px;
+}
+
+span.start-cc {
+    float: left;
+    position: relative;
+    left: 426px;
+}
+
+span.end-cc {
+    float: left;
+    position: relative;
+    left: 668px;
 }
