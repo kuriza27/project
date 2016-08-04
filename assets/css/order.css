@@ -335,7 +335,7 @@ ORDER CSS
 
 .nav-pills > li.active > a{
 	background-color:#325277;
-	border:none;
+	border:1px solid #fff;
 }
 
 .box-thumb img{
@@ -594,7 +594,7 @@ div#order-summary {
 	font-weight:bold;
 }
 
-.fclip-1, .fclip-2, .bclip-1, .bclip-2, #custom-color-button, #font-button{
+.fclip-1, .fclip-2, .bclip-1, .bclip-2, #custom-color-button, #font-button, .btn-add-custom-color{
     background-color: #17a589;
     color: #fff;
     border: 1px solid  #117864 ;
@@ -610,6 +610,18 @@ div#order-summary {
 
 button#custom-color-button {
     margin: 0 56px;
+}
+
+.btn-add-custom-color{
+    margin-left: 10px;
+}
+
+.btn-close-custom-color{
+    border: none;
+    border-radius: 25px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
 }
 
 .pick-color-list {
@@ -831,4 +843,24 @@ input#font-color {
     border: 1px solid #117864;
     padding: 6px 31px;
     border-radius: 3px;
+}
+
+
+.dynamic-pick-color-list {
+    margin: 0;
+    padding: 0;
+    height: 350px;
+    overflow-x: hidden;
+}
+
+.dynamic-pick-color-list li {
+    list-style: none;
+    float: left;
+    padding: 4px 4px;
+    width: 16%;
+    margin-left: 3px;
+}
+
+.dynamic-pick-color-list li:hover{
+    cursor:pointer;
 }

@@ -69,11 +69,9 @@
 
 				  <div class="tab-content">
 					<div id="home" class="tab-pane fade in active js-color" data-value="0" data-color="Solid">
-					
-					  <h3>Solid Colors</h3>
+					  <h3>Solid Colors</h3> <button id="addCustomSolid" class="btn-add-custom-color"><i class="fa fa-plus"></i> Add Custom Color</button>
 					  <div id="main-color-content">
 					  <div class="col-xs-4 box-color">
-
 							<img src="assets/images/src/custom.png"/>
 							<button id="custom-color-button" data-toggle="modal" data-target="#ColorModal">Custom Color</button>
 							<!--------Modal---------->
@@ -121,7 +119,6 @@
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="text" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="text" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
 							</div>
-
 						</div>
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/src/solid/Black.png"/>
@@ -991,8 +988,9 @@
 							<div class="clearfix"></div>
 					  </div>
 					</div>
+					<!-- End Home -->
 					<div id="segmented" class="tab-pane fade js-color" data-value="0.01" data-color="Segmented">
-					  <h3>Segmented Colors</h3>
+					  <h3>Segmented Colors</h3> <button id="addCustomSegmented" class="btn-add-custom-color"><i class="fa fa-plus"></i> Add Custom Color</button>
 					  <div id="main-color-content">
 					     <div class="col-xs-4 box-color">
 							<img src="assets/images/src/custom.png"/>
@@ -2450,8 +2448,9 @@
 							<div class="clearfix"></div>
 					 </div>
 					</div>
+					<!-- End Segmented -->
 					<div id="swirls" class="tab-pane fade js-color" data-value="0.01" data-color="Swirls">
-					  <h3>Swirls Color</h3>
+					  <h3 style="width:auto;">Swirls Color</h3> <button id="addCustomSwirl" class="btn-add-custom-color"><i class="fa fa-plus"></i> Add Custom Color</button>
 					  <div id="main-color-content">
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/src/custom.png"/>
@@ -3758,3 +3757,224 @@
 		</div>
 	</div>
 </div>
+
+<div id="solidCustomColorSelector" class="hide" style="display:none;">
+	<div class="col-xs-4 box-color dynamic-box-color">
+		<button class="btn-close-custom-color">X</button>
+		<img src="assets/images/src/custom.png"/>
+		<button id="custom-color-button" data-toggle="modal" data-target="#ColorModal">Custom Color</button>
+		<!--------Modal---------->
+		<div class="modal fade" id="ColorModal" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Pick Custom Color</h4>
+					</div>
+					<div class="modal-body">
+						<?php include "solid-color-dynamic-template.php";?>
+						<div class="clearfix"></div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+				<!---------End Modal Content-------------->
+			</div>
+		</div>
+		<!-----End Modal Div ---->
+		<div class="clearfix"></div>
+		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input  type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
+		<div class="clearfix"></div>
+		<!---------Start text color option------------>
+		<div class="color-text" style="display:none">
+			<div class="col-sm-1">
+				<?php include "colorAdult-template.php";?>
+			</div>
+			<div class="col-sm-1">
+				<?php include "colorMedium-template.php";?>
+			</div>
+			<div class="col-sm-1">
+				<?php include "colorYouth-template.php";?>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<!-------End text color-------------->
+		<span class="view-more">View More Sizes</span>
+		<div class="show-content">
+			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="text" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
+			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="text" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
+		</div>
+	</div>
+</div>
+
+<div id="segmentedCustomColorSelector" class="hide" style="display:none;">
+	<div class="col-xs-4 box-color dynamic-box-color">
+		<button class="btn-close-custom-color">X</button>
+		<img src="assets/images/src/custom.png"/>
+		<button id="custom-color-button" data-toggle="modal" data-target="#ColorSegModal">Custom Color</button>
+		<!--------Modal---------->
+		<div class="modal fade" id="ColorSegModal" role="dialog">
+				<div class="modal-dialog">
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Pick Custom Color</h4>
+						</div>
+						<div class="modal-body">
+							<?php include "segmented-color-template.php";?>
+							<div class="clearfix"></div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<!---------End Modal Content-------------->
+				</div>
+			</div>
+			<!-----End Modal Div ---->
+		<div class="clearfix"></div>
+		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
+		<div class="clearfix"></div>
+		<!---------Start text color option------------>
+			<div class="color-text" style="display:none">
+				<div class="col-sm-1">
+					<?php include "colorAdult-template.php";?>
+				</div>
+				<div class="col-sm-1">
+					<?php include "colorMedium-template.php";?>
+				</div>
+				<div class="col-sm-1">
+					<?php include "colorYouth-template.php";?>
+				</div>
+					<div class="clearfix"></div>
+			</div>
+		<!-------End text color-------------->
+		<span class="view-more">View More Sizes</span>
+		<div class="show-content">
+			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="text" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
+			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="text" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
+		</div>
+	</div>
+</div>
+
+<div id="swirlCustomColorSelector" class="hide" style="display:none;">
+	<div class="col-xs-4 box-color dynamic-box-color">
+		<button class="btn-close-custom-color">X</button>
+		<img src="assets/images/src/custom.png"/>
+		<button id="custom-color-button" data-toggle="modal" data-target="#ColorSwirlModal">Custom Color</button>
+		<!--------Modal---------->
+		<div class="modal fade" id="ColorSwirlModal" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Pick Custom Color</h4>
+					</div>
+					<div class="modal-body">
+						<?php include "swirl-color-template.php";?>
+						<div class="clearfix"></div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+				<!---------End Modal Content-------------->
+			</div>
+		</div>
+		<!-----End Modal Div ---->
+		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+		<div class="clearfix"></div>
+		<!---------Start text color option------------>
+			<div class="color-text" style="display:none">
+				<div class="col-sm-1">
+					<?php include "colorAdult-template.php";?>
+				</div>
+				<div class="col-sm-1">
+					<?php include "colorMedium-template.php";?>
+				</div>
+				<div class="col-sm-1">
+					<?php include "colorYouth-template.php";?>
+				</div>
+					<div class="clearfix"></div>
+			</div>
+		<!-------End text color-------------->
+		<span class="view-more">View More Sizes</span>
+		<div class="show-content" style="display:none">
+			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="text" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
+			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="text" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(document).ready(function(){
+		//show solid new custom wirstband
+		$('body').on('click', '#addCustomSolid', function(e) {
+			$('#home div#main-color-content').prepend($("#solidCustomColorSelector").html());
+		});
+
+		//show segmented new custom wirstband
+		$('body').on('click', '#addCustomSegmented', function(e) {
+			$('#segmented div#main-color-content').prepend($("#segmentedCustomColorSelector").html());
+		});
+
+		//show swirl new custom wirstband
+		$('body').on('click', '#addCustomSwirl', function(e) {
+			$('#swirls div#main-color-content').prepend($("#swirlCustomColorSelector").html());
+		});
+
+		$('body').on('click', '.btn-close-custom-color', function(e) {
+			$(this).closest(".dynamic-box-color").remove();
+		});
+
+		//colorpicker for dynamic color picker
+		$('body').on('click', '.dynamic-pick-color-list li', function(e) {
+			var color = $(this).attr('refcode');
+			var p = $(this).parent('.dynamic-pick-color-list').prev('.box-opt-color');
+			var num = p.find('input[type="text"]').length;
+			var pick = $(this);
+			var limit = $(this).parent('.dynamic-pick-color-list').find('li.active').length;
+			var box = $(this).parents('.box-color');
+
+			if(!pick.hasClass('active') && limit < num) {
+				var f = p.find('li:not(.active)').eq(0);
+				pick.addClass('active');
+				pick.addClass('select-box-col');
+				f.find('input').val(color);
+				f.addClass('active').css('border-color', '#'+color);
+				f.attr('refcode', color);
+
+				if(num == 1) {
+					box.find('input[type="number"]').attr('ref', color);
+				}
+				if(num > 1) {
+					var colors = [];
+					p.find('li.active').each(function(){
+						var c = $(this).attr('refcode');
+						colors.push(c);
+					});
+					box.find('input[type="number"]').attr('ref', colors.join(','));
+				}
+			} else {
+				pick.removeClass('active');
+				pick.removeClass('select-box-col');
+				var f = p.find('li[refcode="'+color+'"]');
+				f.removeClass('active');
+				f.removeAttr('refcode');
+				f.removeAttr('style');
+				f.find('input').val('');
+			}
+		});
+
+	});
+</script>

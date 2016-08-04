@@ -49,15 +49,15 @@ $(function(){
 		$('.c-input').css("display","block");
 	});
 
-
+	//show preview image
 	$('body').on('click', '.preview-pill', function(e) {
 		$('.preview-pill').removeClass('active');
 		$(this).addClass('active');
 
 		$("#front-view").css('background', 'url(' + $(this).attr('data-image-link') + ')');
 		$("#back-view").css('background', 'url(' + $(this).attr('data-image-link') + ')');
+		$("#inside-view").css('background', 'url(' + $(this).attr('data-image-link') + ')');
 	});
-
 
 	//preview message
 	$('.band-text').keyup(function(){
