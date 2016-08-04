@@ -136,27 +136,64 @@ $(function(){
 		get_style_size('price_table');
 	});
 
+	// //adding quantity to wristband colors
+	// $('.box-color').find('input[name$="-qty"]').keydown(function(e){
+	// 	// Allow: backspace, delete, tab, escape, enter and .
+	// 	if ($.inArray(e.keyCode, [46, 8, 9, 27, 13]) !== -1 ||
+	// 	    // Allow: Ctrl+A
+	// 	    (e.keyCode == 65 && e.ctrlKey === true) ||
+	// 	    // Allow: home, end, left, right
+	// 	    (e.keyCode >= 35 && e.keyCode <= 39)) {
+	// 	        // let it happen, don't do anything
+	// 	        return;
+	// 	}
+	// 	// Ensure that it is a number and stop the keypress
+	// 	if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105 || e.keyCode == 190 || e.keyCode == 110)) {
+	// 	    e.preventDefault();
+	// 	}
+	// 	else {
+	// 		get_style_size('fixed_price');
+	// 	}
+	// });
+
 	//adding quantity to wristband colors
-	$('.box-color').find('input[name$="-qty"]').keydown(function(e){
+	$('body').on('keydown', '.box-color input[name$="-qty"]', function(e) {
+	// $('.box-color').find('input[name$="-qty"]').keydown(function(e) {
 		// Allow: backspace, delete, tab, escape, enter and .
 		if ($.inArray(e.keyCode, [46, 8, 9, 27, 13]) !== -1 ||
-		    // Allow: Ctrl+A
-		    (e.keyCode == 65 && e.ctrlKey === true) ||
-		    // Allow: home, end, left, right
-		    (e.keyCode >= 35 && e.keyCode <= 39)) {
-		        // let it happen, don't do anything
-		        return;
+			// Allow: Ctrl+A
+			(e.keyCode == 65 && e.ctrlKey === true) ||
+			// Allow: home, end, left, right
+			(e.keyCode >= 35 && e.keyCode <= 39)) {
+			// let it happen, don't do anything
+			return;
 		}
 		// Ensure that it is a number and stop the keypress
 		if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105 || e.keyCode == 190 || e.keyCode == 110)) {
-		    e.preventDefault();
-		}
-		else {
+			e.preventDefault();
+		} else {
 			get_style_size('fixed_price');
 		}
 	});
 
-	$('.box-color').find('input[name$="-qty"]').blur(function(){
+	// $('.box-color').find('input[name$="-qty"]').blur(function(){
+	// 	var total = 0;
+	// 	$('#wrist_color_container').find('.js-color').find('input[name$="-qty"]').each(function(i, el){
+	// 		var qty = $(this).val();
+
+	// 		if(qty != '') {
+	// 			total += parseInt(qty);
+	// 		}
+			
+	// 	});
+
+	// 	if(total == 0) {
+	// 		$('.js-total').hide();
+	// 		$('.js-no-total').fadeIn(300);
+	// 	}
+	// });
+
+	$('body').on('blur', '.box-color input[name$="-qty"]', function(e) {
 		var total = 0;
 		$('#wrist_color_container').find('.js-color').find('input[name$="-qty"]').each(function(i, el){
 			var qty = $(this).val();
@@ -243,30 +280,61 @@ $(function(){
 	});
 	
 	//solid done button click
-	$('.done-b').click(function(){
+	// $('.done-b').click(function(){
+	$('body').on('click', '.done-b', function() {
 		if($.trim($('#solid-color-0').val()) == ''){
 			alert('You need to choose a color');
-		}else{	
+		}else{
 			$("#ColorModal").modal('toggle');
+		}
+	});
+
+	//solid dynamic done button click
+	$('body').on('click', '.dynamic-done-b', function() {
+		if($.trim($(this).closest('.box-opt-color').find('.dynamic-solid-color').val()) == ''){
+			alert('You need to choose a color');
+		}else{
+			$(this).closest('.modal').modal('toggle');
 		}
 	});
 	
 	//segmented done button click
-	$('.done-s').click(function(){
-			if($.trim($('#segmented-color-0').val()) == ''){
-				alert('You need to choose colors');
-			}else{	
-				$("#ColorSegModal").modal('toggle');
-			}
+	// $('.done-s').click(function(){
+	$('body').on('click', '.done-s', function() {
+		if($.trim($('#segmented-color-0').val()) == ''){
+			alert('You need to choose colors');
+		}else{
+			$("#ColorSegModal").modal('toggle');
+		}
+	});
+	
+	//segmented dynamic done button click
+	$('body').on('click', '.dynamic-done-s', function() {
+		if($.trim($(this).closest('.box-opt-color').find('.dynamic-segmented-color').val()) == ''){
+			alert('You need to choose colors');
+		}else{
+			$(this).closest('.modal').modal('toggle');
+		}
 	});
 	
 	//swirl done button click
-	$('.done-sw').click(function(){
-			if($.trim($('#swirl-color-0').val()) == ''){
-				alert('You need to choose colors');
-			}else{	
-				$("#ColorSwirlModal").modal('toggle');
-			}
+	// $('.done-sw').click(function(){
+	$('body').on('click', '.done-sw', function() {
+		if($.trim($('#swirl-color-0').val()) == ''){
+			alert('You need to choose colors');
+		}else{
+			$("#ColorSwirlModal").modal('toggle');
+		}
+	});
+	
+	//swirl done button click
+	// $('.done-sw').click(function(){
+	$('body').on('click', '.dynamic-done-sw', function() {
+		if($.trim($(this).closest('.box-opt-color').find('.dynamic-swirl-color').val()) == ''){
+			alert('You need to choose colors');
+		}else{
+			$(this).closest('.modal').modal('toggle');
+		}
 	});
 	
 });
@@ -346,13 +414,17 @@ function get_price_data($style, $size, type) {
 		  								var qty = $(this).val();
 										
 		  								if(qty != ''){ 
-											/*getSelectedColor("#drpColorId");*/
 											total_qty += parseInt(qty);
-											
+											// console.log("-------");
+											// console.log($(this).attr('ref'));
+											// $("#preview-pane-selection").html("");
 		  									var ref_type = $(this).parents('.tab-pane').data('color').toLowerCase();
-		  									var ref_colors = $(this).attr('ref').split(',');
-		  									
-											generatePreviewImage(ref_type, ref_colors);
+		  									if ( typeof $(this).attr('ref') === "undefined" ) {
+		  										return false;
+		  									} else {
+			  									var ref_colors = $(this).attr('ref').split(',');	
+												generatePreviewImage(ref_type, ref_colors);
+		  									}
 										}
 		  							});
 

@@ -820,7 +820,7 @@ input#font-color {
     margin-top: -5px;
 }
 
-.done-b{
+.done-b, .dynamic-done-b{
     background-color: #17a589;
     color: #fff;
     border: 1px solid #117864;
@@ -829,7 +829,7 @@ input#font-color {
 }
 
 
-.done-s{
+.done-s, .dynamic-done-s{
     background-color: #17a589;
     color: #fff;
     border: 1px solid #117864;
@@ -837,7 +837,7 @@ input#font-color {
     border-radius: 3px;
 }
 
-.done-sw{
+.done-sw, .dynamic-done-sw{
     background-color: #17a589;
     color: #fff;
     border: 1px solid #117864;

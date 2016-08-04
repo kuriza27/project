@@ -3762,9 +3762,9 @@
 	<div class="col-xs-4 box-color dynamic-box-color">
 		<button class="btn-close-custom-color">X</button>
 		<img src="assets/images/src/custom.png"/>
-		<button id="custom-color-button" data-toggle="modal" data-target="#ColorModal">Custom Color</button>
+		<button id="custom-color-button" class="custom-color-solid-button" data-toggle="modal" data-target="#ColorModal">Custom Color</button>
 		<!--------Modal---------->
-		<div class="modal fade" id="ColorModal" role="dialog">
+		<div class="modal fade" class="ColorModal" id="ColorModal" role="dialog">
 			<div class="modal-dialog">
 				<!-- Modal content-->
 				<div class="modal-content">
@@ -3815,7 +3815,7 @@
 	<div class="col-xs-4 box-color dynamic-box-color">
 		<button class="btn-close-custom-color">X</button>
 		<img src="assets/images/src/custom.png"/>
-		<button id="custom-color-button" data-toggle="modal" data-target="#ColorSegModal">Custom Color</button>
+		<button id="custom-color-button" class="custom-color-segmented-button" data-toggle="modal" data-target="#ColorSegModal">Custom Color</button>
 		<!--------Modal---------->
 		<div class="modal fade" id="ColorSegModal" role="dialog">
 				<div class="modal-dialog">
@@ -3826,7 +3826,7 @@
 							<h4 class="modal-title">Pick Custom Color</h4>
 						</div>
 						<div class="modal-body">
-							<?php include "segmented-color-template.php";?>
+							<?php include "segmented-color-dynamic-template.php";?>
 							<div class="clearfix"></div>
 						</div>
 						<div class="modal-footer">
@@ -3879,7 +3879,7 @@
 						<h4 class="modal-title">Pick Custom Color</h4>
 					</div>
 					<div class="modal-body">
-						<?php include "swirl-color-template.php";?>
+						<?php include "swirl-color-dynamic-template.php";?>
 						<div class="clearfix"></div>
 					</div>
 					<div class="modal-footer">
@@ -3917,20 +3917,44 @@
 </div>
 
 <script>
-	$(document).ready(function(){
-		//show solid new custom wirstband
+
+	var dynamicSolidCount = 0;
+	var dynamicSSegmentedCount = 0;
+	var dynamicSwirlCount = 0;
+
+	$(document).ready(function() {
+
+		//show new solid custom wirstband
 		$('body').on('click', '#addCustomSolid', function(e) {
+			newId = "ColorModal"+dynamicSolidCount;
+			dynamicSolidCount++;
+			$("#solidCustomColorSelector .dynamic-box-color #custom-color-button").attr("data-target", "#"+newId)
+			$("#solidCustomColorSelector .dynamic-box-color .modal").attr("id", newId);
 			$('#home div#main-color-content').prepend($("#solidCustomColorSelector").html());
 		});
 
-		//show segmented new custom wirstband
+		//show new segmented custom wirstband
 		$('body').on('click', '#addCustomSegmented', function(e) {
+			newId = "ColorSegModal"+dynamicSSegmentedCount;
+			dynamicSSegmentedCount++;
+			$("#segmentedCustomColorSelector .dynamic-box-color #custom-color-button").attr("data-target", "#"+newId)
+			$("#segmentedCustomColorSelector .dynamic-box-color .modal").attr("id", newId);
 			$('#segmented div#main-color-content').prepend($("#segmentedCustomColorSelector").html());
 		});
 
-		//show swirl new custom wirstband
+		//show new swirl custom wirstband
 		$('body').on('click', '#addCustomSwirl', function(e) {
+			newId = "ColorSwirlModal"+dynamicSwirlCount;
+			dynamicSwirlCount++;
+			$("#swirlCustomColorSelector .dynamic-box-color #custom-color-button").attr("data-target", "#"+newId)
+			$("#swirlCustomColorSelector .dynamic-box-color .modal").attr("id", newId);
 			$('#swirls div#main-color-content').prepend($("#swirlCustomColorSelector").html());
+		});
+
+		//show new dynamic modals
+		$('body').on('click', '.custom-color-solid-button, .custom-color-segmented-button, .custom-color-swirl-button', function(e) {
+			var iD = $(this).attr("data-target");
+			$("#"+iD).modal("show");
 		});
 
 		$('body').on('click', '.btn-close-custom-color', function(e) {

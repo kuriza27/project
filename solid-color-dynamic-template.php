@@ -2,7 +2,7 @@
 		<h5>Select Solid Color</h5>
 		<ul>
 		  <li>
-			<input id="dynamic-solid-color-0" type="text" placeholder="PMS#" refid="0">
+			<input id="dynamic-solid-color-0" class="dynamic-solid-color" type="text" placeholder="PMS#" refid="0">
 		   </li>
 		    <li>
 			<button class="dynamic-done-b">Done</button>
