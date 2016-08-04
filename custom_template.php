@@ -72,7 +72,7 @@
 					  <h3>Solid Colors</h3> <button id="addCustomSolid" class="btn-add-custom-color"><i class="fa fa-plus"></i> Add Custom Color</button>
 					  <div id="main-color-content">
 					  <div class="col-xs-4 box-color">
-							<img src="assets/images/src/custom.png"/>
+							<img class="PreviewColorModal" src="assets/images/src/custom.png"/>
 							<button id="custom-color-button" data-toggle="modal" data-target="#ColorModal">Custom Color</button>
 							<!--------Modal---------->
 							<div class="modal fade" id="ColorModal" role="dialog">
@@ -993,7 +993,7 @@
 					  <h3>Segmented Colors</h3> <button id="addCustomSegmented" class="btn-add-custom-color"><i class="fa fa-plus"></i> Add Custom Color</button>
 					  <div id="main-color-content">
 					     <div class="col-xs-4 box-color">
-							<img src="assets/images/src/custom.png"/>
+							<img class="segPreviewColorModal" src="assets/images/src/custom.png"/>
 							<button id="custom-color-button" data-toggle="modal" data-target="#ColorSegModal">Custom Color</button>
 							<!--------Modal---------->
 							<div class="modal fade" id="ColorSegModal" role="dialog">
@@ -2453,7 +2453,7 @@
 					  <h3 style="width:auto;">Swirls Color</h3> <button id="addCustomSwirl" class="btn-add-custom-color"><i class="fa fa-plus"></i> Add Custom Color</button>
 					  <div id="main-color-content">
 						<div class="col-xs-4 box-color">
-							<img src="assets/images/src/custom.png"/>
+							<img class="swlPreviewColorModal" src="assets/images/src/custom.png"/>
 							<button id="custom-color-button" data-toggle="modal" data-target="#ColorSwirlModal">Custom Color</button>
 							<!--------Modal---------->
 							<div class="modal fade" id="ColorSwirlModal" role="dialog">
@@ -3548,6 +3548,7 @@
 					</div>
 
 					<?php include_once 'preview_template.php'; ?>
+					<?php include_once 'preview_band_template.php'; ?>
 
 					<h3>PREVIEW</h3>
 						<div id="preview-pane">
@@ -3741,7 +3742,7 @@
 <div id="solidCustomColorSelector" class="hide" style="display:none;">
 	<div class="col-xs-4 box-color dynamic-box-color">
 		<button class="btn-close-custom-color">X</button>
-		<img src="assets/images/src/custom.png"/>
+		<img class="solidPreviewColorModal" src="assets/images/src/custom.png"/>
 		<button id="custom-color-button" class="custom-color-solid-button" data-toggle="modal" data-target="#ColorModal">Custom Color</button>
 		<!--------Modal---------->
 		<div class="modal fade" class="ColorModal" id="ColorModal" role="dialog">
@@ -3794,7 +3795,7 @@
 <div id="segmentedCustomColorSelector" class="hide" style="display:none;">
 	<div class="col-xs-4 box-color dynamic-box-color">
 		<button class="btn-close-custom-color">X</button>
-		<img src="assets/images/src/custom.png"/>
+		<img class="segmentedPreviewColorModal" src="assets/images/src/custom.png"/>
 		<button id="custom-color-button" class="custom-color-segmented-button" data-toggle="modal" data-target="#ColorSegModal">Custom Color</button>
 		<!--------Modal---------->
 		<div class="modal fade" id="ColorSegModal" role="dialog">
@@ -3847,7 +3848,7 @@
 <div id="swirlCustomColorSelector" class="hide" style="display:none;">
 	<div class="col-xs-4 box-color dynamic-box-color">
 		<button class="btn-close-custom-color">X</button>
-		<img src="assets/images/src/custom.png"/>
+		<img class="swirlPreviewColorModal" src="assets/images/src/custom.png"/>
 		<button id="custom-color-button" data-toggle="modal" data-target="#ColorSwirlModal">Custom Color</button>
 		<!--------Modal---------->
 		<div class="modal fade" id="ColorSwirlModal" role="dialog">
@@ -3908,33 +3909,49 @@
 		$('body').on('click', '#addCustomSolid', function(e) {
 			newId = "ColorModal"+dynamicSolidCount;
 			dynamicSolidCount++;
+			$("#solidCustomColorSelector .dynamic-box-color img.solidPreviewColorModal").attr('class','solidPreviewColorModal');
+			$("#solidCustomColorSelector .dynamic-box-color img.solidPreviewColorModal").addClass("Preview"+newId)
 			$("#solidCustomColorSelector .dynamic-box-color #custom-color-button").attr("data-target", "#"+newId)
 			$("#solidCustomColorSelector .dynamic-box-color .modal").attr("id", newId);
+			
 			$('#home div#main-color-content').prepend($("#solidCustomColorSelector").html());
+			$("#solidCustomColorSelector .dynamic-box-color img.solidPreviewColorModal").attr('class','solidPreviewColorModal');
 		});
 
 		//show new segmented custom wirstband
 		$('body').on('click', '#addCustomSegmented', function(e) {
 			newId = "ColorSegModal"+dynamicSSegmentedCount;
 			dynamicSSegmentedCount++;
+			$("#segmentedCustomColorSelector .dynamic-box-color img.segmentedPreviewColorModal").attr('class','segmentedPreviewColorModal');
+			$("#segmentedCustomColorSelector .dynamic-box-color img.segmentedPreviewColorModal").addClass("Preview"+newId)
 			$("#segmentedCustomColorSelector .dynamic-box-color #custom-color-button").attr("data-target", "#"+newId)
 			$("#segmentedCustomColorSelector .dynamic-box-color .modal").attr("id", newId);
+			
 			$('#segmented div#main-color-content').prepend($("#segmentedCustomColorSelector").html());
+			$("#segmentedCustomColorSelector .dynamic-box-color img.segmentedPreviewColorModal").attr('class','segmentedPreviewColorModal');
 		});
 
 		//show new swirl custom wirstband
 		$('body').on('click', '#addCustomSwirl', function(e) {
 			newId = "ColorSwirlModal"+dynamicSwirlCount;
 			dynamicSwirlCount++;
+			$("#swirlCustomColorSelector .dynamic-box-color img.swirlPreviewColorModal").attr('class','swirlPreviewColorModal');
+			$("#swirlCustomColorSelector .dynamic-box-color img.swirlPreviewColorModal").addClass("Preview"+newId)
 			$("#swirlCustomColorSelector .dynamic-box-color #custom-color-button").attr("data-target", "#"+newId)
 			$("#swirlCustomColorSelector .dynamic-box-color .modal").attr("id", newId);
+			
 			$('#swirls div#main-color-content').prepend($("#swirlCustomColorSelector").html());
+			$("#swirlCustomColorSelector .dynamic-box-color img.swirlPreviewColorModal").attr('class','swirlPreviewColorModal');
 		});
 
 		//show new dynamic modals
 		$('body').on('click', '.custom-color-solid-button, .custom-color-segmented-button, .custom-color-swirl-button', function(e) {
 			var iD = $(this).attr("data-target");
-			$("#"+iD).modal("show");
+			// if(iD.charAt(0) === "#") {
+			// 	$(iD).modal("show");
+			// } else {
+				$("#"+iD).modal("show");
+			// }
 		});
 
 		$('body').on('click', '.btn-close-custom-color', function(e) {

@@ -56,6 +56,7 @@
 	<script type="text/javascript" src="assets/js/canvg.js"></script>
 	<script type="text/javascript" src="assets/js/stackblur.js"></script>
 	<script type="text/javascript" src="assets/js/preview.js"></script>
+	<script type="text/javascript" src="assets/js/preview_band.js"></script>
 
 	<script src="assets/js/main-2.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

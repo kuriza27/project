@@ -2,7 +2,7 @@
 		<h5>Select Solid Color</h5>
 		<ul>
 		  <li>
-			<input id="solid-color-0" type="text" placeholder="PMS#" refid="0">
+			<input id="solid-color-0" class="solid-color-0" type="text" placeholder="PMS#" refid="0">
 		   </li>
 		    <li>
 			<button class="done-b">Done</button>

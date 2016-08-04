@@ -285,7 +285,10 @@ $(function(){
 		if($.trim($('#solid-color-0').val()) == ''){
 			alert('You need to choose a color');
 		}else{
-			$("#ColorModal").modal('toggle');
+			var color = [ $(this).closest('.box-opt-color').find('.solid-color-0').val() ];
+
+			$(".PreviewColorModal").attr('src', generatePreviewBandImage('solid', color));
+			$("#ColorModal").modal('hide');
 		}
 	});
 
@@ -294,16 +297,28 @@ $(function(){
 		if($.trim($(this).closest('.box-opt-color').find('.dynamic-solid-color').val()) == ''){
 			alert('You need to choose a color');
 		}else{
-			$(this).closest('.modal').modal('toggle');
+			var imgID = ".Preview" + $(this).closest('.modal').attr("id");
+			var color = [ $(this).closest('.box-opt-color').find('.solid-color-0').val() ];
+
+			$(imgID).attr('src', generatePreviewBandImage('solid', color));
+			$(this).closest('.modal').modal('hide');
 		}
 	});
 	
 	//segmented done button click
-	// $('.done-s').click(function(){
 	$('body').on('click', '.done-s', function() {
 		if($.trim($('#segmented-color-0').val()) == ''){
 			alert('You need to choose colors');
 		}else{
+			var color = [ 	$(this).closest('.box-opt-color').find('.segmented-color-0').val(),
+							$(this).closest('.box-opt-color').find('.segmented-color-1').val(),
+							$(this).closest('.box-opt-color').find('.segmented-color-2').val(),
+							$(this).closest('.box-opt-color').find('.segmented-color-3').val(),
+							$(this).closest('.box-opt-color').find('.segmented-color-4').val(),
+							$(this).closest('.box-opt-color').find('.segmented-color-5').val() ];
+			color = color.filter(Boolean);
+			$(".segPreviewColorModal").attr('src', generatePreviewBandImage('segmented', color));
+
 			$("#ColorSegModal").modal('toggle');
 		}
 	});
@@ -313,27 +328,48 @@ $(function(){
 		if($.trim($(this).closest('.box-opt-color').find('.dynamic-segmented-color').val()) == ''){
 			alert('You need to choose colors');
 		}else{
-			$(this).closest('.modal').modal('toggle');
+			var imgID = ".Preview" + $(this).closest('.modal').attr("id");
+			var color = [ 	$(this).closest('.box-opt-color').find('.segmented-color-0').val(),
+							$(this).closest('.box-opt-color').find('.segmented-color-1').val(),
+							$(this).closest('.box-opt-color').find('.segmented-color-2').val(),
+							$(this).closest('.box-opt-color').find('.segmented-color-3').val(),
+							$(this).closest('.box-opt-color').find('.segmented-color-4').val(),
+							$(this).closest('.box-opt-color').find('.segmented-color-5').val() ];
+			color = color.filter(Boolean);
+
+			$(imgID).attr('src', generatePreviewBandImage('segmented', color));
+			$(this).closest('.modal').modal('hide');
 		}
 	});
 	
 	//swirl done button click
-	// $('.done-sw').click(function(){
 	$('body').on('click', '.done-sw', function() {
 		if($.trim($('#swirl-color-0').val()) == ''){
 			alert('You need to choose colors');
 		}else{
-			$("#ColorSwirlModal").modal('toggle');
+			var color = [ 	$(this).closest('.box-opt-color').find('.swirl-color-0').val(),
+							$(this).closest('.box-opt-color').find('.swirl-color-1').val(),
+							$(this).closest('.box-opt-color').find('.swirl-color-2').val() ];
+			color = color.filter(Boolean);
+			$(".swlPreviewColorModal").attr('src', generatePreviewBandImage('swirls', color));
+
+			$("#ColorSwirlModal").modal('hide');
 		}
 	});
 	
 	//swirl done button click
-	// $('.done-sw').click(function(){
 	$('body').on('click', '.dynamic-done-sw', function() {
 		if($.trim($(this).closest('.box-opt-color').find('.dynamic-swirl-color').val()) == ''){
 			alert('You need to choose colors');
 		}else{
-			$(this).closest('.modal').modal('toggle');
+			var imgID = ".Preview" + $(this).closest('.modal').attr("id");
+			var color = [ 	$(this).closest('.box-opt-color').find('.swirl-color-0').val(),
+							$(this).closest('.box-opt-color').find('.swirl-color-1').val(),
+							$(this).closest('.box-opt-color').find('.swirl-color-2').val() ];
+			color = color.filter(Boolean);
+
+			$(imgID).attr('src', generatePreviewBandImage('swirls', color));
+			$(this).closest('.modal').modal('hide');
 		}
 	});
 	
