@@ -244,11 +244,11 @@ $(function(){
 	
 	//solid done button click
 	$('.done-b').click(function(){
-			if($.trim($('#solid-color-0').val()) == ''){
-				alert('You need to choose a color');
-			}else{	
-				$("#ColorModal").modal('toggle');
-			}
+		if($.trim($('#solid-color-0').val()) == ''){
+			alert('You need to choose a color');
+		}else{	
+			$("#ColorModal").modal('toggle');
+		}
 	});
 	
 	//segmented done button click
