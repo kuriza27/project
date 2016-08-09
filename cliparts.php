@@ -5,7 +5,7 @@
 	<div class="clips-content">
 
 		<?php include_once 'clipart-template.php'; ?>
-
+		<div class="clearfix"></div>
 	</div>
 
    </div>

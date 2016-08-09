@@ -13,14 +13,15 @@
 
 
 .fonts-content li {
-    width: 33%!important;
+    width: 28%!important;
     padding: 4px!important;
     border: none!important;
-	margin-bottom:40px;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
 .font-style-list li img {
-    width: AUTO!IMPORTANT;
+    width: 212px;
 }
 </style>
 <?php include_once 'footer.php'; ?>

@@ -1,9 +1,7 @@
 <div class="pick-solid box-opt-color">
 		<h5>Select Font Color</h5>
 		<ul>
-		  <li>
-			<input id="font-color" type="text" placeholder="PMS#" refid="0">
-		   </li>
+			<div class="clearfix"></div>
 		</ul>
 			<div class="clearfix"></div>
 </div>

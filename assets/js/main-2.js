@@ -257,9 +257,10 @@ $(function(){
 	$('.font-color-list li').click(function(){
 			var textcolor = $(this).attr('refcode');
 			console.log(textcolor);
-			if(textcolor != undefined);{
+			if(textcolor != undefined || textcolor != '');{
 				$("#preview-pane").css("color", "#"+textcolor);
 				$("#preview-textcolor").css("background-color", "#"+textcolor);
+				$("#FontColorModal").modal('toggle');
 			}
 	});
 	
@@ -286,7 +287,8 @@ $(function(){
 			alert('You need to choose a color');
 		}else{
 			var color = [ $(this).closest('.box-opt-color').find('.solid-color-0').val() ];
-
+			
+			
 			$(".PreviewColorModal").attr('src', generatePreviewBandImage('solid', color));
 			$("#ColorModal").modal('hide');
 		}
