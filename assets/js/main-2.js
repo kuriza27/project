@@ -109,6 +109,7 @@ $(function(){
 			$(".regular-color-size").css("display","none");
 			$(".large-color-size").css("display","none");	
 			$(".regular-figured-size").css("display","block");
+			$(".regular-dual-size").css("display","none");
 		}
 		else{
 			$("#onehalf").show();

@@ -5,8 +5,8 @@
 			</div>
 			<div id="wrist_color_container">
 
-				  <div class="tab-content">
-					<div id="segmented-fig-reg" class="tab-pane fade js-color" data-value="0.01" data-color="Segmented">
+				  <div class="content">
+					<div id="segmented-fig-reg" class="js-color" data-value="0.01" data-color="Segmented">
 					  <h3>Dual Colors</h3> <button id="addCustomSegmented" class="btn-add-custom-color"><i class="fa fa-plus"></i> Add Custom Color</button>
 					  <div id="main-color-content">
 					     <div class="col-xs-4 box-color">
@@ -86,7 +86,7 @@
 							</div>
 						</div>
 						<div class="col-xs-4 box-color">
-							<img src="assets/images/dual/GoldBlack.png.png"/>
+							<img src="assets/images/dual/GoldBlack.png"/>
 							<div class="nocustom_pick">Gold Black</div>
 							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="836F3D,000000" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
 							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="836F3D,000000" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
@@ -380,33 +380,6 @@
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="9ABFE5,FEFEFE" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="9ABFE5,FEFEFE" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
-							</div>
-						</div>
-						<div class="col-xs-4 box-color">
-							<img src="assets/images/dual/WhiteLimeGreen.png"/>
-							<div class="nocustom_pick">White Lime Green</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="FEFEFE,8CD50B" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="FEFEFE,8CD50B" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="FEFEFE,8CD50B" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
-							<div class="clearfix"></div>
-							<!---------Start text color option------------>
-								<div class="color-text" style="display:none">
-									<div class="col-sm-1">
-										<?php include "colorAdult-template.php";?>
-									</div>
-									<div class="col-sm-1">
-										<?php include "colorMedium-template.php";?>
-									</div>
-									<div class="col-sm-1">
-										<?php include "colorYouth-template.php";?>
-									</div>
-										<div class="clearfix"></div>
-								</div>
-							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
-							<div class="show-content">
-								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="FEFEFE,8CD50B" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
-								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="FEFEFE,8CD50B" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
 							</div>
 						</div>
 						<div class="col-xs-4 box-color">
