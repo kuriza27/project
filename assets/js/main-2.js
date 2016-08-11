@@ -23,6 +23,7 @@ $(function(){
 	$("#size").change(function() {
 		$('#float').css("font-size", $(this).val() + "px");
 	});
+	
 
 
 	//show extra band size
@@ -95,12 +96,19 @@ $(function(){
 			$("#two").hide();
 			$("#quarter").hide();
 			$("#one").show();
+			$(".regular-color-size").css("display","none");
+			$(".large-color-size").css("display","none");	
+			$(".regular-figured-size").css("display","none");
+			$(".regular-dual-size").css("display","block");
 		}
 		else if(style =='figured'){
 			$("#onehalf").hide();
 			$("#two").hide();
 			$("#quarter").hide();	
 			$("#one").hide();
+			$(".regular-color-size").css("display","none");
+			$(".large-color-size").css("display","none");	
+			$(".regular-figured-size").css("display","block");
 		}
 		else{
 			$("#onehalf").show();
@@ -109,6 +117,10 @@ $(function(){
 			$("#three").show();
 			$("#one").show();
 			$("#half").show();
+			$(".regular-color-size").css("display","block");
+			$(".large-color-size").css("display","none");	
+			$(".regular-figured-size").css("display","none");
+			$(".regular-dual-size").css("display","none");
 		}
 		
 		$('#wrist_color_container').find('.js-color').find('input[name$="-qty"]').val('');
@@ -124,6 +136,15 @@ $(function(){
 
 	//select wristband size
 	$('.js-size').click(function(){
+		var item = $(this).find('input[type="radio"]').val();
+			if(item=="1/4" || item=="1/2"){
+				$(".regular-color-size").css("display","block");
+				$(".large-color-size").css("display","none");
+			}else{
+				$(".regular-color-size").css("display","none");
+				$(".large-color-size").css("display","block");
+			}
+		
 		$('.js-size').find('input[type="radio"]').prop('checked', false);
 		$('.js-size').removeClass('active');
 		$(this).find('input[type="radio"]').prop('checked', true);
@@ -172,6 +193,7 @@ $(function(){
 		if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105 || e.keyCode == 190 || e.keyCode == 110)) {
 			e.preventDefault();
 		} else {
+			console.log("hello");
 			get_style_size('fixed_price');
 		}
 	});
@@ -195,10 +217,15 @@ $(function(){
 
 	$('body').on('blur', '.box-color input[name$="-qty"]', function(e) {
 		var total = 0;
+		var map = {};
+		
 		$('#wrist_color_container').find('.js-color').find('input[name$="-qty"]').each(function(i, el){
-			var qty = $(this).val();
-
+			//var qty = $(this).val();
+            var qty = map[$(this).attr("name")] = $(this).val();
+			console.log("large-"+qty)
 			if(qty != '') {
+				console.log("sulod here");
+				console.log(qty);
 				total += parseInt(qty);
 			}
 			
@@ -287,7 +314,6 @@ $(function(){
 			alert('You need to choose a color');
 		}else{
 			var color = [ $(this).closest('.box-opt-color').find('.solid-color-0').val() ];
-			
 			
 			$(".PreviewColorModal").attr('src', generatePreviewBandImage('solid', color));
 			$("#ColorModal").modal('hide');
@@ -572,6 +598,7 @@ function get_price_data($style, $size, type) {
 		  										return false;
 		  									} else {
 			  									var ref_colors = $(this).attr('ref').split(',');	
+												$(".click-pre").css("display","block");
 												generatePreviewImage(ref_type, ref_colors);
 		  									}
 										}

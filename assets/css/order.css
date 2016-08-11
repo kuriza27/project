@@ -261,7 +261,7 @@ ORDER CSS
 }
 
 .wrist-size .col-md-4 {
-    width: 16%;
+    width: 16.6%;
     padding: 6px;
     text-align: center;
     margin-top: 10px;
@@ -912,5 +912,10 @@ span.end-cc {
 
 .inside-m {
     color: #212f3d;
+    font-weight: bold;
+}
+
+.click-pre{
+	color: #079ca5;
     font-weight: bold;
 }
