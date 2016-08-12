@@ -96,6 +96,6 @@
 		</ul>
 	</div>
 	<div class="clearfix"></div>
-   </div>
+   </div><!----End Container----->
 </div>
 <?php include_once 'footer.php'; ?>

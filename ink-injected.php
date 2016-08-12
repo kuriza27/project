@@ -41,49 +41,58 @@
 					<div class="clearfix"></div>
 			</div>
 			<div class="wrist_style_container">
+				<<div class="popup-order-gallery">
 				<div class="col-md-4 prod js-style"  value="printed">
+				  <div class="zoom"><a href="assets/images/src/Printed.png" title="Printed Wristband"><img src="assets/images/src/zoom.png" class="galleryimg"></a></div>
 				  <div class="box-thumb"><img src="assets/images/src/Printed.png"></div>
 				  <input type="radio" name="wrist_style" id="printed" class="wrist_style" value="printed" data-style="imprinted">
 				  <h2>Printed</h2>
 				</div>
 				<div class="col-md-4 prod js-style"  value="debossed">
+				<div class="zoom"><a href="assets/images/src/Debossed.png" title="Debossed Wristband"><img src="assets/images/src/zoom.png" class="galleryimg"></a></div>
 				  <div class="box-thumb"><img src="assets/images/src/Debossed.png"></div>
 				  <input type="radio" name="wrist_style" id="debossed" class="wrist_style" value="debossed" data-style="debossed">
 				  <h2>Debossed</h2>
 				</div>
 				<div class="col-md-4 prod js-style"  value="ink-injected">
+				<div class="zoom"><a href="assets/images/src/Color-Filled.png" title="Color-Filled Wristband"><img src="assets/images/src/zoom.png" class="galleryimg"></a></div>
 				  <div class="box-thumb"><img src="assets/images/src/Color-Filled.png"></div>
-				  <input type="radio" name="wrist_style" id="ink-injected" class="wrist_style" value="ink-injected" data-style="color-filled"  checked="checked">
+				  <input type="radio" name="wrist_style" id="ink-injected" class="wrist_style" value="ink-injected" data-style="color-filled" checked="checked">
 				  <h2>Ink Injected</h2>
 				</div>
 				<div class="col-md-4 prod js-style"  value="embossed">
+				<div class="zoom"><a href="assets/images/src/Embossed.png" title="Embossed Wristband"><img src="assets/images/src/zoom.png" class="galleryimg"></a></div>
 				  <div class="box-thumb"><img src="assets/images/src/Embossed.png"></div>
 				  <input type="radio" name="wrist_style" id="embossed" class="wrist_style" value="embossed" data-style="embossed">
 				  <h2>Embossed</h2>
 				</div>
 				<div class="col-md-4 prod js-style"  value="dual-layer">
+				<div class="zoom"><a href="assets/images/src/Dual-Layer.png" title="Dual-Layer Wristband"><img src="assets/images/src/zoom.png" class="galleryimg"></a></div>
 				  <div class="box-thumb"><img src="assets/images/src/Dual-Layer.png"></div>
 				  <input type="radio" name="wrist_style" id="dual-layer" class="wrist_style" value="dual-layer" data-style="dual-layer">
 				  <h2>Dual layer</h2>
 				</div>
 				<div class="col-md-4 prod js-style" value="embossed-printed">
+				<div class="zoom"><a href="assets/images/src/Embossed-Printed.png" title="Embossed-Printed Wristband"><img src="assets/images/src/zoom.png" class="galleryimg"></a></div>
 				  <div class="box-thumb"><img src="assets/images/src/Embossed-Printed.png"></div>
 				   <input type="radio" name="wrist_style" id="embossed-printed" class="wrist_style" value="embossed-printed" data-style="embossed-printed">
 				  <h2>Embossed Printed</h2>
 				</div>
 				<div class="col-md-4 prod js-style" value="figured">
+				<div class="zoom"><a href="assets/images/src/Figured.png" title="Figured Wristband"><img src="assets/images/src/zoom.png" class="galleryimg"></a></div>
 				  <div class="box-thumb"><img src="assets/images/src/Figured.png"></div>
 				   <input type="radio" name="wrist_style" id="figured" class="wrist_style" value="figured" data-style="figured">
 				  <h2>Figured</h2>
 				</div>
 				<div class="col-md-4 prod js-style" value="blank-style">
+				<div class="zoom"><a href="assets/images/src/Blank.png" title="Blank Wristband"><img src="assets/images/src/zoom.png" class="galleryimg"></a></div>
 				  <div class="box-thumb"><img src="assets/images/src/Blank.png"></div>
 				   <input type="radio" name="wrist_style" id="blank-style" class="wrist_style" value="blank-style" data-style="blank">
 				  <h2>Blank</h2>
 				</div>
-			</div>
 				<div class="clearfix"></div>
 				<input type="hidden" name="style_info" class="style_info">
+			</div><!--end popupgallery--->
 		</div>
 		<!-- END WRIST STYLE -->
 			<div class="clearfix"></div>
