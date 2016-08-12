@@ -92,6 +92,7 @@
 								
 								<div class="clip-sec col-xs-6">
 									<button class="fclip-1" data-toggle="modal" data-target="#ClipArtModal" style="margin-left:-14px;">Front Start Clipart</button><br />
+									<a href="#">or Upload your own art</a>
 								</div>
 								<div class="clip-sec col-xs-6">
 									<button class="fclip-2" data-toggle="modal" data-target="#ClipArtModal">Front End Clipart</button><br />
@@ -105,7 +106,7 @@
 								<input type="text" name="back-text" class="band-text" value="" placeholder="Enter Back Message" maxlength="11">
 								<div class="clip-sec col-xs-6">
 									<button class="bclip-1" data-toggle="modal" data-target="#ClipArtModal" style="margin-left:-14px;">Back Start Clipart</button><br />
-									
+									<a href="#">or Upload your own art</a>
 								</div>
 								<div class="clip-sec col-xs-6">
 									<button class="bclip-2" data-toggle="modal" data-target="#ClipArtModal">Back End Clipart</button><br />
@@ -123,6 +124,7 @@
 							<div class="clearfix"></div>
 							<div class="clip-sec" style="float:left;width:20%;margin-left:16px;">
 								<button class="cclip-1" data-toggle="modal" data-target="#ClipArtModal">Start Clipart</button><br />
+								<a href="#">or Upload your own art</a>
 							</div>
 							<div class="clip-sec" style="float:left;width:20%;">
 								<button class="cclip-2" data-toggle="modal" data-target="#ClipArtModal">End Clipart</button><br />
