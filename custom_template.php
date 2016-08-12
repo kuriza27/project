@@ -287,16 +287,12 @@
 				</div>
 				<div class="popup-order-gallery">
 
-					<div id="dv-10-free-keychains" class="col-md-12 add-ons" style="display:block;">
+					<div id="dv-10-free-keychains" class="col-md-12 add-ons" style="display:none;">
 						<div class="box-thumb clearfix">
 							<h1>You have <strong class="js-free-bands-count">10</strong> <strong>FREE</strong> keychains!</h1>
-							<br />
-
-							<input type="radio" id="free-10-keychains" class="free-add-on">
-							<span>Click to claim free keychains</span>
-
+							<br/>
 							<div class="col-xs-12">
-								<h3>Input keychain quantity:</h3>
+								<span>Input keychain quantity:</span>
 								<input type="number" id="freekc" class="freewb-input " pattern="[0-9]*" placeholder="0" data-maxlength="2">
 							</div>
 						</div>

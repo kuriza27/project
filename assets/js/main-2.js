@@ -333,10 +333,20 @@ $(function(){
 			// $('.freewb-input').prop('disabled', false);
 		}else{
 			$('#dv-10-free-keychains').hide();
+			$('#freekc').val('');
 
 			// $('#dv-100-free-band').hide();
 			// $('#dv-100-free-band-content').hide();
 		}
+	});
+
+	$('body').on('blur', '#freekc', function(e){
+		var qty = parseInt($(this).val());
+		if(qty>10){
+			$(this).val('').focus();
+			alert('Must not be more than 10.');
+		}
+		return;
 	});
 
 	// $('body').on('click', '#free-100-wristband', function(){
