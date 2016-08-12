@@ -88,7 +88,7 @@
 							<div class="col-sm-5"   style="border-right:2px solid #154360;margin-left:50px;">
 								<span>Front Message:</span><br />
 								<span class="note-m">* Maximum of 22 characters for both front and back</span>
-								<input type="text" name="front-text" class="band-text" value=""  placeholder="Enter Front Message" maxlength="11">
+								<input type="text" name="front-text" class="band-text" value=""  placeholder="Enter Front Message" maxlength="22">
 								
 								<div class="clip-sec col-xs-6">
 									<button class="fclip-1" data-toggle="modal" data-target="#ClipArtModal" style="margin-left:-14px;">Front Start Clipart</button><br />
@@ -103,7 +103,7 @@
 							<div class="col-sm-5" style="margin-left:60px;">
 								<span>Back Message:</span><br />
 								<span class="note-m">* Maximum of 22 characters for both front and back</span>
-								<input type="text" name="back-text" class="band-text" value="" placeholder="Enter Back Message" maxlength="11">
+								<input type="text" name="back-text" class="band-text" value="" placeholder="Enter Back Message" maxlength="22">
 								<div class="clip-sec col-xs-6">
 									<button class="bclip-1" data-toggle="modal" data-target="#ClipArtModal" style="margin-left:-14px;">Back Start Clipart</button><br />
 									<a href="#">or Upload your own art</a>
@@ -119,7 +119,7 @@
 							<div class="col-sm-8">
 							<span class="inside-m">Inside Text:</span><br /> &nbsp;
 							* Maximum of 22 characters for message<br /> 
-							<input type="text" name="inside-text" class="band-text" value=""  placeholder="Enter Continuous Message">
+							<input type="text" name="inside-text" class="band-text" value=""  placeholder="Enter Continuous Message" maxlength="22">
 							</div>
 							<div class="clearfix"></div>
 							<div class="clip-sec" style="float:left;width:20%;margin-left:16px;">
@@ -164,13 +164,17 @@
 						<div id="preview-pane">
 							<div class="fb-select">
 								<div id="front-view" class="band">
+								<span class="start-fc"></span>
+								<span class="end-fc"></span>
 									<div class="preview-text faded" id="front-text">
-										<span class="start-fc"></span>Front Message<span class="end-fc"></span>
+										Front Message
 									</div>
 								</div>
 								<div id="back-view" class="band">
+									<span class="back-mc"></span>
+								    <span class="backend-mc"></span>
 									<div class="preview-text faded" id="back-text">
-										<span class="start-bc"></span>Back Message<span class="end-bc"></span>
+										Back Message
 									</div>
 								</div>
 								<div class="clearfix"></div>
@@ -178,8 +182,10 @@
 							</div>
 							<div class="c-select" style="display:none;">
 								<div id="inside-view" class="band">
+									<span class="start-cc"></span>
+								    <span class="end-cc"></span>
 									<div class="preview-text faded" id="inside-text">
-										<span class="start-cc"></span>Preview Message<span class="end-cc"></span>
+										Preview Message
 									</div>
 								</div>
 							

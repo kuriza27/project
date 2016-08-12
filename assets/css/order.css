@@ -634,6 +634,7 @@ button#custom-color-button {
 
 .btn-add-custom-color{
     margin-left: 10px;
+	margin-bottom: 20px;
 }
 
 .btn-close-custom-color{
@@ -905,25 +906,25 @@ input#font-color {
 span.start-fc {
     float: left;
     position: relative;
-    left: 186px;
+    left: 164px;
 }
 
 span.end-fc {
     float: left;
     position: relative;
-    left: 356px;
+    left: 382px;
 }
 
 span.back-mc {
     float: left;
     position: relative;
-    left: 186px;
+    left: 150px;
 }
 
 span.backend-mc {
     float: left;
     position: relative;
-    left: 356px;
+    left: 396px;
 }
 
 span.start-cc {

@@ -13,11 +13,11 @@
 
 
 .fonts-content li {
-    width: 28%!important;
-    padding: 4px!important;
-    border: none!important;
-    margin-bottom: 40px;
-    text-align: center;
+	width: 33% !important;
+	padding: 4px !important;
+	border: none !important;
+	margin-bottom: 40px;
+	text-align: center;
 }
 
 .font-style-list li img {
