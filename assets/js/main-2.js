@@ -1,4 +1,37 @@
 var has_preview = {};
+var dynamic_font_color = "";
+
+$(document).ready(function(){
+	// For regular wristband size
+	$('.qtyin-adult-qty').closest('div').append('<div class="fntin fnt-qtyin-adult-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
+	$('.qtyin-medium-qty').closest('div').append('<div class="fntin fnt-qtyin-medium-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
+	$('.qtyin-youth-qty').closest('div').append('<div class="fntin fnt-qtyin-youth-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
+	// For regular wristband xt size
+	$('.xt-small-qty').closest('div').append('<div class="fntin fnt-xt-small-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
+	$('.xt-large-qty').closest('div').append('<div class="fntin fnt-xt-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
+
+	// For large wristband size
+	$('.qtyin-adult-large-qty').closest('div').append('<div class="fntin fnt-qtyin-adult-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
+	$('.qtyin-medium-large-qty').closest('div').append('<div class="fntin fnt-qtyin-medium-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
+	$('.qtyin-youth-large-qty').closest('div').append('<div class="fntin fnt-qtyin-youth-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
+	// For large wristband xt size
+	$('.xt-small-large-qty').closest('div').append('<div class="fntin fnt-xt-small-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
+	$('.xt-large-large-qty').closest('div').append('<div class="fntin fnt-xt-large-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
+
+	// For font color select event
+	$('body').on('click', '.fntin', function(){
+		dynamic_font_color = $(this);
+		$('#FontColorQtyModal').modal('show');
+	});
+
+	$('body').on('click', '#FontColorQtyModal ul.font-color-list li', function(){
+		dynamic_font_color.css('background-color', '#'+$(this).attr('refcode'));
+		// dynamic_font_color.closest('input').attr('ref', '#'+$(this).attr('refcode'));
+		// console.log(dynamic_font_color);
+		// console.log(dynamic_font_color.find('input'));
+		$('#FontColorQtyModal').modal('hide');
+	});
+});
 
 $(function(){
 	
@@ -101,9 +134,16 @@ $(function(){
 		$('.js-style').removeClass('active');
 		$(this).find('input[type="radio"]').prop('checked', true);
 		$(this).addClass('active');
-		
+
 		//check style hide size divs
         var style = $(this).find('input[type="radio"]').val();
+
+		if(style === "printed" || style === "ink-injected" || style === "embossed-printed" || style === "figured"){
+			$('.fntin').show();
+		}else{
+			$('.fntin').hide();
+		}
+
 		if(style =='dual-layer'){
 			$("#onehalf").hide();
 			$("#two").hide();
@@ -302,41 +342,9 @@ $(function(){
 
 		if(total >= 100){
 			$('#dv-10-free-keychains').show();
-
-			// var html = '';
-			// $.each(map, function(key, val){
-			// 	html += '<div class="col-xs-12">';
-			// 	html += '<div class="col-xs-6 text-left" style="padding:0px;"><label for="freewb-'+val.size+'-'+val.type+'-'+val.color+'">';
-			// 	html += '<div class="pull-left">'+val.type.toUpperCase()+'</div>';
-			// 	color = val.color.split('-');
-			// 		$.each(color, function(ck, cv){
-			// 			// html += '<li class="preview-pill" style="background-color:#'+cv+';height:30px;"></li>';
-			// 			html += '<div class="preview-pill pull-left" style="background-color:#'+cv+';border-radius:10px;height:15px;margin-left:5px;width:15px;"></div>';
-			// 		});
-			// 	html += '</label></div>';
-			// 	html += '<div class="col-xs-3"><label for="freewb-Medium_solid_LimeGreen">'+val.size.toUpperCase().replace(/-QTY/g, '')+'</label></div>';
-			// 	html += '<input type="number" id="freewb-'+val.size+'-'+val.type+'-'+val.color+'" name="freewb-'+val.size+'-'+val.type+'-'+val.color+'" class="freewb-input col-xs-3" pattern="[0-9]*" placeholder="0" data-maxlength="3">';
-			// 	html += '</div>';
-			// });
-			// $('.free-100-wb').html(html);
-			// $('.done-free.done').hide();
-			// $('.done-free.update').show();
-			// $('.freewb-input').prop('disabled', true);
-			// // $('#preview-pane-selection').html('');
-			// $('#dv-100-free-band').show();
-			// $('#free-100-wristband').prop('checked',false).removeClass('checked');
-			// $('#dv-100-free-band-content').hide();
-			// $('#wb-free-count').html('0 of 100');
-			// $('.done-free').hide();
-			// $('.done-free.done').show()
-			// $('.freewb-input').val('');
-			// $('.freewb-input').prop('disabled', false);
 		}else{
 			$('#dv-10-free-keychains').hide();
 			$('#freekc').val('');
-
-			// $('#dv-100-free-band').hide();
-			// $('#dv-100-free-band-content').hide();
 		}
 	});
 
@@ -428,25 +436,25 @@ $(function(){
 	});
 	
 	//font-color selection
-	$('.font-color-list li').click(function(){
-			var textcolor = $(this).attr('refcode');
-			console.log(textcolor);
-			if(textcolor != undefined || textcolor != '');{
-				$("#preview-pane").css("color", "#"+textcolor);
-				$("#preview-textcolor").css("background-color", "#"+textcolor);
-				$("#FontColorModal").modal('toggle');
-			}
+	$('#FontColorModal ul.font-color-list li').click(function(){
+		var textcolor = $(this).attr('refcode');
+		console.log(textcolor);
+		if(textcolor != undefined || textcolor != '');{
+			$("#preview-pane").css("color", "#"+textcolor);
+			$("#preview-textcolor").css("background-color", "#"+textcolor);
+			$("#FontColorModal").modal('toggle');
+		}
 	});
 	
 	//font-style selection
 	$('.font-style-list li').click(function(){
-			var text = $(this).attr('name');
-			var img = $(this).attr('ref');
-			
-			if(text != undefined);{
-				$("#preview-pane").css("font-family", text);
-				$("#preview-textfont").html("<img src='assets/images/src/fonts/"+img+"'/>");
-			}
+		var text = $(this).attr('name');
+		var img = $(this).attr('ref');
+		
+		if(text != undefined);{
+			$("#preview-pane").css("font-family", text);
+			$("#preview-textfont").html("<img src='assets/images/src/fonts/"+img+"'/>");
+		}
 	});
 	
 	//start front message clipart

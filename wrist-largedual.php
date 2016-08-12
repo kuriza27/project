@@ -211,9 +211,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/solid/LightBlue.png"/>
 							<div class="nocustom_pick">Light Blue</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="9ABFE5" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="9ABFE5" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="9ABFE5" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="9ABFE5" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="9ABFE5" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="9ABFE5" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -238,9 +238,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/solid/LightPink.png"/>
 							<div class="nocustom_pick">Light Pink</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="F997B7" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="F997B7" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="F997B7" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="F997B7" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="F997B7" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="F997B7" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -1889,9 +1889,9 @@
 								</div>
 							  </div>
                                <!-----End Modal Div ---->
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -1916,9 +1916,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/BlackGreen.png"/>
 							<div class="nocustom_pick">Black Green</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="021509,0C9040"  type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="021509,0C9040" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="021509,0C9040" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="021509,0C9040"  type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="021509,0C9040" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="021509,0C9040" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -1943,9 +1943,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/BlackGrey.png"/>
 							<div class="nocustom_pick">Black Grey</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="070707,9DA09C" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="070707,9DA09C" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="070707,9DA09C" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="070707,9DA09C" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="070707,9DA09C" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="070707,9DA09C" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -1970,9 +1970,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/BlackHotPink.png"/>
 							<div class="nocustom_pick">Black Hot Pink</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="070707,E5028B" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="070707,E5028B" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="070707,E5028B" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="070707,E5028B" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="070707,E5028B" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="070707,E5028B" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -1997,9 +1997,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/BlackPANTONE267.png"/>
 							<div class="nocustom_pick">Black Violet</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="070707,560F88" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="070707,560F88" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="070707,560F88" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="070707,560F88" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="070707,560F88" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="070707,560F88" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2024,9 +2024,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/BlackRed.png"/>
 							<div class="nocustom_pick">Black Red</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="070707,E30C2A" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="070707,E30C2A" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="070707,E30C2A" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="070707,E30C2A" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="070707,E30C2A" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="070707,E30C2A" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2051,9 +2051,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/BlackWhite.png"/>
 							<div class="nocustom_pick">Black White</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="070707,F3F3F3" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="070707,F3F3F3" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="070707,F3F3F3" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="070707,F3F3F3" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="070707,F3F3F3" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="070707,F3F3F3" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2078,9 +2078,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/BlackYellow.png"/>
 							<div class="nocustom_pick">Black Yellow</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="070707,E4DA0E" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="070707,E4DA0E" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="070707,E4DA0E" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="070707,E4DA0E" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="070707,E4DA0E" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="070707,E4DA0E" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2105,9 +2105,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/BlueLimeGreen.png"/>
 							<div class="nocustom_pick">Blue Lime Green</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="1753A6,8AD40C" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="1753A6,8AD40C" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="1753A6,8AD40C" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="1753A6,8AD40C" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="1753A6,8AD40C" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="1753A6,8AD40C" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2132,9 +2132,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/BlueWhite.png"/>
 							<div class="nocustom_pick">Blue White</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="F3F6FC,0D46BA" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="F3F6FC,0D46BA" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="F3F6FC,0D46BA" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="F3F6FC,0D46BA" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="F3F6FC,0D46BA" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="F3F6FC,0D46BA" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2159,9 +2159,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/DarkGreenWhite.png"/>
 							<div class="nocustom_pick">Dark Green White</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="F3F6FC,174830" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="F3F6FC,174830" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="F3F6FC,174830" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="F3F6FC,174830" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="F3F6FC,174830" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="F3F6FC,174830" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2186,9 +2186,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/DesertCamo.png"/>
 							<div class="nocustom_pick">Desert Camo</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="4E4726,DECE76,6B5619" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="4E4726,DECE76,6B5619" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="4E4726,DECE76,6B5619" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="4E4726,DECE76,6B5619" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="4E4726,DECE76,6B5619" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="4E4726,DECE76,6B5619" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2213,9 +2213,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/GreenCamo.png"/>
 							<div class="nocustom_pick">Green Camo</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="000000,BE8B5E,64631C" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="000000,BE8B5E,64631C" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="000000,BE8B5E,64631C" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="000000,BE8B5E,64631C" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="000000,BE8B5E,64631C" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="000000,BE8B5E,64631C" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2240,9 +2240,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/GreenWhite.png"/>
 							<div class="nocustom_pick">Green White</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="FBFCFC,009B4F" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="FBFCFC,009B4F" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="FBFCFC,009B4F" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="FBFCFC,009B4F" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="FBFCFC,009B4F" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="FBFCFC,009B4F" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2267,9 +2267,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/HotPinkLightBlue.png"/>
 							<div class="nocustom_pick">Hot Pink Light Blue</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="E22FAB,9BBAE3" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="E22FAB,9BBAE3" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="E22FAB,9BBAE3" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="E22FAB,9BBAE3" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="E22FAB,9BBAE3" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="E22FAB,9BBAE3" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2294,9 +2294,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/HotPinkLightBlueLimeGreen.png"/>
 							<div class="nocustom_pick">Hot Pink Light Blue Lime Green</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="98C0D7,8FCF49,F90599" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="98C0D7,8FCF49,F90599" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="98C0D7,8FCF49,F90599" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="98C0D7,8FCF49,F90599" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="98C0D7,8FCF49,F90599" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="98C0D7,8FCF49,F90599" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2321,9 +2321,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/DarkGreenWhite.png"/>
 							<div class="nocustom_pick">Dark Green White</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="FBFCFC,11442B" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="FBFCFC,11442B" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="FBFCFC,11442B" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="FBFCFC,11442B" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="FBFCFC,11442B" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="FBFCFC,11442B" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2348,9 +2348,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/LimeGreenYellowLightBlue.png"/>
 							<div class="nocustom_pick">Lime Green Yellow Light Blue</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="8FD040,97C1CC,F0E711" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="8FD040,97C1CC,F0E711" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="8FD040,97C1CC,F0E711" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="8FD040,97C1CC,F0E711" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="8FD040,97C1CC,F0E711" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="8FD040,97C1CC,F0E711" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2375,9 +2375,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/MaroonGrey.png"/>
 							<div class="nocustom_pick">Maroon Grey</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="8A2232,A0A19D" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="8A2232,A0A19D" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="8A2232,A0A19D" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="8A2232,A0A19D" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="8A2232,A0A19D" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="8A2232,A0A19D" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2402,9 +2402,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/OrangeWhite.png"/>
 							<div class="nocustom_pick">Orange White</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="F17A19,FFFCF9" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="F17A19,FFFCF9" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="F17A19,FFFCF9" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="F17A19,FFFCF9" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="F17A19,FFFCF9" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="F17A19,FFFCF9" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2429,9 +2429,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/PANTONE267White.png"/>
 							<div class="nocustom_pick">Violet White</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="773BA1,FBF9FC" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="773BA1,FBF9FC" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="773BA1,FBF9FC" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="773BA1,FBF9FC" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="773BA1,FBF9FC" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="773BA1,FBF9FC" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2456,9 +2456,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/PinkPANTONE267.png"/>
 							<div class="nocustom_pick">Pink Violet</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="681990,F574B1" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="681990,F574B1" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="681990,F574B1" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="681990,F574B1" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="681990,F574B1" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="681990,F574B1" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2483,9 +2483,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/RainbowSwirl.png"/>
 							<div class="nocustom_pick">Rainbow</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="F4303D,FEDE1E,2230A9" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="F4303D,FEDE1E,2230A9" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="F4303D,FEDE1E,2230A9" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="F4303D,FEDE1E,2230A9" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="F4303D,FEDE1E,2230A9" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="F4303D,FEDE1E,2230A9" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2510,9 +2510,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/RedBlackBlue.png"/>
 							<div class="nocustom_pick">Red Black Blue</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="E10D30,08389E,000000" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="E10D30,08389E,000000" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="E10D30,08389E,000000" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="E10D30,08389E,000000" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="E10D30,08389E,000000" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="E10D30,08389E,000000" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2537,9 +2537,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/RedGreen.png"/>
 							<div class="nocustom_pick">Red Green</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="D9152C,178B41" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="D9152C,178B41" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="D9152C,178B41" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="D9152C,178B41" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="D9152C,178B41" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="D9152C,178B41" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2564,9 +2564,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/RedGrey.png"/>
 							<div class="nocustom_pick">Red Grey</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="D9152C,A1A19C" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="D9152C,A1A19C" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="D9152C,A1A19C" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="D9152C,A1A19C" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="D9152C,A1A19C" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="D9152C,A1A19C" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2591,9 +2591,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/RedWhite.png"/>
 							<div class="nocustom_pick">Red White</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="D9152C,FFFFFF" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="D9152C,FFFFFF" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="D9152C,FFFFFF" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="D9152C,FFFFFF" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="D9152C,FFFFFF" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="D9152C,FFFFFF" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2618,9 +2618,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/RedWhiteBlue.png"/>
 							<div class="nocustom_pick">Red White Blue</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="D9152C,FFFFFF,0F42B6" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="D9152C,FFFFFF,0F42B6"type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="D9152C,FFFFFF,0F42B6"type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="D9152C,FFFFFF,0F42B6" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="D9152C,FFFFFF,0F42B6"type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="D9152C,FFFFFF,0F42B6"type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2645,9 +2645,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/RedYellow.png"/>
 							<div class="nocustom_pick">Red Yellow</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="EB2328,F2E50F" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="EB2328,F2E50F" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="EB2328,F2E50F" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="EB2328,F2E50F" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="EB2328,F2E50F" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="EB2328,F2E50F" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2672,9 +2672,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/ReflexBlueBlack.png"/>
 							<div class="nocustom_pick">Reflex Blue Black</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="000001,120F6D" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="000001,120F6D" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="000001,120F6D" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="000001,120F6D" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="000001,120F6D" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="000001,120F6D" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2699,9 +2699,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/ReflexBlueGrey.png"/>
 							<div class="nocustom_pick">Reflex Blue Grey</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="242097,999C9E" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="242097,999C9E" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="242097,999C9E" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="242097,999C9E" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="242097,999C9E" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="242097,999C9E" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2726,9 +2726,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/TealWhite.png"/>
 							<div class="nocustom_pick">Teal White</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="FEFEFE,1CA4AD" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="FEFEFE,1CA4AD" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="FEFEFE,1CA4AD" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="FEFEFE,1CA4AD" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="FEFEFE,1CA4AD" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="FEFEFE,1CA4AD" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2753,9 +2753,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/swirl/WhiteBlackGreen.png"/>
 							<div class="nocustom_pick">White Black Green</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="FEFEFE,000000,05461F" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="FEFEFE,000000,05461F" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="FEFEFE,000000,05461F" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="FEFEFE,000000,05461F" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="FEFEFE,000000,05461F" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="FEFEFE,000000,05461F" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2787,9 +2787,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/glow/GlowDarkFIGUREDBLUE.png"/>
 							<div class="nocustom_pick">Blue</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="3886C4" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="3886C4" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="3886C4" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="3886C4" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="3886C4" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="3886C4" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2814,9 +2814,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/glow/GlowDarkFIGUREDGREEN.png"/>
 							<div class="nocustom_pick">Green</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="5DCE66" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="5DCE66" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="5DCE66" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="5DCE66" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="5DCE66" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="5DCE66" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2841,9 +2841,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/glow/GlowDarkFIGUREDPINK.png"/>
 							<div class="nocustom_pick">Pink</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="D57DA3" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="D57DA3" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="D57DA3" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="D57DA3" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="D57DA3" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="D57DA3" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2868,9 +2868,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/glow/GlowDarkFIGUREDPURPLE.png"/>
 							<div class="nocustom_pick">Purple</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="A078AD" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="A078AD" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="A078AD" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="A078AD" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="A078AD" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="A078AD" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
@@ -2895,9 +2895,9 @@
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/glow/GlowDarkFIGUREDWHITE.png"/>
 							<div class="nocustom_pick">White</div>
-							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="F5F5F5" type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="F5F5F5" type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="F5F5F5" type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input ref="F5F5F5" type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input ref="F5F5F5" type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input ref="F5F5F5" type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">
