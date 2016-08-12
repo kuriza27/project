@@ -247,13 +247,42 @@ $(function(){
 		var total = 0;
 		var map = {};
 
+		var style = $('.js-style .wrist_style:checked').val();
+		var ref_type = $(this).parents('.tab-pane').data('color').toLowerCase();
+		var ref_color = $(this).attr('ref');
+		var ref_color_str = ref_color.replace(/,/g, '-');
+		var ref_color_arr = ref_color.split(',');
+
 		$('.js-color input[name$="-qty"]').each(function(){
 
 			var qty = $(this).val();
+			var name = $(this).attr("name");
+			var idx = ref_type+"-"+style+"-"+name;
 
 			if(qty) {
-				if(typeof(map[$(this).attr("name")]) == "undefined"){
-					map[$(this).attr("name")] = 0;
+
+				qty = parseInt(qty);
+
+				if(qty>0){
+					if(typeof(map[$(this).attr("name")]) == "undefined"){
+						map[$(this).attr("name")] = 0;
+					}
+
+					// if still not defined
+					if(typeof(has_preview[idx]) === "undefined"){
+						has_preview[idx] = [];
+					}
+
+					if($.inArray(ref_color_str, has_preview[idx])<0){
+						has_preview[idx].push(ref_color_str);
+						// create
+						var preview = $("#preview-pane-selection").find('.preview-pill.preview-'+ref_type+'-'+ref_color_str).length > 0;
+						if(!preview) {
+							generatePreviewImage(ref_type, ref_color_arr);
+						}
+					}
+				}else{
+					has_preview[idx].pop(ref_color_str);
 				}
 
 				map[$(this).attr("name")] += parseInt(qty);
@@ -407,7 +436,8 @@ $(function(){
 			var color = [ 	$(this).closest('.box-opt-color').find('.dual-color-0').val(),
 							$(this).closest('.box-opt-color').find('.dual-color-1').val() ];
 			color = color.filter(Boolean);
-			$(".dualPreviewColorModal").attr('src', generatePreviewBandImage('dual', color));
+			// $(".dualPreviewColorModal").attr('src', generatePreviewBandImage('dual', color));
+			$(this).closest('.box-color').find(".dualPreviewColorModal").attr('src', generatePreviewBandImage('dual', color));
 
 			$("#ColorDualModal").modal('toggle');
 		}
@@ -643,51 +673,52 @@ function get_price_data($style, $size, type) {
 
 									var total_qty = 0;
 									var count = 0;
-									// $('#wrist_color_container').find('.js-color').find('input[name$="-qty"]').each(function(i, el){
-									$('.js-color input[name$="-qty"]').each(function(){
-										var qty = $(this).val();
-										// var ref_type = $(this).parents('.tab-pane').data('color').toLowerCase();
-										var ref_type = $(this).parents('.tab-pane').data('color');
-										var style = $('.js-style .wrist_style:checked').val();
 
-										if(qty != ''){
+									// // $('#wrist_color_container').find('.js-color').find('input[name$="-qty"]').each(function(i, el){
+									// $('.js-color input[name$="-qty"]').each(function(){
+									// 	var qty = $(this).val();
+									// 	// var ref_type = $(this).parents('.tab-pane').data('color').toLowerCase();
+									// 	// var ref_type = $(this).parents('.tab-pane').data('color');
+									// 	// var style = $('.js-style .wrist_style:checked').val();
 
-											// if still not defined
-											if(typeof(has_preview[style+"-"+ref_type]) === "undefined"){
-												has_preview[style+"-"+ref_type] = [];
-											}
+									// 	// if(qty != ''){
 
-											var praseQty = parseInt(qty);
+									// 	// 	// if still not defined
+									// 	// 	if(typeof(has_preview[style+"-"+ref_type]) === "undefined"){
+									// 	// 		has_preview[style+"-"+ref_type] = [];
+									// 	// 	}
 
-											// $("#preview-pane-selection").html("");
-											if(typeof $(this).attr('ref') === "undefined"){
-												return false;
-											}else{
-												if(praseQty>0){
-													// check if still has no preview
-													if($.inArray($(this).attr('ref'), has_preview[style+"-"+ref_type])<0){
-														has_preview[style+"-"+ref_type].push($(this).attr('ref'));
+									// 	// 	var praseQty = parseInt(qty);
 
-														$(".click-pre").css("display","block");
-														var ref_colors = $(this).attr('ref').split(',');
+									// 	// 	// $("#preview-pane-selection").html("");
+									// 	// 	if(typeof $(this).attr('ref') === "undefined"){
+									// 	// 		return false;
+									// 	// 	}else{
+									// 	// 		if(praseQty>0){
+									// 	// 			// check if still has no preview
+									// 	// 			// if($.inArray($(this).attr('ref'), has_preview[style+"-"+ref_type])<0){
+									// 	// 			// 	has_preview[style+"-"+ref_type].push($(this).attr('ref'));
 
-														// count total
-														total_qty += praseQty;
+									// 	// 			// 	$(".click-pre").css("display","block");
+									// 	// 			// 	var ref_colors = $(this).attr('ref').split(',');
 
-														// create
-														var preview = $("#preview-pane-selection").find('.preview-pill.preview-'+ref_type.toLowerCase()+'-'+$(this).attr('ref').replace(/,/g, '-')).length > 0;
-														if(!preview) {
-															generatePreviewImage(ref_type.toLowerCase(), ref_colors);
-														}
-													}
-												}else{
-													// $('.preview-pill.preview-'+ref_type.toLowerCase()+'-'+$(this).attr('ref').replace(/,/g, '-')).remove();
-													has_preview[style+"-"+ref_type].pop($(this).attr('ref'));
-												}
-											}
-										}
-									});
-// console.log(has_preview);
+									// 	// 			// 	// count total
+									// 	// 			// 	total_qty += praseQty;
+
+									// 	// 			// 	// create
+									// 	// 			// 	var preview = $("#preview-pane-selection").find('.preview-pill.preview-'+ref_type.toLowerCase()+'-'+$(this).attr('ref').replace(/,/g, '-')).length > 0;
+									// 	// 			// 	if(!preview) {
+									// 	// 			// 		generatePreviewImage(ref_type.toLowerCase(), ref_colors);
+									// 	// 			// 	}
+									// 	// 			// }
+									// 			}else{
+									// 				// $('.preview-pill.preview-'+ref_type.toLowerCase()+'-'+$(this).attr('ref').replace(/,/g, '-')).remove();
+									// 				has_preview[style+"-"+ref_type].pop($(this).attr('ref'));
+									// 			}
+									// 		}
+									// 	}
+									// });
+
 									var arr_keys = Object.keys(obj_price);
 
 									for(key in arr_keys) {
