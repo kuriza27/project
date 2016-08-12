@@ -342,7 +342,7 @@
 		<div class="col-lg-12 col-md-12 col-sm-12 price-cont">
 		  <div class="row offer-bar margin-bootom-20 __web-inspector-hide-shortcut__">
 				<div class="col-xs-3 col-sm-22 offerpv float-left">Pricing Chart</span></div>
-				<div class="col-xs-9 col-sm-101 offer-details float-left">Debossed Color Filled Wristband</div>
+				<div class="col-xs-9 col-sm-101 offer-details float-left">Ink Injected Wristband</div>
 					<div class="clearfix"></div>
 		  </div>
 	   </div>

@@ -520,16 +520,16 @@ span.red {
 
 .sizes-content {
     clear: both;
-    margin-bottom: 170px;
+    margin-bottom: 80px;
 }
 
 .sizes-content ul li {
-    width: 42%;
-    padding: 4px;
-    margin-bottom: 30px;
-    list-style: none;
-    height: 392px;
-    margin-left: 10px;
+	width: 38%;
+	padding: 4px 7px;
+	margin-bottom: 30px;
+	list-style: none;
+	margin-left: 95px;
+	float: left;
 }
 
 .sizes-content ul li img{
