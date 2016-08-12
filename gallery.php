@@ -6,112 +6,112 @@
 	<h4>Wristbands</h4>
 	<div class="popup-gallery">
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-14231.png" title="GW-14231"><img src="assets/images/src/gallery/GW-14231.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-14231.png" title="SILICONEWRISTBANDS-14231"><img src="assets/images/src/gallery/GW-14231.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-14250.png" title="GW-14250"><img src="assets/images/src/gallery/GW-14250.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-14250.png" title="SILICONEWRISTBANDS-14250"><img src="assets/images/src/gallery/GW-14250.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-14515.png" title="GW-14515"><img src="assets/images/src/gallery/GW-14515.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-14515.png" title="SILICONEWRISTBANDS-14515"><img src="assets/images/src/gallery/GW-14515.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-14541.png" title="GW-14541"><img src="assets/images/src/gallery/GW-14541.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-14541.png" title="SILICONEWRISTBANDS-14541"><img src="assets/images/src/gallery/GW-14541.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-14762.png" title="GW-14762"><img src="assets/images/src/gallery/GW-14762.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-14762.png" title="SILICONEWRISTBANDS-14762"><img src="assets/images/src/gallery/GW-14762.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-14791.png" title="GW-14791"><img src="assets/images/src/gallery/GW-14791.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-14791.png" title="SILICONEWRISTBANDS-14791"><img src="assets/images/src/gallery/GW-14791.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-14839.png" title="GW-14839"><img src="assets/images/src/gallery/GW-14839.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-14839.png" title="SILICONEWRISTBANDS-14839"><img src="assets/images/src/gallery/GW-14839.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-14883.png" title="GW-14883"><img src="assets/images/src/gallery/GW-14883.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-14883.png" title="SILICONEWRISTBANDS-14883"><img src="assets/images/src/gallery/GW-14883.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-14918.png" title="GW-14918"><img src="assets/images/src/gallery/GW-14918.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-14918.png" title="SILICONEWRISTBANDS-14918"><img src="assets/images/src/gallery/GW-14918.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-14926.png" title="GW-14926"><img src="assets/images/src/gallery/GW-14926.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-14926.png" title="SILICONEWRISTBANDS-14926"><img src="assets/images/src/gallery/GW-14926.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-14945.png" title="GW-14945"><img src="assets/images/src/gallery/GW-14945.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-14945.png" title="SILICONEWRISTBANDS-14945"><img src="assets/images/src/gallery/GW-14945.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-14990-s.png" title="GW-14990-s3"><img src="assets/images/src/gallery/GW-14990-s.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-14990-s.png" title="SILICONEWRISTBANDS-14990-s3"><img src="assets/images/src/gallery/GW-14990-s.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-14999.png" title="GW-14999"><img src="assets/images/src/gallery/GW-14999.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-14999.png" title="SILICONEWRISTBANDS-14999"><img src="assets/images/src/gallery/GW-14999.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-15013.png" title="GW-15013"><img src="assets/images/src/gallery/GW-15013.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-15013.png" title="SILICONEWRISTBANDS-15013"><img src="assets/images/src/gallery/GW-15013.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-15043&GW-71133.png" title="GW-15043 & GW-71133"><img src="assets/images/src/gallery/GW-15043&GW-71133.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-15043&GW-71133.png" title="SILICONEWRISTBANDS-15043 & GW-71133"><img src="assets/images/src/gallery/GW-15043&GW-71133.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-15080.png" title="GW-15080"><img src="assets/images/src/gallery/GW-15080.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-15080.png" title="SILICONEWRISTBANDS-15080"><img src="assets/images/src/gallery/GW-15080.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-15112.png" title="GW-15112"><img src="assets/images/src/gallery/GW-15112.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-15112.png" title="SILICONEWRISTBANDS-15112"><img src="assets/images/src/gallery/GW-15112.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-15170.png" title="GW-15170"><img src="assets/images/src/gallery/GW-15170.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-15170.png" title="SILICONEWRISTBANDS-15170"><img src="assets/images/src/gallery/GW-15170.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-15217.png" title="GW-15217"><img src="assets/images/src/gallery/GW-15217.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-15217.png" title="SILICONEWRISTBANDS-15217"><img src="assets/images/src/gallery/GW-15217.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-15281.png" title="GW-15281"><img src="assets/images/src/gallery/GW-15281.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-15281.png" title="SILICONEWRISTBANDS-15281"><img src="assets/images/src/gallery/GW-15281.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-15357.png" title="GW-15357"><img src="assets/images/src/gallery/GW-15357.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-15357.png" title="SILICONEWRISTBANDS-15357"><img src="assets/images/src/gallery/GW-15357.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-15407.png" title="GW-15407"><img src="assets/images/src/gallery/GW-15407.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-15407.png" title="SILICONEWRISTBANDS-15407"><img src="assets/images/src/gallery/GW-15407.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-15440.png" title="GW-15440"><img src="assets/images/src/gallery/GW-15440.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-15440.png" title="SILICONEWRISTBANDS-15440"><img src="assets/images/src/gallery/GW-15440.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-15452-1.png" title="GW-15452-1"><img src="assets/images/src/gallery/GW-15452-1.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-15452-1.png" title="SILICONEWRISTBANDS-15452-1"><img src="assets/images/src/gallery/GW-15452-1.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-15452-2.png" title="GW-15452-2"><img src="assets/images/src/gallery/GW-15452-2.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-15452-2.png" title="SILICONEWRISTBANDS-15452-2"><img src="assets/images/src/gallery/GW-15452-2.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-15464.png" title="GW-15464"><img src="assets/images/src/gallery/GW-15464.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-15464.png" title="SILICONEWRISTBANDS-15464"><img src="assets/images/src/gallery/GW-15464.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-15492.png" title="GW-15492"><img src="assets/images/src/gallery/GW-15492.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-15492.png" title="SILICONEWRISTBANDS-15492"><img src="assets/images/src/gallery/GW-15492.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-15510.png" title="GW-15510"><img src="assets/images/src/gallery/GW-15510.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-15510.png" title="SILICONEWRISTBANDS-15510"><img src="assets/images/src/gallery/GW-15510.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-15524.png" title="GW-15524"><img src="assets/images/src/gallery/GW-15524.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-15524.png" title="SILICONEWRISTBANDS-15524"><img src="assets/images/src/gallery/GW-15524.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-15607.png" title="GW-15607"><img src="assets/images/src/gallery/GW-15607.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-15607.png" title="SILICONEWRISTBANDS-15607"><img src="assets/images/src/gallery/GW-15607.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-15685.png" title="GW-15685"><img src="assets/images/src/gallery/GW-15685.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-15685.png" title="SILICONEWRISTBANDS-15685"><img src="assets/images/src/gallery/GW-15685.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-15719.png" title="GW-15719"><img src="assets/images/src/gallery/GW-15719.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-15719.png" title="SILICONEWRISTBANDS-15719"><img src="assets/images/src/gallery/GW-15719.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-15778-1.png" title="GW-15778-1"><img src="assets/images/src/gallery/GW-15778-1.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-15778-1.png" title="SILICONEWRISTBANDS-15778-1"><img src="assets/images/src/gallery/GW-15778-1.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-15832.png" title="GW-15832"><img src="assets/images/src/gallery/GW-15832.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-15832.png" title="SILICONEWRISTBANDS-15832"><img src="assets/images/src/gallery/GW-15832.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-15952.png" title="GW-15952"><img src="assets/images/src/gallery/GW-15952.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-15952.png" title="SILICONEWRISTBANDS-15952"><img src="assets/images/src/gallery/GW-15952.png" class="galleryimg" ></a>
 		</div>
 		<div class="col-md-4 gal">
-			<a href="assets/images/src/gallery/GW-16080.png" title="GW-16080"><img src="assets/images/src/gallery/GW-16080.png" class="galleryimg" ></a>
+			<a href="assets/images/src/gallery/GW-16080.png" title="SILICONEWRISTBANDS-16080"><img src="assets/images/src/gallery/GW-16080.png" class="galleryimg" ></a>
 		</div>
 			<div class="clearfix"></div>
 		
