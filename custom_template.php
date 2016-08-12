@@ -542,11 +542,58 @@
 	</div>
 </div>
 
+<div id="dualCustomColorSelector" class="hide" style="display:none;">
+	<div class="col-xs-4 box-color dynamic-box-color">
+		<button class="btn-close-custom-color">X</button>
+		<img class="dualPreviewColorModal" src="assets/images/src/custom.png"/>
+		<button id="custom-color-button" data-toggle="modal" data-target="#ColorDualModal">Custom Color</button>
+		<div class="modal fade" id="ColorDualModal" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Pick Custom Color</h4>
+					</div>
+					<div class="modal-body">
+						<?php include "dual-color-dynamic-template.php";?>
+						<div class="clearfix"></div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="adult-qty" placeholder="0"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="medium-qty" placeholder="0"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="number" name="youth-qty" class="youth-qty" placeholder="0"/></div>
+		<div class="clearfix"></div>
+			<div class="color-text" style="display:none">
+				<div class="col-sm-1">
+					<?php include "colorAdult-template.php";?>
+				</div>
+				<div class="col-sm-1">
+					<?php include "colorMedium-template.php";?>
+				</div>
+				<div class="col-sm-1">
+					<?php include "colorYouth-template.php";?>
+				</div>
+					<div class="clearfix"></div>
+			</div>
+		<span class="view-more">View More Sizes</span>
+		<div class="show-content" style="display:none">
+			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
+			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
+		</div>
+	</div>
+</div>
+
 <script>
 
 	var dynamicSolidCount = 0;
 	var dynamicSSegmentedCount = 0;
 	var dynamicSwirlCount = 0;
+	var dynamicDualCount = 0;
 
 	$(document).ready(function() {
 
@@ -589,8 +636,23 @@
 			$("#swirlCustomColorSelector .dynamic-box-color img.swirlPreviewColorModal").attr('class','swirlPreviewColorModal');
 		});
 
+
+		//show new dual custom wirstband
+		$('body').on('click', '#addCustomDual', function(e) {
+			newId = "ColorDualModal"+dynamicDualCount;
+			dynamicDualCount++;
+			$("#dualCustomColorSelector .dynamic-box-color img.dualPreviewColorModal").attr('class','dualPreviewColorModal');
+			$("#dualCustomColorSelector .dynamic-box-color img.dualPreviewColorModal").addClass("Preview"+newId)
+			$("#dualCustomColorSelector .dynamic-box-color #custom-color-button").attr("data-target", "#"+newId)
+			$("#dualCustomColorSelector .dynamic-box-color .modal").attr("id", newId);
+			
+			$('#dual-fig-reg div#main-color-content').prepend($("#dualCustomColorSelector").html());
+			$("#dualCustomColorSelector .dynamic-box-color img.dualPreviewColorModal").attr('class','dualPreviewColorModal');
+		});
+
+
 		//show new dynamic modals
-		$('body').on('click', '.custom-color-solid-button, .custom-color-segmented-button, .custom-color-swirl-button', function(e) {
+		$('body').on('click', '.custom-color-solid-button, .custom-color-segmented-button, .custom-color-swirl-button, .custom-color-dual-button', function(e) {
 			var iD = $(this).attr("data-target");
 			// if(iD.charAt(0) === "#") {
 			// 	$(iD).modal("show");

@@ -6,14 +6,14 @@
 			<div id="wrist_color_container">
 
 				  <div class="content">
-					<div id="segmented-fig-reg" class="js-color" data-value="0.01" data-color="Segmented">
-					  <h3>Dual Colors</h3> <button id="addCustomSegmented" class="btn-add-custom-color"><i class="fa fa-plus"></i> Add Custom Color</button>
+					<div id="dual-fig-reg" class="tab-pane js-color" data-value="0.01" data-color="Dual">
+					  <h3>Dual Colors</h3> <button id="addCustomDual" class="btn-add-custom-color"><i class="fa fa-plus"></i> Add Custom Color</button>
 					  <div id="main-color-content">
 					     <div class="col-xs-4 box-color">
-							<img class="segPreviewColorModal" src="assets/images/src/custom.png"/>
-							<button id="custom-color-button" data-toggle="modal" data-target="#ColorSegModal">Custom Color</button>
+							<img class="dualPreviewColorModal" src="assets/images/src/custom.png"/>
+							<button id="custom-color-button" data-toggle="modal" data-target="#ColorDualModal">Custom Color</button>
 							<!--------Modal---------->
-							<div class="modal fade" id="ColorSegModal" role="dialog">
+							<div class="modal fade" id="ColorDualModal" role="dialog">
 								<div class="modal-dialog">
 								  <!-- Modal content-->
 								  <div class="modal-content">
@@ -22,7 +22,7 @@
 									  <h4 class="modal-title">Pick Custom Color</h4>
 									</div>
 									<div class="modal-body">
-									  <?php include "segmented-color-template.php";?>
+									  <?php include "dual-color-template.php";?>
 									   <div class="clearfix"></div>
 									</div>
 									<div class="modal-footer">

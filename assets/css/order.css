@@ -847,6 +847,14 @@ input#font-color {
     border-radius: 3px;
 }
 
+.done-d, .dynamic-done-d{
+    background-color: #17a589;
+    color: #fff;
+    border: 1px solid #117864;
+    padding: 6px 31px;
+    border-radius: 3px;
+}
+
 
 .dynamic-pick-color-list {
     margin: 0;

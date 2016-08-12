@@ -1,3 +1,5 @@
+var has_preview = {};
+
 $(function(){
 	
 	 var $style_value;
@@ -42,7 +44,7 @@ $(function(){
 	});
 
 	//show continous message selection
-	$(".cont-select").click(function() {
+	$(".cont-select").click(function(){
 		$('.front-back-select').prop('checked', false)
 		$('.c-select').css("display","block");
 		$('.fb-select').css("display","none");
@@ -51,13 +53,24 @@ $(function(){
 	});
 
 	//show preview image
-	$('body').on('click', '.preview-pill', function(e) {
+	$('body').on('click', '.preview-pill', function(e){
 		$('.preview-pill').removeClass('active');
 		$(this).addClass('active');
 
 		$("#front-view").css('background', 'url(' + $(this).attr('data-image-link') + ')');
 		$("#back-view").css('background', 'url(' + $(this).attr('data-image-link') + ')');
 		$("#inside-view").css('background', 'url(' + $(this).attr('data-image-link') + ')');
+
+		if(typeof($(this).attr('data-font-color')) != "undefined"){
+			$("#preview-pane").css("color", "#"+$(this).attr('data-font-color'));
+			// $("#preview-textcolor").css("background-color", "#"+$(this).attr('data-font-color'));
+		}else{
+			if($("#font-color").css("display") != "none"){
+				$("#preview-pane").css("color", "#"+$("#preview-textcolor").css("background-color"));
+			}else{
+				$("#preview-pane").css("color", "#444444");
+			}
+		}
 	});
 
 	//preview message
@@ -138,6 +151,11 @@ $(function(){
 	//select wristband size
 	$('.js-size').click(function(){
 		var item = $(this).find('input[type="radio"]').val();
+		var style = $('.js-style .wrist_style:checked').val();
+
+		if(style=="dual-layer" || style=="figured"){
+			// Do nothing
+		}else{
 			if(item=="1/4" || item=="1/2"){
 				$(".regular-color-size").css("display","block");
 				$(".large-color-size").css("display","none");
@@ -145,6 +163,8 @@ $(function(){
 				$(".regular-color-size").css("display","none");
 				$(".large-color-size").css("display","block");
 			}
+		}
+
 		
 		$('.js-size').find('input[type="radio"]').prop('checked', false);
 		$('.js-size').removeClass('active');
@@ -194,10 +214,15 @@ $(function(){
 		if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105 || e.keyCode == 190 || e.keyCode == 110)) {
 			e.preventDefault();
 		} else {
-			console.log("hello");
 			get_style_size('fixed_price');
 		}
 	});
+
+	// //adding quantity to wristband colors
+	// $('body').on('blur', '.box-color input[name$="-qty"]', function(e) {
+	// 	// console.log($(this).val());
+	// 	get_style_size('fixed_price');
+	// });
 
 	// $('.box-color').find('input[name$="-qty"]').blur(function(){
 	// 	var total = 0;
@@ -216,20 +241,24 @@ $(function(){
 	// 	}
 	// });
 
+	
+
 	$('body').on('blur', '.box-color input[name$="-qty"]', function(e) {
 		var total = 0;
 		var map = {};
-		
-		$('#wrist_color_container').find('.js-color').find('input[name$="-qty"]').each(function(i, el){
-			//var qty = $(this).val();
-            var qty = map[$(this).attr("name")] = $(this).val();
-			console.log("large-"+qty)
-			if(qty != '') {
-				console.log("sulod here");
-				console.log(qty);
+
+		$('.js-color input[name$="-qty"]').each(function(){
+
+			var qty = $(this).val();
+
+			if(qty) {
+				if(typeof(map[$(this).attr("name")]) == "undefined"){
+					map[$(this).attr("name")] = 0;
+				}
+
+				map[$(this).attr("name")] += parseInt(qty);
 				total += parseInt(qty);
 			}
-			
 		});
 
 		if(total == 0) {
@@ -255,7 +284,6 @@ $(function(){
 			f.find('input').val(color);
 			f.addClass('active').css('border-color', '#'+color);
 			f.attr('refcode', color);
-
 
 			if(num == 1) {
 				box.find('input[type="number"]').attr('ref', color);
@@ -367,6 +395,35 @@ $(function(){
 			color = color.filter(Boolean);
 
 			$(imgID).attr('src', generatePreviewBandImage('segmented', color));
+			$(this).closest('.modal').modal('hide');
+		}
+	});
+	
+	//dual done button click
+	$('body').on('click', '.done-d', function() {
+		if($.trim($('#dual-color-0').val()) == ''){
+			alert('You need to choose colors');
+		}else{
+			var color = [ 	$(this).closest('.box-opt-color').find('.dual-color-0').val(),
+							$(this).closest('.box-opt-color').find('.dual-color-1').val() ];
+			color = color.filter(Boolean);
+			$(".dualPreviewColorModal").attr('src', generatePreviewBandImage('dual', color));
+
+			$("#ColorDualModal").modal('toggle');
+		}
+	});
+
+	//dual dynamic done button click
+	$('body').on('click', '.dynamic-done-d', function() {
+		if($.trim($(this).closest('.box-opt-color').find('.dynamic-dual-color').val()) == ''){
+			alert('You need to choose colors');
+		}else{
+			var imgID = ".Preview" + $(this).closest('.modal').attr("id");
+			var color = [ 	$(this).closest('.box-opt-color').find('.dynamic-dual-color-0').val(),
+							$(this).closest('.box-opt-color').find('.dynamic-dual-color-1').val() ];
+			color = color.filter(Boolean);
+
+			$(imgID).attr('src', generatePreviewBandImage('dual', color));
 			$(this).closest('.modal').modal('hide');
 		}
 	});
@@ -548,7 +605,6 @@ function get_style_size(type) {
 		else{
 			$("#font-color").show();
 		}
-        
 	}
 
 	get_price_data($style, $size, type);
@@ -559,70 +615,97 @@ function get_price_data($style, $size, type) {
 	//get JSON Price list
 	var count = 0;
 	$.getJSON( "order.json", function( data ) {
-	  	var items = [];
-	  	var arr = $.map(data, function(elem) { return elem });
-	  	var len = arr.length - 1;
+		var items = [];
+		var arr = $.map(data, function(elem) { return elem });
+		var len = arr.length - 1;
 
-	  	for(var keys in arr) {
+		for(var keys in arr) {
 
-	  		for(var wb_style in arr[keys]) {
-	  			if(wb_style == $style) {
+			for(var wb_style in arr[keys]) {
+				if(wb_style == $style) {
 
-	  				for (i in arr[keys][wb_style]) {
-	  					for (var wb_size in arr[keys][wb_style][i]) {
-	  						if(wb_size == $size) {
-	  							var obj_price = arr[keys][wb_style][i][$size][0];
+					for (i in arr[keys][wb_style]) {
+						for (var wb_size in arr[keys][wb_style][i]) {
+							if(wb_size == $size) {
+								var obj_price = arr[keys][wb_style][i][$size][0];
 
-	  							if(type == 'price_table') {
-		  							$('#priceTable').find('td.js-temp').remove();
-		  							$.each(obj_price, function(key, val){
-		  								$('#priceTable').append('<td class="js-temp">$<span data-qty-range="'+key+'">'+val+'</span></td>');
-		  								$('.js-pricing-table').fadeIn(300);
-		  							});
-		  							$('.js-wb-caption').find('.style').text($style.toUpperCase());
-		  							$('.js-wb-caption').find('.size').text($size);
-		  						}
-		  						if(type == 'fixed_price') {
+								if(type == 'price_table') {
+									$('#priceTable').find('td.js-temp').remove();
+									$.each(obj_price, function(key, val){
+										$('#priceTable').append('<td class="js-temp">$<span data-qty-range="'+key+'">'+val+'</span></td>');
+										$('.js-pricing-table').fadeIn(300);
+									});
+									$('.js-wb-caption').find('.style').text($style.toUpperCase());
+									$('.js-wb-caption').find('.size').text($size);
+								}
 
-		  							var total_qty = 0;
+								if(type == 'fixed_price') {
+
+									var total_qty = 0;
 									var count = 0;
-		  							$('#wrist_color_container').find('.js-color').find('input[name$="-qty"]').each(function(i, el){
-		  								var qty = $(this).val();
-										
-		  								if(qty != ''){ 
-											total_qty += parseInt(qty);
-											// console.log("-------");
-											// console.log($(this).attr('ref'));
+									// $('#wrist_color_container').find('.js-color').find('input[name$="-qty"]').each(function(i, el){
+									$('.js-color input[name$="-qty"]').each(function(){
+										var qty = $(this).val();
+										// var ref_type = $(this).parents('.tab-pane').data('color').toLowerCase();
+										var ref_type = $(this).parents('.tab-pane').data('color');
+										var style = $('.js-style .wrist_style:checked').val();
+
+										if(qty != ''){
+
+											// if still not defined
+											if(typeof(has_preview[style+"-"+ref_type]) === "undefined"){
+												has_preview[style+"-"+ref_type] = [];
+											}
+
+											var praseQty = parseInt(qty);
+
 											// $("#preview-pane-selection").html("");
-		  									var ref_type = $(this).parents('.tab-pane').data('color').toLowerCase();
-		  									if ( typeof $(this).attr('ref') === "undefined" ) {
-		  										return false;
-		  									} else {
-			  									var ref_colors = $(this).attr('ref').split(',');	
-												$(".click-pre").css("display","block");
-												generatePreviewImage(ref_type, ref_colors);
-		  									}
+											if(typeof $(this).attr('ref') === "undefined"){
+												return false;
+											}else{
+												if(praseQty>0){
+													// check if still has no preview
+													if($.inArray($(this).attr('ref'), has_preview[style+"-"+ref_type])<0){
+														has_preview[style+"-"+ref_type].push($(this).attr('ref'));
+
+														$(".click-pre").css("display","block");
+														var ref_colors = $(this).attr('ref').split(',');
+
+														// count total
+														total_qty += praseQty;
+
+														// create
+														var preview = $("#preview-pane-selection").find('.preview-pill.preview-'+ref_type.toLowerCase()+'-'+$(this).attr('ref').replace(/,/g, '-')).length > 0;
+														if(!preview) {
+															generatePreviewImage(ref_type.toLowerCase(), ref_colors);
+														}
+													}
+												}else{
+													// $('.preview-pill.preview-'+ref_type.toLowerCase()+'-'+$(this).attr('ref').replace(/,/g, '-')).remove();
+													has_preview[style+"-"+ref_type].pop($(this).attr('ref'));
+												}
+											}
 										}
-		  							});
+									});
+// console.log(has_preview);
+									var arr_keys = Object.keys(obj_price);
 
-		  							var arr_keys = Object.keys(obj_price);
+									for(key in arr_keys) {
+										if(key < (arr_keys.length-1)) {
+											var k = parseInt(key) + 1;
 
-		  							for(key in arr_keys) {
-		  								if(key < (arr_keys.length-1)) {
-		  									var k = parseInt(key) + 1;
-
-		  									if(total_qty >= arr_keys[key] && total_qty < arr_keys[k]) {
-		  										get_total_price(obj_price[arr_keys[key]], total_qty,wb_style, $size);
-		  									}
-		  								}
-		  							}
-		  						}
-	  						}
-	  					}
-	  				}
-	  			}
-	  		}
-	  	}
+											if(total_qty >= arr_keys[key] && total_qty < arr_keys[k]) {
+												get_total_price(obj_price[arr_keys[key]], total_qty,wb_style, $size);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 
 	});
 }

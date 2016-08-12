@@ -7,17 +7,19 @@ function generatePreviewBandImage(style, colors) {
 	$(".band_segmented").css("display", "block");
 	$(".band_solid").css("display", "block");
 	$(".band_swirl").css("display", "block");
-	
+	$(".band_dual").css("display", "block");
+
 	if(typeof colors !== "undefined" && typeof style !== "undefined") {
 
 		// Place colors on an array, for future use
 		// $_COLOR = $_GET["color"].split(",");
 
 		if(style === "swirls") {
-console.log("swirlees");
+
 			// Hide SVG elements not used
 			$(".band_solid").css("display", "none");
 			$(".band_segmented").css("display", "none");
+			$(".band_dual").css("display", "none");
 
 			// Set colors
 			$("#band_swirl_1").css( "fill", "#" + colors[0]); // Set 1st color
@@ -75,6 +77,7 @@ console.log("swirlees");
 			// Hide SVG elements not used
 			$(".band_solid").css("display", "none");
 			$(".band_swirl").css("display", "none");
+			$(".band_dual").css("display", "none");
 
 			// Set colors
 			if(colors.length === 1) { // If 1 colors
@@ -162,9 +165,24 @@ console.log("swirlees");
 			// Remove SVG elements not used
 			$(".band_segmented").css("display", "none");
 			$(".band_swirl").css("display", "none");
+			$(".band_dual").css("display", "none");
 
 			// Set color
 			$(".band_solid").css( "fill", "#" + colors[0]);
+
+			// Render SVG into Canvas
+			return renderBand($("#svg_band_main").parent().html().trim(), "output_band_canvas", "output_band_image", "band_preview", style);
+
+		} else if(style === "dual") {
+
+			// Remove SVG elements not used
+			$(".band_segmented").css("display", "none");
+			$(".band_swirl").css("display", "none");
+			$(".band_solid").css("display", "none");
+
+			// Set color
+			$("#band_dual_1_1").css( "fill", "#" + colors[0]);
+			$("#band_dual_1_2").css( "fill", "#" + colors[1]);
 
 			// Render SVG into Canvas
 			return renderBand($("#svg_band_main").parent().html().trim(), "output_band_canvas", "output_band_image", "band_preview", style);

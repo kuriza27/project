@@ -43,7 +43,7 @@ function generatePreviewImage(style, colors) {
 			}
 
 			// Render SVG into Canvas
-			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview");
+			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview", style, colors);
 
 		} else if (style === "segmented") {
 
@@ -131,7 +131,7 @@ function generatePreviewImage(style, colors) {
 			}
 
 			// Render SVG into Canvas
-			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview", style);
+			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview", style, colors);
 
 		} else if(style === "solid") {
 
@@ -144,7 +144,7 @@ function generatePreviewImage(style, colors) {
 			$(".solid").css( "fill", "#" + colors[0]);
 
 			// Render SVG into Canvas
-			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview", style);
+			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview", style, colors);
 
 		}
 		
@@ -159,7 +159,22 @@ function generatePreviewImage(style, colors) {
 			$(".glow").css( "fill", "#" + colors[0]);
 
 			// Render SVG into Canvas
-			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview", style);
+			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview", style, colors);
+
+		}
+		
+		else if(style === "dual") {
+
+			// Remove SVG elements not used
+			$(".segmented").css("display", "none");
+			$(".swirl").css("display", "none");
+			$(".glow").css("display", "none");
+
+			// Set color
+			$(".solid").css( "fill", "#" + colors[0]);
+
+			// Render SVG into Canvas
+			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview", style, colors);
 
 		}
 
@@ -180,7 +195,7 @@ function generatePreviewImage(style, colors) {
 /**
  *  SVG to canvas to image render function
  */
-function render(svg, canvas, image, preview, type) {
+function render(svg, canvas, image, preview, type, colors) {
 
 	// Get needed elements
 	var can = document.getElementById(canvas);
@@ -195,13 +210,16 @@ function render(svg, canvas, image, preview, type) {
 	// Apply blur effect on image
 	setTimeout(function() {
 		stackBlurImage(image, "canvas", 50);
-		var preview = $("#preview-pane-selection").find('.preview-pill[data-image-link="'+$("#canvas")[0].toDataURL()+'"]').length > 0;
-		var prevType = $("#preview-pane-selection").find('.preview-pill[data-type="'+type+'"]').length > 0;
+		var preview = $("#preview-pane-selection").find('.preview-pill.preview-'+type+'-'+colors.join("-")).length > 0;
+		// var prevType = $("#preview-pane-selection").find('.preview-pill[data-type="'+type+'"]').length > 0;
 
 		if(!preview) {
-			$("#preview-pane-selection").append('<li class="preview-pill" data-type="'+type+'" data-image-link="' + $("#canvas")[0].toDataURL() + '" style="background-image:url(' + $("#canvas")[0].toDataURL() + ');background-size:30px;"></li>');
+			if(type=='dual') {
+				$("#preview-pane-selection").append('<li class="preview-pill preview-'+type+'-'+colors.join("-")+'" data-type="'+type+'" data-font-color="'+colors[1]+'" data-image-link="' + $("#canvas")[0].toDataURL() + '" style="background-image:url(' + $("#canvas")[0].toDataURL() + ');background-size:30px;"></li>');
+			} else {
+				$("#preview-pane-selection").append('<li class="preview-pill preview-'+type+'-'+colors.join("-")+'" data-type="'+type+'" data-image-link="' + $("#canvas")[0].toDataURL() + '" style="background-image:url(' + $("#canvas")[0].toDataURL() + ');background-size:30px;"></li>');
+			}
 		}
-		// console.log($("#canvas")[0].toDataURL());
-		// return $("#canvas")[0].toDataURL();
+
 	}, 1000);
 }
