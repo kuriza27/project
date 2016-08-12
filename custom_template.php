@@ -280,36 +280,104 @@
 						<div class="clearfix"></div>
 				</div>
 				<div class="popup-order-gallery">
+
+					<div id="dv-10-free-keychains" class="col-md-12 add-ons" style="display:block;">
+						<div class="box-thumb clearfix">
+							<h1>You have <strong class="js-free-bands-count">10</strong> <strong>FREE</strong> keychains!</h1>
+							<br />
+
+							<input type="radio" id="free-10-keychains" class="free-add-on">
+							<span>Click to claim free keychains</span>
+
+							<div class="col-xs-12">
+								<h3>Input keychain quantity:</h3>
+								<input type="number" id="freekc" class="freewb-input " pattern="[0-9]*" placeholder="0" data-maxlength="2">
+							</div>
+						</div>
+					</div>
+
+					<!--
+					<div id="dv-100-free-band" class="col-md-12 add-ons" style="display:none;">
+						<div class="box-thumb">
+							<h1>You have <strong class="js-free-bands-count">100</strong> <strong>FREE</strong> wristbands!</h1>
+							<br/>
+							<input type="radio" id="free-100-wristband" class="free-add-on">
+							<span>Click to claim free wristbands</span>
+						</div>
+					</div>
+					-->
+
+					<!--
+					<div id="dv-100-free-band-content" class="col-md-12 add-ons" style="display:none;">
+						<div class="box-thumb">
+							<div class="col-xs-12">
+								<h4>Free Wristbands Color, Size and Quantity</h4>
+								<br/>
+								<div class="col-xs-offset-2 col-xs-8">
+									<i class="uk-icon-info-circle uk-icon-small"></i> Your free wristbands should be of the same color and size from your selections above. Please choose which color and size you want to receive, and specify the quantity below.
+								</div>
+								<br/>
+								<div class="col-xs-offset-3 col-xs-6">
+									<i class="uk-icon-warning uk-icon-small"></i> Your quantities have exceeded the maximum free wristband count.
+								</div>
+								<div class="clearfix"><hr></div>
+							</div>
+
+							<div class="col-xs-12">
+								<div class="col-xs-6 text-left">Style &amp; Color</div>
+								<div class="col-xs-3">Size</div>
+								<div class="col-xs-3">Qty</div>
+							</div>
+
+							<br/>
+							<div class="clearfix"></div>
+							<div class="col-xs-12 free-100-wb"></div>
+							<div class="clearfix"><hr></div>
+
+						    <div class="js-free-bands-less-than-count-tmpl uk-hidden">
+						    	<div class="text-center">
+						        	<div class="col-xs-12">You have entered <span id="wb-free-count" class="text-danger">0 of 100</span> free wristbands.</div>
+						        </div>
+						    </div>
+							<br /><br />
+							<div class="margin">
+								<button class="done-free done" type="button">Done?</button>
+								<button class="done-free update" type="button" style="display:none;">Update?</button>
+							</div>
+						</div>
+					</div>
+					-->
+
 					<div class="col-md-4 add-ons">
-					  <div class="box-thumb"><a href="assets/images/src/add-ons/3mm-thick.png" title="3mm thick option"><img src="assets/images/src/add-ons/3mm-thick.png" class="galleryimg"></a></div>
-					  <div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:150px;">Available for 1/2 and 3/4 inch wristbands only.</div></div>
-					  <div class="add-ons-radio">
-						  <input type="radio" name="add-ons-extra"  class="add-ons" value="1.99">
-						  <h2>3mm Thick Option</h2>
-					  </div>
+						<div class="box-thumb"><a href="assets/images/src/add-ons/3mm-thick.png" title="3mm thick option"><img src="assets/images/src/add-ons/3mm-thick.png" class="galleryimg"></a></div>
+						<div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:150px;">Available for 1/2 and 3/4 inch wristbands only.</div></div>
+						<div class="add-ons-radio">
+							<input type="radio" name="add-ons-extra"  class="add-ons" value="1.99">
+							<h2>3mm Thick Option</h2>
+						</div>
+					</div>
+
+					<div class="col-md-4 add-ons">
+						<div class="box-thumb"><a href="assets/images/src/add-ons/Digital-Proof.png" title="Digital Proof"><img src="assets/images/src/add-ons/Digital-Proof.png" class="galleryimg"></a></div>
+						<div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:150px;">We'll send you a proof for approval before production begins.</div></div>
+						<div class="add-ons-radio">
+							<input type="radio" name="add-ons-extra"  class="add-ons" value="1.99">
+							<h2>Digital Proof</h2>
+						</div>
 					</div>
 					<div class="col-md-4 add-ons">
-					  
-					  <div class="box-thumb"><a href="assets/images/src/add-ons/Digital-Proof.png" title="Digital Proof"><img src="assets/images/src/add-ons/Digital-Proof.png" class="galleryimg"></a></div>
-					  <div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:150px;">We'll send you a proof for approval before production begins.</div></div>
-					  <div class="add-ons-radio">
-						  <input type="radio" name="add-ons-extra"  class="add-ons" value="1.99">
-						  <h2>Digital Proof</h2>
-					  </div>
+						<div class="box-thumb"><a href="assets/images/src/add-ons/ecofriendly.png" title="Eco Friendly"><img src="assets/images/src/add-ons/ecofriendly.png" class="galleryimg"></a></div>
+						<div class="add-ons-radio">
+							<input type="radio" name="add-ons-extra"  class="add-ons" value="1.99">
+							<h2>Eco Friendly</h2>
+						</div>
 					</div>
 					<div class="col-md-4 add-ons">
-					  <div class="box-thumb"><a href="assets/images/src/add-ons/ecofriendly.png" title="Eco Friendly"><img src="assets/images/src/add-ons/ecofriendly.png" class="galleryimg"></a></div>
-					  <div class="add-ons-radio">
-						  <input type="radio" name="add-ons-extra"  class="add-ons" value="1.99">
-						  <h2>Eco Friendly</h2>
-					  </div>
-					</div>
-					<div class="col-md-4 add-ons">
-					  <div class="box-thumb"><a href="assets/images/src/add-ons/Glitters.png" title="Glitters"><img src="assets/images/src/add-ons/Glitters.png" class="galleryimg"></a></div>
-					  <div class="add-ons-radio">
-						  <input type="radio" name="add-ons-extra"  class="add-ons" value="1.99">
-						  <h2>Glitters</h2>
-					  </div>
+						<div class="box-thumb"><a href="assets/images/src/add-ons/Glitters.png" title="Glitters"><img src="assets/images/src/add-ons/Glitters.png" class="galleryimg"></a></div>
+						<div class="add-ons-radio">
+							<input type="radio" name="add-ons-extra"  class="add-ons" value="1.99">
+							<h2>Glitters</h2>
+						</div>
 					</div>
 					<div class="col-md-4 add-ons">
 					  <div class="box-thumb"><a href="assets/images/src/add-ons/Individual-pack.png" title="Individual pack"><img src="assets/images/src/add-ons/Individual-pack.png" class="galleryimg"></a></div>
@@ -328,7 +396,7 @@
 					  </div>
 					</div>
 			    </div>
-					<div class="clearfix"></div>
+				<div class="clearfix"></div>
 			</div>
 			<!-- total -->
 			<div class="clearfix"></div>

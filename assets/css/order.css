@@ -493,6 +493,26 @@ div#preview-textfont{
     margin-top:30px;
 }
 
+.col-md-12.add-ons{
+    margin-top:30px;
+}
+
+.col-md-12.add-ons .box-thumb{
+    color: #659f13;
+    border-color: rgb(101,159,19);
+}
+
+.col-md-12.add-ons h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.col-md-12.add-ons span {
+    margin: 0 0 0 10px;
+    font-size: 16px;
+    color: #079ca5!important;
+}
+
 .add-ons-radio {
     text-align: center;
     padding: 12px 0;
@@ -855,6 +875,13 @@ input#font-color {
     border-radius: 3px;
 }
 
+.done-free{
+    background-color: #17a589;
+    color: #fff;
+    border: 1px solid #117864;
+    padding: 6px 31px;
+    border-radius: 3px;
+}
 
 .dynamic-pick-color-list {
     margin: 0;

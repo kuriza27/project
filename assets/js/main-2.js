@@ -245,16 +245,17 @@ $(function(){
 
 	$('body').on('blur', '.box-color input[name$="-qty"]', function(e) {
 		var total = 0;
-		var map = {};
+		var map = [];
 
 		var style = $('.js-style .wrist_style:checked').val();
-		var ref_type = $(this).parents('.tab-pane').data('color').toLowerCase();
-		var ref_color = $(this).attr('ref');
-		var ref_color_str = ref_color.replace(/,/g, '-');
-		var ref_color_arr = ref_color.split(',');
 
 		$('.js-color input[name$="-qty"]').each(function(){
 
+			var ref_type = $(this).parents('.tab-pane').data('color').toLowerCase();
+			var ref_color = $(this).attr('ref');
+			if(!ref_color){ return; }
+			var ref_color_str = ref_color.replace(/,/g, '-');
+			var ref_color_arr = ref_color.split(',');
 			var qty = $(this).val();
 			var name = $(this).attr("name");
 			var idx = ref_type+"-"+style+"-"+name;
@@ -263,10 +264,14 @@ $(function(){
 
 				qty = parseInt(qty);
 
+				// if(typeof(map[idx]) == "undefined"){
+				// 	map[idx]=[];
+				// }
+
 				if(qty>0){
-					if(typeof(map[$(this).attr("name")]) == "undefined"){
-						map[$(this).attr("name")] = 0;
-					}
+
+					// map[idx].push({'style':style, 'type':ref_type, 'size':name, 'qty':qty, 'color':ref_color_str});
+					map.push({'style':style, 'type':ref_type, 'size':name, 'qty':qty, 'color':ref_color_str});
 
 					// if still not defined
 					if(typeof(has_preview[idx]) === "undefined"){
@@ -285,7 +290,7 @@ $(function(){
 					has_preview[idx].pop(ref_color_str);
 				}
 
-				map[$(this).attr("name")] += parseInt(qty);
+				// map[$(this).attr("name")] += parseInt(qty);
 				total += parseInt(qty);
 			}
 		});
@@ -294,8 +299,82 @@ $(function(){
 			$('.js-total').hide();
 			$('.js-no-total').fadeIn(300);
 		}
+
+		if(total >= 100){
+			$('#dv-10-free-keychains').show();
+
+			// var html = '';
+			// $.each(map, function(key, val){
+			// 	html += '<div class="col-xs-12">';
+			// 	html += '<div class="col-xs-6 text-left" style="padding:0px;"><label for="freewb-'+val.size+'-'+val.type+'-'+val.color+'">';
+			// 	html += '<div class="pull-left">'+val.type.toUpperCase()+'</div>';
+			// 	color = val.color.split('-');
+			// 		$.each(color, function(ck, cv){
+			// 			// html += '<li class="preview-pill" style="background-color:#'+cv+';height:30px;"></li>';
+			// 			html += '<div class="preview-pill pull-left" style="background-color:#'+cv+';border-radius:10px;height:15px;margin-left:5px;width:15px;"></div>';
+			// 		});
+			// 	html += '</label></div>';
+			// 	html += '<div class="col-xs-3"><label for="freewb-Medium_solid_LimeGreen">'+val.size.toUpperCase().replace(/-QTY/g, '')+'</label></div>';
+			// 	html += '<input type="number" id="freewb-'+val.size+'-'+val.type+'-'+val.color+'" name="freewb-'+val.size+'-'+val.type+'-'+val.color+'" class="freewb-input col-xs-3" pattern="[0-9]*" placeholder="0" data-maxlength="3">';
+			// 	html += '</div>';
+			// });
+			// $('.free-100-wb').html(html);
+			// $('.done-free.done').hide();
+			// $('.done-free.update').show();
+			// $('.freewb-input').prop('disabled', true);
+			// // $('#preview-pane-selection').html('');
+			// $('#dv-100-free-band').show();
+			// $('#free-100-wristband').prop('checked',false).removeClass('checked');
+			// $('#dv-100-free-band-content').hide();
+			// $('#wb-free-count').html('0 of 100');
+			// $('.done-free').hide();
+			// $('.done-free.done').show()
+			// $('.freewb-input').val('');
+			// $('.freewb-input').prop('disabled', false);
+		}else{
+			$('#dv-10-free-keychains').hide();
+
+			// $('#dv-100-free-band').hide();
+			// $('#dv-100-free-band-content').hide();
+		}
 	});
 
+	// $('body').on('click', '#free-100-wristband', function(){
+	// 	if($(this).hasClass('checked')){
+	// 		$(this).prop('checked',false);
+	// 		$(this).removeClass('checked');
+	// 		$('#dv-100-free-band-content').hide();
+	// 	}else{
+	// 		$(this).prop('checked',true);
+	// 		$(this).addClass('checked');
+	// 		$('#dv-100-free-band-content').show();
+	// 	}
+	// });
+	
+	// $('body').on('click', '.done-free', function(){
+	// 	total = 0;
+	// 	$('.freewb-input').each(function(){
+	// 		var qty = ($(this).val()) ? parseInt($(this).val()) : 0;
+	// 		total+=qty;
+	// 	});
+
+	// 	if(total>100) {
+	// 		alert("Total must not be over 100 wristbands.");
+	// 		return;
+	// 	}
+
+	// 	$('#wb-free-count').html(total+' of 100');
+
+	// 	if($(this).hasClass('done')){
+	// 		$(this).hide();
+	// 		$('.done-free.update').show();
+	// 		$('.freewb-input').prop('disabled', true);
+	// 	}else if($(this).hasClass('update')){
+	// 		$(this).hide();
+	// 		$('.done-free.done').show();
+	// 		$('.freewb-input').prop('disabled', false)
+	// 	}
+	// });
 
 	//colorpicker
 	$('.pick-color-list li').click(function(){
@@ -488,7 +567,7 @@ $(function(){
 			$(this).closest('.modal').modal('hide');
 		}
 	});
-	
+
 	//front message clipart button -------------------
 	$('.fclip-1').click(function(){
 			$(".clip-color-list li a").addClass('fsc');
@@ -599,7 +678,7 @@ $(function(){
 		$("#ClipArtModal").modal('toggle');
 
 	});
-	
+
 });
 
 function get_style_size(type) {
