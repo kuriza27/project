@@ -13,7 +13,7 @@
 	<li><a ref="Beers.png"><img  src="assets/images/src/clipart/Beers.png"/></a><br /><b>Beers</b></li>
 	<li><a ref="Bell.png"><img  src="assets/images/src/clipart/Bell.png"/></a><br /><b>Bell</b></li>
 	<li><a ref="Bike.png"><img  src="assets/images/src/clipart/Bike.png"/></a><br /><b>Bike</b></li>
-	<li><a ref="Birdhead.png"><img  src="assets/images/src/clipart/BirdHead.png"/></a><br /><b>Birdhead</b></li>
+	<li><a ref="BirdHead.png"><img  src="assets/images/src/clipart/BirdHead.png"/></a><br /><b>Birdhead</b></li>
 	<li><a ref="Bug.png"><img  src="assets/images/src/clipart/Bug.png"/></a><br /><b>Bug</b></li>
 	<li><a ref="Butterfly.png"><img  src="assets/images/src/clipart/Butterfly.png"/></a><br /><b>Butterfly 1</b></li>
 	<li><a ref="Butterfly-1.png"><img  src="assets/images/src/clipart/Butterfly-1.png"/></a><br /><b>Butterfly 2</b></li>

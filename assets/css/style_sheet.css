@@ -524,12 +524,11 @@ span.red {
 }
 
 .sizes-content ul li {
-	width: 38%;
 	padding: 4px 7px;
 	margin-bottom: 30px;
 	list-style: none;
-	margin-left: 95px;
 	float: left;
+	height: auto;
 }
 
 .sizes-content ul li img{

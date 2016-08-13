@@ -652,22 +652,22 @@ console.log(has_preview);
 		
 		if(img!="none.jpg"){
 			if($( ".clip-color-list li a" ).hasClass( "fsc" )){
-				$(".start-fc").html("<img width='24' height='20' src='assets/images/src/clipart/"+img+"'/>");
+				$(".start-fc").html("<img width='34' height='30' src='assets/images/src/clipart/"+img+"'/>");
 			}
 			else if($( ".clip-color-list li a" ).hasClass( "fec" )){
-				$(".end-fc").html("<img width='24' height='20' src='assets/images/src/clipart/"+img+"'/>");
+				$(".end-fc").html("<img width='34' height='30' src='assets/images/src/clipart/"+img+"'/>");
 			}
 			else if($( ".clip-color-list li a" ).hasClass( "bsc" )){
-				$(".back-mc").html("<img width='24' height='20' src='assets/images/src/clipart/"+img+"'/>");
+				$(".back-mc").html("<img width='34' height='30' src='assets/images/src/clipart/"+img+"'/>");
 			}
 			else if($( ".clip-color-list li a" ).hasClass( "bec" )){
-				$(".backend-mc").html("<img width='24' height='20' src='assets/images/src/clipart/"+img+"'/>");
+				$(".backend-mc").html("<img width='34' height='30' src='assets/images/src/clipart/"+img+"'/>");
 			}
 			else if($( ".clip-color-list li a" ).hasClass( "ccs" )){
-				$(".start-cc").html("<img width='24' height='20' src='assets/images/src/clipart/"+img+"'/>");
+				$(".start-cc").html("<img width='34' height='30' src='assets/images/src/clipart/"+img+"'/>");
 			}
 			else{
-				$(".end-cc").html("<img width='24' height='24' src='assets/images/src/clipart/"+img+"'/>");
+				$(".end-cc").html("<img width='34' height='34' src='assets/images/src/clipart/"+img+"'/>");
 			}
 		}
 		else{
