@@ -350,7 +350,7 @@
 	   <div class="cont-p">
 		   <div class="col-xs-98 float-left">
 		   <div class="popup-gallery">
-				<a href="assets/images/src/Color-Filled.png" title="Color-Filled">
+				<a href="assets/images/src/Color-Filled.png" title="Ink Injected">
 					<img width="350" src="assets/images/src/Color-Filled.png" class="galleryimg">
 				</a>
 			</div>
@@ -686,7 +686,7 @@
 	   <div class="cont-p">
 		   <div class="col-xs-98 float-left">
 			   <div class="popup-gallery">
-					<a href="assets/images/src/Embossed-Printed.png" title=""Embossed Printed>
+					<a href="assets/images/src/Embossed-Printed.png" title="Embossed Printed">
 						<img width="350" src="assets/images/src/Embossed-Printed.png" class="galleryimg">
 					</a>
 				</div>
