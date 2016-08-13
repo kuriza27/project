@@ -2,7 +2,7 @@
 /**
  *  Generate a preview image
  */
-function generatePreviewImage(style, colors) {
+function generatePreviewImage(style, colors, font_color) {
 
 	$(".segmented").css("display", "block");
 	$(".solid").css("display", "block");
@@ -43,7 +43,7 @@ function generatePreviewImage(style, colors) {
 			}
 
 			// Render SVG into Canvas
-			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview", style, colors);
+			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview", style, colors, font_color);
 
 		} else if (style === "segmented") {
 
@@ -131,7 +131,7 @@ function generatePreviewImage(style, colors) {
 			}
 
 			// Render SVG into Canvas
-			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview", style, colors);
+			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview", style, colors, font_color);
 
 		} else if(style === "solid") {
 
@@ -144,7 +144,7 @@ function generatePreviewImage(style, colors) {
 			$(".solid").css( "fill", "#" + colors[0]);
 
 			// Render SVG into Canvas
-			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview", style, colors);
+			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview", style, colors, font_color);
 
 		}
 		
@@ -159,7 +159,7 @@ function generatePreviewImage(style, colors) {
 			$(".glow").css( "fill", "#" + colors[0]);
 
 			// Render SVG into Canvas
-			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview", style, colors);
+			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview", style, colors, font_color);
 
 		}
 		
@@ -174,7 +174,7 @@ function generatePreviewImage(style, colors) {
 			$(".solid").css( "fill", "#" + colors[0]);
 
 			// Render SVG into Canvas
-			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview", style, colors);
+			return render($("#svg_main").parent().html().trim(), "output_canvas", "output_image", "preview", style, colors, font_color);
 
 		}
 
@@ -195,7 +195,7 @@ function generatePreviewImage(style, colors) {
 /**
  *  SVG to canvas to image render function
  */
-function render(svg, canvas, image, preview, type, colors) {
+function render(svg, canvas, image, preview, type, colors, font_color) {
 
 	// Get needed elements
 	var can = document.getElementById(canvas);
@@ -217,7 +217,7 @@ function render(svg, canvas, image, preview, type, colors) {
 			if(type=='dual') {
 				$("#preview-pane-selection").append('<li class="preview-pill preview-'+type+'-'+colors.join("-")+'" data-type="'+type+'" data-font-color="'+colors[1]+'" data-image-link="' + $("#canvas")[0].toDataURL() + '" style="background-image:url(' + $("#canvas")[0].toDataURL() + ');background-size:30px;"></li>');
 			} else {
-				$("#preview-pane-selection").append('<li class="preview-pill preview-'+type+'-'+colors.join("-")+'" data-type="'+type+'" data-image-link="' + $("#canvas")[0].toDataURL() + '" style="background-image:url(' + $("#canvas")[0].toDataURL() + ');background-size:30px;"></li>');
+				$("#preview-pane-selection").append('<li class="preview-pill preview-'+type+'-'+colors.join("-")+'" data-type="'+type+'" data-font-color="'+font_color+'" data-image-link="' + $("#canvas")[0].toDataURL() + '" style="background-image:url(' + $("#canvas")[0].toDataURL() + ');background-size:30px;"></li>');
 			}
 		}
 

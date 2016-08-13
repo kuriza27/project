@@ -1,22 +1,23 @@
 var has_preview = {};
 var dynamic_font_color = "";
+var default_font_color = "000000";
 
 $(document).ready(function(){
 	// For regular wristband size
-	$('.qtyin-adult-qty').closest('div').append('<div class="fntin fnt-qtyin-adult-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
-	$('.qtyin-medium-qty').closest('div').append('<div class="fntin fnt-qtyin-medium-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
-	$('.qtyin-youth-qty').closest('div').append('<div class="fntin fnt-qtyin-youth-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
+	$('.qtyin-adult-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-qtyin-adult-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.qtyin-medium-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-qtyin-medium-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.qtyin-youth-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-qtyin-youth-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
 	// For regular wristband xt size
-	$('.xt-small-qty').closest('div').append('<div class="fntin fnt-xt-small-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
-	$('.xt-large-qty').closest('div').append('<div class="fntin fnt-xt-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
+	$('.xt-small-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-xt-small-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.xt-large-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-xt-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
 
 	// For large wristband size
-	$('.qtyin-adult-large-qty').closest('div').append('<div class="fntin fnt-qtyin-adult-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
-	$('.qtyin-medium-large-qty').closest('div').append('<div class="fntin fnt-qtyin-medium-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
-	$('.qtyin-youth-large-qty').closest('div').append('<div class="fntin fnt-qtyin-youth-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
+	$('.qtyin-adult-large-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-qtyin-adult-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.qtyin-medium-large-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-qtyin-medium-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.qtyin-youth-large-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-qtyin-youth-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
 	// For large wristband xt size
-	$('.xt-small-large-qty').closest('div').append('<div class="fntin fnt-xt-small-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
-	$('.xt-large-large-qty').closest('div').append('<div class="fntin fnt-xt-large-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
+	$('.xt-small-large-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-xt-small-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.xt-large-large-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-xt-large-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
 
 	// For font color select event
 	$('body').on('click', '.fntin', function(){
@@ -25,10 +26,7 @@ $(document).ready(function(){
 	});
 
 	$('body').on('click', '#FontColorQtyModal ul.font-color-list li', function(){
-		dynamic_font_color.css('background-color', '#'+$(this).attr('refcode'));
-		// dynamic_font_color.closest('input').attr('ref', '#'+$(this).attr('refcode'));
-		// console.log(dynamic_font_color);
-		// console.log(dynamic_font_color.find('input'));
+		dynamic_font_color.css('background-color', '#'+$(this).attr('refcode')).attr('ref-font-color', $(this).attr('refcode'));
 		$('#FontColorQtyModal').modal('hide');
 	});
 });
@@ -96,7 +94,6 @@ $(function(){
 
 		if(typeof($(this).attr('data-font-color')) != "undefined"){
 			$("#preview-pane").css("color", "#"+$(this).attr('data-font-color'));
-			// $("#preview-textcolor").css("background-color", "#"+$(this).attr('data-font-color'));
 		}else{
 			if($("#font-color").css("display") != "none"){
 				$("#preview-pane").css("color", "#"+$("#preview-textcolor").css("background-color"));
@@ -120,10 +117,10 @@ $(function(){
 		});
 		return false;
 	});
+
 	$('.band-text').keyup().trigger;
 
 	$('.band-color').click(function(){
-
 		$color = $(this).attr('value');
 		$('.band').css('background', $color);
 	});
@@ -139,9 +136,9 @@ $(function(){
         var style = $(this).find('input[type="radio"]').val();
 
 		if(style === "printed" || style === "ink-injected" || style === "embossed-printed" || style === "figured"){
-			$('.fntin').show();
+			$('.fntin').show().addClass('active');
 		}else{
-			$('.fntin').hide();
+			$('.fntin').hide().removeClass('active');
 		}
 
 		if(style =='dual-layer'){
@@ -297,12 +294,13 @@ $(function(){
 			var ref_color_str = ref_color.replace(/,/g, '-');
 			var ref_color_arr = ref_color.split(',');
 			var qty = $(this).val();
-			var name = $(this).attr("name");
-			var idx = ref_type+"-"+style+"-"+name;
+
 
 			if(qty) {
-
-				qty = parseInt(qty);
+				var name = $(this).attr("name");
+				var ref_color_font = $(this).parents('.qty-box').find('.fntin').attr('ref-font-color');
+				var idx = ref_type+"-"+style+"-"+name;
+					qty = parseInt(qty);
 
 				// if(typeof(map[idx]) == "undefined"){
 				// 	map[idx]=[];
@@ -323,7 +321,7 @@ $(function(){
 						// create
 						var preview = $("#preview-pane-selection").find('.preview-pill.preview-'+ref_type+'-'+ref_color_str).length > 0;
 						if(!preview) {
-							generatePreviewImage(ref_type, ref_color_arr);
+							generatePreviewImage(ref_type, ref_color_arr, ref_color_font);
 						}
 					}
 				}else{
@@ -334,7 +332,7 @@ $(function(){
 				total += parseInt(qty);
 			}
 		});
-
+console.log(has_preview);
 		if(total == 0) {
 			$('.js-total').hide();
 			$('.js-no-total').fadeIn(300);
@@ -454,6 +452,7 @@ $(function(){
 		if(text != undefined);{
 			$("#preview-pane").css("font-family", text);
 			$("#preview-textfont").html("<img src='assets/images/src/fonts/"+img+"'/>");
+			$("#FontModal").modal('toggle');
 		}
 	});
 	
