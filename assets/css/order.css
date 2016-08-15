@@ -448,19 +448,20 @@ div#main-color-content {
     }
     
 div#preview-textcolor {
-    height: 40px;
     float: right;
-    width: 49px;
+    height: 40px;
     margin-right: 120px;
     margin-top: 2px;
+    width: 49px;
 }
 
 div#preview-textfont{
-    height: 40px;
     float: right;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    margin-right: 20px;
     width: 150px;
-    /* margin-right: 120px; */
-    margin-top: -32px;
 }
 
 #preview-pane #front-view, #preview-pane #back-view { 
@@ -469,7 +470,7 @@ div#preview-textfont{
     float: left; 
     margin-bottom: 10px; 
     text-align: center; 
-    }
+}
     
 #preview-pane #inside-view { width: 100% }
 #preview-pane .band {background:#fff; height: 50px; }
@@ -511,13 +512,13 @@ div#preview-textfont{
 }
 
 .col-md-12.add-ons .box-thumb{
-    color: #659f13;
-    border-color: rgb(101,159,19);
+    color: #079cb1;
+    border: 1px solid #CBCBCB;
 }
 
 .col-md-12.add-ons h1 {
     font-size: 20px;
-    margin: 0;
+    margin: 10px 0 25px 0;
 }
 
 .col-md-12.add-ons span {
@@ -627,7 +628,7 @@ div#order-summary {
     font-weight:bold;
 }
 
-.fclip-1, .fclip-2, .bclip-1, .bclip-2, #custom-color-button, .cclip-1, .cclip-2, #font-button, .btn-add-custom-color{
+.fclip-1, .fclip-2, .bclip-1, .bclip-2, #custom-color-button, .cclip-1, .cclip-2, #font-button, .btn-add-custom-color, #free-keychain-qty{
     background-color: #17a589;
     color: #fff;
     border: 1px solid  #117864 ;

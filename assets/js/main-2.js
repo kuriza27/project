@@ -332,18 +332,25 @@ $(function(){
 				total += parseInt(qty);
 			}
 		});
-console.log(has_preview);
-		if(total == 0) {
-			$('.js-total').hide();
-			$('.js-no-total').fadeIn(300);
-		}
+
+		get_style_size('fixed_price');
 
 		if(total >= 100){
+			$('.js-total').show();
 			$('#dv-10-free-keychains').show();
 		}else{
 			$('#dv-10-free-keychains').hide();
 			$('#freekc').val('');
 		}
+
+		if(total == 0){
+			$('.js-total').hide();
+			$('.js-no-total').fadeIn(300);	
+		}else if(total >= 20){
+			$('.js-total').fadeIn(300);
+			$('.js-no-total').hide();
+		}
+
 	});
 
 	$('body').on('blur', '#freekc', function(e){
