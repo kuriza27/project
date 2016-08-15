@@ -251,7 +251,7 @@ $(function(){
 		if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105 || e.keyCode == 190 || e.keyCode == 110)) {
 			e.preventDefault();
 		} else {
-			get_style_size('fixed_price');
+			// get_style_size('fixed_price');
 		}
 	});
 
@@ -333,10 +333,10 @@ $(function(){
 			}
 		});
 
-		get_style_size('fixed_price');
-
 		if(total >= 100){
-			$('.js-total').show();
+			get_style_size('fixed_price');
+			$('.js-total').fadeIn(300);
+			$('.js-no-total').hide();
 			$('#dv-10-free-keychains').show();
 		}else{
 			$('#dv-10-free-keychains').hide();
@@ -347,6 +347,7 @@ $(function(){
 			$('.js-total').hide();
 			$('.js-no-total').fadeIn(300);	
 		}else if(total >= 20){
+			get_style_size('fixed_price');
 			$('.js-total').fadeIn(300);
 			$('.js-no-total').hide();
 		}
@@ -723,7 +724,7 @@ function get_style_size(type) {
 	else {
 		var $style = $('input[name="wrist_style"]:checked').data('style');
 
-		
+
 		if($style === "printed" || $style === "ink-injected" || $style === "embossed-printed" || $style === "figured"){
 			$('.fntin').show().addClass('active');
 		}else{
@@ -784,50 +785,46 @@ function get_price_data($style, $size, type) {
 									var total_qty = 0;
 									var count = 0;
 
-									// // $('#wrist_color_container').find('.js-color').find('input[name$="-qty"]').each(function(i, el){
-									// $('.js-color input[name$="-qty"]').each(function(){
-									// 	var qty = $(this).val();
-									// 	// var ref_type = $(this).parents('.tab-pane').data('color').toLowerCase();
-									// 	// var ref_type = $(this).parents('.tab-pane').data('color');
-									// 	// var style = $('.js-style .wrist_style:checked').val();
+									// $('#wrist_color_container').find('.js-color').find('input[name$="-qty"]').each(function(i, el){
+									$('.js-color input[name$="-qty"]').each(function(){
 
-									// 	// if(qty != ''){
+										var qty = $(this).val();
+										var ref_type = $(this).parents('.tab-pane').data('color').toLowerCase();
+										var ref_type = $(this).parents('.tab-pane').data('color');
+										var style = $('.js-style .wrist_style:checked').val();
 
-									// 	// 	// if still not defined
-									// 	// 	if(typeof(has_preview[style+"-"+ref_type]) === "undefined"){
-									// 	// 		has_preview[style+"-"+ref_type] = [];
-									// 	// 	}
+										if(qty != ''){
 
-									// 	// 	var praseQty = parseInt(qty);
+											// if still not defined
+											if(typeof(has_preview[style+"-"+ref_type]) === "undefined"){
+												has_preview[style+"-"+ref_type] = [];
+											}
 
-									// 	// 	// $("#preview-pane-selection").html("");
-									// 	// 	if(typeof $(this).attr('ref') === "undefined"){
-									// 	// 		return false;
-									// 	// 	}else{
-									// 	// 		if(praseQty>0){
-									// 	// 			// check if still has no preview
-									// 	// 			// if($.inArray($(this).attr('ref'), has_preview[style+"-"+ref_type])<0){
-									// 	// 			// 	has_preview[style+"-"+ref_type].push($(this).attr('ref'));
+											var praseQty = parseInt(qty);
 
-									// 	// 			// 	$(".click-pre").css("display","block");
-									// 	// 			// 	var ref_colors = $(this).attr('ref').split(',');
+											// $("#preview-pane-selection").html("");
+											if(typeof $(this).attr('ref') === "undefined"){
+												return false;
+											}else{
+												if(praseQty>0){
+													// check if still has no preview
+													if($.inArray($(this).attr('ref'), has_preview[style+"-"+ref_type])<0){
+														has_preview[style+"-"+ref_type].push($(this).attr('ref'));
 
-									// 	// 			// 	// count total
-									// 	// 			// 	total_qty += praseQty;
+														$(".click-pre").css("display","block");
+														var ref_colors = $(this).attr('ref').split(',');
 
-									// 	// 			// 	// create
-									// 	// 			// 	var preview = $("#preview-pane-selection").find('.preview-pill.preview-'+ref_type.toLowerCase()+'-'+$(this).attr('ref').replace(/,/g, '-')).length > 0;
-									// 	// 			// 	if(!preview) {
-									// 	// 			// 		generatePreviewImage(ref_type.toLowerCase(), ref_colors);
-									// 	// 			// 	}
-									// 	// 			// }
-									// 			}else{
-									// 				// $('.preview-pill.preview-'+ref_type.toLowerCase()+'-'+$(this).attr('ref').replace(/,/g, '-')).remove();
-									// 				has_preview[style+"-"+ref_type].pop($(this).attr('ref'));
-									// 			}
-									// 		}
-									// 	}
-									// });
+														// count total
+														total_qty += praseQty;
+
+													}
+												}else{
+													// $('.preview-pill.preview-'+ref_type.toLowerCase()+'-'+$(this).attr('ref').replace(/,/g, '-')).remove();
+													has_preview[style+"-"+ref_type].pop($(this).attr('ref'));
+												}
+											}
+										}
+									});
 
 									var arr_keys = Object.keys(obj_price);
 
