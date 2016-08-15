@@ -334,7 +334,7 @@ $(function(){
 		});
 
 		if(total >= 100){
-			get_style_size('fixed_price');
+			// get_style_size('fixed_price');
 			$('.js-total').fadeIn(300);
 			$('.js-no-total').hide();
 			$('#dv-10-free-keychains').show();
