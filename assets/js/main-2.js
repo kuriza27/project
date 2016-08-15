@@ -3,20 +3,20 @@ var dynamic_font_color = "";
 
 $(document).ready(function(){
 	// For regular wristband size
-	$('.qtyin-adult-qty').closest('div').append('<div class="fntin fnt-qtyin-adult-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
-	$('.qtyin-medium-qty').closest('div').append('<div class="fntin fnt-qtyin-medium-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
-	$('.qtyin-youth-qty').closest('div').append('<div class="fntin fnt-qtyin-youth-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
+	$('.qtyin-adult-qty').closest('div').append('<div class="fntin fnt-qtyin-adult-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="assets/images/src/clr_bg.png" alt=""></div>');
+	$('.qtyin-medium-qty').closest('div').append('<div class="fntin fnt-qtyin-medium-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="assets/images/src/clr_bg.png" alt=""></div>');
+	$('.qtyin-youth-qty').closest('div').append('<div class="fntin fnt-qtyin-youth-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="assets/images/src/clr_bg.png" alt=""></div>');
 	// For regular wristband xt size
-	$('.xt-small-qty').closest('div').append('<div class="fntin fnt-xt-small-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
-	$('.xt-large-qty').closest('div').append('<div class="fntin fnt-xt-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
+	$('.xt-small-qty').closest('div').append('<div class="fntin fnt-xt-small-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="assets/images/src/clr_bg.png" alt=""></div>');
+	$('.xt-large-qty').closest('div').append('<div class="fntin fnt-xt-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="assets/images/src/clr_bg.png" alt=""></div>');
 
 	// For large wristband size
-	$('.qtyin-adult-large-qty').closest('div').append('<div class="fntin fnt-qtyin-adult-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
-	$('.qtyin-medium-large-qty').closest('div').append('<div class="fntin fnt-qtyin-medium-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
-	$('.qtyin-youth-large-qty').closest('div').append('<div class="fntin fnt-qtyin-youth-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
+	$('.qtyin-adult-large-qty').closest('div').append('<div class="fntin fnt-qtyin-adult-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="assets/images/src/clr_bg.png" alt=""></div>');
+	$('.qtyin-medium-large-qty').closest('div').append('<div class="fntin fnt-qtyin-medium-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="assets/images/src/clr_bg.png" alt=""></div>');
+	$('.qtyin-youth-large-qty').closest('div').append('<div class="fntin fnt-qtyin-youth-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="assets/images/src/clr_bg.png" alt=""></div>');
 	// For large wristband xt size
-	$('.xt-small-large-qty').closest('div').append('<div class="fntin fnt-xt-small-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
-	$('.xt-large-large-qty').closest('div').append('<div class="fntin fnt-xt-large-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="/assets/images/src/clr_bg.png" alt=""></div>');
+	$('.xt-small-large-qty').closest('div').append('<div class="fntin fnt-xt-small-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="assets/images/src/clr_bg.png" alt=""></div>');
+	$('.xt-large-large-qty').closest('div').append('<div class="fntin fnt-xt-large-large-qty" style="background-color:#8f8f8f;height:20px;margin-top:10px;"><img src="assets/images/src/clr_bg.png" alt=""></div>');
 
 	// For font color select event
 	$('body').on('click', '.fntin', function(){
