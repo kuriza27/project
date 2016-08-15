@@ -723,21 +723,28 @@ function get_style_size(type) {
 	else {
 		var $style = $('input[name="wrist_style"]:checked').data('style');
 
-		if($style== 'debossed'){
-			$("#font-color").hide(); 
+		
+		if($style === "printed" || $style === "ink-injected" || $style === "embossed-printed" || $style === "figured"){
+			$('.fntin').show().addClass('active');
+		}else{
+			$('.fntin').hide().removeClass('active');
 		}
-		else if($style == 'embossed'){
-			$("#font-color").hide();
-		}
-		else if($style == 'dual-layer'){
-			$("#font-color").hide();
-		}
-		else if($style == 'blank'){
-			$("#font-color").hide();
-		}
-		else{
-			$("#font-color").show();
-		}
+
+		// if($style== 'debossed'){
+		// 	$("#font-color").hide(); 
+		// }
+		// else if($style == 'embossed'){
+		// 	$("#font-color").hide();
+		// }
+		// else if($style == 'dual-layer'){
+		// 	$("#font-color").hide();
+		// }
+		// else if($style == 'blank'){
+		// 	$("#font-color").hide();
+		// }
+		// else{
+		// 	$("#font-color").show();
+		// }
 	}
 
 	get_price_data($style, $size, type);
