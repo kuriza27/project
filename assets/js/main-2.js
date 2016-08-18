@@ -46,6 +46,40 @@ $(function(){
 		
 		});
 	
+	//removes file 
+	$("#remove-1").click(function() {
+		$(".file-1").val("");
+	});
+	
+
+	//removes file 
+	$("#remove-2").click(function() {
+		$(".file-2").val("");
+	});
+	
+	
+	//removes file 
+	$("#remove-3").click(function() {
+		$(".file-3").val("");
+	});
+	
+	
+	//removes file 
+	$("#remove-4").click(function() {
+		$(".file-4").val("");
+	});
+	
+
+	//removes file 
+	$("#remove-5").click(function() {
+		$(".file-5").val("");
+	});
+	
+	//removes file 
+	$("#remove-6").click(function() {
+		$(".file-6").val("");
+	});
+	
 	 //change font
 	 $("#fs").change(function() {
 		//alert($(this).val());

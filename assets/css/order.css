@@ -999,3 +999,12 @@ span.end-cc {
 	position: absolute;
 
 }
+
+input[type=file] {
+    display: initial;
+    overflow-x: hidden;
+    width: 207px;
+    color: #8E0000;
+    border: 1px solid #CDCDCD;
+    padding: 4px;
+}
