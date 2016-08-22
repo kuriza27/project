@@ -385,7 +385,7 @@
 						<div class="box-thumb"><a href="assets/images/src/add-ons/3mm-thick.png" title="3mm thick option"><img src="assets/images/src/add-ons/3mm-thick.png" class="galleryimg"></a></div>
 						<div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:150px;">Available for 1/2 and 3/4 inch wristbands only.</div></div>
 						<div class="add-ons-radio">
-							<input type="radio" name="add-ons-extra"  class="add-ons" value="1.99">
+							<input type="checkbox" name="add-ons-extra"  class="add-ons" value="1.99"/>
 							<h2>3mm Thick Option</h2>
 						</div>
 					</div>
@@ -394,21 +394,21 @@
 						<div class="box-thumb"><a href="assets/images/src/add-ons/Digital-Proof.png" title="Digital Proof"><img src="assets/images/src/add-ons/Digital-Proof.png" class="galleryimg"></a></div>
 						<div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:150px;">We'll send you a proof for approval before production begins.</div></div>
 						<div class="add-ons-radio">
-							<input type="radio" name="add-ons-extra"  class="add-ons" value="1.99">
+							<input type="checkbox" name="add-ons-extra"  class="add-ons" value="1.99"/>
 							<h2>Digital Proof</h2>
 						</div>
 					</div>
 					<div class="col-md-4 add-ons">
 						<div class="box-thumb"><a href="assets/images/src/add-ons/ecofriendly.png" title="Eco Friendly"><img src="assets/images/src/add-ons/ecofriendly.png" class="galleryimg"></a></div>
 						<div class="add-ons-radio">
-							<input type="radio" name="add-ons-extra"  class="add-ons" value="1.99">
+							<input type="checkbox" name="add-ons-extra"  class="add-ons" value="1.99"/>
 							<h2>Eco Friendly</h2>
 						</div>
 					</div>
 					<div class="col-md-4 add-ons">
 						<div class="box-thumb"><a href="assets/images/src/add-ons/Glitters.png" title="Glitters"><img src="assets/images/src/add-ons/Glitters.png" class="galleryimg"></a></div>
 						<div class="add-ons-radio">
-							<input type="radio" name="add-ons-extra"  class="add-ons" value="1.99">
+							<input type="checkbox" name="add-ons-extra"  class="add-ons" value="1.99"/>
 							<h2>Glitters</h2>
 						</div>
 					</div>
@@ -416,7 +416,7 @@
 					  <div class="box-thumb"><a href="assets/images/src/add-ons/Individual-pack.png" title="Individual pack"><img src="assets/images/src/add-ons/Individual-pack.png" class="galleryimg"></a></div>
 					  <div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:200px;">Professionally sealed on biodegradable bags with clear back to see product inside.</div></div>
 					  <div class="add-ons-radio">
-						  <input type="radio" name="add-ons-extra"  class="add-ons" value="1.99">
+						  <input type="checkbox" name="add-ons-extra"  class="add-ons" value="1.99"/>
 						  <h2>Individually Pack</h2>
 					  </div>
 					</div>
@@ -424,7 +424,7 @@
 					  <div class="box-thumb"><a href="assets/images/src/add-ons/KeyChain.png" title="KeyChain"><img src="assets/images/src/add-ons/KeyChain.png" class="galleryimg"></a></div>
 					  <div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:132px;"> Available for 1/2 inch wristbands only.</div></div>
 					  <div class="add-ons-radio">
-						  <input type="radio" name="add-ons-extra"  class="add-ons" value="1.99">
+						  <input type="checkbox" name="add-ons-extra"  class="add-ons" value="1.99"/>
 						  <h2>Keychain</h2>
 					  </div>
 					</div>
