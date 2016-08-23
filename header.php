@@ -27,7 +27,7 @@
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
    <link rel="stylesheet" type="text/css" href="assets/docs/spectrum.css">
    <script src="assets/js/jquery-2.2.4.min.js"></script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
 
 	<!----<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.26.3/css/uikit.gradient.min.css">

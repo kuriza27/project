@@ -35,7 +35,7 @@
 			<!-- END BLANK STYLE -->
 		</div>
 		<!-- WRIST STYLE -->
-		<form action="" method="post" >
+		<form id="order-form" action="" method="post" novalidate enctype="multipart/form-data">
 		<div class="wrist-style">
 
 			<div class="row offer-bar margin-bootom-20 __web-inspector-hide-shortcut__">

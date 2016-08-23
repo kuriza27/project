@@ -385,7 +385,7 @@
 						<div class="box-thumb"><a href="assets/images/src/add-ons/3mm-thick.png" title="3mm thick option"><img src="assets/images/src/add-ons/3mm-thick.png" class="galleryimg"></a></div>
 						<div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:150px;">Available for 1/2 and 3/4 inch wristbands only.</div></div>
 						<div class="add-ons-radio">
-							<input type="checkbox" name="add-ons-extra"  class="add-ons" value="1.99"/>
+							<input type="checkbox" name="add-ons-extra" class="add-ons" data-code="3mm-thick"/>
 							<h2>3mm Thick Option</h2>
 						</div>
 					</div>
@@ -394,21 +394,21 @@
 						<div class="box-thumb"><a href="assets/images/src/add-ons/Digital-Proof.png" title="Digital Proof"><img src="assets/images/src/add-ons/Digital-Proof.png" class="galleryimg"></a></div>
 						<div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:150px;">We'll send you a proof for approval before production begins.</div></div>
 						<div class="add-ons-radio">
-							<input type="checkbox" name="add-ons-extra"  class="add-ons" value="1.99"/>
+							<input type="checkbox" name="add-ons-extra" class="add-ons" data-code="digital-proof"/>
 							<h2>Digital Proof</h2>
 						</div>
 					</div>
 					<div class="col-md-4 add-ons">
 						<div class="box-thumb"><a href="assets/images/src/add-ons/ecofriendly.png" title="Eco Friendly"><img src="assets/images/src/add-ons/ecofriendly.png" class="galleryimg"></a></div>
 						<div class="add-ons-radio">
-							<input type="checkbox" name="add-ons-extra"  class="add-ons" value="1.99"/>
+							<input type="checkbox" name="add-ons-extra" class="add-ons" data-code="eco-friendly"/>
 							<h2>Eco Friendly</h2>
 						</div>
 					</div>
 					<div class="col-md-4 add-ons">
 						<div class="box-thumb"><a href="assets/images/src/add-ons/Glitters.png" title="Glitters"><img src="assets/images/src/add-ons/Glitters.png" class="galleryimg"></a></div>
 						<div class="add-ons-radio">
-							<input type="checkbox" name="add-ons-extra"  class="add-ons" value="1.99"/>
+							<input type="checkbox" name="add-ons-extra" class="add-ons" data-code="glitters"/>
 							<h2>Glitters</h2>
 						</div>
 					</div>
@@ -416,7 +416,7 @@
 					  <div class="box-thumb"><a href="assets/images/src/add-ons/Individual-pack.png" title="Individual pack"><img src="assets/images/src/add-ons/Individual-pack.png" class="galleryimg"></a></div>
 					  <div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:200px;">Professionally sealed on biodegradable bags with clear back to see product inside.</div></div>
 					  <div class="add-ons-radio">
-						  <input type="checkbox" name="add-ons-extra"  class="add-ons" value="1.99"/>
+						  <input type="checkbox" name="add-ons-extra" class="add-ons" data-code="individual"/>
 						  <h2>Individually Pack</h2>
 					  </div>
 					</div>
@@ -424,7 +424,7 @@
 					  <div class="box-thumb"><a href="assets/images/src/add-ons/KeyChain.png" title="KeyChain"><img src="assets/images/src/add-ons/KeyChain.png" class="galleryimg"></a></div>
 					  <div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:132px;"> Available for 1/2 inch wristbands only.</div></div>
 					  <div class="add-ons-radio">
-						  <input type="checkbox" name="add-ons-extra"  class="add-ons" value="1.99"/>
+						  <input type="checkbox" name="add-ons-extra" class="add-ons" data-code="key-chain"/>
 						  <h2>Keychain</h2>
 					  </div>
 					</div>
@@ -437,25 +437,25 @@
 				<div class="js-total" style="display:none;">
 					<div class="col-md-4">
 					   <h5>Production Time</h5>
-						<select name="ProductionTime" id="ProductionTime" class="uk-form-large uk-width-1-1 js-production-options" data-title="Production" required="" data-validation-error="Please select production time." data-validation-slide-pos="production-shipping">
+						<select name="ProductionTime" id="ProductionTime" class="uk-form-large uk-width-1-1 js-production-options js-time-options" data-title="Production" required="" data-validation-error="Please select production time." data-validation-slide-pos="production-shipping">
 							
 							<?php 
 								
-								$size= isset($_POST['size']);
-								$style = isset($_post['style']);
-								$qty = isset($_post['qty']);
-								$sql = getProductionPrice($style,$size,$qty);
-								$result = $conn->query($sql);
+								// $size= isset($_POST['size']);
+								// $style = isset($_POST['style']);
+								// $qty = isset($_POST['qty']);
+								// $sql = getProductionPrice($style,$size,$qty);
+								// $result = $conn->query($sql);
 
-								if ($result->num_rows > 0) {
-									// output data of each row
-									while($row = $result->fetch_assoc()) {
+								// if ($result->num_rows > 0) {
+								// 	// output data of each row
+								// 	while($row = $result->fetch_assoc()) {
 									
-										echo  "<option value='".$row["price"]. "'>Standard Production '".$row["days"]. "'";
-											}
-								} else {
-									echo "0 results";
-								}
+								// 		echo  "<option value='".$row["price"]. "'>Standard Production '".$row["days"]. "'";
+								// 			}
+								// } else {
+								// 	echo "0 results";
+								// }
 							?>
 							<!---<option value='2' data-price='4.99'>Rush Production - 2 Days (+$4.99)</option>
 							<option value="4" data-price="4.90">Standard Production - 4 Days (+$4.90)</option>
@@ -463,12 +463,12 @@
 						</select>
 						<div style="padding-top:10px;"></div>
 						<h5>Shipping Time</h5>
-							<select name="Delivery" id="ShippingTime" class="uk-form-large uk-width-1-1 js-shipping-options" data-title="Shipping" required="" data-validation-error="Please select shipping time." data-validation-slide-pos="production-shipping">
-								<option value="0">Select Shipping Time…</option>
+							<select name="Delivery" id="ShippingTime" class="uk-form-large uk-width-1-1 js-shipping-options js-time-options" data-title="Shipping" required="" data-validation-error="Please select shipping time." data-validation-slide-pos="production-shipping">
+								<!-- <option value="0">Select Shipping Time…</option>
 								<option value="2" data-price="19.84">Rush Shipping - 2 Days (+$19.84)</option>
 								<option value="4" data-price="6.84">Standard Shipping - 4 Days (+$6.84)</option>
 								<option value="6" data-price="5.89">Standard Shipping - 6 Days (+$5.89)</option>
-								<option value="7" data-price="15.79">International Shipping - 7 Days (+$15.79)</option>
+								<option value="7" data-price="15.79">International Shipping - 7 Days (+$15.79)</option> -->
 							</select>
 					</div>
 
@@ -480,7 +480,10 @@
 									<div class="col-md-12">
 										<p><strong>
 											Style: <u><span id="wristband_style"></span></u> <br>
-											Size: <u><span id="wristband_size"></span></u>
+											Size: <u><span id="wristband_size"></span></u> <br><br>
+											Add-Ons Total: <u><span id="wristband_add_ons" data-addon-total="0">$0.00</span></u><br><br>
+											Production Time: <u><span id="wristband_ptime" data-production-time="0" data-production-price="0">$0.00</span></u><br>
+											Shipping Time: <u><span id="wristband_stime" data-shipping-time="0" data-shipping-price="0">$0.00</span></u>
 										</strong></p>
 									</div>
 								</div>
@@ -488,17 +491,17 @@
 									<div class="col-md-8 col-sm-6"><strong>Colors</strong></div>
 									<div class="col-md-4 col-sm-6 align-right"><strong>Subtotal</strong></div>
 								</div>
-								<hr>
 								<div class="summary-list-item js-item-summary">
 								</div>
 							</div>
 						</div>
-						<h1 class="align-right">Total: <span id= "totalPrice">$ 0.00</span></h1>
+						<hr>
+						<h1 class="align-right">Total: <span id= "totalPrice" data-total="0">$ 0.00</span></h1>
 					</div>
 					<div class="col-md-2">
 
 					  <div class="button-cart">
-						<button>Add to Cart</button>
+						<button type="submit">Add to Cart</button>
 					  </div>
 					</div>
 					<div class="clearfix"></div>
