@@ -438,10 +438,28 @@
 					<div class="col-md-4">
 					   <h5>Production Time</h5>
 						<select name="ProductionTime" id="ProductionTime" class="uk-form-large uk-width-1-1 js-production-options" data-title="Production" required="" data-validation-error="Please select production time." data-validation-slide-pos="production-shipping">
-							<option value="0">Select Production Time…</option>
-							<option value="2" data-price="4.99">Rush Production - 2 Days (+$4.99)</option>
+							
+							<?php 
+								
+								$size= isset($_POST['size']);
+								$style = isset($_post['style']);
+								$qty = isset($_post['qty']);
+								$sql = getProductionPrice($style,$size,$qty);
+								$result = $conn->query($sql);
+
+								if ($result->num_rows > 0) {
+									// output data of each row
+									while($row = $result->fetch_assoc()) {
+									
+										echo  "<option value='".$row["price"]. "'>Standard Production '".$row["days"]. "'";
+											}
+								} else {
+									echo "0 results";
+								}
+							?>
+							<!---<option value='2' data-price='4.99'>Rush Production - 2 Days (+$4.99)</option>
 							<option value="4" data-price="4.90">Standard Production - 4 Days (+$4.90)</option>
-							<option value="7" data-price="0.00">Standard Production - 7 Days (+$0.00)</option>
+							<option value="7" data-price="0.00">Standard Production - 7 Days (+$0.00)</option>---->
 						</select>
 						<div style="padding-top:10px;"></div>
 						<h5>Shipping Time</h5>
@@ -493,7 +511,7 @@
 		</div>
 	</div>
 </div>
-
+</form>
 <div id="solidCustomColorSelector" class="hide" style="display:none;">
 	<div class="col-xs-4 box-color dynamic-box-color">
 		<button class="btn-close-custom-color">X</button>
