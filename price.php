@@ -55,7 +55,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo $row["qty"]. "<br />";
+										echo "<p>".$row["qty"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -75,7 +75,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -95,7 +95,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -115,7 +115,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -135,7 +135,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -155,7 +155,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -175,7 +175,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -244,7 +244,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo $row["qty"]. "<br />";
+										echo "<p>".$row["qty"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -264,7 +264,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -284,7 +284,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -304,7 +304,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -324,7 +324,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -344,7 +344,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -364,7 +364,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -433,7 +433,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo $row["qty"]. "<br />";
+										echo "<p>".$row["qty"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -453,7 +453,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -473,7 +473,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -493,7 +493,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -513,7 +513,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -533,7 +533,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -553,7 +553,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -622,7 +622,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo $row["qty"]. "<br />";
+										echo  "<p>".$row["qty"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -642,7 +642,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -662,7 +662,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -682,7 +682,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -702,7 +702,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -722,7 +722,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -742,7 +742,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -811,7 +811,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo $row["qty"]. "<br />";
+										echo "<p>".$row["qty"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -831,7 +831,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -851,7 +851,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -871,7 +871,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -891,7 +891,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -911,7 +911,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -931,7 +931,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1000,7 +1000,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo $row["qty"]. "<br />";
+										echo "<p>".$row["qty"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1020,7 +1020,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1040,7 +1040,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1060,7 +1060,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1080,7 +1080,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1100,7 +1100,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1120,7 +1120,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1187,7 +1187,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo $row["qty"]. "<br />";
+										echo "<p>".$row["qty"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1207,7 +1207,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1227,7 +1227,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1247,7 +1247,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1267,7 +1267,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1287,7 +1287,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1307,7 +1307,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1374,7 +1374,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo $row["qty"]. "<br />";
+										echo "<p>".$row["qty"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1394,7 +1394,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1414,7 +1414,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1434,7 +1434,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1454,7 +1454,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1474,7 +1474,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1494,7 +1494,7 @@
 									// output data of each row
 									while($row = $result->fetch_assoc()) {
 									
-										echo  $row["price"]. "<br />";
+										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1564,8 +1564,9 @@
 	// -->
 	</script>
 	<style>
-	td br {
-		margin: 8px 0;
+	td p {
+		margin: 12px 0;
+		border-bottom:1px solid #BFBFBF;
 		
 	}
 	
