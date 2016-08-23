@@ -92,11 +92,21 @@
 								
 								<div class="clip-sec col-xs-6">
 									<button class="fclip-1" data-toggle="modal" data-target="#ClipArtModal" style="margin-left:-14px;">Front Start Clipart</button><br />
-									<a href="#">or Upload your own art</a>
+									<a href="javascript:void(0)" data-toggle="collapse" data-target="#upload-1">or Upload your own art</a>
+									<div id="upload-1" class="collapse">
+										<label for="file">Choose Photo:</label>
+										<input type="file" name="file-1" class="file-1" required><br>
+										<a href="javascript:void(0)" id="remove-1">Remove File</a>
+									</div>
 								</div>
 								<div class="clip-sec col-xs-6">
 									<button class="fclip-2" data-toggle="modal" data-target="#ClipArtModal">Front End Clipart</button><br />
-									<a href="#">or Upload your own art</a>
+									<a href="javascript:void(0)" data-toggle="collapse" data-target="#upload-2">or Upload your own art</a>
+									<div id="upload-2" class="collapse">
+										<label for="file">Choose Photo:</label>
+										<input type="file" name="file-2" class="file-2" required><br>
+										<a href="javascript:void(0)" id="remove-2">Remove File</a>
+									</div>
 								</div>
 									<div class="clearfix"></div>
 							</div>
@@ -106,11 +116,22 @@
 								<input type="text" name="back-text" class="band-text" value="" placeholder="Enter Back Message" maxlength="22">
 								<div class="clip-sec col-xs-6">
 									<button class="bclip-1" data-toggle="modal" data-target="#ClipArtModal" style="margin-left:-14px;">Back Start Clipart</button><br />
-									<a href="#">or Upload your own art</a>
+									<a href="javascript:void(0)" data-toggle="collapse" data-target="#upload-3">or Upload your own art</a>
+									<div id="upload-3" class="collapse">
+										<label for="file">Choose Photo:</label>
+										<input type="file" name="file-3" class="file-3" required><br>
+										<a href="javascript:void(0)" id="remove-3">Remove File</a>
+									</div>
 								</div>
 								<div class="clip-sec col-xs-6">
 									<button class="bclip-2" data-toggle="modal" data-target="#ClipArtModal">Back End Clipart</button><br />
-									<a href="#">or Upload your own art</a>
+									<a href="javascript:void(0)" data-toggle="collapse" data-target="#upload-4">or Upload your own art</a>
+									<div id="upload-4" class="collapse">
+										<label for="file">Choose Photo:</label>
+										<input type="file" name="file-4" class="file-4" required><br>
+										<a href="javascript:void(0)" id="remove-4">Remove File</a>
+									</div>
+									<div></div>
 								</div>
 									<div class="clearfix"></div>
 							</div>
@@ -124,11 +145,21 @@
 							<div class="clearfix"></div>
 							<div class="clip-sec" style="float:left;width:20%;margin-left:16px;">
 								<button class="cclip-1" data-toggle="modal" data-target="#ClipArtModal">Start Clipart</button><br />
-								<a href="#">or Upload your own art</a>
+								<a href="javascript:void(0)" data-toggle="collapse" data-target="#upload-5">or Upload your own art</a>
+									<div id="upload-5" class="collapse">
+										<label for="file">Choose Photo:</label>
+										<input type="file" name="file-5" class="file-5" required><br>
+										<a href="javascript:void(0)" id="remove-5">Remove File</a>
+									</div>
 							</div>
 							<div class="clip-sec" style="float:left;width:20%;">
 								<button class="cclip-2" data-toggle="modal" data-target="#ClipArtModal">End Clipart</button><br />
-								<a href="#">or Upload your own art</a>
+								<a href="javascript:void(0)" data-toggle="collapse" data-target="#upload-6">or Upload your own art</a>
+									<div id="upload-6" class="collapse">
+										<label for="file">Choose Photo:</label>
+										<input type="file" name="file-6" class="file-6" required><br>
+										<a href="javascript:void(0)"id="remove-6">Remove File</a>
+									</div>
 							</div>
 								<div class="clearfix"></div>
 						</div>
@@ -354,7 +385,7 @@
 						<div class="box-thumb"><a href="assets/images/src/add-ons/3mm-thick.png" title="3mm thick option"><img src="assets/images/src/add-ons/3mm-thick.png" class="galleryimg"></a></div>
 						<div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:150px;">Available for 1/2 and 3/4 inch wristbands only.</div></div>
 						<div class="add-ons-radio">
-							<input type="radio" name="add-ons-extra"  class="add-ons" value="1.99">
+							<input type="checkbox" name="add-ons-extra"  class="add-ons" value="1.99"/>
 							<h2>3mm Thick Option</h2>
 						</div>
 					</div>
@@ -363,21 +394,21 @@
 						<div class="box-thumb"><a href="assets/images/src/add-ons/Digital-Proof.png" title="Digital Proof"><img src="assets/images/src/add-ons/Digital-Proof.png" class="galleryimg"></a></div>
 						<div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:150px;">We'll send you a proof for approval before production begins.</div></div>
 						<div class="add-ons-radio">
-							<input type="radio" name="add-ons-extra"  class="add-ons" value="1.99">
+							<input type="checkbox" name="add-ons-extra"  class="add-ons" value="1.99"/>
 							<h2>Digital Proof</h2>
 						</div>
 					</div>
 					<div class="col-md-4 add-ons">
 						<div class="box-thumb"><a href="assets/images/src/add-ons/ecofriendly.png" title="Eco Friendly"><img src="assets/images/src/add-ons/ecofriendly.png" class="galleryimg"></a></div>
 						<div class="add-ons-radio">
-							<input type="radio" name="add-ons-extra"  class="add-ons" value="1.99">
+							<input type="checkbox" name="add-ons-extra"  class="add-ons" value="1.99"/>
 							<h2>Eco Friendly</h2>
 						</div>
 					</div>
 					<div class="col-md-4 add-ons">
 						<div class="box-thumb"><a href="assets/images/src/add-ons/Glitters.png" title="Glitters"><img src="assets/images/src/add-ons/Glitters.png" class="galleryimg"></a></div>
 						<div class="add-ons-radio">
-							<input type="radio" name="add-ons-extra"  class="add-ons" value="1.99">
+							<input type="checkbox" name="add-ons-extra"  class="add-ons" value="1.99"/>
 							<h2>Glitters</h2>
 						</div>
 					</div>
@@ -385,7 +416,7 @@
 					  <div class="box-thumb"><a href="assets/images/src/add-ons/Individual-pack.png" title="Individual pack"><img src="assets/images/src/add-ons/Individual-pack.png" class="galleryimg"></a></div>
 					  <div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:200px;">Professionally sealed on biodegradable bags with clear back to see product inside.</div></div>
 					  <div class="add-ons-radio">
-						  <input type="radio" name="add-ons-extra"  class="add-ons" value="1.99">
+						  <input type="checkbox" name="add-ons-extra"  class="add-ons" value="1.99"/>
 						  <h2>Individually Pack</h2>
 					  </div>
 					</div>
@@ -393,7 +424,7 @@
 					  <div class="box-thumb"><a href="assets/images/src/add-ons/KeyChain.png" title="KeyChain"><img src="assets/images/src/add-ons/KeyChain.png" class="galleryimg"></a></div>
 					  <div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:132px;"> Available for 1/2 inch wristbands only.</div></div>
 					  <div class="add-ons-radio">
-						  <input type="radio" name="add-ons-extra"  class="add-ons" value="1.99">
+						  <input type="checkbox" name="add-ons-extra"  class="add-ons" value="1.99"/>
 						  <h2>Keychain</h2>
 					  </div>
 					</div>

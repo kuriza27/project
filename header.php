@@ -63,7 +63,7 @@
 	})(window,document,'script','dataLayer','GTM-KFHV3B');</script>
 	<!-- End Google Tag Manager -->
 	
-
+<?php include_once 'dbconfig.php'; ?>
 <div id="main">
 <header>
     <nav class="navbar navbar-inverse navbar-default">

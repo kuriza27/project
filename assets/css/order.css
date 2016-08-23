@@ -212,7 +212,7 @@ ORDER CSS
     width: 25%;
     padding: 6px 9px;
     margin-top: 10px;
-    min-height: 202px;
+    min-height: 296px;
     display: block;
 }
 
@@ -220,6 +220,7 @@ ORDER CSS
     transform: scale(2);
     cursor:pointer;
 }
+
 
 #main-page-content h2 {
     margin: 0;
@@ -231,7 +232,7 @@ ORDER CSS
     background-color: #fff;
     border: 1px solid #CBCBCB;
     text-align: center;
-    padding: 10px;
+    padding: 58px 9px;
     border-radius: 4px;
     margin-bottom: 10px;
 }
@@ -405,7 +406,7 @@ div#main-color-content {
     font-size: 12px;
     padding: 8px 46px;
     margin-bottom: 18px;
-    /*margin-left: 23px;*/
+    margin-left: 23px;
     top: 12px;
     border: 1px solid;
 }
@@ -826,6 +827,7 @@ b:hover{
 #font-color {
     width: 344px;
     padding: 8px;
+	display:none;
 }
 
 input#font-color {
@@ -997,4 +999,13 @@ span.end-cc {
     display: block;
 	position: absolute;
 
+}
+
+input[type=file] {
+    display: initial;
+    overflow-x: hidden;
+    width: 207px;
+    color: #8E0000;
+    border: 1px solid #CDCDCD;
+    padding: 4px;
 }

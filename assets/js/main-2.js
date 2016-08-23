@@ -46,6 +46,40 @@ $(function(){
 		
 		});
 	
+	//removes file 
+	$("#remove-1").click(function() {
+		$(".file-1").val("");
+	});
+	
+
+	//removes file 
+	$("#remove-2").click(function() {
+		$(".file-2").val("");
+	});
+	
+	
+	//removes file 
+	$("#remove-3").click(function() {
+		$(".file-3").val("");
+	});
+	
+	
+	//removes file 
+	$("#remove-4").click(function() {
+		$(".file-4").val("");
+	});
+	
+
+	//removes file 
+	$("#remove-5").click(function() {
+		$(".file-5").val("");
+	});
+	
+	//removes file 
+	$("#remove-6").click(function() {
+		$(".file-6").val("");
+	});
+	
 	 //change font
 	 $("#fs").change(function() {
 		//alert($(this).val());
@@ -755,11 +789,105 @@ function get_price_data($style, $size, type) {
 
 	//get JSON Price list
 	var count = 0;
-	$.getJSON( "order.json", function( data ) {
+	$.getJSON( "orders_json.php", function( data ) {
 		var items = [];
 		var arr = $.map(data, function(elem) { return elem });
 		var len = arr.length - 1;
 
+		$.each(data, function(data_style, data_sizes) {
+
+			// To lowercase strings for compare
+			$style = $style.toLowerCase();
+			data_style = data_style.toLowerCase();
+
+			if(data_style == $style) {
+
+				$.each(data_sizes, function(key_size, val_size) {
+
+					if(key_size == $size) {
+
+						if(type == 'price_table') {
+
+							$('#priceTable').find('td.js-temp').remove();
+							$.each(val_size, function(key_qty, val_qty){
+								$('#priceTable').append('<td class="js-temp">$<span data-qty-range="'+key_qty+'">'+val_qty+'</span></td>');
+								$('.js-pricing-table').fadeIn(300);
+							});
+							$('.js-wb-caption').find('.style').text($style.toUpperCase());
+							$('.js-wb-caption').find('.size').text($size);
+
+						}
+
+/**
+						if(type == 'fixed_price') {
+
+							var total_qty = 0;
+							var count = 0;
+
+							// $('#wrist_color_container').find('.js-color').find('input[name$="-qty"]').each(function(i, el){
+							$('.js-color input[name$="-qty"]').each(function(){
+
+								var qty = $(this).val();
+								var ref_type = $(this).parents('.tab-pane').data('color').toLowerCase();
+								var ref_type = $(this).parents('.tab-pane').data('color');
+								var style = $('.js-style .wrist_style:checked').val();
+
+								if(qty != ''){
+
+									// if still not defined
+									if(typeof(has_preview[style+"-"+ref_type]) === "undefined"){
+										has_preview[style+"-"+ref_type] = [];
+									}
+
+									var praseQty = parseInt(qty);
+
+									// $("#preview-pane-selection").html("");
+									if(typeof $(this).attr('ref') === "undefined"){
+										return false;
+									}else{
+										if(praseQty>0){
+											// check if still has no preview
+											if($.inArray($(this).attr('ref'), has_preview[style+"-"+ref_type])<0){
+												has_preview[style+"-"+ref_type].push($(this).attr('ref'));
+
+												$(".click-pre").css("display","block");
+												var ref_colors = $(this).attr('ref').split(',');
+
+												// count total
+												total_qty += praseQty;
+
+											}
+										}else{
+											// $('.preview-pill.preview-'+ref_type.toLowerCase()+'-'+$(this).attr('ref').replace(/,/g, '-')).remove();
+											has_preview[style+"-"+ref_type].pop($(this).attr('ref'));
+										}
+									}
+								}
+							});
+
+							var arr_keys = Object.keys(obj_price);
+
+							for(key in arr_keys) {
+								if(key < (arr_keys.length-1)) {
+									var k = parseInt(key) + 1;
+
+									if(total_qty >= arr_keys[key] && total_qty < arr_keys[k]) {
+										get_total_price(obj_price[arr_keys[key]], total_qty,wb_style, $size);
+									}
+								}
+							}
+						}
+*/
+
+					}
+
+				});
+
+			}
+
+		});
+
+		/**
 		for(var keys in arr) {
 
 			for(var wb_style in arr[keys]) {
@@ -844,6 +972,7 @@ function get_price_data($style, $size, type) {
 				}
 			}
 		}
+		*/
 
 	});
 }
