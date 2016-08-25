@@ -64,6 +64,7 @@
 	<!-- End Google Tag Manager -->
 	
 <?php include_once 'dbconfig.php'; ?>
+<?php  //include_once 'dbconfigSite.php'; ?>
 <div id="main">
 <header>
     <nav class="navbar navbar-inverse navbar-default">

@@ -357,7 +357,6 @@ $(function(){
 			var ref_color_arr = ref_color.split(',');
 			var qty = $(this).val();
 
-
 			if(qty) {
 				var name = $(this).attr("name");
 				var ref_color_font = $(this).parents('.qty-box').find('.fntin').attr('ref-font-color');
@@ -369,9 +368,8 @@ $(function(){
 				// }
 
 				if(qty>0){
-					
-					// console.log(style,size,qty);
-
+                     console.log(style, size, qty);
+					$('.prod-ship').css('display','block');
 					sendToQuery('get_prices', style, size, qty);
 					// map[idx].push({'style':style, 'type':ref_type, 'size':name, 'qty':qty, 'color':ref_color_str});
 					map.push({'style':style, 'type':ref_type, 'size':name, 'qty':qty, 'color':ref_color_str});
@@ -834,7 +832,7 @@ function get_price_data($style, $size, type) {
 			data_style = data_style.toLowerCase();
 
 			if(data_style == $style) {
-
+                 console.log($style);
 				$.each(data_sizes, function(key_size, val_size) {
 
 					if(key_size == $size) {
@@ -1134,7 +1132,6 @@ function sendToQuery(action, style, size, qty, where) {
 	    data: {'action':action,'style':style,'size':size,'qty':qty,'where':where},
 	    success: function(data) {
 	    	data = $.parseJSON(data);
-
 	    	if(action === 'get_prices') {
 		    	var html_prod, html_ship = '';
 

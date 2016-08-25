@@ -435,40 +435,13 @@
 			<div class="clearfix"></div>
 			<div class="total-area">
 				<div class="js-total" style="display:none;">
-					<div class="col-md-4">
+					<div class="prod-ship col-md-4" style="display:none;">
 					   <h5>Production Time</h5>
 						<select name="ProductionTime" id="ProductionTime" class="uk-form-large uk-width-1-1 js-production-options js-time-options" data-title="Production" required="" data-validation-error="Please select production time." data-validation-slide-pos="production-shipping">
-							
-							<?php 
-								
-								// $size= isset($_POST['size']);
-								// $style = isset($_POST['style']);
-								// $qty = isset($_POST['qty']);
-								// $sql = getProductionPrice($style,$size,$qty);
-								// $result = $conn->query($sql);
-
-								// if ($result->num_rows > 0) {
-								// 	// output data of each row
-								// 	while($row = $result->fetch_assoc()) {
-									
-								// 		echo  "<option value='".$row["price"]. "'>Standard Production '".$row["days"]. "'";
-								// 			}
-								// } else {
-								// 	echo "0 results";
-								// }
-							?>
-							<!---<option value='2' data-price='4.99'>Rush Production - 2 Days (+$4.99)</option>
-							<option value="4" data-price="4.90">Standard Production - 4 Days (+$4.90)</option>
-							<option value="7" data-price="0.00">Standard Production - 7 Days (+$0.00)</option>---->
 						</select>
 						<div style="padding-top:10px;"></div>
 						<h5>Shipping Time</h5>
 							<select name="Delivery" id="ShippingTime" class="uk-form-large uk-width-1-1 js-shipping-options js-time-options" data-title="Shipping" required="" data-validation-error="Please select shipping time." data-validation-slide-pos="production-shipping">
-								<!-- <option value="0">Select Shipping Time…</option>
-								<option value="2" data-price="19.84">Rush Shipping - 2 Days (+$19.84)</option>
-								<option value="4" data-price="6.84">Standard Shipping - 4 Days (+$6.84)</option>
-								<option value="6" data-price="5.89">Standard Shipping - 6 Days (+$5.89)</option>
-								<option value="7" data-price="15.79">International Shipping - 7 Days (+$15.79)</option> -->
 							</select>
 					</div>
 
@@ -514,7 +487,7 @@
 		</div>
 	</div>
 </div>
-</form>
+<!--</form> -->
 <div id="solidCustomColorSelector" class="hide" style="display:none;">
 	<div class="col-xs-4 box-color dynamic-box-color">
 		<button class="btn-close-custom-color">X</button>

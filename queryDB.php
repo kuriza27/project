@@ -1,5 +1,6 @@
 <?php 
 	include_once 'dbconfig.php';
+	//include_once 'dbconfigSite.php';
 
 	if(isset($_POST['action'])) {
 
@@ -64,40 +65,33 @@
 	//get wristband price by style and size
 	function getWristbandPrice($style,$size)
 	{
-		$sql = "SELECT size_id, qty, price FROM price where style_id ='".$style."' AND size_id = '".$size."'";
+		$sql = "SELECT size_id, qty, price 
+					FROM price where style_id ='".$style."' AND size_id = '".$size."'";
 		
 		return $sql;
 	}
 
 	function getPriceJSON()
 	{
-		$sql = "SELECT p.id, wst.code AS `style_code`, wst.name AS `style_name`, wsz.code AS `size_code`, wsz.name AS `size_name`, p.qty, p.price FROM `price` AS `p` JOIN `wristband_style` AS `wst` ON p.style_id = wst.id JOIN `wristband_size` AS `wsz` ON p.size_id = wsz.id ORDER BY p.style_id ASC";
-		
+		$sql = "SELECT p.id, wst.code AS `style_code`, wst.name AS `style_name`, wsz.code AS `size_code`, wsz.name AS `size_name`, p.qty, p.price 
+					FROM `price` AS `p` 
+				JOIN `wristband_style` AS `wst` ON p.style_id = wst.id 
+				JOIN `wristband_size` AS `wsz` ON p.size_id = wsz.id 
+				ORDER BY p.style_id ASC";
+				
 		return $sql;
 	}
 
 	//get production price by style, qty and size
 	function getProductionPrice($style,$size,$qty)
 	{
-		// echo "Style: ".$style;
-		// echo "Size: ".$size;
-		// echo "Qty: ".$qty;
-		// if($qty>=20 && $qty<50){
-		// 	$limit=50;
-		// 	$sql = "SELECT  qty, price , days
-		// 			FROM price_production
-		// 		WHERE style_id ='".$style."' AND size_id = '".$size."' AND qty <= '".$qty."' AND qty > '".$limit."'";
-		// } else if($qty>=50 && $qty<100){
-		// 	$limit=100;
-		// 	$sql = "SELECT  qty, price , days
-		// 		FROM price_production
-		// 	WHERE style_id ='".$style."' AND size_id = '".$size."' AND qty <= '".$qty."' AND qty > '".$limit."'";
-		// } else {
-		// 	$limit=100;
-			$sql = "SELECT pd.qty, pd.price, pd.days FROM price_production AS pd JOIN wristband_style AS wst ON wst.id = pd.style_id JOIN wristband_size AS wsz ON wsz.id = pd.size_id WHERE wst.code ='".$style."' AND wsz.code = '".$size."' AND qty >= '20' AND qty < '50' ORDER BY pd.days ASC";
-		// }
+			$sql = "SELECT pd.qty, pd.price, pd.days 
+						FROM price_production AS pd 
+					JOIN wristband_style AS wst ON wst.id = pd.style_id 
+					JOIN wristband_size AS wsz ON wsz.id = pd.size_id 
+					WHERE wst.code ='".$style."' AND wsz.code = '".$size."' AND qty >= '20' AND qty < '50' ORDER BY pd.days ASC";
 	
-	    return $sql;	
+			return $sql;	
 
 	}
 	
@@ -105,22 +99,13 @@
 	//get shipping price by style, qty and size
 	function getShippingPrice($style,$size,$qty)
 	{
-		// if($qty>=20 && $qty<50){
-		// 	$limit=50;
-	 //        $sql = "SELECT  qty, price , days
-		// 				FROM price_production
-		// 			WHERE style_id ='".$style."' AND size_id = '".$size."' AND qty <= '".$qty."' AND qty > '".$limit."'";
-		// } else  if($qty>=50 && $qty<100){
-		// 	$limit=100;
-		// 	$sql = "SELECT  qty, price , days
-		// 		FROM price_production
-		// 	WHERE style_id ='".$style."' AND size_id = '".$size."' AND qty <= '".$qty."' AND qty > '".$limit."'";
-		// } else {
-			// $limit=100;
-			$sql = "SELECT ps.qty, ps.price, ps.days FROM price_shipping AS ps JOIN wristband_style AS wst ON wst.id = ps.style_id JOIN wristband_size AS wsz ON wsz.id = ps.size_id WHERE wst.code ='".$style."' AND wsz.code = '".$size."' AND qty >= '20' AND qty < '50' ORDER BY ps.days ASC";
-		// }
 
-		return $sql;
+			$sql = "SELECT ps.qty, ps.price, ps.days 
+						FROM price_shipping AS ps JOIN wristband_style AS wst ON wst.id = ps.style_id
+					JOIN wristband_size AS wsz ON wsz.id = ps.size_id 
+					WHERE wst.code ='".$style."' AND wsz.code = '".$size."' AND qty >= '20' AND qty < '50' ORDER BY ps.days ASC";
+					
+			return $sql;
 
 	}
 
@@ -135,7 +120,10 @@
 			}
 		}
 
-		return $sql = "SELECT * FROM add_ons AS ao JOIN price_add_ons AS pao ON ao.id = pao.add_on_id WHERE ao.code IN (".$strWhere.") AND qty >= '20' AND qty < '50'";
+		return $sql = "SELECT * 
+							FROM add_ons AS ao 
+					  JOIN price_add_ons AS pao ON ao.id = pao.add_on_id 
+					  WHERE ao.code IN (".$strWhere.") AND qty >= '20' AND qty < '50'";
 	}
 
 ?>

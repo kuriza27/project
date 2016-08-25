@@ -35,7 +35,7 @@
 			<!-- END BLANK STYLE -->
 		</div>
 		<!-- WRIST STYLE -->
-		<form id="order-form" action="" method="post" novalidate enctype="multipart/form-data">
+		<!---<form id="order-form" action="" method="post" novalidate enctype="multipart/form-data">---->
 		<div class="wrist-style">
 
 			<div class="row offer-bar margin-bootom-20 __web-inspector-hide-shortcut__">
@@ -48,7 +48,7 @@
 				<div class="col-md-4 prod js-style"  value="printed">
 				  <div class="zoom"><a href="assets/images/src/Printed.png" title="Printed Wristband"><img src="assets/images/src/zoom.png" class="galleryimg"></a></div>
 				  <div class="box-thumb"><img src="assets/images/src/Printed.png"></div>
-				  <input type="radio" name="wrist_style" id="printed" class="wrist_style" value="printed" data-style="imprinted" <?php if(isset($_GET['q'])&&($_GET['q']=="printed")) { ?>
+				  <input type="radio" name="wrist_style" id="printed" class="wrist_style" value="printed" data-style="printed" <?php if(isset($_GET['q'])&&($_GET['q']=="printed")) { ?>
 					checked="checked" <?php } else{ } ?>>
 				  <h2>Printed</h2>
 				</div>
@@ -62,7 +62,7 @@
 				<div class="col-md-4 prod js-style"  value="ink-injected">
 				<div class="zoom"><a href="assets/images/src/Color-Filled.png" title="Color-Filled Wristband"><img src="assets/images/src/zoom.png" class="galleryimg"></a></div>
 				  <div class="box-thumb"><img src="assets/images/src/Color-Filled.png"></div>
-				  <input type="radio" name="wrist_style" id="ink-injected" class="wrist_style" value="ink-injected" data-style="color-filled" <?php if(isset($_GET['q'])&&($_GET['q']=="ink-injected")) { ?>
+				  <input type="radio" name="wrist_style" id="ink-injected" class="wrist_style" value="ink-injected" data-style="ink-injected" <?php if(isset($_GET['q'])&&($_GET['q']=="ink-injected")) { ?>
 					checked="checked"<?php } else{ } ?>>
 				  <h2>Ink Injected</h2>
 				</div>
