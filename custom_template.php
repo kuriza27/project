@@ -318,16 +318,7 @@
 				</div>
 				<div class="popup-order-gallery">
 
-					<div id="dv-10-free-keychains" class="col-md-12 add-ons" style="display:none;">
-						<div class="box-thumb clearfix">
-							<h1>You have <strong class="js-free-bands-count">10</strong> <strong>FREE</strong> keychains!</h1>
-							<br/>
-							<div class="col-xs-12">
-								<span>Input keychain quantity:</span>
-								<input type="number" id="freekc" class="freewb-input " pattern="[0-9]*" placeholder="0" data-maxlength="2">
-							</div>
-						</div>
-					</div>
+					<?php include "promo-keychain-10.php"; ?>
 
 					<!--
 					<div id="dv-100-free-band" class="col-md-12 add-ons" style="display:none;">
@@ -455,6 +446,7 @@
 											Style: <u><span id="wristband_style"></span></u> <br>
 											Size: <u><span id="wristband_size"></span></u> <br><br>
 											Add-Ons Total: <u><span id="wristband_add_ons" data-addon-total="0">$0.00</span></u><br><br>
+											<!-- Free Add-Ons Total: <u><span id="wristband_free_add_ons" data-addon-total="0">$0.00</span></u><br><br> -->
 											Production Time: <u><span id="wristband_ptime" data-production-time="0" data-production-price="0">$0.00</span></u><br>
 											Shipping Time: <u><span id="wristband_stime" data-shipping-time="0" data-shipping-price="0">$0.00</span></u>
 										</strong></p>

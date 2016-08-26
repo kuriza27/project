@@ -397,14 +397,14 @@ $(function(){
 			}
 		});
 
-		if(total >= 100){
-			// get_style_size('fixed_price');
-			$('.js-total').fadeIn(300);
-			$('.js-no-total').hide();
-			$('#dv-10-free-keychains').show();
-		}else{
-			$('#dv-10-free-keychains').hide();
-			$('#freekc').val('');
+		// If existing, do stuff...
+		if($('#dv-10-free-keychains').length  > 0) {
+			if(total >= 100){
+				$('#dv-10-free-keychains').show();
+			}else{
+				$('#dv-10-free-keychains').hide();
+				$('#freekc').val('').focus();
+			}
 		}
 
 		if(total == 0){
@@ -418,14 +418,6 @@ $(function(){
 
 	});
 
-	$('body').on('blur', '#freekc', function(e){
-		var qty = parseInt($(this).val());
-		if(qty>10){
-			$(this).val('').focus();
-			alert('Must not be more than 10.');
-		}
-		return;
-	});
 
 	// $('body').on('click', '#free-100-wristband', function(){
 	// 	if($(this).hasClass('checked')){
