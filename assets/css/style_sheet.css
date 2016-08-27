@@ -808,9 +808,7 @@ li.active.select-box-col {
 }
 
 @media screen and (max-width: 420px){
-	.col-xs-3.col-sm-2.offerpv{
-	  font-size:19px !important;
-  }
+
   
   .nav.nav-pills {
     width: 96%!important;
@@ -835,9 +833,10 @@ li.active.select-box-col {
 		width: 310px!important;
 	}
 	
-	.col-sm-22.offerpv{
-		font-size: 20px!important;
-	}
+	.col-xs-3.col-sm-2.offerpv {
+		font-size: 23px !important;
+     }
+	
 	#order-now{
 		    margin-left: 0px!important;
 	}
@@ -885,7 +884,7 @@ li.active.select-box-col {
 	}
 	
 	.col-md-2 img {
-		width: 288px!important;
+		width: 378px!important;
 	}
 	
 	.zoom{
@@ -902,6 +901,10 @@ li.active.select-box-col {
 	
 	#preview-pane #front-view, #preview-pane #back-view{
 		
+	}
+	div#slideshow{
+		height: 134px!important;
+	}
 }
 
 @media screen and (max-width: 320px){
@@ -1002,6 +1005,10 @@ li.active.select-box-col {
 	
 	#preview-pane #front-view, #preview-pane #back-view{
 		width: 100%!important;
+	}
+	
+	div#slideshow{
+		height: 134px!important;
 	}
 }
 
