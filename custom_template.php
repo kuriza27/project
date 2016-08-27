@@ -60,6 +60,9 @@
 			<div class="regular-dual-size" style="display:none">
 				<?php include "wrist-regulardual.php"; ?>
 			</div>	
+			<div class="large-dual-size" style="display:none">
+				<?php include "wrist-largedual.php"; ?>
+			</div>	
 		</div>
 			<!-- End Wrist-color-quantity -->
 
@@ -252,32 +255,6 @@
 						</div> -->
 					</div>
 					<!--end preview pane -->
-					<div id="font-color" style="display:none;">
-						<h3 style="text-align: left;">Select Font Color</h3>
-						<button id="font-button" class="pull-left" data-toggle="modal" data-target="#FontColorModal">Select Font Color</button><div id="preview-textcolor"></div>
-							<!--------Modal---------->
-							<div class="modal fade" id="FontColorModal" role="dialog">
-							<div class="modal-dialog">
-								<!-- Modal content-->
-								<div class="modal-content">
-									<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal">&times;</button>
-										<h4 class="modal-title">Pick Custom Text Color</h4>
-									</div>
-									<div class="modal-body">
-										<?php include "font-color-template.php";?>
-										<div class="clearfix"></div>
-									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-									</div>
-								</div>
-								<!---------End Modal Content-------------->
-							</div>
-						</div>
-						<!-----End Modal Div ---->
-						<div class="clearfix"></div>
-				    </div>
 					<div id="add-design">
 						<!--<button>Clear</button>-->
 						<h3 style="text-align: left;">Select Font Style</h3>

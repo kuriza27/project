@@ -211,7 +211,8 @@ $(function(){
 			$(".large-color-size").css("display","none");	
 			$(".regular-figured-size").css("display","none");
 			$(".regular-dual-size").css("display","block");
-		}
+
+			}
 		else if(style =='figured'){
 			$("#onehalf").hide();
 			$("#two").hide();
@@ -248,12 +249,46 @@ $(function(){
 
 	//select wristband size
 	$('.js-size').click(function(){
+	
 		var item = $(this).find('input[type="radio"]').val();
 		var style = $('.js-style .wrist_style:checked').val();
 
-		if(style=="dual-layer" || style=="figured"){
-			// Do nothing
-		}else{
+		if(style=="figured"){
+			if(item=='1/2'){
+				$(".regular-figured-size").css("display","block");
+				$(".large-figured-size").css("display","none");
+				$(".regular-color-size").css("display","none");
+				$(".large-color-size").css("display","none");
+				$(".regular-dual-size").css("display","none");
+				$(".large-dual-size").css("display","none");
+			}else{
+
+				$(".large-figured-size").css("display","block");
+				$(".regular-figured-size").css("display","none");
+				$(".regular-color-size").css("display","none");
+				$(".large-color-size").css("display","none");
+				$(".regular-dual-size").css("display","none");
+				$(".large-dual-size").css("display","none");
+			}
+		}
+		else if(style=="dual-layer"){
+			if(item=='1/2'){
+				$(".regular-dual-size").css("display","block");
+				$(".large-figured-size").css("display","none");
+				$(".large-figured-size").css("display","none");
+				$(".regular-color-size").css("display","none");
+				$(".large-color-size").css("display","none");
+				$(".large-dual-size").css("display","none");
+			}else{
+				$(".large-dual-size").css("display","block");
+				$(".large-figured-size").css("display","none");
+				$(".regular-figured-size").css("display","none");
+				$(".regular-color-size").css("display","none");
+				$(".large-color-size").css("display","none");
+				$(".regular-dual-size").css("display","none");
+			}
+		}
+		else{
 			if(item=="1/4" || item=="1/2"){
 				$(".regular-color-size").css("display","block");
 				$(".large-color-size").css("display","none");
@@ -275,6 +310,7 @@ $(function(){
 
 		get_style_size('price_table');
 	});
+
 
 	// //adding quantity to wristband colors
 	// $('.box-color').find('input[name$="-qty"]').keydown(function(e){
@@ -824,13 +860,11 @@ function get_price_data($style, $size, type) {
 			data_style = data_style.toLowerCase();
 
 			if(data_style == $style) {
-                 console.log($style);
+
 				$.each(data_sizes, function(key_size, val_size) {
 
 					if(key_size == $size) {
-
 						if(type == 'price_table') {
-
 							$('#priceTable').find('td.js-temp').remove();
 							$.each(val_size, function(key_qty, val_qty){
 								$('#priceTable').append('<td class="js-temp">$<span data-qty-range="'+key_qty+'">'+val_qty+'</span></td>');
@@ -1020,17 +1054,19 @@ function get_total_price(price, qty, wb_style, wb_size) {
 		var sub_qty = 0;
 		$(this).find('input[name$="-qty"]').each(function(){
 			var q = $(this).val();
-
+       
 			if(q != '') {
 				sub_qty += parseInt(q);
 				empty = false;
 			}
 		});
-
+         
 		if(!empty) {
+			console.log(empty);
+			
 			var color = $(this).data('color');
 			// var added_val = ($(this).data('value')!="") ? parseFloat($(this).data('value')) : 0;
-
+             console.log(color);
 			var has_qty = false;
 			$.each(price, function(key_qty, val_qty){
 				if(has_qty === false) {
@@ -1047,7 +1083,7 @@ function get_total_price(price, qty, wb_style, wb_size) {
 			//calculate total price
 			// total_price += total_subprice;
 			total_price += total_subprice;
-
+            
 			var html_item = '<div class="row summary-item"><div class="col-md-8 col-sm-6">- '+color+' ('+sub_qty+' x '+formatCurrency(sub_price)+' each)</div><div class="col-md-4 col-sm-6 align-right">'+formatCurrency(total_subprice)+'</div></div>';
 
 			$('.js-item-summary').append(html_item);
