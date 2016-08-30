@@ -250,29 +250,6 @@
 							<ul id="preview-pane-selection" class="nav nav-pills preview-pane-colors" style="width:100%;">
 							</ul>
 						</div>
-						<!-- <div id="preview_color_container">
-							<ul class="nav nav-pills js-colors">
-								<li class="active"><a data-toggle="pill" href="#preview1">1</a></li>
-								<li><a data-toggle="pill" href="#preview2" >2</a></li>
-								<li><a data-toggle="pill" href="#preview3">3</a></li>
-								<li><a data-toggle="pill" href="#preview4">4</a></li>
-							</ul>
-
-							<div class="tab-content">
-								<div id="preview1" class="tab-pane fade in active preview-color">
-									1
-								</div>
-								<div id="preview2" class="tab-pane fade preview-color">
-									2
-								</div>
-								<div id="preview3" class="tab-pane fade preview-color">
-									3
-								</div>
-								<div id="preview4" class="tab-pane fade preview-color">
-									4
-								</div>
-							</div>
-						</div> -->
 					</div>
 					<!--end preview pane -->
 					<div id="add-design">
@@ -477,6 +454,7 @@
 	</div>
 </div>
 <!--</form> -->
+
 <div id="solidCustomColorSelector" class="hide" style="display:none;">
 	<div class="col-xs-4 box-color dynamic-box-color">
 		<button class="btn-close-custom-color">X</button>
@@ -681,6 +659,164 @@
 	</div>
 </div>
 
+<div id="solidCustomFigColorSelector" class="hide" style="display:none;">
+	<div class="col-xs-4 box-color dynamic-box-color">
+		<button class="btn-close-custom-color">X</button>
+		<img class="solidPreviewFigColorModal" src="assets/images/src/custom.png"/>
+		<button id="custom-color-button" class="custom-color-solid-button" data-toggle="modal" data-target="#ColorFigModal">Custom Color</button>
+		<!--------Modal---------->
+		<div class="modal fade" class="ColorFigModal" id="ColorFigModala" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Pick Custom Color</h4>
+					</div>
+					<div class="modal-body">
+						<?php include "solid-color-dynamic-template.php";?>
+						<div class="clearfix"></div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+				<!---------End Modal Content-------------->
+			</div>
+		</div>
+		<!-----End Modal Div ---->
+		<div class="clearfix"></div>
+		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input  type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
+		<div class="clearfix"></div>
+		<!---------Start text color option------------>
+		<div class="color-text" style="display:none">
+			<div class="col-sm-1">
+				<?php include "colorAdult-template.php";?>
+			</div>
+			<div class="col-sm-1">
+				<?php include "colorMedium-template.php";?>
+			</div>
+			<div class="col-sm-1">
+				<?php include "colorYouth-template.php";?>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<!-------End text color-------------->
+		<span class="view-more">View More Sizes</span>
+		<div class="show-content">
+			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
+			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
+		</div>
+	</div>
+</div>
+
+<div id="segmentedFigCustomColorSelector" class="hide" style="display:none;">
+	<div class="col-xs-4 box-color dynamic-box-color">
+		<button class="btn-close-custom-color">X</button>
+		<img class="segmentedPreviewFigColorModal" src="assets/images/src/custom.png"/>
+		<button id="custom-color-button" class="custom-color-segmented-button" data-toggle="modal" data-target="#ColorFigSegModal">Custom Color</button>
+		<!--------Modal---------->
+		<div class="modal fade" id="ColorFigSegModal" role="dialog">
+				<div class="modal-dialog">
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Pick Custom Color</h4>
+						</div>
+						<div class="modal-body">
+							<?php include "segmented-color-dynamic-template.php";?>
+							<div class="clearfix"></div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<!---------End Modal Content-------------->
+				</div>
+			</div>
+			<!-----End Modal Div ---->
+		<div class="clearfix"></div>
+		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
+		<div class="clearfix"></div>
+		<!---------Start text color option------------>
+			<div class="color-text" style="display:none">
+				<div class="col-sm-1">
+					<?php include "colorAdult-template.php";?>
+				</div>
+				<div class="col-sm-1">
+					<?php include "colorMedium-template.php";?>
+				</div>
+				<div class="col-sm-1">
+					<?php include "colorYouth-template.php";?>
+				</div>
+					<div class="clearfix"></div>
+			</div>
+		<!-------End text color-------------->
+		<span class="view-more">View More Sizes</span>
+		<div class="show-content">
+			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
+			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
+		</div>
+	</div>
+</div>
+
+<div id="swirlCustomFigColorSelector" class="hide" style="display:none;">
+	<div class="col-xs-4 box-color dynamic-box-color">
+		<button class="btn-close-custom-color">X</button>
+		<img class="swirlPreviewFigColorModal" src="assets/images/src/custom.png"/>
+		<button id="custom-color-button" data-toggle="modal" data-target="#ColorFigSwirlModal">Custom Color</button>
+		<!--------Modal---------->
+		<div class="modal fade" id="ColorFigSwirlModal" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Pick Custom Color</h4>
+					</div>
+					<div class="modal-body">
+						<?php include "swirl-color-dynamic-template.php";?>
+						<div class="clearfix"></div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+				<!---------End Modal Content-------------->
+			</div>
+		</div>
+		<!-----End Modal Div ---->
+		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
+		<div class="clearfix"></div>
+		<!---------Start text color option------------>
+			<div class="color-text" style="display:none">
+				<div class="col-sm-1">
+					<?php include "colorAdult-template.php";?>
+				</div>
+				<div class="col-sm-1">
+					<?php include "colorMedium-template.php";?>
+				</div>
+				<div class="col-sm-1">
+					<?php include "colorYouth-template.php";?>
+				</div>
+					<div class="clearfix"></div>
+			</div>
+		<!-------End text color-------------->
+		<span class="view-more">View More Sizes</span>
+		<div class="show-content" style="display:none">
+			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
+			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
+		</div>
+	</div>
+</div>
+
 <div class="modal fade" id="FontColorQtyModal" role="dialog">
 	<div class="modal-dialog">
 		<!-- Modal content-->
@@ -706,6 +842,7 @@
 	var dynamicSSegmentedCount = 0;
 	var dynamicSwirlCount = 0;
 	var dynamicDualCount = 0;
+	var dynamicSolidFigCount = 0;
 
 	$(document).ready(function() {
 
@@ -748,7 +885,6 @@
 			$("#swirlCustomColorSelector .dynamic-box-color img.swirlPreviewColorModal").attr('class','swirlPreviewColorModal');
 		});
 
-
 		//show new dual custom wirstband
 		$('body').on('click', '#addCustomDual', function(e) {
 			newId = "ColorDualModal"+dynamicDualCount;
@@ -762,15 +898,26 @@
 			$("#dualCustomColorSelector .dynamic-box-color img.dualPreviewColorModal").attr('class','dualPreviewColorModal');
 		});
 
+		// ----- FIGURED -----
+
+		//show new solid custom wirstband
+		$('body').on('click', '#addCustomFiguredSolid', function(e) {
+			newId = "ColorFigModal"+dynamicSolidFigCount;
+			dynamicSolidFigCount++;
+			$("#solidCustomFigColorSelector .dynamic-box-color img.solidPreviewFigColorModal").attr('class','solidPreviewFigColorModal');
+			$("#solidCustomFigColorSelector .dynamic-box-color img.solidPreviewFigColorModal").addClass("Preview"+newId)
+			$("#solidCustomFigColorSelector .dynamic-box-color #custom-color-button").attr("data-target", "#"+newId)
+			$("#solidCustomFigColorSelector .dynamic-box-color .modal").attr("id", newId);
+
+			$('#home-fig-reg div#main-color-content').prepend($("#solidCustomFigColorSelector").html());
+			$("#solidCustomFigColorSelector .dynamic-box-color img.solidPreviewFigColorModal").attr('class','solidPreviewColorModal');
+		});
 
 		//show new dynamic modals
 		$('body').on('click', '.custom-color-solid-button, .custom-color-segmented-button, .custom-color-swirl-button, .custom-color-dual-button', function(e) {
 			var iD = $(this).attr("data-target");
-			// if(iD.charAt(0) === "#") {
-			// 	$(iD).modal("show");
-			// } else {
-				$("#"+iD).modal("show");
-			// }
+console.log(iD);
+			$("#"+iD).modal("show");
 		});
 
 		$('body').on('click', '.btn-close-custom-color', function(e) {

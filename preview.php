@@ -33,9 +33,7 @@
         <span id="scripts">
             
             <script type="text/javascript" src="assets/js/jquery-2.2.4.min.js"></script>
-            <!-- <script type="text/javascript" src="assets/js/jquery.svgmagic.js"></script> -->
             <script type="text/javascript" src="assets/js/canvg.js"></script>
-            <!-- <script type="text/javascript" src="assets/js/rgbcolor.js"></script> -->
             <script type="text/javascript" src="assets/js/stackblur.js"></script>
             <script type="text/javascript">
 
@@ -61,30 +59,26 @@
                         if($_GET["style"] === "swirl") {
 
                             // Remove SVG elements not used
-                            // $(".solid").remove();
-                            // $(".segmented").remove();
                             $(".solid").css("display", "none");
                             $(".segmented").css("display", "none");
 							$(".glow").css("display", "none");
+
                             // Set COLORS
                             $("#swirl_1").css( "fill", "#" + $_COLOR[0]);
 
                             if( $_COLOR.length < 2 ) {
-                                // $("#swirl_2").remove();
                                 $("#swirl_2").css("display", "none");
                             } else {
                                 $("#swirl_2").css( "fill", "#" + $_COLOR[1] );
                             }
 
                             if( $_COLOR.length < 3 ) {
-                                // $("#swirl_3").remove();
                                 $("#swirl_3").css("display", "none");
                             } else {
                                 $("#swirl_3").css( "fill", "#" + $_COLOR[2] );
                             }
 
                             if( $_COLOR.length < 4 ) {
-                                // $("#swirl_4").remove();
                                 $("#swirl_4").css("display", "none");
                             } else {
                                 $("#swirl_4").css( "fill", "#" + $_COLOR[3] );

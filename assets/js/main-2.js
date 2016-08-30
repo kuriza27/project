@@ -581,8 +581,9 @@ $(function(){
 			alert('You need to choose a color');
 		}else{
 			var color = [ $(this).closest('.box-opt-color').find('.solid-color-0').val() ];
+			var style = $('.js-style .wrist_style:checked').val();
 			
-			$(".PreviewColorModal").attr('src', generatePreviewBandImage('solid', color));
+			$(".PreviewColorModal").attr('src', generatePreviewBandImage('solid', color, style));
 			$("#ColorModal").modal('hide');
 		}
 	});
@@ -594,8 +595,9 @@ $(function(){
 		}else{
 			var imgID = ".Preview" + $(this).closest('.modal').attr("id");
 			var color = [ $(this).closest('.box-opt-color').find('.solid-color-0').val() ];
+			var style = $('.js-style .wrist_style:checked').val();
 
-			$(imgID).attr('src', generatePreviewBandImage('solid', color));
+			$(imgID).attr('src', generatePreviewBandImage('solid', color, style));
 			$(this).closest('.modal').modal('hide');
 		}
 	});
@@ -611,8 +613,10 @@ $(function(){
 							$(this).closest('.box-opt-color').find('.segmented-color-3').val(),
 							$(this).closest('.box-opt-color').find('.segmented-color-4').val(),
 							$(this).closest('.box-opt-color').find('.segmented-color-5').val() ];
-			color = color.filter(Boolean);
-			$(".segPreviewColorModal").attr('src', generatePreviewBandImage('segmented', color));
+				color = color.filter(Boolean);
+			var style = $('.js-style .wrist_style:checked').val();
+
+			$(".segPreviewColorModal").attr('src', generatePreviewBandImage('segmented', color, style));
 
 			$("#ColorSegModal").modal('toggle');
 		}
@@ -630,9 +634,10 @@ $(function(){
 							$(this).closest('.box-opt-color').find('.segmented-color-3').val(),
 							$(this).closest('.box-opt-color').find('.segmented-color-4').val(),
 							$(this).closest('.box-opt-color').find('.segmented-color-5').val() ];
-			color = color.filter(Boolean);
+				color = color.filter(Boolean);
+			var style = $('.js-style .wrist_style:checked').val();
 
-			$(imgID).attr('src', generatePreviewBandImage('segmented', color));
+			$(imgID).attr('src', generatePreviewBandImage('segmented', color, style));
 			$(this).closest('.modal').modal('hide');
 		}
 	});
@@ -645,8 +650,10 @@ $(function(){
 			var color = [ 	$(this).closest('.box-opt-color').find('.dual-color-0').val(),
 							$(this).closest('.box-opt-color').find('.dual-color-1').val() ];
 			color = color.filter(Boolean);
+			var style = $('.js-style .wrist_style:checked').val();
+
 			// $(".dualPreviewColorModal").attr('src', generatePreviewBandImage('dual', color));
-			$(this).closest('.box-color').find(".dualPreviewColorModal").attr('src', generatePreviewBandImage('dual', color));
+			$(this).closest('.box-color').find(".dualPreviewColorModal").attr('src', generatePreviewBandImage('dual', color, style));
 
 			$("#ColorDualModal").modal('toggle');
 		}
@@ -660,9 +667,10 @@ $(function(){
 			var imgID = ".Preview" + $(this).closest('.modal').attr("id");
 			var color = [ 	$(this).closest('.box-opt-color').find('.dynamic-dual-color-0').val(),
 							$(this).closest('.box-opt-color').find('.dynamic-dual-color-1').val() ];
-			color = color.filter(Boolean);
+				color = color.filter(Boolean);
+			var style = $('.js-style .wrist_style:checked').val();
 
-			$(imgID).attr('src', generatePreviewBandImage('dual', color));
+			$(imgID).attr('src', generatePreviewBandImage('dual', color, style));
 			$(this).closest('.modal').modal('hide');
 		}
 	});
@@ -675,8 +683,10 @@ $(function(){
 			var color = [ 	$(this).closest('.box-opt-color').find('.swirl-color-0').val(),
 							$(this).closest('.box-opt-color').find('.swirl-color-1').val(),
 							$(this).closest('.box-opt-color').find('.swirl-color-2').val() ];
-			color = color.filter(Boolean);
-			$(".swlPreviewColorModal").attr('src', generatePreviewBandImage('swirls', color));
+				color = color.filter(Boolean);
+			var style = $('.js-style .wrist_style:checked').val();
+
+			$(".swlPreviewColorModal").attr('src', generatePreviewBandImage('swirls', color, style));
 
 			$("#ColorSwirlModal").modal('hide');
 		}
@@ -691,9 +701,10 @@ $(function(){
 			var color = [ 	$(this).closest('.box-opt-color').find('.swirl-color-0').val(),
 							$(this).closest('.box-opt-color').find('.swirl-color-1').val(),
 							$(this).closest('.box-opt-color').find('.swirl-color-2').val() ];
-			color = color.filter(Boolean);
+				color = color.filter(Boolean);
+			var style = $('.js-style .wrist_style:checked').val();
 
-			$(imgID).attr('src', generatePreviewBandImage('swirls', color));
+			$(imgID).attr('src', generatePreviewBandImage('swirls', color, style));
 			$(this).closest('.modal').modal('hide');
 		}
 	});

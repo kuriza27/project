@@ -22,13 +22,13 @@
 
 				  <div class="tab-content">
 					<div id="home-fig-large" class="tab-pane fade in active js-color" data-value="0" data-color="Solid">
-					  <h3>Solid Colors</h3> <button id="addCustomSolid" class="btn-add-custom-color"><i class="fa fa-plus"></i> Add Custom Color</button>
+					  <h3>Solid Colors</h3> <button id="addCustomFiguredSolid" class="btn-add-custom-color"><i class="fa fa-plus"></i> Add Custom Color</button>
 					  <div id="main-color-content">
 					  <div class="col-xs-4 box-color">
-							<img class="PreviewColorModal" src="assets/images/src/custom.png"/>
-							<button id="custom-color-button" data-toggle="modal" data-target="#ColorModal">Custom Color</button>
+							<img class="PreviewFigColorModal" src="assets/images/src/custom.png"/>
+							<button id="custom-color-button" data-toggle="modal" data-target="#ColorFigModal">Custom Color</button>
 							<!--------Modal---------->
-							<div class="modal fade" id="ColorModal" role="dialog">
+							<div class="modal fade" id="ColorFigModal" role="dialog">
 								<div class="modal-dialog">
 								  <!-- Modal content-->
 								  <div class="modal-content">
@@ -538,13 +538,13 @@
 					</div>
 					<!-- End Home -->
 					<div id="segmented-fig-large" class="tab-pane fade js-color" data-value="0.01" data-color="Segmented">
-					  <h3>Segmented Colors</h3> <button id="addCustomSegmented" class="btn-add-custom-color"><i class="fa fa-plus"></i> Add Custom Color</button>
+					  <h3>Segmented Colors</h3> <button id="addCustomFiguredSegmented" class="btn-add-custom-color"><i class="fa fa-plus"></i> Add Custom Color</button>
 					  <div id="main-color-content">
 					     <div class="col-xs-4 box-color">
-							<img class="segPreviewColorModal" src="assets/images/src/custom.png"/>
-							<button id="custom-color-button" data-toggle="modal" data-target="#ColorSegModal">Custom Color</button>
+							<img class="segPreviewFigColorModal" src="assets/images/src/custom.png"/>
+							<button id="custom-color-button" data-toggle="modal" data-target="#ColorFigSegModal">Custom Color</button>
 							<!--------Modal---------->
-							<div class="modal fade" id="ColorSegModal" role="dialog">
+							<div class="modal fade" id="ColorFigSegModal" role="dialog">
 								<div class="modal-dialog">
 								  <!-- Modal content-->
 								  <div class="modal-content">
@@ -1836,13 +1836,13 @@
 					</div>
 					<!-- End Segmented -->
 					<div id="swirls-fig-large" class="tab-pane fade js-color" data-value="0.01" data-color="Swirls">
-					  <h3 style="width:auto;">Swirls Color</h3> <button id="addCustomSwirl" class="btn-add-custom-color"><i class="fa fa-plus"></i> Add Custom Color</button>
+					  <h3 style="width:auto;">Swirls Color</h3> <button id="addCustomFiguredSwirl" class="btn-add-custom-color"><i class="fa fa-plus"></i> Add Custom Color</button>
 					  <div id="main-color-content">
 						<div class="col-xs-4 box-color">
-							<img class="swlPreviewColorModal" src="assets/images/src/custom.png"/>
-							<button id="custom-color-button" data-toggle="modal" data-target="#ColorSwirlModal">Custom Color</button>
+							<img class="swlPreviewFigColorModal" src="assets/images/src/custom.png"/>
+							<button id="custom-color-button" data-toggle="modal" data-target="#ColorFigSwirlModal">Custom Color</button>
 							<!--------Modal---------->
-							<div class="modal fade" id="ColorSwirlModal" role="dialog">
+							<div class="modal fade" id="ColorFigSwirlModal" role="dialog">
 								<div class="modal-dialog">
 								  <!-- Modal content-->
 								  <div class="modal-content">
