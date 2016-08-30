@@ -56,22 +56,38 @@ $(document).ready(function(){
 		console.log('Total : ' + $('#totalPrice').html());
 	});
 
+	var has_checked = false;
+	var has_checked_count = 0;
+	var has_checked_count_value = $(".wrist_size").length;
+
+	//Check if has default size
+	$(".wrist_size").each(function(){
+		has_checked_count++;
+		if ($(this).prop('checked')==true) {
+			has_checked == true;
+		}
+		if(has_checked_count == has_checked_count_value) {
+			if(!has_checked) {
+				$(".wrist_size:first").prop('checked', true);
+				get_style_size('price_table');
+			}
+		}
+	});
+
 });
 
 $(function(){
-	
-	 var $style_value;
-	 var $size_value;
+
+	var $style_value;
+	var $size_value;
 
 	$('#prod-main').click(function(){
 		window.location = 'product-printed.php';
-		
-		});
+	});
 	
 	$('#prod-main2').click(function(){
 		window.location = 'fonts.php';
-		
-		});
+	});
 	
 	//removes file 
 	$("#remove-1").click(function() {
@@ -118,8 +134,6 @@ $(function(){
 		$('#float').css("font-size", $(this).val() + "px");
 	});
 	
-
-
 	//show extra band size
 	$(".show-content").hide();
 	$(".view-more").click(function() {
@@ -151,15 +165,17 @@ $(function(){
 
 		$("#front-view").css('background', 'url(' + $(this).attr('data-image-link') + ')');
 		$("#back-view").css('background', 'url(' + $(this).attr('data-image-link') + ')');
+		$("#continue-view").css('background', 'url(' + $(this).attr('data-image-link') + ')');
+
 		$("#inside-view").css('background', 'url(' + $(this).attr('data-image-link') + ')');
 
 		if(typeof($(this).attr('data-font-color')) != "undefined"){
-			$("#preview-pane").css("color", "#"+$(this).attr('data-font-color'));
+			$(".preview-panel").css("color", "#"+$(this).attr('data-font-color'));
 		}else{
 			if($("#font-color").css("display") != "none"){
-				$("#preview-pane").css("color", "#"+$("#preview-textcolor").css("background-color"));
+				$(".preview-panel").css("color", "#"+$("#preview-textcolor").css("background-color"));
 			}else{
-				$("#preview-pane").css("color", "#444444");
+				$(".preview-panel").css("color", "#444444");
 			}
 		}
 	});
@@ -298,7 +314,6 @@ $(function(){
 			}
 		}
 
-		
 		$('.js-size').find('input[type="radio"]').prop('checked', false);
 		$('.js-size').removeClass('active');
 		$(this).find('input[type="radio"]').prop('checked', true);
@@ -427,8 +442,6 @@ $(function(){
 					has_preview[idx].pop(ref_color_str);
 				}
 
-				// map[$(this).attr("name")] += parseInt(qty);
-
 				total += parseInt(qty);
 			}
 		});
@@ -492,7 +505,7 @@ $(function(){
 	// 	}
 	// });
 
-	//colorpicker
+	// Colorpicker
 	$('.pick-color-list li').click(function(){
 		var color = $(this).attr('refcode');
 		var p = $(this).parent('.pick-color-list').prev('.box-opt-color');
@@ -538,7 +551,7 @@ $(function(){
 		var textcolor = $(this).attr('refcode');
 		console.log(textcolor);
 		if(textcolor != undefined || textcolor != '');{
-			$("#preview-pane").css("color", "#"+textcolor);
+			$(".preview-panel").css("color", "#"+textcolor);
 			$("#preview-textcolor").css("background-color", "#"+textcolor);
 			$("#FontColorModal").modal('toggle');
 		}
@@ -550,7 +563,7 @@ $(function(){
 		var img = $(this).attr('ref');
 		
 		if(text != undefined);{
-			$("#preview-pane").css("font-family", text);
+			$(".preview-panel").css("font-family", text);
 			$("#preview-textfont").html("<img src='assets/images/src/fonts/"+img+"'/>");
 			$("#FontModal").modal('toggle');
 		}
@@ -872,7 +885,6 @@ function get_price_data($style, $size, type) {
 							});
 							$('.js-wb-caption').find('.style').text($style.toUpperCase());
 							$('.js-wb-caption').find('.size').text($size);
-
 						}
 
 						// if(type == 'fixed_price') {

@@ -141,9 +141,9 @@
 						</div>
 						<div class="c-input" style="display:none;margin-left:52px;">
 							<div class="col-sm-8">
-							<span class="inside-m">Inside Text:</span><br /> &nbsp;
+							<span class="inside-m">Continuous Text:</span><br /> &nbsp;
 							* Maximum of 22 characters for message<br /> 
-							<input type="text" name="inside-text" class="band-text" value=""  placeholder="Enter Continuous Message" maxlength="22">
+							<input type="text" name="continue-text" class="band-text" value=""  placeholder="Enter Continuous Message" maxlength="22">
 							</div>
 							<div class="clearfix"></div>
 							<div class="clip-sec" style="float:left;width:20%;margin-left:16px;">
@@ -164,9 +164,20 @@
 										<a href="javascript:void(0)"id="remove-6">Remove File</a>
 									</div>
 							</div>
-								<div class="clearfix"></div>
-						</div>
 							<div class="clearfix"></div>
+						</div>
+						<div class="i-input" style=";margin-left:52px;">
+							<div class="col-sm-12">
+								<br />
+								<span class="inside-m">Inside Text:</span><br /> &nbsp;
+								* Maximum of 22 characters for message
+								<br /> 
+								<input type="text" name="inside-text" class="band-text" value=""  placeholder="Enter Inside Message" maxlength="22" style="width:100%;">
+								<br /><br />
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="clearfix"></div>
 						<!-------start modal here---------->
 						<div class="modal fade" id="ClipArtModal" role="dialog">
 								<div class="modal-dialog">
@@ -195,7 +206,7 @@
 					<?php include_once 'preview_band_template.php'; ?>
 
 					<h3>PREVIEW</h3>
-						<div id="preview-pane">
+						<div id="preview-pane" class="preview-panel">
 							<div class="fb-select">
 								<div id="front-view" class="band">
 								<span class="start-fc"></span>
@@ -212,17 +223,26 @@
 									</div>
 								</div>
 								<div class="clearfix"></div>
-								
 							</div>
 							<div class="c-select" style="display:none;">
+								<div id="continue-view" class="band">
+									<span class="start-cc"></span>
+								    <span class="end-cc"></span>
+									<div class="preview-text faded" id="continue-text">
+										Continuous Message
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="preview-pane" class="preview-panel">
+							<div class="i-select" style="display:block;">
 								<div id="inside-view" class="band">
 									<span class="start-cc"></span>
 								    <span class="end-cc"></span>
 									<div class="preview-text faded" id="inside-text">
-										Preview Message
+										Inside Message
 									</div>
 								</div>
-							
 							</div>
 						</div>
 						<div class="text-center">
