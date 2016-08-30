@@ -979,7 +979,7 @@ span.end-cc {
 
 .zoom {
     position: absolute;
-    left: 238px;
+    left: 238px!important;
     top: 13px;
     z-index: 999;
 }
