@@ -574,14 +574,21 @@ $(function(){
 	//solid done button click
 	// $('.done-b').click(function(){
 	$('body').on('click', '.done-b', function() {
-		if($.trim($('#solid-color-0').val()) == ''){
+
+		if($.trim($(this).closest('.box-opt-color').find('#solid-color-0').val()) == ''){
 			alert('You need to choose a color');
 		}else{
 			var color = [ $(this).closest('.box-opt-color').find('.solid-color-0').val() ];
 			var style = $('.js-style .wrist_style:checked').val();
 			
-			$(".PreviewColorModal").attr('src', generatePreviewBandImage('solid', color, style));
-			$("#ColorModal").modal('hide');
+			if(style!=='figured') {
+				$(".PreviewColorModal").attr('src', generatePreviewBandImage('solid', color, style));
+			} else {
+				$(".PreviewFigColorModal").attr('src', generatePreviewBandImage('solid', color, style));
+			}
+
+			// $("#ColorModal").modal('hide');
+			$(this).closest('.modal').modal('hide');
 		}
 	});
 
@@ -595,13 +602,14 @@ $(function(){
 			var style = $('.js-style .wrist_style:checked').val();
 
 			$(imgID).attr('src', generatePreviewBandImage('solid', color, style));
+
 			$(this).closest('.modal').modal('hide');
 		}
 	});
 	
 	//segmented done button click
 	$('body').on('click', '.done-s', function() {
-		if($.trim($('#segmented-color-0').val()) == ''){
+		if($.trim($(this).closest('.box-opt-color').find('#segmented-color-0').val()) == ''){
 			alert('You need to choose colors');
 		}else{
 			var color = [ 	$(this).closest('.box-opt-color').find('.segmented-color-0').val(),
@@ -613,9 +621,14 @@ $(function(){
 				color = color.filter(Boolean);
 			var style = $('.js-style .wrist_style:checked').val();
 
-			$(".segPreviewColorModal").attr('src', generatePreviewBandImage('segmented', color, style));
+			if(style!=='figured') {
+				$(".segPreviewColorModal").attr('src', generatePreviewBandImage('segmented', color, style));
+			} else {
+				$(".segPreviewFigColorModal").attr('src', generatePreviewBandImage('segmented', color, style));
+			}
 
-			$("#ColorSegModal").modal('toggle');
+			// $("#ColorSegModal").modal('toggle');
+			$(this).closest('.modal').modal('hide');
 		}
 	});
 	
@@ -635,13 +648,14 @@ $(function(){
 			var style = $('.js-style .wrist_style:checked').val();
 
 			$(imgID).attr('src', generatePreviewBandImage('segmented', color, style));
+
 			$(this).closest('.modal').modal('hide');
 		}
 	});
 	
 	//dual done button click
 	$('body').on('click', '.done-d', function() {
-		if($.trim($('#dual-color-0').val()) == ''){
+		if($.trim($(this).closest('.box-opt-color').find('#dual-color-0').val()) == ''){
 			alert('You need to choose colors');
 		}else{
 			var color = [ 	$(this).closest('.box-opt-color').find('.dual-color-0').val(),
@@ -653,6 +667,7 @@ $(function(){
 			$(this).closest('.box-color').find(".dualPreviewColorModal").attr('src', generatePreviewBandImage('dual', color, style));
 
 			$("#ColorDualModal").modal('toggle');
+			$(this).closest('.modal').modal('hide');
 		}
 	});
 
@@ -668,13 +683,14 @@ $(function(){
 			var style = $('.js-style .wrist_style:checked').val();
 
 			$(imgID).attr('src', generatePreviewBandImage('dual', color, style));
+
 			$(this).closest('.modal').modal('hide');
 		}
 	});
 	
 	//swirl done button click
 	$('body').on('click', '.done-sw', function() {
-		if($.trim($('#swirl-color-0').val()) == ''){
+		if($.trim($(this).closest('.box-opt-color').find('#swirl-color-0').val()) == ''){
 			alert('You need to choose colors');
 		}else{
 			var color = [ 	$(this).closest('.box-opt-color').find('.swirl-color-0').val(),
@@ -683,9 +699,14 @@ $(function(){
 				color = color.filter(Boolean);
 			var style = $('.js-style .wrist_style:checked').val();
 
-			$(".swlPreviewColorModal").attr('src', generatePreviewBandImage('swirls', color, style));
+			if(style!=='figured') {
+				$(".swlPreviewColorModal").attr('src', generatePreviewBandImage('swirls', color, style));
+			} else {
+				$(".swlPreviewFigColorModal").attr('src', generatePreviewBandImage('swirls', color, style));
+			}
 
-			$("#ColorSwirlModal").modal('hide');
+			// $("#ColorSwirlModal").modal('hide');
+			$(this).closest('.modal').modal('hide');
 		}
 	});
 	
@@ -702,6 +723,7 @@ $(function(){
 			var style = $('.js-style .wrist_style:checked').val();
 
 			$(imgID).attr('src', generatePreviewBandImage('swirls', color, style));
+
 			$(this).closest('.modal').modal('hide');
 		}
 	});

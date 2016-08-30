@@ -689,9 +689,9 @@
 	<div class="col-xs-4 box-color dynamic-box-color">
 		<button class="btn-close-custom-color">X</button>
 		<img class="solidPreviewFigColorModal" src="assets/images/src/custom.png"/>
-		<button id="custom-color-button" class="custom-color-solid-button" data-toggle="modal" data-target="#ColorFigModal">Custom Color</button>
+		<button id="custom-color-button" class="custom-color-solid-button" data-toggle="modal" data-target="#ColorFigRegModal">Custom Color</button>
 		<!--------Modal---------->
-		<div class="modal fade" class="ColorFigModal" id="ColorFigModala" role="dialog">
+		<div class="modal fade" class="ColorFigModal" id="ColorFigRegModal" role="dialog">
 			<div class="modal-dialog">
 				<!-- Modal content-->
 				<div class="modal-content">
@@ -869,6 +869,8 @@
 	var dynamicSwirlCount = 0;
 	var dynamicDualCount = 0;
 	var dynamicSolidFigCount = 0;
+	var dynamicSegmentedFigCount = 0;
+	var dynamicSwirlFigCount = 0;
 
 	$(document).ready(function() {
 
@@ -928,22 +930,88 @@
 
 		//show new solid custom wirstband
 		$('body').on('click', '#addCustomFiguredSolid', function(e) {
-			newId = "ColorFigModal"+dynamicSolidFigCount;
+			newRegId = "ColorFigRegModal"+dynamicSolidFigCount;
+			newLrgId = "ColorFigLrgModal"+dynamicSolidFigCount;
 			dynamicSolidFigCount++;
+
+			// For regular
 			$("#solidCustomFigColorSelector .dynamic-box-color img.solidPreviewFigColorModal").attr('class','solidPreviewFigColorModal');
-			$("#solidCustomFigColorSelector .dynamic-box-color img.solidPreviewFigColorModal").addClass("Preview"+newId)
-			$("#solidCustomFigColorSelector .dynamic-box-color #custom-color-button").attr("data-target", "#"+newId)
-			$("#solidCustomFigColorSelector .dynamic-box-color .modal").attr("id", newId);
+			$("#solidCustomFigColorSelector .dynamic-box-color img.solidPreviewFigColorModal").addClass("Preview"+newRegId)
+			$("#solidCustomFigColorSelector .dynamic-box-color #custom-color-button").attr("data-target", "#"+newRegId)
+			$("#solidCustomFigColorSelector .dynamic-box-color .modal").attr("id", newRegId);
 
 			$('#home-fig-reg div#main-color-content').prepend($("#solidCustomFigColorSelector").html());
-			$("#solidCustomFigColorSelector .dynamic-box-color img.solidPreviewFigColorModal").attr('class','solidPreviewColorModal');
+			$("#solidCustomFigColorSelector .dynamic-box-color img.solidPreviewFigColorModal").attr('class','solidPreviewFigColorModal');
+
+			// For large
+			$("#solidCustomFigColorSelector .dynamic-box-color img.solidPreviewFigColorModal").attr('class','solidPreviewFigColorModal');
+			$("#solidCustomFigColorSelector .dynamic-box-color img.solidPreviewFigColorModal").addClass("Preview"+newLrgId)
+			$("#solidCustomFigColorSelector .dynamic-box-color #custom-color-button").attr("data-target", "#"+newLrgId)
+			$("#solidCustomFigColorSelector .dynamic-box-color .modal").attr("id", newLrgId);
+
+			$('#home-fig-large div#main-color-content').prepend($("#solidCustomFigColorSelector").html());
+			$("#solidCustomFigColorSelector .dynamic-box-color img.solidPreviewFigColorModal").attr('class','solidPreviewFigColorModal');
+		});
+
+		//show new solid custom wirstband
+		$('body').on('click', '#addCustomFiguredSegmented', function(e) {
+			newRegId = "ColorSegFigRegModal"+dynamicSegmentedFigCount;
+			newLrgId = "ColorSegFigLrgModal"+dynamicSegmentedFigCount;
+			dynamicSegmentedFigCount++;
+
+			// For regular
+			$("#segmentedFigCustomColorSelector .dynamic-box-color img.segmentedPreviewFigColorModal").attr('class','segmentedPreviewFigColorModal');
+			$("#segmentedFigCustomColorSelector .dynamic-box-color img.segmentedPreviewFigColorModal").addClass("Preview"+newRegId)
+			$("#segmentedFigCustomColorSelector .dynamic-box-color #custom-color-button").attr("data-target", "#"+newRegId)
+			$("#segmentedFigCustomColorSelector .dynamic-box-color .modal").attr("id", newRegId);
+
+			$('#segmented-fig-reg div#main-color-content').prepend($("#segmentedFigCustomColorSelector").html());
+			$("#segmentedFigCustomColorSelector .dynamic-box-color img.segmentedPreviewFigColorModal").attr('class','segmentedPreviewFigColorModal');
+
+			// For large
+			$("#segmentedFigCustomColorSelector .dynamic-box-color img.segmentedPreviewFigColorModal").attr('class','segmentedPreviewFigColorModal');
+			$("#segmentedFigCustomColorSelector .dynamic-box-color img.segmentedPreviewFigColorModal").addClass("Preview"+newLrgId)
+			$("#segmentedFigCustomColorSelector .dynamic-box-color #custom-color-button").attr("data-target", "#"+newLrgId)
+			$("#segmentedFigCustomColorSelector .dynamic-box-color .modal").attr("id", newLrgId);
+
+			$('#segmented-fig-large div#main-color-content').prepend($("#segmentedFigCustomColorSelector").html());
+			$("#segmentedFigCustomColorSelector .dynamic-box-color img.segmentedPreviewFigColorModal").attr('class','segmentedPreviewFigColorModal');
+		});
+
+		//show new solid custom wirstband
+		$('body').on('click', '#addCustomFiguredSwirl', function(e) {
+			newRegId = "ColorSegFigRegModal"+dynamicSegmentedFigCount;
+			newLrgId = "ColorSegFigLrgModal"+dynamicSegmentedFigCount;
+			dynamicSegmentedFigCount++;
+
+			// For regular
+			$("#swirlCustomFigColorSelector .dynamic-box-color img.swirlPreviewFigColorModal").attr('class','swirlPreviewFigColorModal');
+			$("#swirlCustomFigColorSelector .dynamic-box-color img.swirlPreviewFigColorModal").addClass("Preview"+newRegId)
+			$("#swirlCustomFigColorSelector .dynamic-box-color #custom-color-button").attr("data-target", "#"+newRegId)
+			$("#swirlCustomFigColorSelector .dynamic-box-color .modal").attr("id", newRegId);
+
+			$('#swirls-fig-reg div#main-color-content').prepend($("#swirlCustomFigColorSelector").html());
+			$("#swirlCustomFigColorSelector .dynamic-box-color img.swirlPreviewFigColorModal").attr('class','swirlPreviewFigColorModal');
+
+			// For large
+			$("#swirlCustomFigColorSelector .dynamic-box-color img.swirlPreviewFigColorModal").attr('class','swirlPreviewFigColorModal');
+			$("#swirlCustomFigColorSelector .dynamic-box-color img.swirlPreviewFigColorModal").addClass("Preview"+newLrgId)
+			$("#swirlCustomFigColorSelector .dynamic-box-color #custom-color-button").attr("data-target", "#"+newLrgId)
+			$("#swirlCustomFigColorSelector .dynamic-box-color .modal").attr("id", newLrgId);
+
+			$('#swirls-fig-large div#main-color-content').prepend($("#swirlCustomFigColorSelector").html());
+			$("#swirlCustomFigColorSelector .dynamic-box-color img.swirlPreviewFigColorModal").attr('class','swirlPreviewFigColorModal');
 		});
 
 		//show new dynamic modals
 		$('body').on('click', '.custom-color-solid-button, .custom-color-segmented-button, .custom-color-swirl-button, .custom-color-dual-button', function(e) {
 			var iD = $(this).attr("data-target");
-console.log(iD);
-			$("#"+iD).modal("show");
+
+			// if(iD.charAt(0) === "#") {
+			// 	$(iD).modal("show");
+			// } else {
+				$("#"+iD).modal("show");
+			// }
 		});
 
 		$('body').on('click', '.btn-close-custom-color', function(e) {

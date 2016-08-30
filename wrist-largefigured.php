@@ -542,9 +542,9 @@
 					  <div id="main-color-content">
 					     <div class="col-xs-4 box-color">
 							<img class="segPreviewFigColorModal" src="assets/images/src/custom.png"/>
-							<button id="custom-color-button" data-toggle="modal" data-target="#ColorFigSegModal">Custom Color</button>
+							<button id="custom-color-button" data-toggle="modal" data-target="#ColorFigLargeSegModal">Custom Color</button>
 							<!--------Modal---------->
-							<div class="modal fade" id="ColorFigSegModal" role="dialog">
+							<div class="modal fade" id="ColorFigLargeSegModal" role="dialog">
 								<div class="modal-dialog">
 								  <!-- Modal content-->
 								  <div class="modal-content">
@@ -1840,9 +1840,9 @@
 					  <div id="main-color-content">
 						<div class="col-xs-4 box-color">
 							<img class="swlPreviewFigColorModal" src="assets/images/src/custom.png"/>
-							<button id="custom-color-button" data-toggle="modal" data-target="#ColorFigSwirlModal">Custom Color</button>
+							<button id="custom-color-button" data-toggle="modal" data-target="#ColorFigLargeSwirlModal">Custom Color</button>
 							<!--------Modal---------->
-							<div class="modal fade" id="ColorFigSwirlModal" role="dialog">
+							<div class="modal fade" id="ColorFigLargeSwirlModal" role="dialog">
 								<div class="modal-dialog">
 								  <!-- Modal content-->
 								  <div class="modal-content">
