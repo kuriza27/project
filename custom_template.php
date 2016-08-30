@@ -237,8 +237,8 @@
 						<div id="preview-pane" class="preview-panel">
 							<div class="i-select" style="display:block;">
 								<div id="inside-view" class="band">
-									<span class="start-cc"></span>
-								    <span class="end-cc"></span>
+									<span class="startIn-cc"></span>
+								    <span class="endIn-cc"></span>
 									<div class="preview-text faded" id="inside-text">
 										Inside Message
 									</div>
