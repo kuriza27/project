@@ -11,9 +11,9 @@
 					  <div id="main-color-content">
 					     <div class="col-xs-4 box-color">
 							<img class="dualPreviewColorModal" src="assets/images/src/custom.png"/>
-							<button id="custom-color-button" data-toggle="modal" data-target="#ColorDualModal">Custom Color</button>
+							<button id="custom-color-button" data-toggle="modal" data-target="#ColorDualLargeModal">Custom Color</button>
 							<!--------Modal---------->
-							<div class="modal fade" id="ColorDualModal" role="dialog">
+							<div class="modal fade" id="ColorDualLargeModal" role="dialog">
 								<div class="modal-dialog">
 								  <!-- Modal content-->
 								  <div class="modal-content">

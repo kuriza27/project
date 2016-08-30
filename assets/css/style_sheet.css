@@ -373,7 +373,7 @@ table.table-area-ink-injected-half.uk-table.uk-table-bordered.js-pricing-table {
 
 
 .col-md-2 img {
-    width: 374px;
+    width: 374px!important;
 }
 
 .images-clips {
@@ -567,7 +567,7 @@ span.red {
     background: #0a1a38;
     text-align: center;
     position: relative;
-    font-size: 39px;
+    font-size: 39px!important;
 }
 
 .col-sm-101.offer-details{
@@ -617,7 +617,7 @@ span.red {
 }
 
 .col-xs-99 {
-    width: 61%;
+    width: 61%!important;
     float: left;
     padding: 0 36px;
 }
@@ -808,7 +808,12 @@ li.active.select-box-col {
 }
 
 @media screen and (max-width: 420px){
-
+	.navbar-brand>img{
+	  width: 346px!important;
+  }
+  .col-xs-3.col-sm-2.offerpv{
+	  font-size:20px !important;
+  }
   
   .nav.nav-pills {
     width: 96%!important;
@@ -821,7 +826,7 @@ li.active.select-box-col {
 	}
 	
 	.galleryimg {
-    width: 330px!important;
+		width: 31px!important;
 	}
 	
 	ul.price-sidebar img {
@@ -833,10 +838,9 @@ li.active.select-box-col {
 		width: 310px!important;
 	}
 	
-	.col-xs-3.col-sm-2.offerpv {
-		font-size: 23px !important;
-     }
-	
+	.col-sm-22.offerpv{
+		font-size: 20px!important;
+	}
 	#order-now{
 		    margin-left: 0px!important;
 	}
@@ -863,56 +867,36 @@ li.active.select-box-col {
 	}
 	
 	.fonts-content li {
-		width: 47% !important;
-	  
-	}
-	
-	.font-style-list li img {
-		width: 122px!important;
-	}
-	
-	.gal {
-		height: auto!important;
-	}
-	
-	#main-content .col-md-4 {
-		margin-bottom: 40px!important;
-	}
-	
-	.galleryimg{
-		width: auto!important;
+     width: 47% !important;
 	}
 	
 	.col-md-2 img {
-		width: 378px!important;
+		width: 323px!important;
 	}
 	
-	.zoom{
-		left:180px!important;
+	.col-xs-98{
+		    padding: 0 3px 0 20px!important;
 	}
 	
-	#add-design{
-		width: 282px!important;
+	.band-text {
+    `width: 238px!important;
 	}
 	
-	.band-text{
-		width: 194px!important;
+	.col-xs-6 {
+		width: 100%!important;
 	}
 	
-	#preview-pane #front-view, #preview-pane #back-view{
-		
-	}
-	div#slideshow{
-		height: 134px!important;
-	}
+	.band-text {
+		width: 230px!important;
+		}
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 350px){
 	.navbar-brand>img{
 	  width: 346px!important;
   }
   .col-xs-3.col-sm-2.offerpv{
-	  font-size:19px !important;
+	  font-size:20px !important;
   }
   
   .nav.nav-pills {
@@ -920,22 +904,22 @@ li.active.select-box-col {
 	}
 	
 	.col-xs-99 {
-    width: 350px!important;
-    float: left;
-    padding: 0 36px;
+		width: 292px!important;
+		float: left;
+		padding: 0 15px;
 	}
 	
 	.galleryimg {
-    width: 330px!important;
+    width: 250px!important;
 	}
 	
 	ul.price-sidebar img {
-    width: 308px;
+    width: 260px!important;
     /* height: 120px; */
 	}
 	
-	.order-now-green{
-		width: 310px!important;
+	.order-now-green {
+		width: 260px!important;
 	}
 	
 	.col-sm-22.offerpv{
@@ -982,34 +966,26 @@ li.active.select-box-col {
 	#main-content .col-md-4 {
 		margin-bottom: 40px!important;
 	}
-	
-	.galleryimg{
-		width: auto!important;
-	}
+
 	
 	.col-md-2 img {
 		width: 288px!important;
 	}
 	
-	.zoom{
-		left:180px!important;
+	.col-xs-98 {
+		padding: 0 3px 0 18px!important;
 	}
-	
-	#add-design{
-		width: 282px!important;
+	.zoom {
+		position: absolute;
+		left: 184px!important;
 	}
-	
-	.band-text{
-		width: 194px!important;
-	}
-	
-	#preview-pane #front-view, #preview-pane #back-view{
+	.col-xs-6 {
 		width: 100%!important;
 	}
 	
-	div#slideshow{
-		height: 134px!important;
-	}
+	.band-text {
+		width: 230px!important;
+		}
 }
 
 

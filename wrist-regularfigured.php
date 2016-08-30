@@ -26,9 +26,9 @@
 					  <div id="main-color-content">
 					  <div class="col-xs-4 box-color">
 							<img class="PreviewFigColorModal" src="assets/images/src/custom.png"/>
-							<button id="custom-color-button" data-toggle="modal" data-target="#ColorFigModal">Custom Color</button>
+							<button id="custom-color-button" data-toggle="modal" data-target="#ColorFigRegModal">Custom Color</button>
 							<!--------Modal---------->
-							<div class="modal fade" id="ColorFigModal" role="dialog">
+							<div class="modal fade" id="ColorFigRegModal" role="dialog">
 								<div class="modal-dialog">
 								  <!-- Modal content-->
 								  <div class="modal-content">
