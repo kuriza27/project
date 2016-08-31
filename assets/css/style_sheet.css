@@ -793,7 +793,7 @@ li.active.select-box-col {
 		width:100%!important;
 	}
 }
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
 	.navbar-brand>img{
 	  width: 346px!important;
   }
@@ -804,6 +804,30 @@ li.active.select-box-col {
   .nav.nav-pills {
     width: 96%!important;
 	}
+	
+	.galleryimg {
+    width: 80px;
+	}
+	
+	.zoom {
+		left: 484px!important;
+		}
+		
+	.icon-img {
+		right: 110px;
+	}
+	
+	.nav.nav-pills{
+		width:100%!important;
+	}
+	
+	.icon-text{
+		width: 154px!important;
+	}
+	
+	span.end-cc {
+    left: 506px!important;}
+	
 	
 }
 
@@ -870,6 +894,10 @@ li.active.select-box-col {
      width: 47% !important;
 	}
 	
+	.font-style-list li img {
+		width: 150px;
+	}
+	
 	.col-md-2 img {
 		width: 323px!important;
 	}
@@ -879,16 +907,70 @@ li.active.select-box-col {
 	}
 	
 	.band-text {
-    `width: 238px!important;
+    `width: 330px!important;
 	}
 	
 	.col-xs-6 {
-		width: 100%!important;
+		width: 50%!important;
+		padding-left: 13px!important;
 	}
 	
 	.band-text {
 		width: 230px!important;
 		}
+		
+	.col-sm-3 {
+		float: left!important;
+		width: 170px!important;
+		font-size: 12px!important;
+	}
+	.col-sm-5{
+	    margin-left:0px!important;
+		border-right:none!Important;
+	}
+	
+	.i-input {
+		margin-left: 2px!important;
+	}
+	
+	.fb-select img {
+		width: 10px!important;
+		height: 10px!important;
+	}
+	
+	.c-select img {
+		width: 10px!important;
+		height: 10px!important;
+	}
+	
+	span.start-fc{
+		left:7px!important;
+	}
+	
+	span.end-fc {
+		left: 113px!important;
+	}
+	
+	span.back-mc {
+		left: 6px!important;
+	}
+	
+	span.start-cc {
+		left: 126px!important;
+	}
+	
+	span.end-cc {
+		left: 229px!important;
+	}
+	
+	span.backend-mc {
+		left: 114px!important;
+	}
+	
+	.clip-sec {
+		width: 44%!important;
+	}
+	
 }
 
 @media screen and (max-width: 350px){
@@ -910,7 +992,7 @@ li.active.select-box-col {
 	}
 	
 	.galleryimg {
-    width: 250px!important;
+    width: 50px!important;
 	}
 	
 	ul.price-sidebar img {
@@ -986,6 +1068,46 @@ li.active.select-box-col {
 	.band-text {
 		width: 230px!important;
 		}
+		
+	.clip-sec {
+    width: 44%!important;
+	}	
+	
+	span.start-fc{
+		left:7px!important;
+	}
+	
+	span.end-fc {
+		left: 113px!important;
+	}
+	
+	span.back-mc {
+		left: 6px!important;
+	}
+	
+	span.start-cc {
+		left: 54px!important;
+	}
+	
+	span.end-cc {
+		left: 188px!important;
+	}
+	
+	span.backend-mc {
+		left: 112px!important;
+	}
+	.prod-ship.col-md-4 select {
+		width: 246px!important;
+	}
+	
+	#add-design {
+		width: 282px!important;
+	}
+	
+	div#preview-textfont{
+		float: left!important;
+	}
+	
 }
 
 
