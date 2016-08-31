@@ -258,7 +258,7 @@ $(function(){
 
 		get_style_size('price_table');
 	});
-	
+
 	/*$(".clip-color-list a").click(function(){
 		var ref = clipArt.attr('ref');
 	});*/
