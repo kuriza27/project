@@ -23,5 +23,18 @@
 .font-style-list li img {
     width: 212px;
 }
+
+@media screen and (max-width: 420px){
+	
+	.fonts-content li {
+     width: 47% !important;
+	}
+	
+	.font-style-list li img {
+		width: 150px;
+	}
+}
+
+
 </style>
 <?php include_once 'footer.php'; ?>
