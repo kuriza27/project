@@ -3,9 +3,9 @@
 				<div class="col-xs-9 col-sm-10 offer-details float-left">Select Wristband Color and  Quantity <i>(*Minimum of 20)</i> </div>
 					<div class="clearfix"></div>
 			</div>
-			<div id="wrist_color_container">
+			<div id="wrist_color_container" class="wrist_color_container">
 
-				  <ul class="nav nav-pills js-colors">
+				  <ul class="nav nav-pills js-color">
 					<li class="active" data-color-style="solid">
 						<a data-toggle="pill" data-value="0" href="#home-fig-reg">Solid</a>
 					</li>

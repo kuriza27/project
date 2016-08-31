@@ -3,7 +3,7 @@
 				<div class="col-xs-9 col-sm-10 offer-details float-left">Select Wristband Color and  Quantity <i>(*Minimum of 20)</i> </div>
 					<div class="clearfix"></div>
 			</div>
-			<div id="wrist_color_container">
+			<div id="wrist_color_container" class="wrist_color_container">
 
 				  <div class="content">
 					<div id="dual-fig-reg" class="tab-pane js-color" data-value="0.01" data-color="Dual">

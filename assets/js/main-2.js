@@ -390,6 +390,9 @@ $(function(){
 	
 
 	$('body').on('blur', '.box-color input[name$="-qty"]', function(e) {
+
+		$("#preview-pane-selection").html("");
+
 		var total = 0;
 		var map = [];
 
@@ -421,22 +424,29 @@ $(function(){
 					sendToQuery('get_prices', style, size, qty);
 					// map[idx].push({'style':style, 'type':ref_type, 'size':name, 'qty':qty, 'color':ref_color_str});
 					map.push({'style':style, 'type':ref_type, 'size':name, 'qty':qty, 'color':ref_color_str});
-					
-					// if still not defined
-					if(typeof(has_preview[idx]) === "undefined"){
-						has_preview[idx] = [];
+
+					if(ref_type === "swirls") {
+						ref_type = "swirl";
 					}
 
-					if($.inArray(ref_color_str, has_preview[idx])<0){
-						has_preview[idx].push(ref_color_str);
-						// create
-						var preview = $("#preview-pane-selection").find('.preview-pill.preview-'+ref_type+'-'+ref_color_str).length > 0;
-						if(!preview) {
-							generatePreviewImage(ref_type, ref_color_arr, ref_color_font);
-						}
-					}
+					$("#preview-pane-selection").append('<li class="preview-pill preview-color-'+ref_type+'-'+ref_color_arr.join("-")+'-font-'+ref_color_font+'" data-type="'+ref_type+'" data-font-color="'+ref_color_font+'" data-image-link="/gd/belt.php?style='+ref_type+'&type='+style+'&color='+ref_color_arr.join(",")+'" style="background-image:url(\'/gd/belt.php?style='+ref_type+'&color='+ref_color_arr.join(",")+'\');background-size:30px;background-repeat: no-repeat;background-size: 100% 100%;"></li>');
+
+					// if still not defined
+					// if(typeof(has_preview[idx]) === "undefined"){
+					// 	has_preview[idx] = [];
+					// }
+
+					// if($.inArray(ref_color_str, has_preview[idx])<0){
+					// 	has_preview[idx].push(ref_color_str);
+					// 	// create
+					// 	// var preview = $("#preview-pane-selection").find('.preview-pill.preview-'+ref_type+'-'+ref_color_str).length > 0;
+					// 	// if(!preview) {
+
+					// 	// 	generatePreviewImage(ref_type, ref_color_arr, ref_color_font);
+					// 	// }
+					// }
 				}else{
-					has_preview[idx].pop(ref_color_str);
+					// has_preview[idx].pop(ref_color_str);
 				}
 
 				total += parseInt(qty);
