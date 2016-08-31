@@ -399,13 +399,23 @@ $(function(){
 		var style = $('.js-style .wrist_style:checked').val();
 		var size = $('.js-size .wrist_size:checked').val();
 
+		if(style === "figured") {
+			$("#front-view, #back-view, #inside-view, #continue-view").css("height", "104px");
+			$(".preview-text").css("line-height", "104px");
+		} else {
+			$("#front-view, #back-view, #inside-view, #continue-view").css("height", "54px");
+			$(".preview-text").css("line-height", "54px");
+		}
+
 		$('.js-color input[name$="-qty"]').each(function(){
 
 			var ref_type = $(this).parents('.tab-pane').data('color').toLowerCase();
 			var ref_color = $(this).attr('ref');
 			if(!ref_color){ return; }
+
 			var ref_color_str = ref_color.replace(/,/g, '-');
 			var ref_color_arr = ref_color.split(',');
+
 			var qty = $(this).val();
 
 			if(qty) {
@@ -431,20 +441,6 @@ $(function(){
 
 					$("#preview-pane-selection").append('<li class="preview-pill preview-color-'+ref_type+'-'+ref_color_arr.join("-")+'-font-'+ref_color_font+'" data-type="'+ref_type+'" data-font-color="'+ref_color_font+'" data-image-link="/gd/belt.php?style='+ref_type+'&type='+style+'&color='+ref_color_arr.join(",")+'" style="background-image:url(\'/gd/belt.php?style='+ref_type+'&color='+ref_color_arr.join(",")+'\');background-size:30px;background-repeat: no-repeat;background-size: 100% 100%;"></li>');
 
-					// if still not defined
-					// if(typeof(has_preview[idx]) === "undefined"){
-					// 	has_preview[idx] = [];
-					// }
-
-					// if($.inArray(ref_color_str, has_preview[idx])<0){
-					// 	has_preview[idx].push(ref_color_str);
-					// 	// create
-					// 	// var preview = $("#preview-pane-selection").find('.preview-pill.preview-'+ref_type+'-'+ref_color_str).length > 0;
-					// 	// if(!preview) {
-
-					// 	// 	generatePreviewImage(ref_type, ref_color_arr, ref_color_font);
-					// 	// }
-					// }
 				}else{
 					// has_preview[idx].pop(ref_color_str);
 				}

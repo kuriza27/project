@@ -820,6 +820,10 @@ b:hover{
     background-size: 100% 100%!important;
 }
 
+#preview-pane #continue-view {
+    background-size: 100% 100%!important;
+}
+
 .col-sm-1 {
     width: 30%;
     padding: 0 14px;
