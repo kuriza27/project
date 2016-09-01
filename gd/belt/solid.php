@@ -13,7 +13,7 @@
 
 		// Declare image variables
 		list( $r_0, $g_0, $b_0 ) = sscanf( $hex_0, "#%02x%02x%02x" );
-		$img_0 = array(	'file'	 => 'img\belt\base.png',
+		$img_0 = array(	'file'	 => 'img/belt/base.png',
 						'colorR' => $r_0,
 						'colorG' => $g_0,
 						'colorB' => $b_0 );
@@ -45,7 +45,7 @@
 
 		// For image emboss effect
 		// Declare image variables
-		$img_emboss = imagecreatefrompng( 'img\belt\emboss.png' );
+		$img_emboss = imagecreatefrompng( 'img/belt/emboss.png' );
 
 		// Let's make image background transparent
 		// imagefilledrectangle( $img_emboss, 0, 0, $width, $height, 0xFF );
