@@ -79,7 +79,7 @@ $(document).ready(function(){
 						ref_type = "swirl";
 					}
 
-					$("#preview-pane-selection").append('<li class="preview-pill preview-color-'+ref_type+'-'+ref_color_arr.join("-")+'-font-'+ref_color_font+'" data-type="'+ref_type+'" data-font-color="'+ref_color_font+'" data-image-link="gd/belt.php?style='+ref_type+'&type='+style+'&color='+ref_color_arr.join(",")+'" style="background-image:url(\'gd/belt.php?style='+ref_type+'&color='+ref_color_arr.join(",")+'\');background-size:30px;background-repeat: no-repeat;background-size: 100% 100%;"></li>');
+					$("#preview-pane-selection").append('<li class="blink preview-pill preview-color-'+ref_type+'-'+ref_color_arr.join("-")+'-font-'+ref_color_font+'" data-type="'+ref_type+'" data-font-color="'+ref_color_font+'" data-image-link="gd/belt.php?style='+ref_type+'&type='+style+'&color='+ref_color_arr.join(",")+'" style="background-image:url(\'gd/belt.php?style='+ref_type+'&color='+ref_color_arr.join(",")+'\');background-size:30px;background-repeat: no-repeat;background-size: 100% 100%;color:#'+ref_color_font+'">Y</li>');
 
 				}else{ 
 					// has_preview[idx].pop(ref_color_str);
@@ -90,6 +90,17 @@ $(document).ready(function(){
 		});
 	});
 
+	//blink
+	function blink(selector){
+	$(selector).fadeOut('slow', function(){
+		$(this).fadeIn('slow', function(){
+			blink(this);
+		});
+	});
+	}
+		
+	blink('.blink');
+	
 	// ADD-ON EVENTS
 	$('body').on('click', '.add-ons', function(e) {
 		e.stopPropagation();
@@ -221,6 +232,7 @@ $(function(){
 	//show preview image
 	$('body').on('click', '.preview-pill', function(e){
 		$('.preview-pill').removeClass('active');
+		$('.preview-pill').removeClass('blink');
 		$(this).addClass('active');
 
 		$("#front-view").css('background', 'url(' + $(this).attr('data-image-link') + ')');
@@ -499,7 +511,7 @@ $(function(){
 						ref_type = "swirl";
 					}
 
-					$("#preview-pane-selection").append('<li class="preview-pill preview-color-'+ref_type+'-'+ref_color_arr.join("-")+'-font-'+ref_color_font+'" data-type="'+ref_type+'" data-font-color="'+ref_color_font+'" data-image-link="gd/belt.php?style='+ref_type+'&type='+style+'&color='+ref_color_arr.join(",")+'" style="background-image:url(\'gd/belt.php?style='+ref_type+'&color='+ref_color_arr.join(",")+'\');background-size:30px;background-repeat: no-repeat;background-size: 100% 100%;"></li>');
+					$("#preview-pane-selection").append('<li class="blink preview-pill preview-color-'+ref_type+'-'+ref_color_arr.join("-")+'-font-'+ref_color_font+'" data-type="'+ref_type+'" data-font-color="'+ref_color_font+'" data-image-link="gd/belt.php?style='+ref_type+'&type='+style+'&color='+ref_color_arr.join(",")+'" style="background-image:url(\'gd/belt.php?style='+ref_type+'&color='+ref_color_arr.join(",")+'\');background-size:30px;background-repeat: no-repeat;background-size: 100% 100%;">Y</li>');
 
 				}else{ 
 					// has_preview[idx].pop(ref_color_str);
@@ -1159,7 +1171,7 @@ function get_total_price(price, qty, wb_style, wb_size) {
 
 	var total_price = 0;
 	$('.js-item-summary').html('');
-	$('#wrist_color_container').find('.js-color').each(function(){
+	$('.wrist_color_container').find('.js-color').each(function(){
 		var empty = true;
 		var sub_qty = 0;
 		$(this).find('input[name$="-qty"]').each(function(){
@@ -1283,7 +1295,8 @@ function sendToQuery(action, style, size, qty, where) {
 		    	$("#ShippingTime").html(html_ship);
 		        // $('.summary-table').html(response);
 	    	} else if(action === 'get_addons') {
-	    		$('#wristband_add_ons').html(formatCurrency(data * qty));
+
+				$('#wristband_add_ons').html(formatCurrency(data * qty));
 	    		$('#wristband_add_ons').attr('data-addon-total', data * qty);
 
 	    		var new_ttl = parseFloat($('#totalPrice').attr('data-total')) + (data * qty);
@@ -1313,6 +1326,8 @@ $('.clipart .drpMenuItems').on('click',function(){
 		$('.drpMenuItems_clipart').fadeOut(300);
 	}
 });
+
+
 
    /* function getSelectedColor(id) {
         var value='';
