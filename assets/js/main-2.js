@@ -25,9 +25,69 @@ $(document).ready(function(){
 		$('#FontColorQtyModal').modal('show');
 	});
 
+	//font-color selection per qty
 	$('body').on('click', '#FontColorQtyModal ul.font-color-list li', function(){
 		dynamic_font_color.css('background-color', '#'+$(this).attr('refcode')).attr('ref-font-color', $(this).attr('refcode'));
 		$('#FontColorQtyModal').modal('hide');
+		
+		$("#preview-pane-selection").html("");
+
+		var total = 0;
+		var map = [];
+
+		var style = $('.js-style .wrist_style:checked').val();
+		var size = $('.js-size .wrist_size:checked').val();
+
+		if(style === "figured") {
+			$("#front-view, #back-view, #inside-view, #continue-view").css("height", "104px");
+			$(".preview-text").css("line-height", "104px");
+		} else {
+			$("#front-view, #back-view, #inside-view, #continue-view").css("height", "54px");
+			$(".preview-text").css("line-height", "54px");
+		}
+
+		$('.js-color input[name$="-qty"]').each(function(){
+             
+			var ref_type = $(this).parents('.tab-pane').data('color').toLowerCase();
+			var ref_color = $(this).attr('ref');
+			if(!ref_color){ return; }
+
+			var ref_color_str = ref_color.replace(/,/g, '-');
+			var ref_color_arr = ref_color.split(',');
+
+			var qty = $(this).val();
+
+			if(qty) {
+				
+				var name = $(this).attr("name");
+				var ref_color_font = $(this).parents('.qty-box').find('.fntin').attr('ref-font-color');
+				var idx = ref_type+"-"+style+"-"+name;
+					qty = parseInt(qty);
+
+				// if(typeof(map[idx]) == "undefined"){
+				// 	map[idx]=[];
+				// }
+
+				if(qty>0){
+                     console.log(style, size, qty);
+					$('.prod-ship').css('display','block');
+					sendToQuery('get_prices', style, size, qty);
+					// map[idx].push({'style':style, 'type':ref_type, 'size':name, 'qty':qty, 'color':ref_color_str});
+					map.push({'style':style, 'type':ref_type, 'size':name, 'qty':qty, 'color':ref_color_str});
+
+					if(ref_type === "swirls") {
+						ref_type = "swirl";
+					}
+
+					$("#preview-pane-selection").append('<li class="preview-pill preview-color-'+ref_type+'-'+ref_color_arr.join("-")+'-font-'+ref_color_font+'" data-type="'+ref_type+'" data-font-color="'+ref_color_font+'" data-image-link="gd/belt.php?style='+ref_type+'&type='+style+'&color='+ref_color_arr.join(",")+'" style="background-image:url(\'gd/belt.php?style='+ref_type+'&color='+ref_color_arr.join(",")+'\');background-size:30px;background-repeat: no-repeat;background-size: 100% 100%;"></li>');
+
+				}else{ 
+					// has_preview[idx].pop(ref_color_str);
+				}
+
+				total += parseInt(qty);
+			}
+		});
 	});
 
 	// ADD-ON EVENTS
