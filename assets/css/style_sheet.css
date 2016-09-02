@@ -971,6 +971,14 @@ li.active.select-box-col {
 		width: 44%!important;
 	}
 	
+	label{
+		font-size:11px!important;
+	}
+	
+	#preview-pane{
+		font-size:11px!important;
+	}
+	
 }
 
 @media screen and (max-width: 350px){
@@ -1108,6 +1116,13 @@ li.active.select-box-col {
 		float: left!important;
 	}
 	
+	label{
+		font-size:11px!important;
+	}
+	
+	#preview-pane{
+		font-size:11px!important;
+	}
 }
 
 

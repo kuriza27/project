@@ -39,7 +39,8 @@ $(document).ready(function(){
 		var size = $('.js-size .wrist_size:checked').val();
 
 		if(style === "figured") {
-			$("#front-view, #back-view, #inside-view, #continue-view").css("height", "104px");
+			$("#front-view, #back-view, #inside-view, #continue-view").css("height", "92px");
+			$("#front-view, #back-view, #inside-view, #continue-view").css("top", "54px");
 			$(".preview-text").css("line-height", "104px");
 		} else {
 			$("#front-view, #back-view, #inside-view, #continue-view").css("height", "54px");
@@ -299,7 +300,7 @@ $(function(){
 			$(".large-color-size").css("display","none");	
 			$(".regular-figured-size").css("display","none");
 			$(".regular-dual-size").css("display","block");
-
+			$(".figupload").css("display","none");
 			}
 		else if(style =='figured'){
 			$("#onehalf").hide();
@@ -310,6 +311,7 @@ $(function(){
 			$(".large-color-size").css("display","none");	
 			$(".regular-figured-size").css("display","block");
 			$(".regular-dual-size").css("display","none");
+			$(".figupload").css("display","block");
 		}
 		else{
 			$("#onehalf").show();
@@ -322,6 +324,7 @@ $(function(){
 			$(".large-color-size").css("display","none");	
 			$(".regular-figured-size").css("display","none");
 			$(".regular-dual-size").css("display","none");
+			$(".figupload").css("display","none");
 		}
 		
 		$('#wrist_color_container').find('.js-color').find('input[name$="-qty"]').val('');
@@ -473,9 +476,11 @@ $(function(){
 
 		if(style === "figured") {
 			$("#front-view, #back-view, #inside-view, #continue-view").css("height", "104px");
+			$(".start-fc, .end-fc, .back-mc, .backend-mc").addClass("fig_mov");
 			$(".preview-text").css("line-height", "104px");
 		} else {
 			$("#front-view, #back-view, #inside-view, #continue-view").css("height", "54px");
+			$(".start-fc, .end-fc, .back-mc, .backend-mc").removeClass("fig_mov");
 			$(".preview-text").css("line-height", "54px");
 		}
 
@@ -814,6 +819,7 @@ $(function(){
 			$(".clip-color-list li a").removeClass('bsc');
 			$(".clip-color-list li a").removeClass('ces');
 			$(".clip-color-list li a").removeClass('ccs');
+			$(".clip-color-list li a").removeClass('figcenter');
 	});	
 	
 	$('.fclip-2').click(function(){
@@ -821,8 +827,9 @@ $(function(){
 			$(".clip-color-list li a").removeClass('fsc');
 			$(".clip-color-list li a").removeClass('bec');
 			$(".clip-color-list li a").removeClass('bsc');
-			 $(".clip-color-list li a").removeClass('ces');
+			$(".clip-color-list li a").removeClass('ces');
 			$(".clip-color-list li a").removeClass('ccs');
+			$(".clip-color-list li a").removeClass('figcenter');
 	});
 	//front message clipart button end here -----------
 
@@ -834,6 +841,7 @@ $(function(){
 			$(".clip-color-list li a").removeClass('bec');
 		    $(".clip-color-list li a").removeClass('ces');
 			$(".clip-color-list li a").removeClass('ccs');
+			$(".clip-color-list li a").removeClass('figcenter');
 	});
 	
 	$('.bclip-2').click(function(){
@@ -843,6 +851,7 @@ $(function(){
 			$(".clip-color-list li a").removeClass('bsc');
 			$(".clip-color-list li a").removeClass('ces');
 			$(".clip-color-list li a").removeClass('ccs');
+			$(".clip-color-list li a").removeClass('figcenter');
 	});
 	//back message clipart button end here --------------
 	
@@ -855,6 +864,7 @@ $(function(){
 			$(".clip-color-list li a").removeClass('bsc');
 			$(".clip-color-list li a").removeClass('bec');
 			$(".clip-color-list li a").removeClass('ces');
+			$(".clip-color-list li a").removeClass('figcenter');
 	});
 	
 	$('.cclip-2').click(function(){
@@ -864,8 +874,20 @@ $(function(){
 			$(".clip-color-list li a").removeClass('bsc');
 			$(".clip-color-list li a").removeClass('bec');
 			$(".clip-color-list li a").removeClass('ccs');
+			$(".clip-color-list li a").removeClass('figcenter');
 	});
 	//continous message clipart button end here --------------
+	
+	$('.fclip-3').click(function(){
+			$(".clip-color-list li a").addClass('figcenter');
+			$(".clip-color-list li a").removeClass('ces');
+			$(".clip-color-list li a").removeClass('fsc');
+			$(".clip-color-list li a").removeClass('fec');
+			$(".clip-color-list li a").removeClass('bsc');
+			$(".clip-color-list li a").removeClass('bec');
+			$(".clip-color-list li a").removeClass('ccs');
+	});
+	//figured message clipart button end here --------------
 	
 	//clipart front message button ------
 	$('.clip-color-list li a').click(function(){
@@ -887,6 +909,9 @@ $(function(){
 			else if($( ".clip-color-list li a" ).hasClass( "ccs" )){
 				$(".start-cc").html("<img width='34' height='30' src='assets/images/src/clipart/"+img+"'/>");
 			}
+			else if($( ".clip-color-list li a" ).hasClass( "figcenter" )){
+				$(".fig-cc").html("<img width='34' height='30' src='assets/images/src/clipart/"+img+"'/>");
+			}
 			else{
 				$(".end-cc").html("<img width='34' height='34' src='assets/images/src/clipart/"+img+"'/>");
 			}
@@ -907,6 +932,9 @@ $(function(){
 			}
 			else if($( ".clip-color-list li a" ).hasClass( "ccs" )){
 				$(".start-cc").find("img").remove();
+			}
+			else if($( ".clip-color-list li a" ).hasClass( "figcenter" )){
+				$(".fig-cc").find("img").remove();
 			}
 			else{
 				$(".end-cc").find("img").remove();

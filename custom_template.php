@@ -111,6 +111,15 @@
 										<a href="javascript:void(0)" id="remove-2">Remove File</a>
 									</div>
 								</div>
+								<div class="clip-sec col-xs-6 figupload" style="display:none;">
+									<button class="fclip-3" data-toggle="modal" data-target="#ClipArtFiguredModal">Figured Center Clipart</button><br />
+									<a href="javascript:void(0)" data-toggle="collapse" data-target="#upload-2">or Upload your own art</a>
+									<div id="upload-2" class="collapse">
+										<label for="file">Choose Photo:</label>
+										<input type="file" name="file-2" class="file-2" required><br>
+										<a href="javascript:void(0)" id="remove-2">Remove File</a>
+									</div>
+								</div>
 									<div class="clearfix"></div>
 							</div>
 							<div class="col-sm-5" style="margin-left:60px;">
@@ -199,7 +208,30 @@
 								</div>
 					     </div>
                                <!-----End Modal Div ---->
-								<div class="clear"></div>
+								<div class="clearfix"></div>
+						
+						<!-------start modal here---------->
+						<div class="modal fade" id="ClipArtFiguredModal" role="dialog">
+								<div class="modal-dialog">
+								  <!-- Modal content-->
+								  <div class="modal-content">
+									<div class="modal-header">
+									  <button type="button" class="close" data-dismiss="modal">&times;</button>
+									  <h4 class="modal-title">Pick Clipart</h4>
+									</div>
+									<div class="modal-body">
+									  <?php include "clipart-template.php";?>
+									   <div class="clearfix"></div>
+									</div>
+									<div class="modal-footer">
+									  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									</div>
+								  </div>
+								  <!---------End Modal Content-------------->
+								</div>
+					     </div>
+                               <!-----End Modal Div ---->
+							   <div class="clearfix"></div>
 					</div>
 
 					<?php include_once 'preview_template.php'; ?>
@@ -214,6 +246,7 @@
 									<div class="preview-text faded" id="front-text">
 										Front Message
 									</div>
+									<span class="fig-cc"></span>
 								</div>
 								<div id="back-view" class="band">
 									<span class="back-mc"></span>

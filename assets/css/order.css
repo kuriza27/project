@@ -640,6 +640,18 @@ div#order-summary {
     border-radius: 3px;
 }
 
+.fclip-3{
+	background-color: #17a589;
+    color: #fff;
+    border: 1px solid #117864;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.clip-sec.col-xs-6.figupload {
+    margin-left: -13px;
+}
+
 
 .fclip-1:hover,  .fclip-2:hover, .bclip-1:hover, .bclip-2:hover .cclip-1:hover, .cclip-1:hover {
     background-color: #1abc9c ;
@@ -1019,4 +1031,16 @@ input[type=file] {
     color: #8E0000;
     border: 1px solid #CDCDCD;
     padding: 4px;
+}
+
+.fig_mov{
+	margin-top: 24px;
+}
+
+
+span.fig-cc {
+    float: left;
+    position: relative;
+    left: 533px;
+    top: -79px;
 }
