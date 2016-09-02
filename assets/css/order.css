@@ -239,8 +239,6 @@ ORDER CSS
     margin-bottom: 10px;
 }
 
-
-
 .prod:hover, .prod.active{
     cursor:pointer;
     border:1px solid #ADACAC;
@@ -249,9 +247,9 @@ ORDER CSS
 
 .prod-size:hover, .prod-size.active{
     cursor:pointer;
+    background-color: #fff;
     border:1px solid #ADACAC;
 }
-
 
 #banner-pricing{
     margin:0;

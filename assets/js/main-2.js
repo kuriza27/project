@@ -3,6 +3,7 @@ var dynamic_font_color = "";
 var default_font_color = "000000";
 
 $(document).ready(function(){
+
 	// For regular wristband size
 	$('.qtyin-adult-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-qtyin-adult-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
 	$('.qtyin-medium-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-qtyin-medium-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
@@ -15,6 +16,7 @@ $(document).ready(function(){
 	$('.qtyin-adult-large-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-qtyin-adult-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
 	$('.qtyin-medium-large-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-qtyin-medium-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
 	$('.qtyin-youth-large-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-qtyin-youth-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+
 	// For large wristband xt size
 	$('.xt-small-large-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-xt-small-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
 	$('.xt-large-large-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-xt-large-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
@@ -46,7 +48,7 @@ $(document).ready(function(){
 			$(".preview-text").css("line-height", "54px");
 		}
 
-		$('.js-color input[name$="-qty"]').each(function(){
+		$('.wrist_color_container:visible .js-color input[name$="-qty"]').each(function(){
              
 			var ref_type = $(this).parents('.tab-pane').data('color').toLowerCase();
 			var ref_color = $(this).attr('ref');
@@ -69,20 +71,28 @@ $(document).ready(function(){
 				// }
 
 				if(qty>0){
-                     console.log(style, size, qty);
+
 					$('.prod-ship').css('display','block');
 					sendToQuery('get_prices', style, size, qty);
-					// map[idx].push({'style':style, 'type':ref_type, 'size':name, 'qty':qty, 'color':ref_color_str});
+					// mapi[dx].push({'style':style, 'type':ref_type, 'size':name, 'qty':qty, 'color':ref_color_str});
 					map.push({'style':style, 'type':ref_type, 'size':name, 'qty':qty, 'color':ref_color_str});
 
 					if(ref_type === "swirls") {
 						ref_type = "swirl";
+					} else if (ref_type === "dual") {
+						ref_type = "solid";
+						ref_color_font = ref_color_arr[1];
+						ref_color_arr = ref_color_arr.slice(0,1);
+					}
+
+					if (style === "debossed") {
+						ref_color_font = "000000";
+					} else if (style === "embossed") {
+						ref_color_font = "000000";
 					}
 
 					$("#preview-pane-selection").append('<li class="blink preview-pill preview-color-'+ref_type+'-'+ref_color_arr.join("-")+'-font-'+ref_color_font+'" data-type="'+ref_type+'" data-font-color="'+ref_color_font+'" data-image-link="gd/belt.php?style='+ref_type+'&type='+style+'&color='+ref_color_arr.join(",")+'" style="background-image:url(\'gd/belt.php?style='+ref_type+'&color='+ref_color_arr.join(",")+'\');background-size:30px;background-repeat: no-repeat;background-size: 100% 100%;color:#'+ref_color_font+'">Y</li>');
 
-				}else{ 
-					// has_preview[idx].pop(ref_color_str);
 				}
 
 				total += parseInt(qty);
@@ -131,19 +141,19 @@ $(document).ready(function(){
 	var has_checked_count = 0;
 	var has_checked_count_value = $(".wrist_size").length;
 
-	//Check if has default size
-	$(".wrist_size").each(function(){
-		has_checked_count++;
-		if ($(this).prop('checked')==true) {
-			has_checked == true;
-		}
-		if(has_checked_count == has_checked_count_value) {
-			if(!has_checked) {
-				$(".wrist_size:first").prop('checked', true);
+	// //Check if has default size
+	// $(".wrist_size").each(function(){
+	// 	has_checked_count++;
+	// 	if ($(this).prop('checked')==true) {
+	// 		has_checked == true;
+	// 	}
+	// 	if(has_checked_count == has_checked_count_value) {
+	// 		if(!has_checked) {
+	// 			$(".wrist_size:first").prop('checked', true);
 				get_style_size('price_table');
-			}
-		}
-	});
+	// 		}
+	// 	}
+	// });
 
 });
 
@@ -275,14 +285,18 @@ $(function(){
 	});
 
 	//select wristband style
-	$('.js-style').click(function(){
+	$('body').on('click', '.js-style', function() {
+
+		// Uncheck others
 		$('.js-style').find('input[type="radio"]').prop('checked', false);
 		$('.js-style').removeClass('active');
+
+		// Check & set as active
 		$(this).find('input[type="radio"]').prop('checked', true);
 		$(this).addClass('active');
 
 		//check style hide size divs
-        var style = $(this).find('input[type="radio"]').val();
+		var style = $(this).find('input[type="radio"]').val();
 
 		if(style === "printed" || style === "ink-injected" || style === "embossed-printed" || style === "figured"){
 			$('.fntin').show().addClass('active');
@@ -290,7 +304,7 @@ $(function(){
 			$('.fntin').hide().removeClass('active');
 		}
 
-		if(style =='dual-layer'){
+		if(style =='dual-layer') {
 			$("#onehalf").hide();
 			$("#two").hide();
 			$("#quarter").hide();
@@ -299,9 +313,7 @@ $(function(){
 			$(".large-color-size").css("display","none");	
 			$(".regular-figured-size").css("display","none");
 			$(".regular-dual-size").css("display","block");
-
-			}
-		else if(style =='figured'){
+		} else if(style =='figured') {
 			$("#onehalf").hide();
 			$("#two").hide();
 			$("#quarter").hide();	
@@ -310,8 +322,7 @@ $(function(){
 			$(".large-color-size").css("display","none");	
 			$(".regular-figured-size").css("display","block");
 			$(".regular-dual-size").css("display","none");
-		}
-		else{
+		} else {
 			$("#onehalf").show();
 			$("#two").show();
 			$("#quarter").show();	
@@ -324,16 +335,23 @@ $(function(){
 			$(".regular-dual-size").css("display","none");
 		}
 		
+		// Get current checked radio button
+		var selected = $(".js-size:visible input[type='radio']:checked");
+
+		if(selected.length <= 0) {
+			selected = $(".js-size:visible:first input[type='radio']");
+		}
+
+		$('.js-size').removeClass('active');
+		selected.closest('.js-size').addClass('active');
+		selected.prop("checked", true);
+
 		$('#wrist_color_container').find('.js-color').find('input[name$="-qty"]').val('');
 		$('.js-total').hide();
 		$('.js-no-total').fadeIn(300);
 
 		get_style_size('price_table');
 	});
-
-	/*$(".clip-color-list a").click(function(){
-		var ref = clipArt.attr('ref');
-	});*/
 
 	//select wristband size
 	$('.js-size').click(function(){
@@ -479,7 +497,7 @@ $(function(){
 			$(".preview-text").css("line-height", "54px");
 		}
 
-		$('.js-color input[name$="-qty"]').each(function(){
+		$('.wrist_color_container:visible .js-color input[name$="-qty"]').each(function(){
 
 			var ref_type = $(this).parents('.tab-pane').data('color').toLowerCase();
 			var ref_color = $(this).attr('ref');
@@ -509,12 +527,20 @@ $(function(){
 
 					if(ref_type === "swirls") {
 						ref_type = "swirl";
+					} else if (ref_type === "dual") {
+						ref_type = "solid";
+						ref_color_font = ref_color_arr[1];
+						ref_color_arr = ref_color_arr.slice(0,1);
+					}
+
+					if (style === "debossed") {
+						ref_color_font = "000000";
+					} else if (style === "embossed") {
+						ref_color_font = "000000";
 					}
 
 					$("#preview-pane-selection").append('<li class="blink preview-pill preview-color-'+ref_type+'-'+ref_color_arr.join("-")+'-font-'+ref_color_font+'" data-type="'+ref_type+'" data-font-color="'+ref_color_font+'" data-image-link="gd/belt.php?style='+ref_type+'&type='+style+'&color='+ref_color_arr.join(",")+'" style="background-image:url(\'gd/belt.php?style='+ref_type+'&color='+ref_color_arr.join(",")+'\');background-size:30px;background-repeat: no-repeat;background-size: 100% 100%;">Y</li>');
 
-				}else{ 
-					// has_preview[idx].pop(ref_color_str);
 				}
 
 				total += parseInt(qty);
@@ -969,25 +995,25 @@ function get_price_data($style, $size, type) {
 	//get JSON Price list
 	var count = 0;
 	total_qty = 0;
-	$.getJSON( "orders_json.php", function( data ) {
-		var items = [];
-		var arr = $.map(data, function(elem) { return elem });
-		var len = arr.length - 1;
 
-		$.each(data, function(data_style, data_sizes) {
+	// $.getJSON( "orders_json.php", function( data ) {
+
+		var items = [];
+		var $data = $.parseJSON(price_json);
+
+		$.each($data, function(data_style, data_sizes) {
 
 			// To lowercase strings for compare
 			$style = $style.toLowerCase();
 			data_style = data_style.toLowerCase();
 
-			if(data_style == $style) {
-                 console.log($style);
-				$.each(data_sizes, function(key_size, val_size) {
-
-					if(key_size == $size) {
+			if(data_style == $style) { // Check if is style
+				
+				$.each(data_sizes, function(key_size, val_size) { // Loop through sizees
+					
+					if(key_size == $size) { // Check if is size
 
 						if(type == 'price_table') {
-
 							$('#priceTable').find('td.js-temp').remove();
 							$.each(val_size, function(key_qty, val_qty){
 								$('#priceTable').append('<td class="js-temp">$<span data-qty-range="'+key_qty+'">'+val_qty+'</span></td>');
@@ -997,173 +1023,34 @@ function get_price_data($style, $size, type) {
 							$('.js-wb-caption').find('.size').text($size);
 						}
 
-						// if(type == 'fixed_price') {
-
-						// 	var total_qty = 0;
-						// 	var count = 0;
-
-						// 	// $('#wrist_color_container').find('.js-color').find('input[name$="-qty"]').each(function(i, el){
-						// 	$('.js-color input[name$="-qty"]').each(function(){
-
-						// 		var qty = $(this).val();
-						// 		var ref_type = $(this).parents('.tab-pane').data('color').toLowerCase();
-						// 		var ref_type = $(this).parents('.tab-pane').data('color');
-						// 		var style = $('.js-style .wrist_style:checked').val();
-
-						// 		if(qty != ''){
-
-						// 			// if still not defined
-						// 			if(typeof(has_preview[style+"-"+ref_type]) === "undefined"){
-						// 				has_preview[style+"-"+ref_type] = [];
-						// 			}
-
-						// 			var praseQty = parseInt(qty);
-
-						// 			// $("#preview-pane-selection").html("");
-						// 			if(typeof $(this).attr('ref') === "undefined"){
-						// 				return false;
-						// 			}else{
-						// 				if(praseQty>0){
-						// 					// check if still has no preview
-						// 					if($.inArray($(this).attr('ref'), has_preview[style+"-"+ref_type])<0){
-						// 						// has_preview[style+"-"+ref_type].push($(this).attr('ref'));
-
-						// 						$(".click-pre").css("display","block");
-						// 						var ref_colors = $(this).attr('ref').split(',');
-
-						// 						// count total
-						// 						total_qty += praseQty;
-
-						// 					}
-						// 				}else{
-						// 					// $('.preview-pill.preview-'+ref_type.toLowerCase()+'-'+$(this).attr('ref').replace(/,/g, '-')).remove();
-						// 					// has_preview[style+"-"+ref_type].pop($(this).attr('ref'));
-						// 				}
-						// 			}
-						// 		}
-						// 	});
-
-
-							$('.js-color input[name$="-qty"]').each(function(){
-
-								var qty = $(this).val();
-
-								if(qty != '') {
-									total_qty += parseInt(qty);
-									get_total_price(val_size, qty, $style, $size);
-								}
-
-							});
-
-							// var arr_keys = Object.keys(obj_price);
-
-							// for(key in arr_keys) {
-							// 	if(key < (arr_keys.length-1)) {
-							// 		var k = parseInt(key) + 1;
-
-							// 		if(total_qty >= arr_keys[key] && total_qty < arr_keys[k]) {
-							// 		}
-							// 	}
-							// }
-						// }
-
-
+						$('.js-color input[name$="-qty"]').each(function(){
+							var qty = $(this).val();
+							if(qty != '') {
+								total_qty += parseInt(qty);
+								get_total_price(val_size, qty, $style, $size);
+							}
+						});
 					}
-
 				});
-
 			}
-
 		});
 
-		/**
-		for(var keys in arr) {
+	// });
 
-			for(var wb_style in arr[keys]) {
-				if(wb_style == $style) {
+	$('.js-free-summary').html("");
+	$('.total-summary-free').hide();
 
-					for (i in arr[keys][wb_style]) {
-						for (var wb_size in arr[keys][wb_style][i]) {
-							if(wb_size == $size) {
-								var obj_price = arr[keys][wb_style][i][$size][0];
+	if(total_qty > 100) {
+		$('.total-summary-free').show();
 
-								if(type == 'price_table') {
-									$('#priceTable').find('td.js-temp').remove();
-									$.each(obj_price, function(key, val){
-										$('#priceTable').append('<td class="js-temp">$<span data-qty-range="'+key+'">'+val+'</span></td>');
-										$('.js-pricing-table').fadeIn(300);
-									});
-									$('.js-wb-caption').find('.style').text($style.toUpperCase());
-									$('.js-wb-caption').find('.size').text($size);
-								}
-
-								if(type == 'fixed_price') {
-
-									var total_qty = 0;
-									var count = 0;
-
-									// $('#wrist_color_container').find('.js-color').find('input[name$="-qty"]').each(function(i, el){
-									$('.js-color input[name$="-qty"]').each(function(){
-
-										var qty = $(this).val();
-										var ref_type = $(this).parents('.tab-pane').data('color').toLowerCase();
-										var ref_type = $(this).parents('.tab-pane').data('color');
-										var style = $('.js-style .wrist_style:checked').val();
-
-										if(qty != ''){
-
-											// if still not defined
-											if(typeof(has_preview[style+"-"+ref_type]) === "undefined"){
-												has_preview[style+"-"+ref_type] = [];
-											}
-
-											var praseQty = parseInt(qty);
-
-											// $("#preview-pane-selection").html("");
-											if(typeof $(this).attr('ref') === "undefined"){
-												return false;
-											}else{
-												if(praseQty>0){
-													// check if still has no preview
-													if($.inArray($(this).attr('ref'), has_preview[style+"-"+ref_type])<0){
-														has_preview[style+"-"+ref_type].push($(this).attr('ref'));
-
-														$(".click-pre").css("display","block");
-														var ref_colors = $(this).attr('ref').split(',');
-
-														// count total
-														total_qty += praseQty;
-
-													}
-												}else{
-													// $('.preview-pill.preview-'+ref_type.toLowerCase()+'-'+$(this).attr('ref').replace(/,/g, '-')).remove();
-													has_preview[style+"-"+ref_type].pop($(this).attr('ref'));
-												}
-											}
-										}
-									});
-
-									var arr_keys = Object.keys(obj_price);
-
-									for(key in arr_keys) {
-										if(key < (arr_keys.length-1)) {
-											var k = parseInt(key) + 1;
-
-											if(total_qty >= arr_keys[key] && total_qty < arr_keys[k]) {
-												get_total_price(obj_price[arr_keys[key]], total_qty,wb_style, $size);
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
+		var free_qty = $("#freekc").val();
+		if(free_qty === "") {
+			free_qty = 0;
 		}
-		*/
 
-	});
+		var html_item = '<div class="row summary-item"><div class="col-md-8 col-sm-6">- Keychains</div><div class="col-md-4 col-sm-6 align-right">'+free_qty+' piece/s</div></div>';
+		$('.js-free-summary').append(html_item);
+	}
 
 }
 
@@ -1171,7 +1058,8 @@ function get_total_price(price, qty, wb_style, wb_size) {
 
 	var total_price = 0;
 	$('.js-item-summary').html('');
-	$('.wrist_color_container').find('.js-color').each(function(){
+
+	$('.wrist_color_container').find('.js-color').each(function() {
 		var empty = true;
 		var sub_qty = 0;
 		$(this).find('input[name$="-qty"]').each(function(){
@@ -1186,7 +1074,7 @@ function get_total_price(price, qty, wb_style, wb_size) {
 		if(!empty) {
 			var color = $(this).data('color');
 			// var added_val = ($(this).data('value')!="") ? parseFloat($(this).data('value')) : 0;
-
+			var sub_price = 0;
 			var has_qty = false;
 			$.each(price, function(key_qty, val_qty){
 				if(has_qty === false) {
@@ -1274,6 +1162,7 @@ function resetDrpMenu() {
 }
 
 function sendToQuery(action, style, size, qty, where) {
+
 	$.ajax({  
 	    type: 'POST',  
 	    url: 'queryDB.php', 
@@ -1303,10 +1192,9 @@ function sendToQuery(action, style, size, qty, where) {
 	    		$('#totalPrice').text( formatCurrency(new_ttl) );
 				$('#totalPrice').attr('data-total', new_ttl);
 	    	}
-
 	    }
 	});
-	
+
 }
 
 $('[input]').on('focus',function(){
