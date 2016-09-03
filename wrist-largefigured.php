@@ -67,7 +67,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -94,7 +94,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="000000" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="000000" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -121,7 +121,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="6A491A" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="6A491A" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -148,7 +148,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="0E9543" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="0E9543" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -175,7 +175,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="A0A29F" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="A0A29F" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -202,7 +202,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="FD029A" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="FD029A" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -229,7 +229,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="9ABFE5" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="9ABFE5" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -256,7 +256,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="F997B7" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="F997B7" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -283,7 +283,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="8CD50B" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="8CD50B" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -310,7 +310,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="891C2E" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="891C2E" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -337,7 +337,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input  ref="836F3D" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input  ref="836F3D" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -364,7 +364,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="01214E" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="01214E" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -391,7 +391,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="EF6B01" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="EF6B01" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -418,7 +418,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="B99474" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="B99474" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -445,7 +445,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="EA0D2C" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="EA0D2C" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -472,7 +472,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="079CA5" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="079CA5" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -499,7 +499,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="FFFFFF" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="FFFFFF" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -526,7 +526,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="F2E80F" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="F2E80F" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -583,7 +583,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -610,7 +610,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="000000,0E9543" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="000000,0E9543" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -637,7 +637,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="000000,FD029A" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="000000,FD029A" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -664,7 +664,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="000000,836F3D" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="000000,836F3D" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -691,7 +691,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="000000,8D8F8C" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="000000,8D8F8C" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -718,7 +718,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="000000,EF6B01" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="000000,EF6B01" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -745,7 +745,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="000000,5A108B" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="000000,5A108B" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -772,7 +772,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="000000,FFFFFF" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="000000,FFFFFF" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -799,7 +799,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="000000,F2E80F" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="000000,F2E80F" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -826,7 +826,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="0B45BB,A0A29F" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="0B45BB,A0A29F" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -853,7 +853,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="0B45BB,FD029A" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="0B45BB,FD029A" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -880,7 +880,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input  ref="0B45BB,9ABFE5" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input  ref="0B45BB,9ABFE5" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -907,7 +907,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="0B45BB,5A108B,EA0D2C" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="0B45BB,5A108B,EA0D2C" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -934,7 +934,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="0E9543,EA0D2C,F2E80F" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="0E9543,EA0D2C,F2E80F" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -961,7 +961,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="0E9543,191597" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="0E9543,191597" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -988,7 +988,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="FD029A,9ABFE5" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="FD029A,9ABFE5" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1015,7 +1015,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="7BB201,44A3BC" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="7BB201,44A3BC" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1042,7 +1042,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="0E9543,F2E80F,EF6B01,EA0D2C,5A108B,0B45BB" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="0E9543,F2E80F,EF6B01,EA0D2C,5A108B,0B45BB" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1069,7 +1069,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="EA0D2C,000000" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="EA0D2C,000000" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1096,7 +1096,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="EA0D2C,000000,F2E80F" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="EA0D2C,000000,F2E80F" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1123,7 +1123,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="EA0D2C,0B45BB" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="EA0D2C,0B45BB" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1150,7 +1150,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="EA0D2C,0B45BB,FD029A" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="EA0D2C,0B45BB,FD029A" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1177,7 +1177,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="EA0D2C,0B45BB,F2E80F" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="EA0D2C,0B45BB,F2E80F" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1204,7 +1204,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="EA0D2C,0E9543" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="EA0D2C,0E9543" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1231,7 +1231,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="EA0D2C,A0A29F" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="EA0D2C,A0A29F" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1258,7 +1258,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="EA0D2C,FD029A" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="EA0D2C,FD029A" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1285,7 +1285,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="EA0D2C,5A108B,000000" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="EA0D2C,5A108B,000000" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1312,7 +1312,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="EA0D2C,419DB5" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="EA0D2C,419DB5" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1339,7 +1339,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="EA0D2C,FB78B2" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="EA0D2C,FB78B2" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1366,7 +1366,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="EA0D2C,FEFEFE,0B45BB" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="EA0D2C,FEFEFE,0B45BB" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1393,7 +1393,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="EA0D2C,FEFEFE,0E9543" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="EA0D2C,FEFEFE,0E9543" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1420,7 +1420,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="EA0D2C,F2E80F" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="EA0D2C,F2E80F" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1447,7 +1447,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="EF6B01,FEFEFE,000000" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="EF6B01,FEFEFE,000000" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1474,7 +1474,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="EFEFE,0B45BB" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="EFEFE,0B45BB" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1501,7 +1501,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="5A108B,FEFEFE,0B45BB" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="5A108B,FEFEFE,0B45BB" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1528,7 +1528,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="FEFEFE,6A491A" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="FEFEFE,6A491A" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1555,7 +1555,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="FEFEFE,0E9543" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="FEFEFE,0E9543" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1582,7 +1582,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="FEFEFE,A0A29F"  type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="FEFEFE,A0A29F" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1609,7 +1609,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="FEFEFE,FD029A" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="FEFEFE,FD029A" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1636,7 +1636,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="FEFEFE,9ABFE5" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="FEFEFE,9ABFE5" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1663,7 +1663,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="FEFEFE,8CD50B" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="FEFEFE,8CD50B" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1690,7 +1690,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="FEFEFE,EF6B01" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="FEFEFE,EF6B01" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1717,7 +1717,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="FEFEFE,AD71C5" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="FEFEFE,AD71C5" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1744,7 +1744,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="FEFEFE,FB78B2" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="FEFEFE,FB78B2" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1771,7 +1771,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="FEFEFE,EA0D2C" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="FEFEFE,EA0D2C" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1798,7 +1798,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="FEFEFE,079CA5" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="FEFEFE,079CA5" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1825,7 +1825,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="F2E80F,0B45BB" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="F2E80F,0B45BB" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1880,7 +1880,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1907,7 +1907,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="021509,0C9040" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="021509,0C9040" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1934,7 +1934,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="070707,9DA09C" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="070707,9DA09C" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1961,7 +1961,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="070707,E5028B" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="070707,E5028B" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -1988,7 +1988,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="070707,560F88" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="070707,560F88" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2015,7 +2015,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="070707,E30C2A" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="070707,E30C2A" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2042,7 +2042,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="070707,F3F3F3" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="070707,F3F3F3" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2069,7 +2069,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="070707,E4DA0E" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="070707,E4DA0E" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2096,7 +2096,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="1753A6,8AD40C" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="1753A6,8AD40C" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2123,7 +2123,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="F3F6FC,0D46BA" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="F3F6FC,0D46BA" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2150,7 +2150,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="F3F6FC,174830" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="F3F6FC,174830" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2177,7 +2177,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="4E4726,DECE76,6B5619"  type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="4E4726,DECE76,6B5619" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2204,7 +2204,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="000000,BE8B5E,64631C" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="000000,BE8B5E,64631C" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2231,7 +2231,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="FBFCFC,009B4F" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="FBFCFC,009B4F" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2258,7 +2258,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="E22FAB,9BBAE3" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="E22FAB,9BBAE3" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2285,7 +2285,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="98C0D7,8FCF49,F90599" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="98C0D7,8FCF49,F90599" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2312,7 +2312,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="8FD040,97C1CC,F0E711" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="8FD040,97C1CC,F0E711" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2339,7 +2339,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="8A2232,A0A19D" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="8A2232,A0A19D" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2366,7 +2366,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="F17A19,FFFCF9" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="F17A19,FFFCF9" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2393,7 +2393,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="773BA1,FBF9FC" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="773BA1,FBF9FC" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2420,7 +2420,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="681990,F574B1" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="681990,F574B1" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2447,7 +2447,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="F4303D,FEDE1E,2230A9" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="F4303D,FEDE1E,2230A9" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2474,7 +2474,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="E10D30,08389E,000000" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="E10D30,08389E,000000" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2501,7 +2501,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="D9152C,178B41" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="D9152C,178B41" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2528,7 +2528,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="D9152C,A1A19C" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="D9152C,A1A19C" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2555,7 +2555,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="D9152C,FFFFFF" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="D9152C,FFFFFF" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2582,7 +2582,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="D9152C,FFFFFF,0F42B6"type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="D9152C,FFFFFF,0F42B6"type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2609,7 +2609,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="EB2328,F2E50F" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="EB2328,F2E50F" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2636,7 +2636,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="000001,120F6D" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="000001,120F6D" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2663,7 +2663,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="242097,999C9E" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="242097,999C9E" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2690,7 +2690,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="FEFEFE,1CA4AD" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="FEFEFE,1CA4AD" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2717,7 +2717,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="FEFEFE,000000,05461F" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="FEFEFE,000000,05461F" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2751,7 +2751,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="3886C4" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="3886C4" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2778,7 +2778,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="5DCE66" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="5DCE66" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2805,7 +2805,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="D57DA3" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="D57DA3" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2832,7 +2832,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="A078AD" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="A078AD" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
@@ -2859,7 +2859,7 @@
 										<div class="clearfix"></div>
 								</div>
 							<!-------End text color-------------->
-							<span class="view-more">View More Sizes</span>
+							<span class="view-more col-xs-12">View More Sizes</span>
 							<div class="show-content" style="display:none">
 								<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input ref="F5F5F5" type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 								<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input ref="F5F5F5" type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>

@@ -5,21 +5,21 @@ var default_font_color = "000000";
 $(document).ready(function(){
 
 	// For regular wristband size
-	$('.qtyin-adult-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-qtyin-adult-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
-	$('.qtyin-medium-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-qtyin-medium-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
-	$('.qtyin-youth-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-qtyin-youth-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.qtyin-adult-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-qtyin-adult-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.qtyin-medium-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-qtyin-medium-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.qtyin-youth-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-qtyin-youth-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
 	// For regular wristband xt size
-	$('.xt-small-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-xt-small-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
-	$('.xt-large-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-xt-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.xt-small-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-xt-small-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.xt-large-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-xt-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
 
 	// For large wristband size
-	$('.qtyin-adult-large-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-qtyin-adult-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
-	$('.qtyin-medium-large-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-qtyin-medium-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
-	$('.qtyin-youth-large-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-qtyin-youth-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.qtyin-adult-large-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-qtyin-adult-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.qtyin-medium-large-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-qtyin-medium-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.qtyin-youth-large-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-qtyin-youth-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
 
 	// For large wristband xt size
-	$('.xt-small-large-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-xt-small-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
-	$('.xt-large-large-qty').closest('div').addClass('qty-box').append('<div class="fntin fnt-xt-large-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.xt-small-large-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-xt-small-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.xt-large-large-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-xt-large-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
 
 	// For font color select event
 	$('body').on('click', '.fntin', function(){
@@ -164,43 +164,39 @@ $(function(){
 	$('#prod-main2').click(function(){
 		window.location = 'fonts.php';
 	});
-	
+
 	//removes file 
 	$("#remove-1").click(function() {
 		$(".file-1").val("");
 	});
-	
 
 	//removes file 
 	$("#remove-2").click(function() {
 		$(".file-2").val("");
 	});
-	
-	
+
 	//removes file 
 	$("#remove-3").click(function() {
 		$(".file-3").val("");
 	});
-	
-	
+
 	//removes file 
 	$("#remove-4").click(function() {
 		$(".file-4").val("");
 	});
-	
 
 	//removes file 
 	$("#remove-5").click(function() {
 		$(".file-5").val("");
 	});
-	
+
 	//removes file 
 	$("#remove-6").click(function() {
 		$(".file-6").val("");
 	});
-	
-	 //change font
-	 $("#fs").change(function() {
+
+	//change font
+	$("#fs").change(function() {
 		//alert($(this).val());
 		$('.changeMe').css("font-family", $(this).val());
 	});
@@ -272,12 +268,12 @@ $(function(){
 		return false;
 	});
 
-	$('.band-text').keyup().trigger;
+	// $('.band-text').keyup().trigger;
 
-	$('.band-color').click(function(){
-		$color = $(this).attr('value');
-		$('.band').css('background', $color);
-	});
+	// $('.band-color').click(function(){
+	// 	$color = $(this).attr('value');
+	// 	$('.band').css('background', $color);
+	// });
 
 	//select wristband style
 	$('body').on('click', '.js-style', function() {
@@ -299,48 +295,87 @@ $(function(){
 			$('.fntin').hide().removeClass('active');
 		}
 
-		if(style =='dual-layer') {
-			$("#onehalf").hide();
-			$("#two").hide();
-			$("#quarter").hide();
-			$("#one").show();
-			$(".regular-color-size").css("display","none");
-			$(".large-color-size").css("display","none");	
-			$(".regular-figured-size").css("display","none");
-			$(".regular-dual-size").css("display","block");
-		} else if(style =='figured') {
-			$("#onehalf").hide();
-			$("#two").hide();
-			$("#quarter").hide();	
-			$("#one").hide();
-			$(".regular-color-size").css("display","none");
-			$(".large-color-size").css("display","none");	
-			$(".regular-figured-size").css("display","block");
-			$(".regular-dual-size").css("display","none");
-		} else {
-			$("#onehalf").show();
-			$("#two").show();
-			$("#quarter").show();	
+		$(".wsize-default .js-size").hide();
+		$(".wristband-view-color").hide();
+		
+		$('.js-size').removeClass('active');
+		$(".wristband-view-color").hide();
+
+		var style = $('.js-style .wrist_style:checked').val();
+
+		if(style == "figured") {
+			// Show sizes
+			$("#half").show();
 			$("#three").show();
 			$("#one").show();
+
+			// Get current checked radio button
+			var selected = $(".js-size:visible input[type='radio']:checked");
+			if(selected.length <= 0) {
+				selected = $(".js-size:visible:first input[type='radio']");
+			}
+			selected.closest('.js-size').addClass('active');
+			selected.prop("checked", true);
+
+			// Get checked style
+			var item = $('.js-size:visible .wrist_size:checked').val();
+
+			// Show items
+			if($.inArray(item, ["1/4", "1/2", "3/4"]) > 0) {
+				$(".regular-figured-size").show(); // Show regular sizes
+			} else {
+				$(".large-figured-size").show(); // Show large sizes
+			}
+		} else if(style=="dual-layer") {
+			// Show sizes
 			$("#half").show();
-			$(".regular-color-size").css("display","block");
-			$(".large-color-size").css("display","none");	
-			$(".regular-figured-size").css("display","none");
-			$(".regular-dual-size").css("display","none");
+			$("#three").show();
+
+			// Get current checked radio button
+			var selected = $(".js-size:visible input[type='radio']:checked");
+			if(selected.length <= 0) {
+				selected = $(".js-size:visible:first input[type='radio']");
+			}
+			selected.closest('.js-size').addClass('active');
+			selected.prop("checked", true);
+
+			// Get checked style
+			var item = $('.js-size:visible .wrist_size:checked').val();
+
+			// Show items
+			if($.inArray(item, ["1/4", "1/2"]) > 0) {
+				$(".regular-dual-size").show(); // Show regular sizes
+			} else {
+				$(".large-dual-size").show(); // Show large sizes
+			}
+		} else {
+			// Show sizes
+			$("#quarter").show();
+			$("#half").show();
+			$("#three").show();
+			$("#one").show();
+			$("#onehalf").show();
+			$("#two").show();
+
+			// Get current checked radio button
+			var selected = $(".js-size:visible input[type='radio']:checked");
+			if(selected.length <= 0) {
+				selected = $(".js-size:visible:first input[type='radio']");
+			}
+			selected.closest('.js-size').addClass('active');
+			selected.prop("checked", true);
+
+			// Get checked style
+			var item = $('.js-size:visible .wrist_size:checked').val();
+
+			// Show items
+			if($.inArray(item, ["1/4", "1/2", "3/4", "1"]) > 0) {
+				$(".regular-color-size").show(); // Show regular sizes
+			} else {
+				$(".large-color-size").show(); // Show large sizes
+			}
 		}
 		
-		// Get current checked radio button
-		var selected = $(".js-size:visible input[type='radio']:checked");
-
-		if(selected.length <= 0) {
-			selected = $(".js-size:visible:first input[type='radio']");
-		}
-
-		$('.js-size').removeClass('active');
-		selected.closest('.js-size').addClass('active');
-		selected.prop("checked", true);
-
 		$('#wrist_color_container').find('.js-color').find('input[name$="-qty"]').val('');
 		$('.js-total').hide();
 		$('.js-no-total').fadeIn(300);
@@ -350,52 +385,6 @@ $(function(){
 
 	//select wristband size
 	$('body').on('click', '.js-size', function(){
-		var item = $(this).find('input[type="radio"]').val();
-		var style = $('.js-style .wrist_style:checked').val();
-
-		if(style=="figured"){
-			if(item=='1/2'){
-				$(".regular-figured-size").css("display","block");
-				$(".large-figured-size").css("display","none");
-				$(".regular-color-size").css("display","none");
-				$(".large-color-size").css("display","none");
-				$(".regular-dual-size").css("display","none");
-				$(".large-dual-size").css("display","none");
-			}else{
-
-				$(".large-figured-size").css("display","block");
-				$(".regular-figured-size").css("display","none");
-				$(".regular-color-size").css("display","none");
-				$(".large-color-size").css("display","none");
-				$(".regular-dual-size").css("display","none");
-				$(".large-dual-size").css("display","none");
-			}
-		}
-		else if(style=="dual-layer"){
-			if(item=='1/2'){
-				$(".regular-dual-size").css("display","block");
-				$(".large-figured-size").css("display","none");
-				$(".large-figured-size").css("display","none");
-				$(".regular-color-size").css("display","none");
-				$(".large-color-size").css("display","none");
-				$(".large-dual-size").css("display","none");
-			}else{
-				$(".large-dual-size").css("display","block");
-				$(".large-figured-size").css("display","none");
-				$(".regular-figured-size").css("display","none");
-				$(".regular-color-size").css("display","none");
-				$(".large-color-size").css("display","none");
-				$(".regular-dual-size").css("display","none");
-			}		
-		}else{
-			if(item=="1/4" || item=="1/2"){
-				$(".regular-color-size").css("display","block");
-				$(".large-color-size").css("display","none");
-			}else{
-				$(".regular-color-size").css("display","none");
-				$(".large-color-size").css("display","block");
-			}
-		}
 
 		$('.js-size').find('input[type="radio"]').prop('checked', false);
 		$('.js-size').removeClass('active');
@@ -403,31 +392,40 @@ $(function(){
 		$(this).addClass('active');
 
 		$('#wrist_color_container').find('.js-color').find('input[name$="-qty"]').val('');
+		
+		var item = $('.js-size:visible .wrist_size:checked').val();
+		var style = $('.js-style .wrist_style:checked').val();
+
+		$(".wristband-view-color").hide();
+
+		if(style == "figured") {
+			// Show items
+			if($.inArray(item, ["1/4", "1/2", "3/4"]) > 0) {
+				$(".regular-figured-size").show(); // Show regular sizes
+			} else {
+				$(".large-figured-size").show(); // Show large sizes
+			}
+		} else if(style=="dual-layer") {
+			// Show items
+			if($.inArray(item, ["1/4", "1/2"]) > 0) {
+				$(".regular-dual-size").show(); // Show regular sizes
+			} else {
+				$(".large-dual-size").show(); // Show large sizes
+			}		
+		} else {
+			// Show items
+			if($.inArray(item, ["1/4", "1/2", "3/4", "1"]) > 0) {
+				$(".regular-color-size").show(); // Show regular sizes
+			} else {
+				$(".large-color-size").show(); // Show large sizes
+			}
+		}
+
 		$('.js-total').hide();
 		$('.js-no-total').fadeIn(300);
 
 		get_style_size('price_table');
 	});
-
-	// //adding quantity to wristband colors
-	// $('.box-color').find('input[name$="-qty"]').keydown(function(e){
-	// 	// Allow: backspace, delete, tab, escape, enter and .
-	// 	if ($.inArray(e.keyCode, [46, 8, 9, 27, 13]) !== -1 ||
-	// 	    // Allow: Ctrl+A
-	// 	    (e.keyCode == 65 && e.ctrlKey === true) ||
-	// 	    // Allow: home, end, left, right
-	// 	    (e.keyCode >= 35 && e.keyCode <= 39)) {
-	// 	        // let it happen, don't do anything
-	// 	        return;
-	// 	}
-	// 	// Ensure that it is a number and stop the keypress
-	// 	if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105 || e.keyCode == 190 || e.keyCode == 110)) {
-	// 	    e.preventDefault();
-	// 	}
-	// 	else {
-	// 		get_style_size('fixed_price');
-	// 	}
-	// });
 
 	//adding quantity to wristband colors
 	$('body').on('keydown', '.box-color input[name$="-qty"]', function(e) {
@@ -448,31 +446,6 @@ $(function(){
 			// get_style_size('fixed_price');
 		}
 	});
-
-	// //adding quantity to wristband colors
-	// $('body').on('blur', '.box-color input[name$="-qty"]', function(e) {
-	// 	// console.log($(this).val());
-	// 	get_style_size('fixed_price');
-	// });
-
-	// $('.box-color').find('input[name$="-qty"]').blur(function(){
-	// 	var total = 0;
-	// 	$('#wrist_color_container').find('.js-color').find('input[name$="-qty"]').each(function(i, el){
-	// 		var qty = $(this).val();
-
-	// 		if(qty != '') {
-	// 			total += parseInt(qty);
-	// 		}
-			
-	// 	});
-
-	// 	if(total == 0) {
-	// 		$('.js-total').hide();
-	// 		$('.js-no-total').fadeIn(300);
-	// 	}
-	// });
-
-	
 
 	$('body').on('blur', '.box-color input[name$="-qty"]', function(e) {
 
@@ -509,12 +482,8 @@ $(function(){
 				var idx = ref_type+"-"+style+"-"+name;
 					qty = parseInt(qty);
 
-				// if(typeof(map[idx]) == "undefined"){
-				// 	map[idx]=[];
-				// }
-
 				if(qty>0){
-                    // console.log(style, size, qty);
+					// console.log(style, size, qty);
 					$('.prod-ship').css('display','block');
 					
 					// map[idx].push({'style':style, 'type':ref_type, 'size':name, 'qty':qty, 'color':ref_color_str});

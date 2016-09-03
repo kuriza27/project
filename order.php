@@ -1,6 +1,7 @@
 <?php include_once 'header.php'; ?>
 <?php include_once 'queryDB.php'; ?>
 <?php
+
 	// SQL query
 	$sql = getPriceJSON();
 	$result = $conn->query($sql);
@@ -11,12 +12,16 @@
 
 	if ($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
-			$style[$row['style_code']][$row['size_code']][$row['qty']] = $row['price'];
+			$style[strtolower($row['style_code'])][$row['size_code']][$row['qty']] = $row['price'];
 		}
 		$data = $style;
 	}
 
-	$qstyle = (isset($_GET['q'])&&!empty($_GET['q'])) ? $_GET['q'] : "printed" ;
+	// Get wristband style
+	$qstyle = strtolower((isset($_GET['q'])&&!empty($_GET['q'])) ? $_GET['q'] : "printed");
+	// Double check if existing
+	if(!isset($data[$qstyle])) { $qstyle = "printed"; }
+
 ?>
 
 <script>

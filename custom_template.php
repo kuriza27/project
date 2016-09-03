@@ -9,32 +9,32 @@
 				<div class="clearfix"></div>
 			</div>
 			<div class="wsize-default">
-				<div class="col-md-4 prod-size js-size" id="quarter">
+				<div class="col-md-4 prod-size js-size" id="quarter" style="display:<?php echo (in_array($qstyle, ['printed','debossed','ink-injected','embossed','embossed-printed','blank']))?'block':'none'; ?>">
 					<div class="box-thumb"><img src="assets/images/src/sizes/1-4.png"></div>
 					<input type="radio" name="wrist_size"  class="wrist_size" value="1/4" data-size="1/4">
 					<h2>1/4 Inch</h2>
 				</div>
-				<div class="col-md-4 prod-size js-size active"  id="half">
+				<div class="col-md-4 prod-size js-size active"  id="half" style="display:<?php echo (in_array($qstyle, ['printed','debossed','ink-injected','embossed','embossed-printed','blank','dual-layer','figured']))?'block':'none'; ?>">
 					<div class="box-thumb"><img src="assets/images/src/sizes/1-2.png"></div>
 					<input type="radio" name="wrist_size" class="wrist_size" value="1/2" data-size="1/2" checked="checked">
 					<h2>1/2 Inch</h2>
 				</div>
-				<div class="col-md-4 prod-size js-size" id="three">
+				<div class="col-md-4 prod-size js-size" id="three" style="display:<?php echo (in_array($qstyle, ['printed','debossed','ink-injected','embossed','embossed-printed','blank','dual-layer','figured']))?'block':'none'; ?>">
 					<div class="box-thumb"><img src="assets/images/src/sizes/3-4.png"></div>
 					<input type="radio" name="wrist_size"  class="wrist_size" value="3/4" data-size="3/4">
 					<h2>3/4 Inch</h2>
 				</div>
-				<div class="col-md-4 prod-size js-size" id="one">
+				<div class="col-md-4 prod-size js-size" id="one" style="display:<?php echo (in_array($qstyle, ['printed','debossed','ink-injected','embossed','embossed-printed','blank','dual-layer']))?'block':'none'; ?>">
 					<div class="box-thumb"><img src="assets/images/src/sizes/1.png"></div>
 					<input type="radio" name="wrist_size"  class="wrist_size" value="1" data-size="1">
 					<h2>1 Inch</h2>
 				</div>
-				<div class="col-md-4 prod-size js-size" id="onehalf">
+				<div class="col-md-4 prod-size js-size" id="onehalf" style="display:<?php echo (in_array($qstyle, ['printed','debossed','ink-injected','embossed','embossed-printed','blank']))?'block':'none'; ?>">
 					<div class="box-thumb"><img src="assets/images/src/sizes/11-2.png"></div>
 					<input type="radio" name="wrist_size"  class="wrist_size" value="1.5" data-size="1.5">
 					<h2>1.5 Inch</h2>
 				</div>
-				<div class="col-md-4 prod-size js-size" id="two">
+				<div class="col-md-4 prod-size js-size" id="two" style="display:<?php echo (in_array($qstyle, ['printed','debossed','ink-injected','embossed','embossed-printed','blank']))?'block':'none'; ?>">
 					<div class="box-thumb"><img src="assets/images/src/sizes/2.png"></div>
 					<input type="radio" name="wrist_size" class="wrist_size" value="2" data-size="2">
 					<h2>2 Inch</h2>
@@ -46,22 +46,22 @@
 
 		<!-- WRIST COLOR -->
 		<div class="wrist-color-quantity">
-			<div class="regular-color-size">
+			<div class="wristband-view-color regular-color-size" style="display:<?php echo (in_array($qstyle, ['printed','debossed','ink-injected','embossed','embossed-printed','blank']))?'block':'none'; ?>">
 				<?php include "wrist-regularbandcolor.php"; ?>
 			</div>
-			<div class="large-color-size" style="display:none">
+			<div class="wristband-view-color large-color-size" style="display:none">
 				<?php include "wrist-largebandcolor.php"; ?>
 			</div>
-			<div class="large-figured-size" style="display:none">
-				<?php include "wrist-largefigured.php"; ?>
-			</div>
-			<div class="regular-figured-size" style="display:none">
+			<div class="wristband-view-color regular-figured-size" style="display:<?php echo (in_array($qstyle, ['figured']))?'block':'none'; ?>">
 				<?php include "wrist-regularfigured.php"; ?>
 			</div>
-			<div class="regular-dual-size" style="display:none">
+			<div class="wristband-view-color large-figured-size" style="display:none">
+				<?php include "wrist-largefigured.php"; ?>
+			</div>
+			<div class="wristband-view-color regular-dual-size" style="display:<?php echo (in_array($qstyle, ['dual-layer']))?'block':'none'; ?>">
 				<?php include "wrist-regulardual.php"; ?>
 			</div>	
-			<div class="large-dual-size" style="display:none">
+			<div class="wristband-view-color large-dual-size" style="display:none">
 				<?php include "wrist-largedual.php"; ?>
 			</div>
 		</div>
@@ -462,7 +462,7 @@
 					<hr>
 					<h1 class="align-right">Total: <span id= "totalPrice" data-total="0">$ 0.00</span></h1>
 				</div>
-				<div class="col-md-2">
+				<div class="col-md-12">
 					<div class="button-cart">
 						<button type="submit">Add to Cart</button>
 					</div>
@@ -524,14 +524,13 @@
 			<div class="clearfix"></div>
 		</div>
 		<!-------End text color-------------->
-		<span class="view-more">View More Sizes</span>
+		<span class="view-more col-xs-12">View More Sizes</span>
 		<div class="show-content">
 			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
 		</div>
 	</div>
 </div>
-
 <div id="segmentedCustomColorSelector" class="hide" style="display:none;">
 	<div class="col-xs-4 box-color dynamic-box-color">
 		<button class="btn-close-custom-color">X</button>
@@ -577,14 +576,13 @@
 					<div class="clearfix"></div>
 			</div>
 		<!-------End text color-------------->
-		<span class="view-more">View More Sizes</span>
+		<span class="view-more col-xs-12">View More Sizes</span>
 		<div class="show-content">
 			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
 		</div>
 	</div>
 </div>
-
 <div id="swirlCustomColorSelector" class="hide" style="display:none;">
 	<div class="col-xs-4 box-color dynamic-box-color">
 		<button class="btn-close-custom-color">X</button>
@@ -629,14 +627,13 @@
 					<div class="clearfix"></div>
 			</div>
 		<!-------End text color-------------->
-		<span class="view-more">View More Sizes</span>
+		<span class="view-more col-xs-12">View More Sizes</span>
 		<div class="show-content" style="display:none">
 			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
 		</div>
 	</div>
 </div>
-
 <div id="dualCustomColorSelector" class="hide" style="display:none;">
 	<div class="col-xs-4 box-color dynamic-box-color">
 		<button class="btn-close-custom-color">X</button>
@@ -675,14 +672,13 @@
 				</div>
 					<div class="clearfix"></div>
 			</div>
-		<span class="view-more">View More Sizes</span>
+		<span class="view-more col-xs-12">View More Sizes</span>
 		<div class="show-content" style="display:none">
 			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
 		</div>
 	</div>
 </div>
-
 <div id="solidCustomFigColorSelector" class="hide" style="display:none;">
 	<div class="col-xs-4 box-color dynamic-box-color">
 		<button class="btn-close-custom-color">X</button>
@@ -728,14 +724,13 @@
 			<div class="clearfix"></div>
 		</div>
 		<!-------End text color-------------->
-		<span class="view-more">View More Sizes</span>
+		<span class="view-more col-xs-12">View More Sizes</span>
 		<div class="show-content">
 			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
 		</div>
 	</div>
 </div>
-
 <div id="segmentedFigCustomColorSelector" class="hide" style="display:none;">
 	<div class="col-xs-4 box-color dynamic-box-color">
 		<button class="btn-close-custom-color">X</button>
@@ -781,14 +776,13 @@
 					<div class="clearfix"></div>
 			</div>
 		<!-------End text color-------------->
-		<span class="view-more">View More Sizes</span>
+		<span class="view-more col-xs-12">View More Sizes</span>
 		<div class="show-content">
 			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
 		</div>
 	</div>
 </div>
-
 <div id="swirlCustomFigColorSelector" class="hide" style="display:none;">
 	<div class="col-xs-4 box-color dynamic-box-color">
 		<button class="btn-close-custom-color">X</button>
@@ -833,14 +827,13 @@
 					<div class="clearfix"></div>
 			</div>
 		<!-------End text color-------------->
-		<span class="view-more">View More Sizes</span>
+		<span class="view-more col-xs-12">View More Sizes</span>
 		<div class="show-content" style="display:none">
 			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
 			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
 		</div>
 	</div>
 </div>
-
 <div class="modal fade" id="FontColorQtyModal" role="dialog">
 	<div class="modal-dialog">
 		<!-- Modal content-->
