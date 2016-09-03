@@ -66,10 +66,6 @@ $(document).ready(function(){
 				var idx = ref_type+"-"+style+"-"+name;
 					qty = parseInt(qty);
 
-				// if(typeof(map[idx]) == "undefined"){
-				// 	map[idx]=[];
-				// }
-
 				if(qty>0){
 
 					$('.prod-ship').css('display','block');
@@ -137,10 +133,9 @@ $(document).ready(function(){
 		console.log('Total : ' + $('#totalPrice').html());
 	});
 
-	var has_checked = false;
-	var has_checked_count = 0;
-	var has_checked_count_value = $(".wrist_size").length;
-
+	// var has_checked = false;
+	// var has_checked_count = 0;
+	// var has_checked_count_value = $(".wrist_size").length;
 	// //Check if has default size
 	// $(".wrist_size").each(function(){
 	// 	has_checked_count++;
@@ -963,7 +958,6 @@ function get_style_size(type) {
 	else {
 		var $style = $('input[name="wrist_style"]:checked').data('style');
 
-
 		if($style === "printed" || $style === "ink-injected" || $style === "embossed-printed" || $style === "figured"){
 			$('.fntin').show().addClass('active');
 		}else{
@@ -1192,6 +1186,8 @@ function sendToQuery(action, style, size, qty, where) {
 	    		$('#totalPrice').text( formatCurrency(new_ttl) );
 				$('#totalPrice').attr('data-total', new_ttl);
 	    	}
+	    	// Calculate again
+	    	// get_style_size('fixed_price');
 	    }
 	});
 
