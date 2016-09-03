@@ -349,7 +349,7 @@ $(function(){
 	});
 
 	//select wristband size
-	$('.js-size').click(function(){
+	$('body').on('click', '.js-size', function(){
 		var item = $(this).find('input[type="radio"]').val();
 		var style = $('.js-style .wrist_style:checked').val();
 
@@ -514,9 +514,9 @@ $(function(){
 				// }
 
 				if(qty>0){
-                     console.log(style, size, qty);
+                    // console.log(style, size, qty);
 					$('.prod-ship').css('display','block');
-					sendToQuery('get_prices', style, size, qty);
+					
 					// map[idx].push({'style':style, 'type':ref_type, 'size':name, 'qty':qty, 'color':ref_color_str});
 					map.push({'style':style, 'type':ref_type, 'size':name, 'qty':qty, 'color':ref_color_str});
 
@@ -540,7 +540,11 @@ $(function(){
 
 				total += parseInt(qty);
 			}
+
 		});
+
+		// Get proper total qty
+		sendToQuery('get_prices', style, size, total);
 
 		// If existing, do stuff...
 		if($('#dv-10-free-keychains').length  > 0) {
@@ -1017,7 +1021,7 @@ function get_price_data($style, $size, type) {
 							$('.js-wb-caption').find('.size').text($size);
 						}
 
-						$('.js-color input[name$="-qty"]').each(function(){
+						$('.wrist_color_container:visible .js-color input[name$="-qty"]').each(function(){
 							var qty = $(this).val();
 							if(qty != '') {
 								total_qty += parseInt(qty);
@@ -1034,7 +1038,10 @@ function get_price_data($style, $size, type) {
 	$('.js-free-summary').html("");
 	$('.total-summary-free').hide();
 
-	if(total_qty > 100) {
+	// Get proper total qty
+	sendToQuery('get_prices', $style, $size, total_qty);
+
+	if(total_qty >= 100) {
 		$('.total-summary-free').show();
 
 		var free_qty = $("#freekc").val();
@@ -1042,7 +1049,7 @@ function get_price_data($style, $size, type) {
 			free_qty = 0;
 		}
 
-		var html_item = '<div class="row summary-item"><div class="col-md-8 col-sm-6">- Keychains</div><div class="col-md-4 col-sm-6 align-right">'+free_qty+' piece/s</div></div>';
+		var html_item = '<div class="row summary-item"><div class="col-md-8 col-sm-6">- Keychains ('+free_qty+' piece/s)</div><div class="col-md-4 col-sm-6 align-right"></div></div>';
 		$('.js-free-summary').append(html_item);
 	}
 
@@ -1053,7 +1060,7 @@ function get_total_price(price, qty, wb_style, wb_size) {
 	var total_price = 0;
 	$('.js-item-summary').html('');
 
-	$('.wrist_color_container').find('.js-color').each(function() {
+	$('.wrist_color_container:visible .js-color').each(function() {
 		var empty = true;
 		var sub_qty = 0;
 		$(this).find('input[name$="-qty"]').each(function(){
@@ -1118,7 +1125,7 @@ function get_total_price(price, qty, wb_style, wb_size) {
 		addOns.push($(this).attr('data-code'));
 	});
 
-	$('.js-color input[name$="-qty"]').each(function(){
+	$('.wrist_color_container:visible .js-color input[name$="-qty"]').each(function(){
 		var qty = $(this).val();
 		if(qty != '') {
 			total += parseFloat(qty);

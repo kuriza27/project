@@ -453,7 +453,7 @@
 							<div class="row total-summary-free" style="display:none;">
 								<br/>
 								<div class="col-md-8 col-sm-6"><strong>Free</strong></div>
-								<div class="col-md-4 col-sm-6 align-right"><strong>Quantity</strong></div>
+								<div class="col-md-4 col-sm-6 align-right"><strong></strong></div>
 							</div>
 							<div class="summary-list-item js-free-summary total-summary-free" style="display:none;">
 							</div>
