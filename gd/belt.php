@@ -43,7 +43,16 @@
 				generate_solid($color);
 			}
 
-		} else if ( $style == 'segmented' ) {
+		}else if ( $style == 'glow' ) {
+
+			// Check maximum & minimum color count
+			if ( count( $color ) == 1 ) {
+				generate_glow($color);
+			}
+
+		}
+
+		else if ( $style == 'segmented' ) {
 
 			// Check maximum & minimum color count
 			if ( count( $color ) <= 6 && count( $color ) >= 1 ) {
@@ -70,7 +79,15 @@
 				generate_fig_solid($color);
 			}
 
-		} else if ( $style == 'segmented' ) {
+		}else if ( $style == 'glow' ) {
+
+			// Check maximum & minimum color count
+			if ( count( $color ) == 1 ) {
+				generate_fig_glow($color);
+			}
+
+		}
+		else if ( $style == 'segmented' ) {
 
 			// Check maximum & minimum color count
 			if ( count( $color ) <= 6 && count( $color ) >= 1 ) {

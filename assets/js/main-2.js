@@ -86,6 +86,11 @@ $(document).ready(function(){
 					} else if (style === "embossed") {
 						ref_color_font = "000000";
 					}
+					
+					//if background black and font-color black
+					if(ref_color_arr=="000000" && ref_color_font = "000000"){
+						ref_color_font = "464646";
+					}
 
 					$("#preview-pane-selection").append('<li class="blink preview-pill preview-color-'+ref_type+'-'+ref_color_arr.join("-")+'-font-'+ref_color_font+'" data-type="'+ref_type+'" data-font-color="'+ref_color_font+'" data-image-link="gd/belt.php?style='+ref_type+'&type='+style+'&color='+ref_color_arr.join(",")+'" style="background-image:url(\'gd/belt.php?style='+ref_type+'&color='+ref_color_arr.join(",")+'\');background-size:30px;background-repeat: no-repeat;background-size: 100% 100%;color:#'+ref_color_font+'">Y</li>');
 
@@ -308,6 +313,12 @@ $(function(){
 			$("#half").show();
 			$("#three").show();
 			$("#one").show();
+			$(".start-fc").addClass("fig_move");
+			$(".end-fc").addClass("fig_move");
+			$(".back-mc").addClass("fig_move");
+			$(".backend-mc").addClass("fig_move");
+			$(".start-cc").addClass("fig_move");
+			$(".end-cc").addClass("fig_move");
 
 			// Get current checked radio button
 			var selected = $(".js-size:visible input[type='radio']:checked");
@@ -330,6 +341,12 @@ $(function(){
 			// Show sizes
 			$("#half").show();
 			$("#three").show();
+			$(".start-fc").removeClass("fig_move");
+			$(".end-fc").removeClass("fig_move");
+			$(".back-mc").removeClass("fig_move");
+			$(".backend-mc").removeClass("fig_move");
+			$(".start-cc").removeClass("fig_move");
+			$(".end-cc").removeClass("fig_move");
 
 			// Get current checked radio button
 			var selected = $(".js-size:visible input[type='radio']:checked");
@@ -356,6 +373,12 @@ $(function(){
 			$("#one").show();
 			$("#onehalf").show();
 			$("#two").show();
+			$(".start-fc").removeClass("fig_move");
+			$(".end-fc").removeClass("fig_move");
+			$(".back-mc").removeClass("fig_move");
+			$(".backend-mc").removeClass("fig_move");
+			$(".start-cc").removeClass("fig_move");
+			$(".end-cc").removeClass("fig_move");
 
 			// Get current checked radio button
 			var selected = $(".js-size:visible input[type='radio']:checked");
