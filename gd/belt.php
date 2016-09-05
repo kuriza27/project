@@ -6,9 +6,11 @@
 	include_once 'belt/fig-solid.php';
 	include_once 'belt/fig-segmented.php';
 	include_once 'belt/fig-swirl.php';
+	include_once 'belt/fig-glow.php';
+	include_once 'belt/glow.php';
 
 	// Only allowed styles
-	$list_style = array( 'solid', 'segmented', 'swirl' );
+	$list_style = array( 'solid', 'segmented', 'swirl' ,'glow');
 
 	if( !isset( $_REQUEST['style'] ) ) {
 		die('Error: Library not defined!');
