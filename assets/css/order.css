@@ -976,9 +976,10 @@ span.end-cc {
     font-weight: bold;
 }
 
-.click-pre{
-	color: #079ca5;
+.click-pre {
+    color: #BC0000;
     font-weight: bold;
+    text-align: left;
 }
 
 .zoom {

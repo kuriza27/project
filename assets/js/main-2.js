@@ -88,10 +88,10 @@ $(document).ready(function(){
 					}
 					
 					//if background black and font-color black
-					if(ref_color_arr=="000000" && ref_color_font = "000000"){
+					if(ref_color_arr=="000000" && ref_color_font == "000000"){
 						ref_color_font = "464646";
 					}
-
+					S('.click-pre').show();
 					$("#preview-pane-selection").append('<li class="blink preview-pill preview-color-'+ref_type+'-'+ref_color_arr.join("-")+'-font-'+ref_color_font+'" data-type="'+ref_type+'" data-font-color="'+ref_color_font+'" data-image-link="gd/belt.php?style='+ref_type+'&type='+style+'&color='+ref_color_arr.join(",")+'" style="background-image:url(\'gd/belt.php?style='+ref_type+'&color='+ref_color_arr.join(",")+'\');background-size:30px;background-repeat: no-repeat;background-size: 100% 100%;color:#'+ref_color_font+'">Y</li>');
 
 				}
@@ -286,7 +286,8 @@ $(function(){
 		// Uncheck others
 		$('.js-style').find('input[type="radio"]').prop('checked', false);
 		$('.js-style').removeClass('active');
-
+		$('.click-pre').hide();
+		
 		// Check & set as active
 		$(this).find('input[type="radio"]').prop('checked', true);
 		$(this).addClass('active');
@@ -525,7 +526,13 @@ $(function(){
 					} else if (style === "embossed") {
 						ref_color_font = "000000";
 					}
-
+					
+					//if background black and font-color black
+					if(ref_color_arr=="000000" && ref_color_font == "000000"){
+						ref_color_font = "464646";
+					}
+					
+					$('.click-pre').show();
 					$("#preview-pane-selection").append('<li class="blink preview-pill preview-color-'+ref_type+'-'+ref_color_arr.join("-")+'-font-'+ref_color_font+'" data-type="'+ref_type+'" data-font-color="'+ref_color_font+'" data-image-link="gd/belt.php?style='+ref_type+'&type='+style+'&color='+ref_color_arr.join(",")+'" style="background-image:url(\'gd/belt.php?style='+ref_type+'&color='+ref_color_arr.join(",")+'\');background-size:30px;background-repeat: no-repeat;background-size: 100% 100%;">Y</li>');
 
 				}
