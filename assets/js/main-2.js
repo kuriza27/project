@@ -320,7 +320,8 @@ $(function(){
 			$(".backend-mc").addClass("fig_move");
 			$(".start-cc").addClass("fig_move");
 			$(".end-cc").addClass("fig_move");
-
+			$(".figarea").show();
+			
 			// Get current checked radio button
 			var selected = $(".js-size:visible input[type='radio']:checked");
 			if(selected.length <= 0) {
@@ -348,6 +349,7 @@ $(function(){
 			$(".backend-mc").removeClass("fig_move");
 			$(".start-cc").removeClass("fig_move");
 			$(".end-cc").removeClass("fig_move");
+			$(".figarea").hide();
 
 			// Get current checked radio button
 			var selected = $(".js-size:visible input[type='radio']:checked");
@@ -380,6 +382,7 @@ $(function(){
 			$(".backend-mc").removeClass("fig_move");
 			$(".start-cc").removeClass("fig_move");
 			$(".end-cc").removeClass("fig_move");
+			$(".figarea").hide();
 
 			// Get current checked radio button
 			var selected = $(".js-size:visible input[type='radio']:checked");
@@ -858,6 +861,7 @@ $(function(){
 			$(".clip-color-list li a").removeClass('bec');
 		    $(".clip-color-list li a").removeClass('ces');
 			$(".clip-color-list li a").removeClass('ccs');
+			$(".clip-color-list li a").removeClass('figc');
 	});
 	
 	$('.bclip-2').click(function(){
@@ -867,6 +871,7 @@ $(function(){
 			$(".clip-color-list li a").removeClass('bsc');
 			$(".clip-color-list li a").removeClass('ces');
 			$(".clip-color-list li a").removeClass('ccs');
+			$(".clip-color-list li a").removeClass('figc');
 	});
 	//back message clipart button end here --------------
 	
@@ -879,6 +884,7 @@ $(function(){
 			$(".clip-color-list li a").removeClass('bsc');
 			$(".clip-color-list li a").removeClass('bec');
 			$(".clip-color-list li a").removeClass('ces');
+			$(".clip-color-list li a").removeClass('figc');
 	});
 	
 	$('.cclip-2').click(function(){
@@ -888,8 +894,20 @@ $(function(){
 			$(".clip-color-list li a").removeClass('bsc');
 			$(".clip-color-list li a").removeClass('bec');
 			$(".clip-color-list li a").removeClass('ccs');
+			$(".clip-color-list li a").removeClass('figc');
 	});
 	//continous message clipart button end here --------------
+	
+	//figured center clipart button -------------------
+	$('.fclip-3').click(function(){
+			$(".clip-color-list li a").addClass('figc');
+			$(".clip-color-list li a").removeClass('fsc');
+			$(".clip-color-list li a").removeClass('fec');
+			$(".clip-color-list li a").removeClass('bec');
+			$(".clip-color-list li a").removeClass('bsc');
+			$(".clip-color-list li a").removeClass('ces');
+			$(".clip-color-list li a").removeClass('ccs');
+	});	
 	
 	//clipart front message button ------
 	$('.clip-color-list li a').click(function(){
@@ -911,9 +929,13 @@ $(function(){
 			else if($( ".clip-color-list li a" ).hasClass( "ccs" )){
 				$(".start-cc").html("<img width='34' height='30' src='assets/images/src/clipart/"+img+"'/>");
 			}
+			else if($( ".clip-color-list li a" ).hasClass( "figc" )){
+				$(".fig-fc").html("<img width='34' height='34' src='assets/images/src/clipart/"+img+"'/>");
+			}
 			else{
 				$(".end-cc").html("<img width='34' height='34' src='assets/images/src/clipart/"+img+"'/>");
 			}
+
 		}
 		else{
 			
@@ -932,9 +954,13 @@ $(function(){
 			else if($( ".clip-color-list li a" ).hasClass( "ccs" )){
 				$(".start-cc").find("img").remove();
 			}
+			else if($( ".clip-color-list li a" ).hasClass( "figc" )){
+				$(".fig-fc").find("img").remove();
+			}
 			else{
 				$(".end-cc").find("img").remove();
 			}
+
 		 }
 		
 		$("#ClipArtModal").modal('toggle');
