@@ -40,8 +40,8 @@
 				<thead>
 					<tr>
 					<th data-uk-tooltip="{pos:'top'}" title="Quantity" class="uk-text-primary">Qty</th>
-					<th data-uk-tooltip="{pos:'top'}" title="20 to 49">20</th>
-					<th data-uk-tooltip="{pos:'top'}" title="50 to 99">50</th>
+					<th data-uk-tooltip="{pos:'top'}" title="20 to 29">20</th>
+					<th data-uk-tooltip="{pos:'top'}" title="30 to 99">30</th>
 					<th data-uk-tooltip="{pos:'top'}" title="100 to 199">100</th>
 					<th data-uk-tooltip="{pos:'top'}" title="200 to 299">200</th>
 					<th data-uk-tooltip="{pos:'top'}" title="300 to 499">300</th>

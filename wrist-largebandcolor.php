@@ -23,7 +23,7 @@
 				  <div class="tab-content">
 					<div id="home-large" class="tab-pane fade in active js-color" data-value="0" data-color="Solid">
 					  <h3>Solid Colors</h3> <button id="addCustomSolid" class="btn-add-custom-color"><i class="fa fa-plus"></i> Add Custom Color</button>
-					  <div id="main-color-content">
+					  <div id="main-color-content" class="main-color-content">
 					  <div class="col-xs-4 box-color">
 							<img class="PreviewColorModal" src="assets/images/src/custom.png"/>
 							<button id="custom-color-button" data-toggle="modal" data-target="#ColorLargeModal">Custom Color</button>
@@ -971,7 +971,7 @@
 					<!-- End Home -->
 					<div id="segmented-large" class="tab-pane fade js-color" data-value="0.01" data-color="Segmented">
 					  <h3>Segmented Colors</h3> <button id="addCustomSegmented" class="btn-add-custom-color"><i class="fa fa-plus"></i> Add Custom Color</button>
-					  <div id="main-color-content">
+					  <div id="main-color-content" class="main-color-content">
 					     <div class="col-xs-4 box-color">
 							<img class="segPreviewColorModal" src="assets/images/src/custom.png"/>
 							<button id="custom-color-button" data-toggle="modal" data-target="#ColorSegModal">Custom Color</button>
@@ -2431,7 +2431,7 @@
 					<!-- End Segmented -->
 					<div id="swirls-large" class="tab-pane fade js-color" data-value="0.01" data-color="Swirls">
 					  <h3 style="width:auto;">Swirls Color</h3> <button id="addCustomSwirl" class="btn-add-custom-color"><i class="fa fa-plus"></i> Add Custom Color</button>
-					  <div id="main-color-content">
+					  <div id="main-color-content" class="main-color-content">
 						<div class="col-xs-4 box-color">
 							<img class="swlPreviewColorModal" src="assets/images/src/custom.png"/>
 							<button id="custom-color-button" data-toggle="modal" data-target="#ColorSwirlModal">Custom Color</button>
@@ -3216,7 +3216,7 @@
 					<!-- End Swirl -->
 					<div id="glow-large" class="tab-pane fade js-color" data-value="0.03" data-color="Glow">
 					  <h3>Glow</h3>
-					  <div id="main-color-content">
+					  <div id="main-color-content" class="main-color-content">
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/src/glow/GlowDarkBLUE.png"/>
 							<div class="nocustom_pick">Blue</div>
