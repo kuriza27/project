@@ -129,6 +129,26 @@ $(document).ready(function(){
             $(".free-convert").hide();
         }
     });
+	
+	
+	//Confirm on freewristband conversion
+	$(".done-button-fwb").on("click",function(e) {
+		var qty = 0;
+		var html_item="";
+		$('.freewb').each(function() {
+			qty += +$(this).val();
+		});
+	
+		if(qty>100){
+			alert("You have exceeded the limit number for free wristbands.");
+		}else{
+			$('.js-free-bands').show().delay(5000).hide(0);
+			html_item = '<div class="row total-summary-freewb"><div class="col-md-8 col-sm-6">- Free Wristbands ('+qty+')</div><div class="clearfix"></div></div>';
+		}
+		
+		$(html_item).insertAfter( ".total-summary-after");
+
+	});
 
 	//Select on production and shipping option
 	$('body').on('click', '.js-time-options', function(e) {
@@ -240,24 +260,6 @@ $(function(){
 		$('.cont-select').prop('checked', false)
 	});
 
-	//Confirm on freewristband conversion
-	$("body").on("click",".done-button-fwb",function(e) {
-		var qty = 0;
-		$('.freewb').each(function() {
-			qty += +$(this).val();
-		});
-		
-		if(qty>100){
-			alert("You have exceeded the limit number for free wristbands.");
-		}else{
-			$('.js-free-bands').show().delay(5000).hide(0);
-			var html_item = '<div class="row summary-item"><div class="col-md-8 col-sm-6">- Free Wristbands ('+qty+')</div><div class="clearfix"></div></div>';
-			$('.js-free-summary').html(html_item);
-		}
-	});
-	
-	
-	
 	//show continous message selection
 	$(".cont-select").click(function(){
 		$('.front-back-select').prop('checked', false)

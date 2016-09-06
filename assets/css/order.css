@@ -1088,4 +1088,7 @@ table.fwb-title th {
     padding: 6px 9px;
 }
 
+table.fwb-title {
+    margin-left: 48px;
+}
 

@@ -455,8 +455,9 @@
 								<br/>
 								<div class="col-md-8 col-sm-6"><strong>Free</strong></div>
 								<div class="col-md-4 col-sm-6 align-right"><strong></strong></div>
-								<div class="fwb-total col-md-4 col-sm-6 align-right"><strong></strong></div>
+								<div class="col-md-4 col-sm-6 align-right"><strong></strong></div>
 							</div>
+							<div class="row total-summary-after" style="display:none;"></div>
 							<div class="summary-list-item js-free-summary total-summary-free" style="display:none;">
 							</div>
 						</div>
