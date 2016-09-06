@@ -41,10 +41,12 @@ $(document).ready(function(){
 		var size = $('.js-size .wrist_size:checked').val();
 
 		if(style === "figured") {
-			$("#front-view, #back-view, #inside-view, #continue-view").css("height", "104px");
+			$("#front-view, #back-view, #inside-view, #continue-view").addClass("set-height-fig");
+			$("#front-view, #back-view, #inside-view, #continue-view").removeClass("set-height-reg");
 			$(".preview-text").css("line-height", "104px");
 		} else {
-			$("#front-view, #back-view, #inside-view, #continue-view").css("height", "54px");
+			$("#front-view, #back-view, #inside-view, #continue-view").addClass("set-height-reg");
+			$("#front-view, #back-view, #inside-view, #continue-view").removeClass("set-height-fig");
 			$(".preview-text").css("line-height", "54px");
 		}
 
@@ -308,7 +310,8 @@ $(function(){
 		$(".wristband-view-color").hide();
 
 		var style = $('.js-style .wrist_style:checked').val();
-
+		$(".preview-panel").find("img").remove();
+		
 		if(style == "figured") {
 			// Show sizes
 			$("#half").show();
@@ -320,6 +323,7 @@ $(function(){
 			$(".backend-mc").addClass("fig_move");
 			$(".start-cc").addClass("fig_move");
 			$(".end-cc").addClass("fig_move");
+			$(".fig-fc").addClass("fig_move");
 			$(".figarea").show();
 			
 			// Get current checked radio button
@@ -485,10 +489,12 @@ $(function(){
 		var size = $('.js-size .wrist_size:checked').val();
 
 		if(style === "figured") {
-			$("#front-view, #back-view, #inside-view, #continue-view").css("height", "104px");
+			$("#front-view, #back-view, #inside-view, #continue-view").addClass("set-height-fig");
+			$("#front-view, #back-view, #inside-view, #continue-view").removeClass("set-height-reg");
 			$(".preview-text").css("line-height", "104px");
 		} else {
-			$("#front-view, #back-view, #inside-view, #continue-view").css("height", "54px");
+			$("#front-view, #back-view, #inside-view, #continue-view").addClass("set-height-reg");
+			$("#front-view, #back-view, #inside-view, #continue-view").removeClass("set-height-fig");
 			$(".preview-text").css("line-height", "54px");
 		}
 
@@ -533,6 +539,7 @@ $(function(){
 					//if background black and font-color black
 					if(ref_color_arr=="000000" && ref_color_font == "000000"){
 						ref_color_font = "464646";
+						$("#front-view, #back-view, #inside-view, #continue-view").addClass("clipart-black");
 					}
 					
 					$('.click-pre').show();

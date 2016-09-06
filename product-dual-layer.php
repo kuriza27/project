@@ -1,4 +1,5 @@
 <?php include_once 'header.php'; ?>
+<?php include_once 'queryDB.php'; ?>
 <div id="main-content" class="row homecontent">
 <div class="container">
 	<div class="half_bg" style="width: 60%; margin: 1% 0px 1% 1%;">
@@ -11,103 +12,168 @@
 				</div>
 			</div>
 				<div class="clearfix"  style="margin-bottom:20px;"></div>
-			<div class="col-md-6">
+			<div class="col-md-10">
 				<div class="size_options">
-				<table><tbody>
-					<tr>
-						<th colspan="3" class="title">1/2 Inch Dual Layer</th>
+				<table class="table" border="0" cellpadding="0" cellspacing="0" width="100%">
+				   <tr>
+				   <td>
+						<tr>
+							<th>Quantity</th>
+							<th>1/4 Inch</th>
+							<th>1/2 Inch</th>
+							<th>3/4 Inch</th>
+							<th>1 Inch</th>
+							<th>1.5 Inch</th>
+							<th>2 Inch</th>
+						</tr>
+						
+					</td>
 					</tr>
 					<tr>
-						<th>Quantity</th> <th>Free</th> <th>Unit Price</th>
+					<td>
+						
+						   <?php
+								$size = 1;
+								$style = 19;
+								$sql = getWristbandPrice($style,$size);
+								$result = $conn->query($sql);
+
+								if ($result->num_rows > 0) {
+									// output data of each row
+									while($row = $result->fetch_assoc()) {
+									
+										echo "<p>".$row["qty"]. "</p>";
+											}
+								} else {
+									echo "0 results";
+								}
+
+								?> 
+						</td>
+						<td>
+						
+						   <?php
+								$size = 1;
+								$style = 19;
+								$sql = getWristbandPrice($style,$size);
+								$result = $conn->query($sql);
+
+								if ($result->num_rows > 0) {
+									// output data of each row
+									while($row = $result->fetch_assoc()) {
+									
+										echo  "<p>".$row["price"]. "</p>";
+											}
+								} else {
+									echo "0 results";
+								}
+
+								?> 
+						</td>
+						<td>
+						
+						   <?php
+								$size = 2;
+								$style = 19;
+								$sql = getWristbandPrice($style,$size);
+								$result = $conn->query($sql);
+
+								if ($result->num_rows > 0) {
+									// output data of each row
+									while($row = $result->fetch_assoc()) {
+									
+										echo  "<p>".$row["price"]. "</p>";
+											}
+								} else {
+									echo "0 results";
+								}
+								
+								?> 
+						</td>
+						<td>
+						
+						   <?php
+								$size = 3;
+								$style = 19;
+								$sql = getWristbandPrice($style,$size);
+								$result = $conn->query($sql);
+
+								if ($result->num_rows > 0) {
+									// output data of each row
+									while($row = $result->fetch_assoc()) {
+									
+										echo  "<p>".$row["price"]. "</p>";
+											}
+								} else {
+									echo "0 results";
+								}
+								
+								?> 
+						</td>
+						<td>
+						
+						   <?php
+								$size = 4;
+								$style = 19;
+								$sql = getWristbandPrice($style,$size);
+								$result = $conn->query($sql);
+
+								if ($result->num_rows > 0) {
+									// output data of each row
+									while($row = $result->fetch_assoc()) {
+									
+										echo  "<p>".$row["price"]. "</p>";
+											}
+								} else {
+									echo "0 results";
+								}
+								
+								?> 
+						</td>
+						<td>
+						
+						   <?php
+								$size = 5;
+								$style = 19;
+								$sql = getWristbandPrice($style,$size);
+								$result = $conn->query($sql);
+
+								if ($result->num_rows > 0) {
+									// output data of each row
+									while($row = $result->fetch_assoc()) {
+									
+										echo  "<p>".$row["price"]. "</p>";
+											}
+								} else {
+									echo "0 results";
+								}
+								
+								?> 
+						</td>
+						<td>
+						
+						   <?php
+								$size = 6;
+								$style = 19;
+								$sql = getWristbandPrice($style,$size);
+								$result = $conn->query($sql);
+
+								if ($result->num_rows > 0) {
+									// output data of each row
+									while($row = $result->fetch_assoc()) {
+									
+										echo  "<p>".$row["price"]. "</p>";
+											}
+								} else {
+									echo "0 results";
+								}
+								
+								?> 
+						</td>
+						</tr>
+						
 					</tr>
-					<tr>
-						<td>20-49</td> <td>N/A</td> <td>$3.4</td>
-					</tr>
-					<tr>
-						<td>50-74</td> <td>N/A</td> <td>$1.89</td>
-					</tr>
-					<tr>
-						<td>100-199</td> <td>+100 Free</td> <td>$0.85</td>
-					</tr>
-					<tr>
-						<td>200-299</td> <td>+100 Free</td> <td>$0.95</td>
-					</tr>
-					<tr>
-						<td>300-499</td> <td>+100 Free</td> <td>$0.95</td>
-					</tr>
-					<tr>
-						<td>500-999</td> <td>+100 Free</td> <td>$0.75</td>
-					</tr>
-					<tr>
-						<td>1,000-1,999</td> <td>+100 Free</td> <td>$0.5</td>
-					</tr>
-					<tr>
-						<td>2,000-2,999</td> <td>+100 Free</td> <td>$0.43</td>
-					</tr>
-					<tr>
-						<td>3,000-4,999</td> <td>+100 Free</td> <td>$0.42</td>
-					</tr>
-					<tr>
-						<td>5,000-9,999</td> <td>+100 Free</td> <td>$0.32</td>
-					</tr>
-					<tr>
-						<td>10,000-19,999</td> <td>+100 Free</td> <td>$0.22</td>
-					</tr>
-					<tr>
-						<td>20,000+</td> <td>+100 Free</td> <td>$0.22</td>
-					</tr>
-				</tbody>
-				</table>
-				<div class="pricenote">All prices and options are on a (P).</div>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="size_options">
-				<table><tbody>
-					<tr>
-						<th colspan="3" class="title">1 Inch Dual Layer</th>
-					</tr>
-					<tr>
-						<th>Quantity</th><th>Free</th><th>Unit Price</th>
-					</tr>
-					<tr>
-						<td>20-49</td> <td>N/A</td> <td>$10.98</td>
-					</tr>
-					<tr>
-						<td>50-74</td> <td>N/A</td> <td>$9.89</td>
-					</tr>
-					<tr>
-						<td>100-199</td> <td>+100 Free</td> <td>$2.63</td>
-					</tr>
-					<tr>
-						<td>200-299</td> <td>+100 Free</td> <td>$1.98</td>
-					</tr>
-					<tr>
-						<td>300-499</td> <td>+100 Free</td> <td>$1.95</td>
-					</tr>
-					<tr>
-						<td>500-999</td> <td>+100 Free</td> <td>$1.86</td>
-					</tr>
-					<tr>
-						<td>1,000-1,999</td> <td>+100 Free</td> <td>$1.32</td>
-					</tr>
-					<tr>
-						<td>2,000-2,999</td> <td>+100 Free</td> <td>$1.26</td>
-					</tr>
-					<tr>
-						<td>3,000-4,999</td> <td>+100 Free</td> <td>$1.21</td>
-					</tr>
-					<tr>
-						<td>5,000-9,999</td> <td>+100 Free</td> <td>$1.21</td>
-					</tr>
-					<tr>
-						<td>10,000-19,999</td> <td>+100 Free</td> <td>$1.12</td>
-					</tr>
-					<tr>
-						<td>20,000+</td> <td>+100 Free</td> <td>$1.1</td>
-					</tr>
-				</tbody>
-				</table>
+			</table>	
 				</div>
 			</div>
 				<div class="clearfix"></div>

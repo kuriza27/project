@@ -698,6 +698,24 @@ li.active.select-box-col {
 }
 
 
+
+.set-height-fig{
+	height: 104px;
+	}
+	
+.set-height-reg{
+	height: 54px;
+	}
+	
+.clipart-black img{
+     -webkit-filter: drop-shadow(2px 2px 6px #909090 ); /* Chrome, Safari, Opera */
+    filter: drop-shadow(2px 2px 6px #909090 );
+}
+
+.col-md-10 {
+    text-align: center;
+}
+
 /****
 **
 **** MEDIA QUERIES
@@ -808,11 +826,7 @@ li.active.select-box-col {
 	.galleryimg {
     width: 80px;
 	}
-	
-	.zoom {
-		left: 484px!important;
-		}
-		
+
 	.icon-img {
 		right: 110px;
 	}
@@ -905,25 +919,24 @@ li.active.select-box-col {
 	.col-xs-98{
 		    padding: 0 3px 0 20px!important;
 	}
-	
-	.band-text {
-    `width: 330px!important;
-	}
+
 	
 	.col-xs-6 {
 		width: 50%!important;
 		padding-left: 13px!important;
 	}
 	
-	.band-text {
-		width: 230px!important;
-		}
 		
 	.col-sm-3 {
 		float: left!important;
-		width: 170px!important;
+		width: 190px!important;
 		font-size: 12px!important;
 	}
+	
+	input.cont-select {
+		margin-left: 8px;
+	}
+	
 	.col-sm-5{
 	    margin-left:0px!important;
 		border-right:none!Important;
@@ -952,7 +965,7 @@ li.active.select-box-col {
 	}
 	
 	span.back-mc {
-		left: 6px!important;
+		left: 14px!important;
 	}
 	
 	span.start-cc {
@@ -964,13 +977,56 @@ li.active.select-box-col {
 	}
 	
 	span.backend-mc {
-		left: 114px!important;
+		left: 124px!important;
 	}
 	
 	.clip-sec {
 		width: 44%!important;
 	}
 	
+	label {
+		font-size:13px!important;
+	}
+	
+	span.fig-fc {
+		left: 146px!important;
+	}
+	
+	#preview-pane #front-view, #preview-pane #back-view, #inside-view{
+		font-size:10px!important;
+	}
+	
+	.band-text {
+		width: 298px!important;
+		padding: 4px;
+	}
+	
+	.mob-fig-move{
+		position: relative!important;
+		top: -27px!important;
+		font-size: 10px!important;
+		left: -14px;
+	}
+	
+	div#back-text {
+		position: relative;
+			left: -9px!important;
+	}
+	
+	.fig_move {
+		top: -1px!important;
+	}
+	
+	.col-md-10 {
+		text-align: center;
+		width: 299px!important;
+		overflow-y: hidden!important;
+	}
+	
+	.col-md-8 img{
+		width:250px!important;
+		
+	}
 }
 
 @media screen and (max-width: 350px){
@@ -1065,9 +1121,6 @@ li.active.select-box-col {
 		width: 100%!important;
 	}
 	
-	.band-text {
-		width: 230px!important;
-		}
 		
 	.clip-sec {
     width: 44%!important;
@@ -1106,6 +1159,23 @@ li.active.select-box-col {
 	
 	div#preview-textfont{
 		float: left!important;
+	}
+	
+	label {
+		font-size:13px!important;
+	}
+	
+	span.fig-fc {
+		left: 76px!important;
+	}
+	
+	#preview-pane #front-view, #preview-pane, #back-view, #insides-view{
+		font-size:13px!important;
+	}
+	
+	.band-text {
+		width: 262px!important;
+		padding: 4px;
 	}
 	
 }

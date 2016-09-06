@@ -474,7 +474,7 @@ div#preview-textfont{
 }
     
 #preview-pane #inside-view { width: 100% }
-#preview-pane .band {background:#fff; height: 50px; }
+#preview-pane .band {background:#fff; }
 #preview-pane .band .faded { opacity: 0.5; }
 
 
@@ -808,6 +808,7 @@ b:hover{
 #preview-pane #front-view, #preview-pane #back-view {
     background-repeat: no-repeat!important;
     background-size: 200% 100%!important;
+	position: relative;
 }
 
 #preview-pane #back-view {
@@ -931,13 +932,13 @@ input#font-color {
 span.start-fc {
     float: left;
     position: relative;
-    left: 164px;
+    left: 150px;
 }
 
 span.end-fc {
     float: left;
     position: relative;
-    left: 382px;
+    left: 396px;
 }
 
 span.back-mc {
@@ -984,7 +985,7 @@ span.end-cc {
 
 .zoom {
     position: absolute;
-    left: 238px!important;
+    left: 238px;
     top: 13px;
     z-index: 999;
 }
@@ -1030,7 +1031,8 @@ button.fclip-3 {
 }
 
 span.fig-fc {
-    position: relative;
+	position: absolute;
     top: 26px;
-    left: 258px;
+    left: 531px;
+    z-index: 1;
 }
