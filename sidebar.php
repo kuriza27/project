@@ -23,13 +23,13 @@
 				<h4>Colors Available</h4>
 				<p> All Colors<br>
 					Free PMS Pantone Color Match<br>
-					<a href="/color">View Pantone Chart</a>
+					<a href="colors.php">View Pantone Chart</a>
 				</p>
 				<h4>Fonts Available</h4>
-				<p> <a href="/font">View Fonts Available</a>
+				<p> <a href="fonts.php">View Fonts Available</a>
 				</p>
 				<h4>Logo Cliparts Available</h4>
-				<p> <a href="/clipart">View Logo Cliparts Available</a> <span class="red">(+$0.08)</span>
+				<p> <a href="cliparts.php">View Logo Cliparts Available</a> <span class="red">(+$0.08)</span>
 				</p>
 				<h4>Shipping Turnaround Time</h4>
 				<p> Standard Shipping (10 to 14 days): <span class="red">FREE</span><br>
