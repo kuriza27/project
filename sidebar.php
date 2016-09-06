@@ -1,10 +1,10 @@
 <div class="half_sm" style="width: 32%; margin: 5% 0px 1% 5%;"> 
 			<div class="addl_options">
 				<h4>Message Options</h4>
-				<p> Back Message: <span class="red">(+$0.08 each)</span><br>
-					Inside Message: <span class="red">(+$0.08 each)</span><br>
+				<p> Back Message: <span class="red">(+$0.06 each)</span><br>
+					Inside Message: <span class="red">(+$0.01 each)</span><br>
 					Add Wristband Color: <span class="red">(+$20/color)</span><br>
-					Add Wristband Size: <span class="red">(+$80/size)</span><br>
+					Add Wristband Size: <span class="red">(+$40/size)</span><br>
 					Digital Proof: <span class="red">(+$20/order)</span>
 				</p>
 				<h4>Sizes</h4>
