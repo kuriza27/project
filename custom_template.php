@@ -376,6 +376,39 @@
 					</div>
 				</div>
 				-->
+				<!----Message 100 Free---->
+				<div class="message_wristband_100" style="display:none">
+					<h3>You have <strong class="js-free-bands-count">100</strong> <strong>FREE</strong> wristbands!</h3>
+					<label class="js-free-bands-accept">
+					<div class="free-wristbands"><input type="checkbox" name="add-ons-extra" data-code="free-wristbands" class="free-bands"/> <span style="margin-left:10px;">Click to claim free wristbands</span></div></label>
+				</div>
+				<!-----end message for 100 free--->
+				<!-----Box for conversion wristbands------>
+				<div  class="free-convert" data-free-entered="0" style="display:none;">
+					<h4>
+						<label>Free Wristbands Color, Size and Quantity</label>
+					</h4>
+					<div class="span-text-con1">
+						<div> Your free wristbands should be of the same color and size from your selections above. Please choose which color and size you want to receive, and specify the quantity below.</div>            
+					</div>
+					<div class="area-conversion">
+						<ul class="area-conversion-list">
+						</ul>
+					</div>
+					<div class="js-free-bands-less-than-count-tmpl uk-hidden">
+						<div class="uk-text-left">
+							<div>Are you sure you want to continue?</div>
+						</div>
+					</div>
+
+					<div class="submit">
+						<button class="" type="button">
+							<i class="uk-icon-check"></i> Done
+						</button>
+					</div>
+				</div>
+				<!----end conversion wristbands----->
+				
 				<div class="col-md-4 add-ons">
 					<div class="box-thumb"><a href="assets/images/src/add-ons/3mm-thick.png" title="3mm thick option"><img src="assets/images/src/add-ons/3mm-thick.png" class="galleryimg"></a></div>
 					<div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:150px;">Available for 1/2 and 3/4 inch wristbands only.</div></div>

@@ -1036,3 +1036,25 @@ span.fig-fc {
     left: 531px;
     z-index: 1;
 }
+
+.message_wristband_100{
+	padding:20px;
+	background: #f2fae3;
+    color: #659f13;
+    border-color: rgba(101,159,19,.3);
+	margin-top: 14px;
+	text-align:center;
+}
+
+.free-convert{
+    margin-bottom: 15px;
+    padding: 20px;
+    border: 1px dashed #ddd;
+    background: #fafafa;
+    color: #444;
+}
+
+.span-text-con1{
+	    font-size: 11px;
+		color:#5F5F5F;
+}
