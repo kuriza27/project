@@ -265,7 +265,7 @@
 			<div id="font-color" style="display:none;">
 				<h3 style="text-align: left;">Select Font Color</h3>
 				<button id="font-button" class="pull-left" data-toggle="modal" data-target="#FontColorModal">Select Font Color</button><div id="preview-textcolor"></div>
-					<!--------Modal---------->
+					<!-- Modal -->
 					<div class="modal fade" id="FontColorModal" role="dialog">
 					<div class="modal-dialog">
 						<!-- Modal content-->
@@ -282,10 +282,10 @@
 								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 							</div>
 						</div>
-						<!---------End Modal Content-------------->
+						<!-- End Modal Content -->
 					</div>
 				</div>
-				<!-----End Modal Div ---->
+				<!-- End Modal Div -->
 				<div class="clearfix"></div>
 			</div>
 			<div id="add-design">
@@ -308,10 +308,10 @@
 								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 							</div>
 						</div>
-						<!---------End Modal Content-------------->
+						<!-- End Modal Content -->
 					</div>
 				</div>
-				<!-----End Modal Div ---->
+				<!-- End Modal Div -->
 				<div class="clearfix"></div>
 			</div>
 		</div>
@@ -326,136 +326,85 @@
 			</div>
 			<div class="popup-order-gallery">
 				<?php include "promo-keychain-10.php"; ?>
-				<!--
-				<div id="dv-100-free-band" class="col-md-12 add-ons" style="display:none;">
-					<div class="box-thumb">
-						<h1>You have <strong class="js-free-bands-count">100</strong> <strong>FREE</strong> wristbands!</h1>
-						<br/>
-						<input type="radio" id="free-100-wristband" class="free-add-on">
-						<span>Click to claim free wristbands</span>
-					</div>
-				</div>
-				-->
-				<!--
-				<div id="dv-100-free-band-content" class="col-md-12 add-ons" style="display:none;">
-					<div class="box-thumb">
-						<div class="col-xs-12">
-							<h4>Free Wristbands Color, Size and Quantity</h4>
-							<br/>
-							<div class="col-xs-offset-2 col-xs-8">
-								<i class="uk-icon-info-circle uk-icon-small"></i> Your free wristbands should be of the same color and size from your selections above. Please choose which color and size you want to receive, and specify the quantity below.
-							</div>
-							<br/>
-							<div class="col-xs-offset-3 col-xs-6">
-								<i class="uk-icon-warning uk-icon-small"></i> Your quantities have exceeded the maximum free wristband count.
-							</div>
-							<div class="clearfix"><hr></div>
-						</div>
-
-						<div class="col-xs-12">
-							<div class="col-xs-6 text-left">Style &amp; Color</div>
-							<div class="col-xs-3">Size</div>
-							<div class="col-xs-3">Qty</div>
-						</div>
-
-						<br/>
-						<div class="clearfix"></div>
-						<div class="col-xs-12 free-100-wb"></div>
-						<div class="clearfix"><hr></div>
-
-					    <div class="js-free-bands-less-than-count-tmpl uk-hidden">
-					    	<div class="text-center">
-					        	<div class="col-xs-12">You have entered <span id="wb-free-count" class="text-danger">0 of 100</span> free wristbands.</div>
-					        </div>
-					    </div>
-						<br /><br />
-						<div class="margin">
-							<button class="done-free done" type="button">Done?</button>
-							<button class="done-free update" type="button" style="display:none;">Update?</button>
-						</div>
-					</div>
-				</div>
-				-->
-				<!----Message 100 Free---->
-				<div class="message_wristband_100" style="display:none">
-					<h3>You have <strong class="js-free-bands-count">100</strong> <strong>FREE</strong> wristbands!</h3>
-					<label class="js-free-bands-accept">
-					<div class="free-wristbands"><input type="checkbox" name="add-ons-extra" data-code="free-wristbands" class="free-bands"/> <span style="margin-left:10px;">Click to claim free wristbands</span></div></label>
-				</div>
-				<!-----end message for 100 free--->
-				<!-----Box for conversion wristbands------>
-				<div  class="free-convert" data-free-entered="0" style="display:none;">
-					<h4>
-						<label>Free Wristbands Color, Size and Quantity</label>
-					</h4>
-					<div class="span-text-con1">
-						<div> Your free wristbands should be of the same color and size from your selections above. Please choose which color and size you want to receive, and specify the quantity below.</div>            
-					</div>
-					<div class="area-conversion">
-						<ul class="area-conversion-list">
-						</ul>
-					</div>
-					<div class="js-free-bands-less-than-count-tmpl uk-hidden">
-						<div class="uk-text-left">
-							<div>Are you sure you want to continue?</div>
-						</div>
-					</div>
-
-					<div class="submit">
-						<button class="" type="button">
-							<i class="uk-icon-check"></i> Done
-						</button>
-					</div>
-				</div>
-				<!----end conversion wristbands----->
+			</div>
 				
-				<div class="col-md-4 add-ons">
-					<div class="box-thumb"><a href="assets/images/src/add-ons/3mm-thick.png" title="3mm thick option"><img src="assets/images/src/add-ons/3mm-thick.png" class="galleryimg"></a></div>
-					<div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:150px;">Available for 1/2 and 3/4 inch wristbands only.</div></div>
-					<div class="add-ons-radio">
-						<input type="checkbox" name="add-ons-extra" class="add-ons" data-code="3mm-thick"/>
-						<h2>3mm Thick Option</h2>
+			<!-- Message 100 Free -->
+			<div class="col-md-12 message_wristband_100" style="display:none">
+				<h3>You have <strong class="js-free-bands-count">100</strong> <strong>FREE</strong> wristbands!</h3>
+				<label class="js-free-bands-accept">
+				<div class="free-wristbands"><input type="checkbox" name="add-ons-extra" data-code="free-wristbands" class="free-bands"/> <span style="margin-left:10px;">Click to claim free wristbands</span></div></label>
+			</div>
+			<!-- End message for 100 free -->
+			<!-- Box for conversion wristbands -->
+			<div  class="col-md-12 free-convert" data-free-entered="0" style="display:none;">
+				<h4>
+					<label>Free Wristbands Color, Size and Quantity</label>
+				</h4>
+				<div class="span-text-con1">
+					<div> Your free wristbands should be of the same color and size from your selections above. Please choose which color and size you want to receive, and specify the quantity below.</div>            
+				</div>
+				<div class="area-conversion">
+					<ul class="area-conversion-list">
+					</ul>
+				</div>
+				<div class="js-free-bands-less-than-count-tmpl uk-hidden">
+					<div class="uk-text-left">
+						<div>Are you sure you want to continue?</div>
 					</div>
 				</div>
-				<div class="col-md-4 add-ons">
-					<div class="box-thumb"><a href="assets/images/src/add-ons/Digital-Proof.png" title="Digital Proof"><img src="assets/images/src/add-ons/Digital-Proof.png" class="galleryimg"></a></div>
-					<div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:150px;">We'll send you a proof for approval before production begins.</div></div>
-					<div class="add-ons-radio">
-						<input type="checkbox" name="add-ons-extra" class="add-ons" data-code="digital-proof"/>
-						<h2>Digital Proof</h2>
-					</div>
+				<div class="submit">
+					<button class="" type="button">
+						<i class="uk-icon-check"></i> Done
+					</button>
 				</div>
-				<div class="col-md-4 add-ons">
-					<div class="box-thumb"><a href="assets/images/src/add-ons/ecofriendly.png" title="Eco Friendly"><img src="assets/images/src/add-ons/ecofriendly.png" class="galleryimg"></a></div>
-					<div class="add-ons-radio">
-						<input type="checkbox" name="add-ons-extra" class="add-ons" data-code="eco-friendly"/>
-						<h2>Eco Friendly</h2>
-					</div>
+			</div>
+			<!-- End conversion wristbands -->
+			<div class="col-md-4 add-ons">
+				<div class="box-thumb"><a href="assets/images/src/add-ons/3mm-thick.png" title="3mm thick option"><img src="assets/images/src/add-ons/3mm-thick.png" class="galleryimg"></a></div>
+				<div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:150px;">Available for 1/2 and 3/4 inch wristbands only.</div></div>
+				<div class="add-ons-radio">
+					<input type="checkbox" name="add-ons-extra" class="add-ons" data-code="3mm-thick"/>
+					<h2>3mm Thick Option</h2>
 				</div>
-				<div class="col-md-4 add-ons">
-					<div class="box-thumb"><a href="assets/images/src/add-ons/Glitters.png" title="Glitters"><img src="assets/images/src/add-ons/Glitters.png" class="galleryimg"></a></div>
-					<div class="add-ons-radio">
-						<input type="checkbox" name="add-ons-extra" class="add-ons" data-code="glitters"/>
-						<h2>Glitters</h2>
-					</div>
+			</div>
+			<div class="col-md-4 add-ons">
+				<div class="box-thumb"><a href="assets/images/src/add-ons/Digital-Proof.png" title="Digital Proof"><img src="assets/images/src/add-ons/Digital-Proof.png" class="galleryimg"></a></div>
+				<div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:150px;">We'll send you a proof for approval before production begins.</div></div>
+				<div class="add-ons-radio">
+					<input type="checkbox" name="add-ons-extra" class="add-ons" data-code="digital-proof"/>
+					<h2>Digital Proof</h2>
 				</div>
-				<div class="col-md-4 add-ons">
-				  <div class="box-thumb"><a href="assets/images/src/add-ons/Individual-pack.png" title="Individual pack"><img src="assets/images/src/add-ons/Individual-pack.png" class="galleryimg"></a></div>
-				  <div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:200px;">Professionally sealed on biodegradable bags with clear back to see product inside.</div></div>
-				  <div class="add-ons-radio">
-					  <input type="checkbox" name="add-ons-extra" class="add-ons" data-code="individual"/>
-					  <h2>Individually Pack</h2>
-				  </div>
+			</div>
+			<div class="col-md-4 add-ons">
+				<div class="box-thumb"><a href="assets/images/src/add-ons/ecofriendly.png" title="Eco Friendly"><img src="assets/images/src/add-ons/ecofriendly.png" class="galleryimg"></a></div>
+				<div class="add-ons-radio">
+					<input type="checkbox" name="add-ons-extra" class="add-ons" data-code="eco-friendly"/>
+					<h2>Eco Friendly</h2>
 				</div>
-				<div class="col-md-4 add-ons">
-				  <div class="box-thumb"><a href="assets/images/src/add-ons/KeyChain.png" title="KeyChain"><img src="assets/images/src/add-ons/KeyChain.png" class="galleryimg"></a></div>
-				  <div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:132px;"> Available for 1/2 inch wristbands only.</div></div>
-				  <div class="add-ons-radio">
-					  <input type="checkbox" name="add-ons-extra" class="add-ons" data-code="key-chain"/>
-					  <h2>Keychain</h2>
-				  </div>
+			</div>
+			<div class="col-md-4 add-ons">
+				<div class="box-thumb"><a href="assets/images/src/add-ons/Glitters.png" title="Glitters"><img src="assets/images/src/add-ons/Glitters.png" class="galleryimg"></a></div>
+				<div class="add-ons-radio">
+					<input type="checkbox" name="add-ons-extra" class="add-ons" data-code="glitters"/>
+					<h2>Glitters</h2>
 				</div>
+			</div>
+			<div class="col-md-4 add-ons">
+				<div class="box-thumb"><a href="assets/images/src/add-ons/Individual-pack.png" title="Individual pack"><img src="assets/images/src/add-ons/Individual-pack.png" class="galleryimg"></a></div>
+				<div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:200px;">Professionally sealed on biodegradable bags with clear back to see product inside.</div></div>
+				<div class="add-ons-radio">
+					<input type="checkbox" name="add-ons-extra" class="add-ons" data-code="individual"/>
+					<h2>Individually Pack</h2>
 				</div>
+			</div>
+			<div class="col-md-4 add-ons">
+				<div class="box-thumb"><a href="assets/images/src/add-ons/KeyChain.png" title="KeyChain"><img src="assets/images/src/add-ons/KeyChain.png" class="galleryimg"></a></div>
+				<div class="icon-img"><img src="assets/images/src/icon.png"/> <div class="icon-text" style="width:132px;"> Available for 1/2 inch wristbands only.</div></div>
+				<div class="add-ons-radio">
+					<input type="checkbox" name="add-ons-extra" class="add-ons" data-code="key-chain"/>
+					<h2>Keychain</h2>
+				</div>
+			</div>
 			<div class="clearfix"></div>
 		</div>
 
@@ -528,7 +477,7 @@
 		<button class="btn-close-custom-color">X</button>
 		<img class="solidPreviewColorModal" src="assets/images/src/custom.png"/>
 		<button id="custom-color-button" class="custom-color-solid-button" data-toggle="modal" data-target="#ColorModal">Custom Color</button>
-		<!--------Modal---------->
+		<!-- Modal -->
 		<div class="modal fade" class="ColorModal" id="ColorModal" role="dialog">
 			<div class="modal-dialog">
 				<!-- Modal content-->
@@ -545,16 +494,16 @@
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					</div>
 				</div>
-				<!---------End Modal Content-------------->
+				<!-- End Modal Content -->
 			</div>
 		</div>
-		<!-----End Modal Div ---->
+		<!-- End Modal Div -->
 		<div class="clearfix"></div>
 		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
 		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
 		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input  type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 		<div class="clearfix"></div>
-		<!---------Start text color option------------>
+		<!-- Start text color option -->
 		<div class="color-text" style="display:none">
 			<div class="col-sm-1">
 				<?php include "colorAdult-template.php";?>
@@ -567,7 +516,7 @@
 			</div>
 			<div class="clearfix"></div>
 		</div>
-		<!-------End text color-------------->
+		<!-- End text color -->
 		<span class="view-more col-xs-12">View More Sizes</span>
 		<div class="show-content">
 			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
@@ -580,7 +529,7 @@
 		<button class="btn-close-custom-color">X</button>
 		<img class="segmentedPreviewColorModal" src="assets/images/src/custom.png"/>
 		<button id="custom-color-button" class="custom-color-segmented-button" data-toggle="modal" data-target="#ColorSegModal">Custom Color</button>
-		<!--------Modal---------->
+		<!-- Modal -->
 		<div class="modal fade" id="ColorSegModal" role="dialog">
 				<div class="modal-dialog">
 					<!-- Modal content-->
@@ -597,16 +546,16 @@
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 						</div>
 					</div>
-					<!---------End Modal Content-------------->
+					<!-- End Modal Content -->
 				</div>
 			</div>
-			<!-----End Modal Div ---->
+			<!-- End Modal Div -->
 		<div class="clearfix"></div>
 		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
 		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
 		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 		<div class="clearfix"></div>
-		<!---------Start text color option------------>
+		<!-- Start text color option -->
 			<div class="color-text" style="display:none">
 				<div class="col-sm-1">
 					<?php include "colorAdult-template.php";?>
@@ -619,7 +568,7 @@
 				</div>
 					<div class="clearfix"></div>
 			</div>
-		<!-------End text color-------------->
+		<!-- End text color -->
 		<span class="view-more col-xs-12">View More Sizes</span>
 		<div class="show-content">
 			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
@@ -632,7 +581,7 @@
 		<button class="btn-close-custom-color">X</button>
 		<img class="swirlPreviewColorModal" src="assets/images/src/custom.png"/>
 		<button id="custom-color-button" data-toggle="modal" data-target="#ColorSwirlModal">Custom Color</button>
-		<!--------Modal---------->
+		<!-- Modal -->
 		<div class="modal fade" id="ColorSwirlModal" role="dialog">
 			<div class="modal-dialog">
 				<!-- Modal content-->
@@ -649,15 +598,15 @@
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					</div>
 				</div>
-				<!---------End Modal Content-------------->
+				<!-- End Modal Content -->
 			</div>
 		</div>
-		<!-----End Modal Div ---->
+		<!-- End Modal Div -->
 		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
 		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
 		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 		<div class="clearfix"></div>
-		<!---------Start text color option------------>
+		<!-- Start text color option -->
 			<div class="color-text" style="display:none">
 				<div class="col-sm-1">
 					<?php include "colorAdult-template.php";?>
@@ -670,7 +619,7 @@
 				</div>
 					<div class="clearfix"></div>
 			</div>
-		<!-------End text color-------------->
+		<!-- End text color -->
 		<span class="view-more col-xs-12">View More Sizes</span>
 		<div class="show-content" style="display:none">
 			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
@@ -728,7 +677,7 @@
 		<button class="btn-close-custom-color">X</button>
 		<img class="solidPreviewFigColorModal" src="assets/images/src/custom.png"/>
 		<button id="custom-color-button" class="custom-color-solid-button" data-toggle="modal" data-target="#ColorFigRegModal">Custom Color</button>
-		<!--------Modal---------->
+		<!-- Modal -->
 		<div class="modal fade" class="ColorFigModal" id="ColorFigRegModal" role="dialog">
 			<div class="modal-dialog">
 				<!-- Modal content-->
@@ -745,16 +694,16 @@
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					</div>
 				</div>
-				<!---------End Modal Content-------------->
+				<!-- End Modal Content -->
 			</div>
 		</div>
-		<!-----End Modal Div ---->
+		<!-- End Modal Div -->
 		<div class="clearfix"></div>
 		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
 		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
 		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input  type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 		<div class="clearfix"></div>
-		<!---------Start text color option------------>
+		<!-- Start text color option -->
 		<div class="color-text" style="display:none">
 			<div class="col-sm-1">
 				<?php include "colorAdult-template.php";?>
@@ -767,7 +716,7 @@
 			</div>
 			<div class="clearfix"></div>
 		</div>
-		<!-------End text color-------------->
+		<!-- End text color -->
 		<span class="view-more col-xs-12">View More Sizes</span>
 		<div class="show-content">
 			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
@@ -780,7 +729,7 @@
 		<button class="btn-close-custom-color">X</button>
 		<img class="segmentedPreviewFigColorModal" src="assets/images/src/custom.png"/>
 		<button id="custom-color-button" class="custom-color-segmented-button" data-toggle="modal" data-target="#ColorFigSegModal">Custom Color</button>
-		<!--------Modal---------->
+		<!-- Modal -->
 		<div class="modal fade" id="ColorFigSegModal" role="dialog">
 				<div class="modal-dialog">
 					<!-- Modal content-->
@@ -797,16 +746,16 @@
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 						</div>
 					</div>
-					<!---------End Modal Content-------------->
+					<!-- End Modal Content -->
 				</div>
 			</div>
-			<!-----End Modal Div ---->
+			<!-- End Modal Div -->
 		<div class="clearfix"></div>
 		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
 		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
 		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 		<div class="clearfix"></div>
-		<!---------Start text color option------------>
+		<!-- Start text color option -->
 			<div class="color-text" style="display:none">
 				<div class="col-sm-1">
 					<?php include "colorAdult-template.php";?>
@@ -819,7 +768,7 @@
 				</div>
 					<div class="clearfix"></div>
 			</div>
-		<!-------End text color-------------->
+		<!-- End text color -->
 		<span class="view-more col-xs-12">View More Sizes</span>
 		<div class="show-content">
 			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
@@ -832,7 +781,7 @@
 		<button class="btn-close-custom-color">X</button>
 		<img class="swirlPreviewFigColorModal" src="assets/images/src/custom.png"/>
 		<button id="custom-color-button" data-toggle="modal" data-target="#ColorFigSwirlModal">Custom Color</button>
-		<!--------Modal---------->
+		<!-- modal -->
 		<div class="modal fade" id="ColorFigSwirlModal" role="dialog">
 			<div class="modal-dialog">
 				<!-- Modal content-->
@@ -849,15 +798,15 @@
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					</div>
 				</div>
-				<!---------End Modal Content-------------->
+				<!-- End Modal Content -->
 			</div>
 		</div>
-		<!-----End Modal Div ---->
+		<!-- End Modal Div -->
 		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
 		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
 		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
 		<div class="clearfix"></div>
-		<!---------Start text color option------------>
+		<!-- Start text color option -->
 			<div class="color-text" style="display:none">
 				<div class="col-sm-1">
 					<?php include "colorAdult-template.php";?>
@@ -870,7 +819,7 @@
 				</div>
 					<div class="clearfix"></div>
 			</div>
-		<!-------End text color-------------->
+		<!-- End text color -->
 		<span class="view-more col-xs-12">View More Sizes</span>
 		<div class="show-content" style="display:none">
 			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
@@ -893,7 +842,7 @@
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 			</div>
 		</div>
-		<!---------End Modal Content-------------->
+		<!-- End Modal Content -->
 	</div>
 </div>
 

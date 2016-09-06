@@ -126,11 +126,9 @@ $(document).ready(function(){
             $(".free-convert").show();
 		}
 		else{
-        
             $(".free-convert").hide();
         }
     });
-	
 
 	$('body').on('click', '.js-time-options', function(e) {
 		e.stopPropagation();
@@ -492,6 +490,7 @@ $(function(){
 
 	$('body').on('blur', '.box-color input[name$="-qty"]', function(e) {
 
+		$(".area-conversion-list").html("");
 		$("#preview-pane-selection").html("");
 
 		var total = 0;
@@ -561,7 +560,7 @@ $(function(){
 					$("#preview-pane-selection").append('<li class="blink preview-pill preview-color-'+ref_type+'-'+ref_color_arr.join("-")+'-font-'+ref_color_font+'" data-type="'+ref_type+'" data-font-color="'+ref_color_font+'" data-image-link="gd/belt.php?style='+ref_type+'&type='+style+'&color='+ref_color_arr.join(",")+'" style="background-image:url(\'gd/belt.php?style='+ref_type+'&color='+ref_color_arr.join(",")+'\');background-size:30px;background-repeat: no-repeat;background-size: 100% 100%;">Y</li>');
 					
 					//for free 100 conversions
-					getFreeWristbands(name,ref_type,color_title,qty);
+					getFreeWristbands(name, ref_type, color_title, qty);
 				}
 
 				total += parseInt(qty);
@@ -576,8 +575,10 @@ $(function(){
 		if($('#dv-10-free-keychains').length  > 0) {
 			if(total >= 100){
 				$('#dv-10-free-keychains').show();
+				$('.message_wristband_100').show();
 			}else{
 				$('#dv-10-free-keychains').hide();
+				$('.message_wristband_100').hide();
 				$('#freekc').val('').focus();
 			}
 		}
@@ -1137,7 +1138,6 @@ function get_total_price(price, qty, wb_style, wb_size) {
 
 			// var sub_price = added_val + parseFloat(price);
 			var total_subprice = sub_price * sub_qty;
-			$('.message_wristband_100').show();
 
 			//calculate total price
 			// total_price += total_subprice;
@@ -1268,16 +1268,34 @@ $('.clipart .drpMenuItems').on('click',function(){
 	}
 });
 
-function getFreeWristbands(size,type,color,qty){
-	 console.log(size);
-	 console.log(type);
-	 console.log(color);
-	 console.log(qty);
-	
-	$(".area-conversion-list").append('<li class="conversion-wrist-'+type+'" data-band-color="'+color+'">'+type+' - '+color+' -'+size+
-	'<input type="number" id="freewb-Medium_'+type+'_'+color+'" name="'+size+'_'+type+'_'+color+'" class="freewb" placeholder="0" data-maxlength="3"/> </li>');
+function getFreeWristbands(size, type, color, qty){
+	size = size.toString();
+	color = color.toString();
+
+	qty = qty.toString().toLowerCase();
+	type = type.toString().toLowerCase();
+
+	sizeStr = size.toLowerCase();
+	sizeStr = sizeStr.replace("-qty", "");
+	sizeStrUp = sizeStr.capitalizeFirstLetter();
+
+	colorStr = color.toString().toLowerCase();
+	colorStr = colorStr.replace(/ /g, "-");
+
+	// console.log(color);
+	// console.log(type);
+	// console.log(color);
+	// console.log(qty);
+
+	if(!$('.conversion-wrist-'+type+'.free-wrist-'+type+'-'+sizeStr+'-'+colorStr).length > 0) {
+		$(".area-conversion-list").append('<li class="conversion-wrist-'+type+' free-wrist-'+type+'-'+sizeStr+'-'+colorStr+'" data-band-color="' + color + '">' + type.toUpperCase() + ' - ' + color + ' - ' + sizeStrUp+'<input type="number" class="freewb" id="freewb-'+type+'-'+sizeStr+'-'+colorStr+'" name="'+type+'-'+sizeStr+'-'+colorStr+'" placeholder="0" data-maxlength="3" /></li>');
+	}
+
 }
 
+String.prototype.capitalizeFirstLetter = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}
 
    /* function getSelectedColor(id) {
         var value='';
