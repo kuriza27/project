@@ -1,10 +1,10 @@
 <div class="half_sm" style="width: 32%; margin: 5% 0px 1% 5%;"> 
 			<div class="addl_options">
 				<h4>Message Options</h4>
-				<p> Back Message: <span class="red">(+$0.08 each)</span><br>
-					Inside Message: <span class="red">(+$0.08 each)</span><br>
+				<p> Back Message: <span class="red">(+$0.06 each)</span><br>
+					Inside Message: <span class="red">(+$0.01 each)</span><br>
 					Add Wristband Color: <span class="red">(+$20/color)</span><br>
-					Add Wristband Size: <span class="red">(+$80/size)</span><br>
+					Add Wristband Size: <span class="red">(+$40/size)</span><br>
 					Digital Proof: <span class="red">(+$20/order)</span>
 				</p>
 				<h4>Sizes</h4>
@@ -23,13 +23,13 @@
 				<h4>Colors Available</h4>
 				<p> All Colors<br>
 					Free PMS Pantone Color Match<br>
-					<a href="/color">View Pantone Chart</a>
+					<a href="colors.php">View Pantone Chart</a>
 				</p>
 				<h4>Fonts Available</h4>
-				<p> <a href="/font">View Fonts Available</a>
+				<p> <a href="fonts.php">View Fonts Available</a>
 				</p>
 				<h4>Logo Cliparts Available</h4>
-				<p> <a href="/clipart">View Logo Cliparts Available</a> <span class="red">(+$0.08)</span>
+				<p> <a href="cliparts.php">View Logo Cliparts Available</a> <span class="red">(+$0.08)</span>
 				</p>
 				<h4>Shipping Turnaround Time</h4>
 				<p> Standard Shipping (10 to 14 days): <span class="red">FREE</span><br>

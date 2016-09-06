@@ -59,7 +59,7 @@
 		<div class="row row-content">
 			<!-- <span>:</span> -->
 			<div class="input-group input-group col-xs-12 col-md-6 col-md-offset-3">
-				<input id="freekc" class="form-control" type="number" pattern="[0-9]*" placeholder="Input keychain quantity" data-maxlength="2">
+				<input id="freekc" class="form-control" type="number" pattern="[0-9]*" placeholder="Input keychain quantity" min="0" max="10" data-maxlength="2">
 				<!-- <input id="freekc" class="freewb-input col-xs-12 col-md-offset-3 col-md-6" type="number" pattern="[0-9]*" placeholder="Input keychain quantity" data-maxlength="2"> -->
 				<span class="input-group-btn">
 					<button id="btnfreekc" class="btn btn-success glyphicon glyphicon-ok"></button>
@@ -78,7 +78,7 @@
 				<h4 class="modal-title">Error</h4>
 			</div>
 			<div class="modal-body text-center">
-				<h2 style="font-size:25px;padding:10px 0;">Quantity must be between 0-10.</h2>
+				<h2 style="font-size:25px;padding:10px 0;">Quantity must not be over 10 pieces.</h2>
 				<div class="clearfix"></div>
 			</div>
 			<div class="modal-footer">

@@ -11,17 +11,6 @@
 
 	if ($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
-			// // $wb_style[$row['style_code']][$row['size_code']][$row['qty']] = $row['price'];
-			// $style_array[$count_style]
-			// if (isset($style_array[$count_style])) {
-			// 	$style_array[$count_style][$row['style_code']] = [];
-			// }
-
-			// if(!in_array($row['style_code'], $style)) {
-			// 	$style[] = $row['style_code'];
-			// 	$count_style++;
-			// }
-
 			$style[$row['style_code']][$row['size_code']][$row['qty']] = $row['price'];
 		}
 

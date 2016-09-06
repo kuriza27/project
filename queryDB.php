@@ -85,13 +85,30 @@
 	//get production price by style, qty and size
 	function getProductionPrice($style,$size,$qty)
 	{
-			$sql = "SELECT pd.qty, pd.price, pd.days 
-						FROM price_production AS pd 
+			/** $sql = "SELECT pd.qty, pd.price, pd.days 
+					FROM price_production AS pd JOIN wristband_style AS wst ON wst.id = pd.style_id 
+					JOIN wristband_size AS wsz ON wsz.id = pd.size_id .
+					WHERE wst.code ='".$style."' AND wsz.code = '".$size."' AND qty >= '20' AND qty < '50' ORDER BY pd.days ASC"; */
+
+			$sql = "SELECT pd.qty AS qty, pd.price AS price, pd.days AS days 
+					FROM price_production AS pd 
 					JOIN wristband_style AS wst ON wst.id = pd.style_id 
 					JOIN wristband_size AS wsz ON wsz.id = pd.size_id 
-					WHERE wst.code ='".$style."' AND wsz.code = '".$size."' AND qty >= '20' AND qty < '50' ORDER BY pd.days ASC";
-	
-			return $sql;	
+					WHERE 
+						wst.code ='".$style."' 
+					AND 
+						wsz.code = '".$size."' 
+					AND 
+						pd.qty = (	SELECT 
+										CASE 
+											WHEN MAX(ipd.qty) IS NULL 
+											THEN 0 
+											ELSE MAX(ipd.qty) 
+										END as qty 
+									FROM price_production AS ipd 
+									WHERE ipd.qty BETWEEN '0' AND '".$qty."' )
+					ORDER BY pd.days ASC";
+			return $sql;
 
 	}
 	
@@ -100,11 +117,29 @@
 	function getShippingPrice($style,$size,$qty)
 	{
 
-			$sql = "SELECT ps.qty, ps.price, ps.days 
-						FROM price_shipping AS ps JOIN wristband_style AS wst ON wst.id = ps.style_id
+			/** $sql = "SELECT ps.qty, ps.price, ps.days 
+					FROM price_shipping AS ps JOIN wristband_style AS wst ON wst.id = ps.style_id
 					JOIN wristband_size AS wsz ON wsz.id = ps.size_id 
-					WHERE wst.code ='".$style."' AND wsz.code = '".$size."' AND qty >= '20' AND qty < '50' ORDER BY ps.days ASC";
-					
+					WHERE wst.code ='".$style."' AND wsz.code = '".$size."' AND qty >= '20' AND qty < '50' ORDER BY ps.days ASC"; */
+
+			$sql = "SELECT pd.qty AS qty, pd.price AS price, pd.days AS days 
+					FROM price_production AS pd 
+					JOIN wristband_style AS wst ON wst.id = pd.style_id 
+					JOIN wristband_size AS wsz ON wsz.id = pd.size_id 
+					WHERE 
+						wst.code ='".$style."' 
+					AND 
+						wsz.code = '".$size."' 
+					AND 
+						pd.qty = (	SELECT 
+										CASE 
+											WHEN MAX(ipd.qty) IS NULL 
+											THEN 0 
+											ELSE MAX(ipd.qty) 
+										END as qty 
+									FROM price_production AS ipd 
+									WHERE ipd.qty BETWEEN '0' AND '".$qty."' )
+					ORDER BY pd.days ASC";
 			return $sql;
 
 	}
