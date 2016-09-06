@@ -1029,7 +1029,7 @@ li.active.select-box-col {
 	}
 	
 	.pick-color-list li{
-		    height: 90px!Important;
+		    height: 95px!Important;
 	}
 }
 
@@ -1166,8 +1166,9 @@ li.active.select-box-col {
 	}
 	
 	label {
-		font-size:13px!important;
+		font-size:10px!important;
 	}
+	
 	
 	span.fig-fc {
 		left: 76px!important;
@@ -1183,7 +1184,7 @@ li.active.select-box-col {
 	}
 	
 	.pick-color-list li{
-		    height: 90px!Important;
+		    height: 95px!Important;
 	}
 	
 }
