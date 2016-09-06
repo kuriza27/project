@@ -120,7 +120,7 @@ $(document).ready(function(){
 		get_style_size('fixed_price');
 	});
 	
-	// Free wristbandss EVENTS
+	// Free wristbands EVENTS
 	$('.free-bands').change(function(){
         if(this.checked){
             $(".free-convert").show();
@@ -130,11 +130,13 @@ $(document).ready(function(){
         }
     });
 
+	//Select on production and shipping option
 	$('body').on('click', '.js-time-options', function(e) {
 		e.stopPropagation();
 		get_style_size('fixed_price');
 	});
 
+	//submit order form
 	$('body').on('submit', '#order-form', function(e) {
 		e.preventDefault();
 		e.stopPropagation();
@@ -238,6 +240,24 @@ $(function(){
 		$('.cont-select').prop('checked', false)
 	});
 
+	//Confirm on freewristband conversion
+	$("body").on("click",".done-button-fwb",function(e) {
+		var qty = 0;
+		$('.freewb').each(function() {
+			qty += +$(this).val();
+		});
+		
+		if(qty>100){
+			alert("You have exceeded the limit number for free wristbands.");
+		}else{
+			$('.js-free-bands').show().delay(5000).hide(0);
+			var html_item = '<div class="row summary-item"><div class="col-md-8 col-sm-6">- Free Wristbands ('+qty+')</div><div class="clearfix"></div></div>';
+			$('.js-free-summary').html(html_item);
+		}
+	});
+	
+	
+	
 	//show continous message selection
 	$(".cont-select").click(function(){
 		$('.front-back-select').prop('checked', false)
@@ -487,7 +507,8 @@ $(function(){
 			// get_style_size('fixed_price');
 		}
 	});
-
+	
+	//Blur on quantity
 	$('body').on('blur', '.box-color input[name$="-qty"]', function(e) {
 
 		$(".area-conversion-list").html("");
@@ -1038,6 +1059,7 @@ function get_style_size(type) {
 	get_price_data($style, $size, type);
 }
 
+//Get Price list
 function get_price_data($style, $size, type) {
 
 	//get JSON Price list
@@ -1099,12 +1121,13 @@ function get_price_data($style, $size, type) {
 			free_qty = 0;
 		}
 
-		var html_item = '<div class="row summary-item"><div class="col-md-8 col-sm-6">- Keychains ('+free_qty+' piece/s)</div><div class="clearfix"></div><div class="col-md-8 col-sm-6">- + Free 100 wristbands</div><div class="col-md-4 col-sm-6 align-right"></div></div>';
+		var html_item = '<div class="row summary-item"><div class="col-md-8 col-sm-6">- Keychains ('+free_qty+' piece/s)</div><div class="clearfix"></div><div class="col-md-4 col-sm-6 align-right"></div></div>';
 		$('.js-free-summary').append(html_item);
 	}
 
 }
 
+//Get Total Price of wristbands
 function get_total_price(price, qty, wb_style, wb_size) {
 
 	var total_price = 0;
@@ -1187,16 +1210,13 @@ function get_total_price(price, qty, wb_style, wb_size) {
 	$('#totalPrice').text(formatCurrency(total_price));
 	$('#totalPrice').attr('data-total', total_price);
 
-	/*
-	$('#style_name').text(style_name);
-	$('#qty_style').text("....$"+ price + "x"+qty);
-	$('#order_title').text("Order Summary:");
-	*/
+
 
 	$('.js-total').fadeIn(300);
 	$('.js-no-total').hide();
 }
 
+//format currency
 function formatCurrency(total) {
     var neg = false;
     if(total < 0) {
@@ -1206,12 +1226,14 @@ function formatCurrency(total) {
     return (neg ? "-$" : '$') + parseFloat(total, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString();
 }
 
+//Reset Menu
 function resetDrpMenu() {
 	$('.drpMenuItems_clipart').fadeOut(300);
 	$('.wristForm .clipart li a').removeClass('open');
 	$('.wristForm .clipart li a').addClass('closex');
 }
 
+//Get Query for Wristband Production
 function sendToQuery(action, style, size, qty, where) {
 
 	$.ajax({  
@@ -1250,10 +1272,13 @@ function sendToQuery(action, style, size, qty, where) {
 
 }
 
+//Resets
 $('[input]').on('focus',function(){
 	resetDrpMenu();
 });
 
+
+//Clipart clik on items
 $('.clipart .drpMenuItems').on('click',function(){
 	$('.clipart li').removeAttr('style');
 	if($(this).hasClass('closex')){
@@ -1268,6 +1293,7 @@ $('.clipart .drpMenuItems').on('click',function(){
 	}
 });
 
+//Get Free wristbands
 function getFreeWristbands(size, type, color, qty){
 	size = size.toString();
 	color = color.toString();
@@ -1282,33 +1308,14 @@ function getFreeWristbands(size, type, color, qty){
 	colorStr = color.toString().toLowerCase();
 	colorStr = colorStr.replace(/ /g, "-");
 
-	// console.log(color);
-	// console.log(type);
-	// console.log(color);
-	// console.log(qty);
-
 	if(!$('.conversion-wrist-'+type+'.free-wrist-'+type+'-'+sizeStr+'-'+colorStr).length > 0) {
-		$(".area-conversion-list").append('<li class="conversion-wrist-'+type+' free-wrist-'+type+'-'+sizeStr+'-'+colorStr+'" data-band-color="' + color + '">' + type.toUpperCase() + ' - ' + color + ' - ' + sizeStrUp+'<input type="number" class="freewb" id="freewb-'+type+'-'+sizeStr+'-'+colorStr+'" name="'+type+'-'+sizeStr+'-'+colorStr+'" placeholder="0" data-maxlength="3" /></li>');
+		$(".area-conversion-list").append('<li class="fwb-list conversion-wrist-'+type+' free-wrist-'+type+'-'+sizeStr+'-'+colorStr+'" data-band-color="' + color + '"><div class="fwb-text col-md-8 col-sm-6">' + type.toUpperCase() + ' - ' + color + ' - ' + sizeStrUp+'</div><div class="col-md-4 col-sm-6 align-right"><input type="number" class="freewb" id="freewb-'+type+'-'+sizeStr+'-'+colorStr+'" name="'+type+'-'+sizeStr+'-'+colorStr+'-fwb" placeholder="0" data-maxlength="3" /></div><div class="clearfix"></div></li>');
 	}
 
 }
 
+//Capitalize First letter
 String.prototype.capitalizeFirstLetter = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 }
-
-   /* function getSelectedColor(id) {
-        var value='';
-        console.log(id);
-        // set value to be the current selected value
-        value = jQuery(id+"option:selected").attr('ref');
-        // change value whenever the box changes
-        jQuery(id).change(function () {
-            value = jQuery(id+"option:selected").attr('ref');
-            console.log(value);
-        });
-
-        return value;
-    }
-*/
 

@@ -1031,6 +1031,14 @@ li.active.select-box-col {
 	.pick-color-list li{
 		    height: 95px!Important;
 	}
+	
+	#dv-10-free-keychains .row-title h1{
+		font-size: 25px!important;
+	}
+	
+	.align-right{
+		text-align: left!important;
+	}
 }
 
 @media screen and (max-width: 350px){
@@ -1187,6 +1195,13 @@ li.active.select-box-col {
 		    height: 95px!Important;
 	}
 	
+	#dv-10-free-keychains .row-title h1{
+		font-size: 20px!important;
+	}
+	
+	.align-right{
+		text-align: left!important;
+	}
 }
 
 

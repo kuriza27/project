@@ -639,10 +639,21 @@ div#order-summary {
 }
 
 
-.fclip-1:hover,  .fclip-2:hover, .fclip-3:hover, .bclip-1:hover, .bclip-2:hover .cclip-1:hover, .cclip-1:hover {
+.fclip-1:hover,  .fclip-2:hover, .fclip-3:hover, .bclip-1:hover, .bclip-2:hover, .cclip-1:hover, .cclip-1:hover {
     background-color: #1abc9c ;
 }
 
+.done-button-fwb{
+	background-color: #17a589;
+    color: #fff;
+    border: 1px solid  #117864 ;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.done-button-fwb:hover{
+	background-color: #1abc9c ;
+}
 
 button#custom-color-button {
     margin: 6px 56px;
@@ -1058,3 +1069,23 @@ span.fig-fc {
 	    font-size: 11px;
 		color:#5F5F5F;
 }
+
+.fwb-list {
+    list-style: none;
+    padding: 4px;
+    font-size: 12px;
+}
+
+.fwb-text{
+	width:220px;
+}
+
+.submit {
+    text-align: center;
+}
+
+table.fwb-title th {
+    padding: 6px 9px;
+}
+
+
