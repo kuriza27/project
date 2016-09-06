@@ -1027,6 +1027,10 @@ li.active.select-box-col {
 		width:250px!important;
 		
 	}
+	
+	.pick-color-list li{
+		    height: 90px!Important;
+	}
 }
 
 @media screen and (max-width: 350px){
@@ -1176,6 +1180,10 @@ li.active.select-box-col {
 	.band-text {
 		width: 262px!important;
 		padding: 4px;
+	}
+	
+	.pick-color-list li{
+		    height: 90px!Important;
 	}
 	
 }
