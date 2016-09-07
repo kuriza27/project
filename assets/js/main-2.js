@@ -1154,11 +1154,11 @@ function get_total_price(price, qty, wb_style, wb_size) {
 			var has_qty = false;
 			$.each(price, function(key_qty, val_qty){
 				if(has_qty === false) {
-					if(qty >= key_qty) {
+					if(sub_qty >= key_qty) {
 						sub_price = val_qty;
-						has_qty = true;
 					}
 				}
+
 			});
 
 			// var sub_price = added_val + parseFloat(price);
@@ -1184,7 +1184,17 @@ function get_total_price(price, qty, wb_style, wb_size) {
 	var p_price = $('#ProductionTime').find(':selected').data('price');
 	var s_days  = parseFloat($('#ShippingTime').val());
 	var s_price = $('#ShippingTime').find(':selected').data('price');
-
+	
+    if(isNaN(p_days) || isNaN(p_price)){
+		p_days = 0;
+		p_price= 0;
+	}
+	
+	if(isNaN(s_days) || isNaN(s_days)){
+		s_days = 0;
+		s_price = 0;
+	}
+ 
 	$('#wristband_ptime').attr('data-production-time', p_days).attr('data-production-price', p_price).html(p_days + " Days ("+formatCurrency(p_price)+")");
 	$('#wristband_stime').attr('data-shipping-time', s_days).attr('data-shipping-price', s_price).html(s_days + " Days ("+formatCurrency(s_price)+")");
 
