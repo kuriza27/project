@@ -639,10 +639,21 @@ div#order-summary {
 }
 
 
-.fclip-1:hover,  .fclip-2:hover, .fclip-3:hover, .bclip-1:hover, .bclip-2:hover .cclip-1:hover, .cclip-1:hover {
+.fclip-1:hover,  .fclip-2:hover, .fclip-3:hover, .bclip-1:hover, .bclip-2:hover, .cclip-1:hover, .cclip-1:hover {
     background-color: #1abc9c ;
 }
 
+.done-button-fwb{
+	background-color: #17a589;
+    color: #fff;
+    border: 1px solid  #117864 ;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.done-button-fwb:hover{
+	background-color: #1abc9c ;
+}
 
 button#custom-color-button {
     margin: 6px 56px;
@@ -1023,7 +1034,7 @@ input[type=file] {
 
 
 .fig_move{
-	top: 26px;
+    top: 26px;
 }
 
 button.fclip-3 {
@@ -1031,19 +1042,19 @@ button.fclip-3 {
 }
 
 span.fig-fc {
-	position: absolute;
+    position: absolute;
     top: 26px;
     left: 531px;
     z-index: 1;
 }
 
 .message_wristband_100{
-	padding:20px;
-	background: #f2fae3;
+    padding:20px;
+    background: #f2fae3;
     color: #659f13;
     border-color: rgba(101,159,19,.3);
-	margin-top: 14px;
-	text-align:center;
+    margin-top: 14px;
+    text-align:center;
 }
 
 .free-convert{
@@ -1055,6 +1066,48 @@ span.fig-fc {
 }
 
 .span-text-con1{
-	    font-size: 11px;
-		color:#5F5F5F;
+    color:#5F5F5F;
+    font-size: 12px;
+    margin-bottom: 10px;
 }
+
+.area-conversion-list {
+    background-color: rgba(200,255,100,0.2);
+    padding: 15px 0;
+}
+
+.fwb-list {
+    font-size: 15px;
+    list-style: none;
+    padding: 4px;
+    text-align: center;
+}
+
+.fwb-text{
+    color: #659f13;
+    min-height: 30px;
+    line-height: 30px;
+}
+
+.fwb-text h4{
+    font-weight: bolder;
+}
+
+input.freewb  {
+    border: 1px #CCCCCC dashed;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.submit {
+    text-align: center;
+}
+
+table.fwb-title th {
+    padding: 6px 9px;
+}
+
+table.fwb-title {
+    margin-left: 48px;
+}
+

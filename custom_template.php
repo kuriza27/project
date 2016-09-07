@@ -344,17 +344,32 @@
 					<div> Your free wristbands should be of the same color and size from your selections above. Please choose which color and size you want to receive, and specify the quantity below.</div>            
 				</div>
 				<div class="area-conversion">
+					<!-- <table class="fwb-title">
+						<tr>
+							<th>Style</th>
+							<th>Color</th>
+							<th>Size</th>
+						</tr>
+					</table> -->
+					<div class="row">
+						<div class="fwb-text col-md-6 col-sm-12 text-center">
+							<div class="col-xs-4"><h4>STYLE</h4></div>
+							<div class="col-xs-4"><h4>COLOR</h4></div>
+							<div class="col-xs-4"><h4>SIZE</h4></div>
+						</div>
+					</div>
 					<ul class="area-conversion-list">
 					</ul>
+						<div class="clearfix"></div>
 				</div>
-				<div class="js-free-bands-less-than-count-tmpl uk-hidden">
-					<div class="uk-text-left">
-						<div>Are you sure you want to continue?</div>
+				<div class="js-free-bands" style="display:none">
+					<div style="color:#00C273;text-align:center;">
+						<div>Free wristband quantities have been saved.</div>
 					</div>
 				</div>
 				<div class="submit">
-					<button class="" type="button">
-						<i class="uk-icon-check"></i> Done
+					<button class="done-button-fwb" type="button">
+						Done
 					</button>
 				</div>
 			</div>
@@ -447,7 +462,9 @@
 								<br/>
 								<div class="col-md-8 col-sm-6"><strong>Free</strong></div>
 								<div class="col-md-4 col-sm-6 align-right"><strong></strong></div>
+								<div class="col-md-4 col-sm-6 align-right"><strong></strong></div>
 							</div>
+							<div class="row total-summary-after" style="display:none;"></div>
 							<div class="summary-list-item js-free-summary total-summary-free" style="display:none;">
 							</div>
 						</div>
