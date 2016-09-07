@@ -146,7 +146,7 @@ $(document).ready(function(){
 			html_item = '<div class="row total-summary-freewb"><div class="col-md-8 col-sm-6">- Free Wristbands ('+qty+')</div><div class="clearfix"></div></div>';
 		}
 		
-		$(html_item).insertAfter( ".total-summary-after");
+		$('.total-summary-after').html(html_item);
 
 	});
 

@@ -993,7 +993,7 @@ li.active.select-box-col {
 	}
 	
 	#preview-pane #front-view, #preview-pane #back-view, #inside-view{
-		font-size:10px!important;
+		font-size:8px!important;
 	}
 	
 	.band-text {
@@ -1014,8 +1014,8 @@ li.active.select-box-col {
 	}
 	
 	.fig_move {
-		top: -1px!important;
-	}
+     top: 26px!important;
+   }
 	
 	.col-md-10 {
 		text-align: center;
@@ -1038,6 +1038,10 @@ li.active.select-box-col {
 	
 	.align-right{
 		text-align: left!important;
+	}
+	div#front-text {
+		left: -17px!important;
+		position: relative!important;
 	}
 }
 
