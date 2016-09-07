@@ -368,7 +368,7 @@
 					</div>
 				</div>
 				<div class="submit">
-					<button class="done-button-fwb" type="button">
+					<button class="done-button-fwb btn-lg" type="button">
 						Done
 					</button>
 				</div>

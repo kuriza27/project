@@ -38,9 +38,9 @@
 			<table class="table-area-printed-half uk-table uk-table-bordered js-pricing-table" data-pricing-tbl="" style="display:none;">
 				<caption class="uk-margin-bottom js-wb-caption">Pricing for <span class="style">Printed</span> wristbands (&quot;<span class="size">1/2</span>&quot;) as of July, 2016</caption>
 				<thead>
-					<tr>
+					<tr id="priceHeader">
 					<th data-uk-tooltip="{pos:'top'}" title="Quantity" class="uk-text-primary">Qty</th>
-					<th data-uk-tooltip="{pos:'top'}" title="20 to 29">20</th>
+					<!-- <th data-uk-tooltip="{pos:'top'}" title="20 to 29">20</th>
 					<th data-uk-tooltip="{pos:'top'}" title="30 to 99">30</th>
 					<th data-uk-tooltip="{pos:'top'}" title="100 to 199">100</th>
 					<th data-uk-tooltip="{pos:'top'}" title="200 to 299">200</th>
@@ -53,7 +53,7 @@
 					<th data-uk-tooltip="{pos:'top'}" title="10000 to 19999">10,000</th>
 					<th data-uk-tooltip="{pos:'top'}" title="20000 to 49999">20,000</th>
 					<th data-uk-tooltip="{pos:'top'}" title="50000 to 99999">50,000</th>
-					<th data-uk-tooltip="{pos:'top'}" title="100000 to 199999">100,000</th>
+					<th data-uk-tooltip="{pos:'top'}" title="100000 to 199999">100,000</th> -->
 					</tr>
 				</thead>
 				<tbody>

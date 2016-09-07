@@ -295,11 +295,15 @@ ORDER CSS
     color: #079ca5!important;
 }
 
-#banner-pricing .uk-table.uk-table-bordered th {
+#banner-pricing .uk-table.uk-table-bordered th{
     border-right-style: solid;
     border-right-width: 1px;
     width: 6.6%;
     text-align: center;
+}
+
+#banner-pricing .uk-table.uk-table-bordered th:last-child{
+    border-right: none;
 }
 
 #banner-pricing .uk-table.uk-table-bordered td{
@@ -310,8 +314,12 @@ ORDER CSS
     border-bottom-style: none;
 }
 
+#banner-pricing .uk-table.uk-table-bordered td:last-child{
+    border-right: none;
+}
+
 .uk-table.uk-table-bordered th, .uk-table.uk-table-bordered td{
-       border-color: #A1A1A1;
+    border-color: #A1A1A1;
 }
 
 .nav.nav-pills {
@@ -647,7 +655,7 @@ div#order-summary {
 	background-color: #17a589;
     color: #fff;
     border: 1px solid  #117864 ;
-    padding: 10px;
+    padding: 10px 50px;
     border-radius: 3px;
 }
 
@@ -996,8 +1004,8 @@ span.end-cc {
 
 .zoom {
     position: absolute;
-    left: 238px;
-    top: 13px;
+    right: 15px;
+    top: 15px;
     z-index: 999;
 }
 
