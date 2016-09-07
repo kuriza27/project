@@ -1208,6 +1208,11 @@ li.active.select-box-col {
 	}
 }
 
+@media screen and (max-width: 360px){
+	span.fig-fc {
+		left: 140px!important;
+	}
+}
 
 
 
