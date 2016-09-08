@@ -113,10 +113,10 @@
 							<div class="clearfix"></div>
 							<div class="clip-sec col-xs-6 figarea" style="display:none;">
 								<button class="fclip-3" data-toggle="modal" data-target="#ClipArtModal">Figured Center Clipart</button><br />
-								<a href="javascript:void(0)" data-toggle="collapse" data-target="#upload-2">or Upload your own art</a>
-								<div id="upload-2" class="collapse">
+								<a href="javascript:void(0)" data-toggle="collapse" data-target="#upload-7">or Upload your own art</a>
+								<div id="upload-7" class="collapse">
 									<label for="file">Choose Photo:</label>
-									<input type="file" name="file-2" class="file-2" required><br>
+									<input type="file" name="file-7" class="file-7" required><br>
 									<a href="javascript:void(0)" id="remove-2">Remove File</a>
 								</div>
 							</div>
@@ -344,13 +344,20 @@
 					<div> Your free wristbands should be of the same color and size from your selections above. Please choose which color and size you want to receive, and specify the quantity below.</div>            
 				</div>
 				<div class="area-conversion">
-					<table class="fwb-title">
+					<!-- <table class="fwb-title">
 						<tr>
 							<th>Style</th>
 							<th>Color</th>
 							<th>Size</th>
 						</tr>
-					</table>
+					</table> -->
+					<div class="row">
+						<div class="fwb-text col-md-6 col-sm-12 text-center">
+							<div class="col-xs-4"><h4>STYLE</h4></div>
+							<div class="col-xs-4"><h4>COLOR</h4></div>
+							<div class="col-xs-4"><h4>SIZE</h4></div>
+						</div>
+					</div>
 					<ul class="area-conversion-list">
 					</ul>
 						<div class="clearfix"></div>
@@ -361,7 +368,7 @@
 					</div>
 				</div>
 				<div class="submit">
-					<button class="done-button-fwb" type="button">
+					<button class="done-button-fwb btn-lg" type="button">
 						Done
 					</button>
 				</div>
@@ -509,9 +516,9 @@
 		</div>
 		<!-- End Modal Div -->
 		<div class="clearfix"></div>
-		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
-		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
-		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input  type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="text" name="adult-qty" class="qtyin-adult-qty" placeholder="Qty"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="text" name="medium-qty" class="qtyin-medium-qty" placeholder="Qty"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input  type="text" name="youth-qty" class="qtyin-youth-qty" placeholder="Qty"/></div>
 		<div class="clearfix"></div>
 		<!-- Start text color option -->
 		<div class="color-text" style="display:none">
@@ -529,8 +536,8 @@
 		<!-- End text color -->
 		<span class="view-more col-xs-12">View More Sizes</span>
 		<div class="show-content">
-			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
-			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
+			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="text" name="xt-small-qty" class="xt-small-qty" placeholder="Qty"/></div>
+			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="text" name="xt-large-qty" class="xt-large-qty" placeholder="Qty"/></div>
 		</div>
 	</div>
 </div>
@@ -561,9 +568,9 @@
 			</div>
 			<!-- End Modal Div -->
 		<div class="clearfix"></div>
-		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
-		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
-		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="text" name="adult-qty" class="qtyin-adult-qty" placeholder="Qty"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="text" name="medium-qty" class="qtyin-medium-qty" placeholder="Qty"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="text" name="youth-qty" class="qtyin-youth-qty" placeholder="Qty"/></div>
 		<div class="clearfix"></div>
 		<!-- Start text color option -->
 			<div class="color-text" style="display:none">
@@ -581,8 +588,8 @@
 		<!-- End text color -->
 		<span class="view-more col-xs-12">View More Sizes</span>
 		<div class="show-content">
-			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
-			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
+			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="text" name="xt-small-qty" class="xt-small-qty" placeholder="Qty"/></div>
+			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="text" name="xt-large-qty" class="xt-large-qty" placeholder="Qty"/></div>
 		</div>
 	</div>
 </div>
@@ -612,9 +619,9 @@
 			</div>
 		</div>
 		<!-- End Modal Div -->
-		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
-		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
-		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="text" name="adult-qty" class="qtyin-adult-qty" placeholder="Qty"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="text" name="medium-qty" class="qtyin-medium-qty" placeholder="Qty"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="text" name="youth-qty" class="qtyin-youth-qty" placeholder="Qty"/></div>
 		<div class="clearfix"></div>
 		<!-- Start text color option -->
 			<div class="color-text" style="display:none">
@@ -632,8 +639,8 @@
 		<!-- End text color -->
 		<span class="view-more col-xs-12">View More Sizes</span>
 		<div class="show-content" style="display:none">
-			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
-			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
+			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="text" name="xt-small-qty" class="xt-small-qty" placeholder="Qty"/></div>
+			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="text" name="xt-large-qty" class="xt-large-qty" placeholder="Qty"/></div>
 		</div>
 	</div>
 </div>
@@ -659,9 +666,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
-		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
-		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="text" name="adult-qty" class="qtyin-adult-qty" placeholder="Qty"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="text" name="medium-qty" class="qtyin-medium-qty" placeholder="Qty"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="text" name="youth-qty" class="qtyin-youth-qty" placeholder="Qty"/></div>
 		<div class="clearfix"></div>
 			<div class="color-text" style="display:none">
 				<div class="col-sm-1">
@@ -677,8 +684,8 @@
 			</div>
 		<span class="view-more col-xs-12">View More Sizes</span>
 		<div class="show-content" style="display:none">
-			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
-			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
+			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="text" name="xt-small-qty" class="xt-small-qty" placeholder="Qty"/></div>
+			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="text" name="xt-large-qty" class="xt-large-qty" placeholder="Qty"/></div>
 		</div>
 	</div>
 </div>
@@ -709,9 +716,9 @@
 		</div>
 		<!-- End Modal Div -->
 		<div class="clearfix"></div>
-		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
-		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
-		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input  type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="text" name="adult-qty" class="qtyin-adult-qty" placeholder="Qty"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="text" name="medium-qty" class="qtyin-medium-qty" placeholder="Qty"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input  type="text" name="youth-qty" class="qtyin-youth-qty" placeholder="Qty"/></div>
 		<div class="clearfix"></div>
 		<!-- Start text color option -->
 		<div class="color-text" style="display:none">
@@ -729,8 +736,8 @@
 		<!-- End text color -->
 		<span class="view-more col-xs-12">View More Sizes</span>
 		<div class="show-content">
-			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
-			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
+			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="text" name="xt-small-qty" class="xt-small-qty" placeholder="Qty"/></div>
+			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="text" name="xt-large-qty" class="xt-large-qty" placeholder="Qty"/></div>
 		</div>
 	</div>
 </div>
@@ -761,9 +768,9 @@
 			</div>
 			<!-- End Modal Div -->
 		<div class="clearfix"></div>
-		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
-		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
-		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="text" name="adult-qty" class="qtyin-adult-qty" placeholder="Qty"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="text" name="medium-qty" class="qtyin-medium-qty" placeholder="Qty"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="text" name="youth-qty" class="qtyin-youth-qty" placeholder="Qty"/></div>
 		<div class="clearfix"></div>
 		<!-- Start text color option -->
 			<div class="color-text" style="display:none">
@@ -781,8 +788,8 @@
 		<!-- End text color -->
 		<span class="view-more col-xs-12">View More Sizes</span>
 		<div class="show-content">
-			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
-			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
+			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="text" name="xt-small-qty" class="xt-small-qty" placeholder="Qty"/></div>
+			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="text" name="xt-large-qty" class="xt-large-qty" placeholder="Qty"/></div>
 		</div>
 	</div>
 </div>
@@ -812,9 +819,9 @@
 			</div>
 		</div>
 		<!-- End Modal Div -->
-		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-qty" class="qtyin-adult-qty" placeholder="0"/></div>
-		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-qty" class="qtyin-medium-qty" placeholder="0"/></div>
-		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="number" name="youth-qty" class="qtyin-youth-qty" placeholder="0"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="text" name="adult-qty" class="qtyin-adult-qty" placeholder="Qty"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="text" name="medium-qty" class="qtyin-medium-qty" placeholder="Qty"/></div>
+		<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="text" name="youth-qty" class="qtyin-youth-qty" placeholder="Qty"/></div>
 		<div class="clearfix"></div>
 		<!-- Start text color option -->
 			<div class="color-text" style="display:none">
@@ -832,8 +839,8 @@
 		<!-- End text color -->
 		<span class="view-more col-xs-12">View More Sizes</span>
 		<div class="show-content" style="display:none">
-			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="number" name="xt-small-qty" class="xt-small-qty" placeholder="0"/></div>
-			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="number" name="xt-large-qty" class="xt-large-qty" placeholder="0"/></div>
+			<div class="col-xs-4 col-sm-6"><label>Extra Small Qty</label><input type="text" name="xt-small-qty" class="xt-small-qty" placeholder="Qty"/></div>
+			<div class="col-xs-4 col-sm-6"><label>Extra Large Qty </label><input type="text" name="xt-large-qty" class="xt-large-qty" placeholder="Qty"/></div>
 		</div>
 	</div>
 </div>
