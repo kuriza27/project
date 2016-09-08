@@ -295,11 +295,15 @@ ORDER CSS
     color: #079ca5!important;
 }
 
-#banner-pricing .uk-table.uk-table-bordered th {
+#banner-pricing .uk-table.uk-table-bordered th{
     border-right-style: solid;
     border-right-width: 1px;
     width: 6.6%;
     text-align: center;
+}
+
+#banner-pricing .uk-table.uk-table-bordered th:last-child{
+    border-right: none;
 }
 
 #banner-pricing .uk-table.uk-table-bordered td{
@@ -310,8 +314,12 @@ ORDER CSS
     border-bottom-style: none;
 }
 
+#banner-pricing .uk-table.uk-table-bordered td:last-child{
+    border-right: none;
+}
+
 .uk-table.uk-table-bordered th, .uk-table.uk-table-bordered td{
-       border-color: #A1A1A1;
+    border-color: #A1A1A1;
 }
 
 .nav.nav-pills {
@@ -647,7 +655,7 @@ div#order-summary {
 	background-color: #17a589;
     color: #fff;
     border: 1px solid  #117864 ;
-    padding: 10px;
+    padding: 10px 50px;
     border-radius: 3px;
 }
 
@@ -996,8 +1004,8 @@ span.end-cc {
 
 .zoom {
     position: absolute;
-    left: 238px;
-    top: 13px;
+    right: 15px;
+    top: 15px;
     z-index: 999;
 }
 
@@ -1034,7 +1042,7 @@ input[type=file] {
 
 
 .fig_move{
-	top: 26px;
+    top: 26px;
 }
 
 button.fclip-3 {
@@ -1042,19 +1050,19 @@ button.fclip-3 {
 }
 
 span.fig-fc {
-	position: absolute;
+    position: absolute;
     top: 26px;
     left: 531px;
     z-index: 1;
 }
 
 .message_wristband_100{
-	padding:20px;
-	background: #f2fae3;
+    padding:20px;
+    background: #f2fae3;
     color: #659f13;
     border-color: rgba(101,159,19,.3);
-	margin-top: 14px;
-	text-align:center;
+    margin-top: 14px;
+    text-align:center;
 }
 
 .free-convert{
@@ -1066,18 +1074,37 @@ span.fig-fc {
 }
 
 .span-text-con1{
-	    font-size: 11px;
-		color:#5F5F5F;
+    color:#5F5F5F;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.area-conversion-list {
+    background-color: rgba(200,255,100,0.2);
+    padding: 15px 0;
 }
 
 .fwb-list {
+    font-size: 15px;
     list-style: none;
     padding: 4px;
-    font-size: 12px;
+    text-align: center;
 }
 
 .fwb-text{
-	width:220px;
+    color: #659f13;
+    min-height: 30px;
+    line-height: 30px;
+}
+
+.fwb-text h4{
+    font-weight: bolder;
+}
+
+input.freewb  {
+    border: 1px #CCCCCC dashed;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .submit {

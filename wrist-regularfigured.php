@@ -23,7 +23,7 @@
 				  <div class="tab-content">
 					<div id="home-fig-reg" class="tab-pane fade in active js-color" data-value="0" data-color="Solid">
 					  <h3>Solid Colors</h3> <button id="addCustomFiguredSolid" class="btn-add-custom-color"><i class="fa fa-plus"></i> Add Custom Color</button>
-					  <div id="main-color-content">
+					  <div id="main-color-content" class="main-color-content">
 					  <div class="col-xs-4 box-color">
 							<img class="PreviewFigColorModal" src="assets/images/src/custom.png"/>
 							<button id="custom-color-button" data-toggle="modal" data-target="#ColorFigRegModal">Custom Color</button>
@@ -539,7 +539,7 @@
 					<!-- End Home -->
 					<div id="segmented-fig-reg" class="tab-pane fade js-color" data-value="0.01" data-color="Segmented">
 					  <h3>Segmented Colors</h3> <button id="addCustomFiguredSegmented" class="btn-add-custom-color"><i class="fa fa-plus"></i> Add Custom Color</button>
-					  <div id="main-color-content">
+					  <div id="main-color-content" class="main-color-content">
 					     <div class="col-xs-4 box-color">
 							<img class="segPreviewFigColorModal" src="assets/images/src/custom.png"/>
 							<button id="custom-color-button" data-toggle="modal" data-target="#ColorFigRegSegModal">Custom Color</button>
@@ -1864,7 +1864,7 @@
 					<!-- End Segmented -->
 					<div id="swirls-fig-reg" class="tab-pane fade js-color" data-value="0.01" data-color="Swirls">
 					  <h3 style="width:auto;">Swirls Color</h3> <button id="addCustomFiguredSwirl" class="btn-add-custom-color"><i class="fa fa-plus"></i> Add Custom Color</button>
-					  <div id="main-color-content">
+					  <div id="main-color-content" class="main-color-content">
 						<div class="col-xs-4 box-color">
 							<img class="swlPreviewFigColorModal" src="assets/images/src/custom.png"/>
 							<button id="custom-color-button" data-toggle="modal" data-target="#ColorFigRegSwirlModal">Custom Color</button>
@@ -2783,7 +2783,7 @@
 					<!-- End Swirl -->
 					<div id="glow-fig-reg" class="tab-pane fade js-color" data-value="0.03" data-color="Glow">
 					  <h3>Glow</h3>
-					  <div id="main-color-content">
+					  <div id="main-color-content" class="main-color-content">
 						<div class="col-xs-4 box-color">
 							<img src="assets/images/figured/glow/GlowDarkFIGUREDBLUE.png"/>
 							<div class="nocustom_pick">Blue</div>

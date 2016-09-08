@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="../../favicon.ico">
 
-    <title>Promotional Wristbands</title>
+		<title>Promotional Wristbands</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Bootstrap core CSS -->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="assets/css/style_sheet.css" rel="stylesheet">
-	<link href="assets/css/order.css" rel="stylesheet">
-	<link href="assets/css/font_style.css" rel="stylesheet">
-	<link href="assets/css/magnific-popup.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="assets/css/style_sheet.css" rel="stylesheet">
+		<link href="assets/css/order.css" rel="stylesheet">
+		<link href="assets/css/font_style.css" rel="stylesheet">
+		<link href="assets/css/magnific-popup.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-   <link rel="stylesheet" type="text/css" href="assets/docs/spectrum.css">
-   <script src="assets/js/jquery-2.2.4.min.js"></script>
-   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+		<link rel="stylesheet" type="text/css" href="assets/docs/spectrum.css">
 
-	<!----<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.26.3/css/uikit.gradient.min.css">
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.26.3/css/components/tooltip.gradient.css">
+		<script src="assets/js/jquery-2.2.4.min.js"></script>
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
+		<!-- <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.26.3/css/uikit.gradient.min.css">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.26.3/css/components/tooltip.gradient.css">
+		-->
 
-	<script>
-	   $(function() {
-            $('#fs > option').hover(function() {
-                $(this).parent().css({fontFamily:$(this).val()})    
-			})            
-        })
-	</script>    
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
 
-
-  </head>
+		<script>
+			$(function() {
+				$('#fs > option').hover(function() {
+					$(this).parent().css({fontFamily:$(this).val()})    
+				});
+			});
+		</script>
+	</head>
 
 <body>
 
 	<!-- Google Tag Manager -->
-	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KFHV3B"
+	<!-- <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KFHV3B"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-KFHV3B');</script>
+	})(window,document,'script','dataLayer','GTM-KFHV3B');</script> -->
 	<!-- End Google Tag Manager -->
 	
 <?php include_once 'dbconfig.php'; ?>
