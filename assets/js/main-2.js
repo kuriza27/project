@@ -361,6 +361,33 @@ $(function(){
 		$('#float').css("font-size", $(this).val() + "px");
 	});
 	
+	
+	//change file-upload get value
+	$('input[class^="file"').change(function() {
+		if($(this).hasClass('file-1')){
+			$(".start-fc").html("<img width='30' height='30' src='assets/images/src/upload-icon.png'/>");
+		}
+		else if($(this).hasClass('file-2')){
+			$(".end-fc").html("<img width='30' height='30' src='assets/images/src/upload-icon.png'/>");
+		}
+		else if($(this).hasClass('file-3')){
+			$(".back-mc").html("<img width='30' height='30' src='assets/images/src/upload-icon.png'/>");
+		}
+		else if($(this).hasClass('file-4')){
+			$(".backend-mc").html("<img width='30' height='30' src='assets/images/src/upload-icon.png'/>");
+		}
+		else if($(this).hasClass('file-5')){
+			$(".start-cc").html("<img width='30' height='30' src='assets/images/src/upload-icon.png'/>");
+		}
+		else if($(this).hasClass('file-6')){
+			$(".end-cc").html("<img width='30' height='30' src='assets/images/src/upload-icon.png'/>");
+		}
+		else if($(this).hasClass('file-7')){
+			$(".fig-fc").html("<img width='30' height='30' src='assets/images/src/upload-icon.png'/>");
+		}
+		
+	});
+	
 	//show extra band size
 	$(".show-content").hide();
 	$("body").on("click", ".view-more", function() {

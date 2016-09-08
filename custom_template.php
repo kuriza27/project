@@ -113,10 +113,10 @@
 							<div class="clearfix"></div>
 							<div class="clip-sec col-xs-6 figarea" style="display:none;">
 								<button class="fclip-3" data-toggle="modal" data-target="#ClipArtModal">Figured Center Clipart</button><br />
-								<a href="javascript:void(0)" data-toggle="collapse" data-target="#upload-2">or Upload your own art</a>
-								<div id="upload-2" class="collapse">
+								<a href="javascript:void(0)" data-toggle="collapse" data-target="#upload-7">or Upload your own art</a>
+								<div id="upload-7" class="collapse">
 									<label for="file">Choose Photo:</label>
-									<input type="file" name="file-2" class="file-2" required><br>
+									<input type="file" name="file-7" class="file-7" required><br>
 									<a href="javascript:void(0)" id="remove-2">Remove File</a>
 								</div>
 							</div>
