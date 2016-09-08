@@ -720,7 +720,7 @@ $(function(){
 										html += '<div class="col-xs-4">'+color+'</div>';
 										html += '<div class="col-xs-4">'+sizeStrUp+'</div>';
 									html += '</div>';
-									html += '<div class="col-md-6 col-xs-12 align-right"><input type="number" class="freewb col-xs-12" id="freewb-'+type+'-'+sizeStr+'-'+colorStr+'" name="'+type+'-'+sizeStr+'-'+colorStr+'-fwb" placeholder="0" data-maxlength="3" /></div>';
+									html += '<div class="col-md-6 col-xs-12"><label>Input Quantity</label><input type="number" class="freewb col-xs-12" id="freewb-'+type+'-'+sizeStr+'-'+colorStr+'" name="'+type+'-'+sizeStr+'-'+colorStr+'-fwb" placeholder="0" data-maxlength="3" /></div>';
 									html += '<div class="clearfix"></div>';
 									html += '</li>';
 								$(".area-conversion-list").append(html);
@@ -1378,7 +1378,7 @@ function get_total_price(price, qty, wb_style, wb_size) {
 					html += '<div class="col-xs-3">'+color+'</div>';
 					html += '<div class="col-xs-3">'+sizeStrUp+'</div>';
 				html += '</div>';
-				html += '<div class="col-md-12 col-xs-6 align-right"><input type="number" class="freewb col-xs-12" id="freewb-'+type+'-'+sizeStr+'-'+colorStr+'" name="'+type+'-'+sizeStr+'-'+colorStr+'-fwb" placeholder="0" data-maxlength="3" /></div>';
+				html += '<div class="col-md-12 col-xs-6"><input type="number" class="freewb col-xs-12" id="freewb-'+type+'-'+sizeStr+'-'+colorStr+'" name="'+type+'-'+sizeStr+'-'+colorStr+'-fwb" placeholder="0" data-maxlength="3" /></div>';
 				html += '<div class="clearfix"></div>';
 				html += '</li>';
 			$('.js-item-summary').append(html);
