@@ -37,7 +37,7 @@
 					Eco Friendly<span class="red"></span><br>
 					Glitters<span class="red"></span><br>
 					Individually Pack<br>
-					Keychain <span class="red">(+$0.01)</span><br>
+					Keychain<br>
 				</p>
 				<h4>Shipping Turnaround Time</h4>
 				<p> Standard Shipping (10 to 14 days): <span class="red">FREE</span><br>
