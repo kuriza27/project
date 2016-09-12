@@ -484,6 +484,8 @@ $(function(){
 		$('.js-size').removeClass('active');
 		$(".wristband-view-color").hide();
 
+		$("#front-view, #back-view, #inside-view, #continue-view").attr('display', '');
+
 		var style = $('.js-style .wrist_style:checked').val();
 		$(".preview-panel").find("img").remove();
 		

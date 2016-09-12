@@ -697,15 +697,25 @@ li.active.select-box-col {
     margin: 20px auto 10px auto;
 }
 
-
-
 .set-height-fig{
+	background-image:url('/gd/img/belt/fig-base.png');
 	height: 104px;
-	}
-	
+}
+
+.set-height-fig .preview-text{
+	height: 104px;
+	line-height: 104px;
+}
+
 .set-height-reg{
+	background-image:url('/gd/img/belt/base.png');
 	height: 54px;
-	}
+}
+
+.set-height-reg .preview-text{
+	height: 54px;
+	line-height: 54px;
+}
 	
 .clipart-black img{
      -webkit-filter: drop-shadow(2px 2px 6px #909090 ); /* Chrome, Safari, Opera */

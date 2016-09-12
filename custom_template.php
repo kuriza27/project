@@ -217,7 +217,7 @@
 				<h3>PREVIEW</h3>
 				<div id="preview-pane" class="preview-panel">
 					<div class="fb-select">
-						<div id="front-view" class="band">
+						<div id="front-view" class="band <?php echo(($qstyle==='figured')?'set-height-fig':'set-height-reg'); ?>">
 						<span class="start-fc"></span>
 						<span class="end-fc"></span>
 						<span class="fig-fc"></span>
@@ -225,7 +225,7 @@
 								Front Message
 							</div>
 						</div>
-						<div id="back-view" class="band">
+						<div id="back-view" class="band <?php echo(($qstyle==='figured')?'set-height-fig':'set-height-reg'); ?>">
 							<span class="back-mc"></span>
 							<span class="backend-mc"></span>
 							<div class="preview-text faded" id="back-text">
@@ -235,7 +235,7 @@
 						<div class="clearfix"></div>
 					</div>
 					<div class="c-select" style="display:none;">
-						<div id="continue-view" class="band">
+						<div id="continue-view" class="band <?php echo(($qstyle==='figured')?'set-height-fig':'set-height-reg'); ?>">
 							<span class="start-cc"></span>
 							<span class="end-cc"></span>
 							<div class="preview-text faded" id="continue-text">
@@ -246,7 +246,7 @@
 				</div>
 				<div id="preview-pane" class="preview-panel">
 					<div class="i-select" style="display:block;">
-						<div id="inside-view" class="band">
+						<div id="inside-view" class="band <?php echo(($qstyle==='figured')?'set-height-fig':'set-height-reg'); ?>">
 							<span class="startIn-cc"></span>
 							<span class="endIn-cc"></span>
 							<div class="preview-text faded" id="inside-text">
