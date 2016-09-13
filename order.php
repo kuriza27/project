@@ -26,8 +26,13 @@
 
 <script>
 	var price_json = '<?php echo(json_encode($data)); ?>';
+	
+	//loader for order page
+	$(window).load(function() {
+		$(".loader").fadeOut("6000");
+	})
 </script>
-
+<div class="loader"></div>
 <div id="main-page-content">
 	<div class="container">
 
