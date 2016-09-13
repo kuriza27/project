@@ -1040,7 +1040,7 @@ input[type=file] {
 
 
 .fig_move{
-    top: 26px;
+    top: 36px;
 }
 
 button.fclip-3 {
@@ -1049,7 +1049,7 @@ button.fclip-3 {
 
 span.fig-fc {
     position: absolute;
-    top: 26px;
+    top: 36px;
     left: 531px;
     z-index: 1;
 }
