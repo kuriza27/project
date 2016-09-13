@@ -702,7 +702,15 @@ li.active.select-box-col {
 	height: 104px;
 }
 
-.set-height-fig .preview-text{
+.set-height-fig .preview-text,
+.set-height-fig .start-fc,
+.set-height-fig .end-fc,
+.set-height-fig .back-mc,
+.set-height-fig .backend-mc,
+.set-height-fig .start-cc,
+.set-height-fig .end-cc,
+.set-height-fig .startIn-cc,
+.set-height-fig .endIn-cc{
 	height: 104px;
 	line-height: 104px;
 }
@@ -712,7 +720,15 @@ li.active.select-box-col {
 	height: 54px;
 }
 
-.set-height-reg .preview-text{
+.set-height-reg .preview-text,
+.set-height-reg .start-fc,
+.set-height-reg .end-fc,
+.set-height-reg .back-mc,
+.set-height-reg .backend-mc,
+.set-height-reg .start-cc,
+.set-height-reg .end-cc,
+.set-height-fig .startIn-cc,
+.set-height-fig .endIn-cc{
 	height: 54px;
 	line-height: 54px;
 }

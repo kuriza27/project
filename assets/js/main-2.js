@@ -30,10 +30,11 @@ $(document).ready(function(){
 	//font-color selection per qty
 	$('body').on('click', '#FontColorQtyModal ul.font-color-list li', function(){
 		dynamic_font_color.css('background-color', '#'+$(this).attr('refcode')).attr('ref-font-color', $(this).attr('refcode'));
-		$('#FontColorQtyModal').modal('hide');
-		
-		$("#preview-pane-selection").html("");
 
+		$('#FontColorQtyModal').modal('hide');
+		$("#preview-pane-selection").html("");
+		// $("#front-view, #back-view, #inside-view, #continue-view").attr('style', '');
+		
 		var total = 0;
 		var map = [];
 
@@ -288,22 +289,8 @@ $(document).ready(function(){
 		console.log('Total : ' + $('#totalPrice').html());
 	});
 
-	// var has_checked = false;
-	// var has_checked_count = 0;
-	// var has_checked_count_value = $(".wrist_size").length;
-	// //Check if has default size
-	// $(".wrist_size").each(function(){
-	// 	has_checked_count++;
-	// 	if ($(this).prop('checked')==true) {
-	// 		has_checked == true;
-	// 	}
-	// 	if(has_checked_count == has_checked_count_value) {
-	// 		if(!has_checked) {
-	// 			$(".wrist_size:first").prop('checked', true);
-				get_style_size('price_table');
-	// 		}
-	// 	}
-	// });
+	// Initialize wristband price table
+	get_style_size('price_table');
 
 });
 
@@ -385,7 +372,6 @@ $(function(){
 		else if($(this).hasClass('file-7')){
 			$(".fig-fc").html("<img width='30' height='30' src='assets/images/src/upload-icon.png'/>");
 		}
-		
 	});
 	
 	//show extra band size
@@ -464,13 +450,23 @@ $(function(){
 		$('.js-style').find('input[type="radio"]').prop('checked', false);
 		$('.js-style').removeClass('active');
 		$('.click-pre').hide();
+
+		$(".wsize-default .js-size").hide();
+		$(".wristband-view-color").hide();
+		$('.js-size').removeClass('active');
+		$(".preview-panel").find("img").remove();
+
+		$(".preview-panel").attr('style', '');
+		$("#preview-pane-selection").html("");
+		$("#front-view, #back-view, #inside-view, #continue-view").attr('style', '');
 		
 		// Check & set as active
 		$(this).find('input[type="radio"]').prop('checked', true);
 		$(this).addClass('active');
 
 		//check style hide size divs
-		var style = $(this).find('input[type="radio"]').val();
+		// var style = $(this).find('input[type="radio"]').val();
+		var style = $('.js-style .wrist_style:checked').val();
 
 		if(style === "printed" || style === "ink-injected" || style === "embossed-printed" || style === "figured"){
 			$('.fntin').show().addClass('active');
@@ -478,16 +474,15 @@ $(function(){
 			$('.fntin').hide().removeClass('active');
 		}
 
-		$(".wsize-default .js-size").hide();
-		$(".wristband-view-color").hide();
-		
-		$('.js-size').removeClass('active');
-		$(".wristband-view-color").hide();
-
-		$("#front-view, #back-view, #inside-view, #continue-view").attr('display', '');
-
-		var style = $('.js-style .wrist_style:checked').val();
-		$(".preview-panel").find("img").remove();
+		if(style === "figured") {
+			$("#front-view, #back-view, #inside-view, #continue-view").addClass("set-height-fig");
+			$("#front-view, #back-view, #inside-view, #continue-view").removeClass("set-height-reg");
+			$(".preview-text").css("line-height", "104px");
+		} else {
+			$("#front-view, #back-view, #inside-view, #continue-view").addClass("set-height-reg");
+			$("#front-view, #back-view, #inside-view, #continue-view").removeClass("set-height-fig");
+			$(".preview-text").css("line-height", "54px");
+		}
 		
 		if(style == "figured") {
 			// Show sizes
@@ -660,7 +655,8 @@ $(function(){
 
 		$(".area-conversion-list").html("");
 		$("#preview-pane-selection").html("");
-
+		// $("#front-view, #back-view, #inside-view, #continue-view").attr('style', '');
+		
 		var total = 0;
 		var style = $('.js-style .wrist_style:checked').val();
 		var size = $('.js-size .wrist_size:checked').val();
