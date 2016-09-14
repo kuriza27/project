@@ -541,8 +541,9 @@ div#preview-textfont{
 }
 
 .total-area {
-    padding: 16px;
     background: #008da9;
+    margin: 20px 0;
+    padding: 16px;
 }
 
 .total-area h1{
