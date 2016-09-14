@@ -51,7 +51,7 @@
 							<div class="clearfix"></div>
 							<div class="col-xs-4 col-sm-4"><label>Adult Qty </label><input type="number" name="adult-large-qty" class="qtyin-adult-large-qty" placeholder="0"/></div>
 							<div class="col-xs-4 col-sm-4"><label>Medium Qty</label><input type="number" name="medium-large-qty" class="qtyin-medium-large-qty" placeholder="0"/></div>
-							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input  type="number" name="youth-large-qty" class="qtyin-youth-large-qty" placeholder="0"/></div>
+							<div class="col-xs-4 col-sm-4"><label>Youth Qty </label><input type="number" name="youth-large-qty" class="qtyin-youth-large-qty" placeholder="0"/></div>
 							<div class="clearfix"></div>
 							<!---------Start text color option------------>
 								<div class="color-text" style="display:none">

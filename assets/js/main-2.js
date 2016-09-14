@@ -94,7 +94,7 @@ $(document).ready(function(){
 					if(ref_color_arr=="000000" && ref_color_font == "000000"){
 						ref_color_font = "464646";
 					}
-					S('.click-pre').show();
+					$('.click-pre').show();
 					$("#preview-pane-selection").append('<li class="blink preview-pill preview-color-'+ref_type+'-'+ref_color_arr.join("-")+'-font-'+ref_color_font+'" data-type="'+ref_type+'" data-font-color="'+ref_color_font+'" data-image-link="gd/belt.php?style='+ref_type+'&type='+style+'&color='+ref_color_arr.join(",")+'" style="background-image:url(\'gd/belt.php?style='+ref_type+'&color='+ref_color_arr.join(",")+'\');background-size:30px;background-repeat: no-repeat;background-size: 100% 100%;color:#'+ref_color_font+'">Y</li>');
 
 				}
@@ -274,19 +274,126 @@ $(document).ready(function(){
 	});
 
 	//submit order form
-	$('body').on('submit', '#order-form', function(e) {
+	$('body').on('click', '#submitOrder', function(e) {
 		e.preventDefault();
 		e.stopPropagation();
 
+		//get JSON Price list
+		var $collection = {};
+		var $total_qty = 0;
+		var $total_prc = 0;
+		var $data = $.parseJSON(price_json);
+		var $size = $('.js-size .wrist_size:checked').val();
+		var $style = $('.js-style .wrist_style:checked').val();
+
+		$('.wrist_color_container:visible .js-color input[name$="-qty"]').each(function() {
+			var qty = $(this).val();
+
+			if(qty) {
+				qty = parseInt(qty);
+				if(qty > 0) {
+					// Variables
+					var ref_color = $(this).attr('ref'); if(!ref_color){ return; }
+					var ref_color_font = $(this).parents('.qty-box').find('.fntin').attr('ref-font-color');
+					var ref_color_title = "Custom"; if(typeof $(this).attr('reftitle') != "undefined" && $(this).attr('reftitle') != "") { ref_color_title = $(this).attr('reftitle'); }
+					var ref_color_str = ref_color.replace(/,/g, '-');
+					var ref_color_arr = ref_color.split(',');
+					var ref_size_name = $(this).attr("name");
+					var ref_type = $(this).parents('.tab-pane').data('color').toLowerCase();
+
+					// Fix proper type and color per type
+					if(ref_type === "swirls") {
+						ref_type = "swirl";
+					} else if (ref_type === "dual") { // Fix dual's proper values
+						ref_type = "solid";
+						ref_color_font = ref_color_arr[1];
+						ref_color_arr = ref_color_arr.slice(0,1);
+					}
+
+					// Fix proper font-color
+					if ($style === "debossed") {
+						ref_color_font = "000000";
+					} else if ($style === "embossed") {
+						ref_color_font = "000000";
+					}
+
+					// Check and change
+					if(ref_type === "swirls") { ref_type = "swirl"; }
+
+					// List all items with quantity
+					if(typeof $collection[ref_type] == "undefined" || $collection[ref_type] == null) {
+
+						var $price = 0;
+						var hasQty = false;
+
+						// Get item price
+						$.each($data[$style][$size], function(_data_qty, _data_prc){
+							if(hasQty === false) {
+								if(qty <= parseInt(_data_qty)) {
+console.log("<qty")
+									$price = parseFloat(_data_prc);
+								} else if(qty < 20) {
+console.log("<20");
+									$price = parseFloat($data[$style][$size]['20']);
+								} else {
+console.log("else");
+									hasQty = true;
+								}
+							}
+						});
+
+						$collection[ref_type] = { price:$price, qty:parseInt(qty), size:$size, total:0, data:[] };
+					} else {
+
+						$collection[ref_type].qty += parseInt(qty);
+					}
+
+					$collection[ref_type].total += $collection[ref_type].price * $collection[ref_type].qty;
+					$collection[ref_type].data.push({ color:ref_color_arr, font:ref_color_font, name:ref_color_title.toString().toLowerCase(), size:ref_size_name.toString().toLowerCase().replace("-qty", "") });
+
+					// Calculate total quantity
+					$total_qty += parseInt(qty);
+				}
+			}
+		});
+
+		// After prod and shipping prices are fetched, Do Calculations
+		// $.each(arrBand, function(bKey, bVal) {
+		// 	var subPrice = 0;
+		// 	var ttlSubPrice = 0;
+		// 	var hasQty = false;
+
+		// 	// Get item price
+		// 	$.each(bVal.price, function(pQty, pPrice){
+		// 		if(hasQty === false) {
+		// 			if(pQty <= bVal.qty) {
+		// 				subPrice = parseFloat(pPrice);
+		// 			} else if(bVal.qty < 20) {
+		// 				subPrice = parseFloat(bVal.price['20']);
+		// 			} else {
+		// 				hasQty = true;
+		// 			}
+		// 		}
+		// 	});
+
+		// 	// Calculate total price
+		// 	ttlSubPrice = parseFloat(subPrice) * parseFloat(bVal.qty);
+		// 	ttlPrice += parseFloat(ttlSubPrice);
+		// });
+
 		console.log('DATA >>>');
-		console.log('Style : ' + $('#wristband_style').html() );
-		console.log('Size  : ' + $('#wristband_size').html() );
-		console.log('Price (Addon) : ' + $('#wristband_add_ons').html() );
-		console.log('Price (Prod)  : ' + $('#wristband_ptime').attr('data-production-price') );
-		console.log('Price (Ship)  : ' + $('#wristband_stime').attr('data-shipping-price') );
-		console.log('Days (Prod) : ' + $('#wristband_ptime').attr('data-production-time') );
-		console.log('Days (Ship) : ' + $('#wristband_stime').attr('data-shipping-time') );
-		console.log('Total : ' + $('#totalPrice').html());
+		// console.log('Style : ' + $('#wristband_style').html() );
+		// console.log('Size  : ' + $('#wristband_size').html() );
+		// console.log('Price (Addon) : ' + $('#wristband_add_ons').html() );
+		// console.log('Price (Prod)  : ' + $('#wristband_ptime').attr('data-production-price') );
+		// console.log('Price (Ship)  : ' + $('#wristband_stime').attr('data-shipping-price') );
+		// console.log('Days (Prod) : ' + $('#wristband_ptime').attr('data-production-time') );
+		// console.log('Days (Ship) : ' + $('#wristband_stime').attr('data-shipping-time') );
+		// console.log('Total : ' + $('#totalPrice').html());
+		console.log($collection);
+		// console.log(size);
+		// console.log(style);
+		// console.log(ttlPrice);
 	});
 
 	// Initialize wristband price table
@@ -694,8 +801,12 @@ $(function(){
 						var name = $(this).attr("name");
 						var ref_color_font = $(this).parents('.qty-box').find('.fntin').attr('ref-font-color');
 						var idx = ref_type+"-"+style+"-"+name;
-						var color_title = $(this).attr('reftitle');
-							qty = parseInt(qty);
+						var color_title = "Custom";
+						if(typeof $(this).attr('reftitle') !== "undefined" && $(this).attr('reftitle') !== "") {
+							color_title = $(this).attr('reftitle');
+						}
+
+						qty = parseInt(qty);
 
 						if(qty>0){
 							$('.prod-ship').css('display','block');
@@ -762,44 +873,6 @@ $(function(){
 		// END AJAX
 
 	});
-
-
-	// $('body').on('click', '#free-100-wristband', function(){
-	// 	if($(this).hasClass('checked')){
-	// 		$(this).prop('checked',false);
-	// 		$(this).removeClass('checked');
-	// 		$('#dv-100-free-band-content').hide();
-	// 	}else{
-	// 		$(this).prop('checked',true);
-	// 		$(this).addClass('checked');
-	// 		$('#dv-100-free-band-content').show();
-	// 	}
-	// });
-	
-	// $('body').on('click', '.done-free', function(){
-	// 	total = 0;
-	// 	$('.freewb-input').each(function(){
-	// 		var qty = ($(this).val()) ? parseInt($(this).val()) : 0;
-	// 		total+=qty;
-	// 	});
-
-	// 	if(total>100) {
-	// 		alert("Total must not be over 100 wristbands.");
-	// 		return;
-	// 	}
-
-	// 	$('#wb-free-count').html(total+' of 100');
-
-	// 	if($(this).hasClass('done')){
-	// 		$(this).hide();
-	// 		$('.done-free.update').show();
-	// 		$('.freewb-input').prop('disabled', true);
-	// 	}else if($(this).hasClass('update')){
-	// 		$(this).hide();
-	// 		$('.done-free.done').show();
-	// 		$('.freewb-input').prop('disabled', false)
-	// 	}
-	// });
 
 	// Colorpicker
 	$('.pick-color-list li').click(function(){
@@ -1457,8 +1530,6 @@ function get_total_price(price, qty, wb_style, wb_size) {
 
 	$('#totalPrice').text(formatCurrency(total_price));
 	$('#totalPrice').attr('data-total', total_price);
-
-
 
 	$('.js-total').fadeIn(300);
 	$('.js-no-total').hide();

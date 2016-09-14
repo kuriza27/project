@@ -474,7 +474,7 @@
 				</div>
 				<div class="col-md-12">
 					<div class="button-cart">
-						<button type="submit">Add to Cart</button>
+						<button id="submitOrder" type="submit">Add to Cart</button>
 					</div>
 				</div>
 				<div class="clearfix"></div>
