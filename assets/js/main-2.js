@@ -308,16 +308,24 @@ $(document).ready(function(){
 		$collection.total_price += parseFloat($collection.shipping_price);
 		$collection.total_price += parseFloat($collection.production_price);
 		// Get texts
-		$.each($('.band-text'), function(key, obj){
-			$collection.text[$(obj).attr('name')] = $(obj).val().trim();
-		});
+		$text_type = $("input[type='radio'].band-text-design:checked").val();
+		if ($text_type == "front-back-select") {
+			$collection.text["type"] = "regular";
+			$collection.text["text_back"] = $("#input-back-text").val();
+			$collection.text["text_front"] = $("#input-front-text").val();
+			$collection.text["text_inside"] = $("#input-inside-text").val();
+		} else {
+			$collection.text["type"] = "continuous";
+			$collection.text["text_continue"] = $("#input-continue-text").val();
+			$collection.text["text_inside"] = $("#input-inside-text").val();
+		}
 		// Get icons
-		// $collection.icon["front_start"] = new FormData($("input[type='file'].file-1")[0]);
-		// $collection.icon["front_end"] = new FormData($("input[type='file'].file-2")[0]);
-		// $collection.icon["back_start"] = new FormData($("input[type='file'].file-3")[0]);
-		// $collection.icon["back_end"] = new FormData($("input[type='file'].file-4")[0]);
-		// $collection.icon["continues_start"] = new FormData($("input[type='file'].file-5")[0]);
-		// $collection.icon["continues_end"] = new FormData($("input[type='file'].file-6")[0]);
+		$collection.icon["front_start"]		= $(".start-fc img").attr("src");
+		$collection.icon["front_end"]		= $(".end-fc img").attr("src");
+		$collection.icon["back_start"]		= $(".back-mc img").attr("src");
+		$collection.icon["back_end"]		= $(".backend-mc img").attr("src");
+		$collection.icon["continues_start"]	= $(".start-cc img").attr("src");
+		$collection.icon["continues_end"]	= $(".end-cc img").attr("src");
 		// Get all wristbands with quantity
 		$(".wrist_color_container:visible .js-color input[name$='-qty']").each(function() {
 			// Get quantity
@@ -431,15 +439,25 @@ $(document).ready(function(){
 			}
 		});
 
-		$.ajax({
-			type : 'POST',
-			url : 'submit_order.php', //this should be url to your PHP file
-			dataType : 'jsonp',
-			data : $collection,
-			beforeSend : function() {},
-			complete : function() {},
-			success : function(html) {}
+		var $form_data = new FormData();
+		$form_data.append('file-1', $("input[type='file'].file-1")[0].files[0]);
+		$form_data.append('file-2', $("input[type='file'].file-2")[0].files[0]);
+		$form_data.append('file-3', $("input[type='file'].file-3")[0].files[0]);
+		$form_data.append('file-4', $("input[type='file'].file-4")[0].files[0]);
+		$form_data.append('file-5', $("input[type='file'].file-5")[0].files[0]);
+		$form_data.append('file-6', $("input[type='file'].file-6")[0].files[0]);
+		$form_data.append('data', JSON.stringify($collection));
+
+		jQuery.ajax({
+			url: 'submit_order.php',
+			data: $form_data,
+			cache: false,
+			contentType: false,
+			processData: false,
+			type: 'POST',
+			success: function(data){ }
 		});
+
 		// console.log($collection);
 	});
 
@@ -903,7 +921,7 @@ $(function(){
 										html += '<div class="col-xs-4">'+color+'</div>';
 										html += '<div class="col-xs-4">'+sizeStrUp+'</div>';
 									html += '</div>';
-									html += '<div class="col-md-6 col-xs-12"><label>Input Quantity</label><input type="number" class="freewb col-xs-12" id="freewb-'+type+'-'+sizeStr+'-'+colorStr+'" name="'+type+'-'+sizeStr+'-'+colorStr+'-fwb" placeholder="0" data-maxlength="3" data-color="'+ref_color_arr.join(",")+'" data-font-color="'+ref_color_font+'" data-name="'+color+'" data-size="'+sizeStr+'" /></div>';
+									html += '<div class="col-xs-12 col-md-6"><label class="fwb-text col-sm-12 hidden-md hidden-lg">INPUT QUANTITY</label><input type="number" class="freewb col-xs-12" id="freewb-'+type+'-'+sizeStr+'-'+colorStr+'" name="'+type+'-'+sizeStr+'-'+colorStr+'-fwb" placeholder="0" data-maxlength="3" data-color="'+ref_color_arr.join(",")+'" data-font-color="'+ref_color_font+'" data-name="'+color+'" data-size="'+sizeStr+'" /></div>';
 									html += '<div class="clearfix"></div>';
 									html += '</li>';
 								$(".area-conversion-list").append(html);

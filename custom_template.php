@@ -79,10 +79,10 @@
 				</div>
 				<div class="message-selection">
 					<div class="col-sm-3">
-						<input class="front-back-select" type="radio" value="front-back-select" name="font-back-select" checked="checked"/>Font/Back Message
+						<input class="band-text-design front-back-select" type="radio" value="front-back-select" name="font-back-select" checked="checked"/>Font/Back Message
 					</div>
 					<div class="col-sm-3">
-						<input class="cont-select" type="radio" value="cont-select" name="cont-select"/>Continuous Message
+						<input class="band-text-design cont-select" type="radio" value="cont-select" name="cont-select"/>Continuous Message
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -91,7 +91,7 @@
 						<div class="col-sm-5"   style="border-right:2px solid #154360;margin-left:50px;">
 							<span>Front Message:</span><br />
 							<span class="note-m">* Maximum of 22 characters for both front and back</span>
-							<input type="text" name="front-text" class="band-text" value=""  placeholder="Enter Front Message" maxlength="22">
+							<input id="input-front-text" type="text" name="front-text" class="band-text" value=""  placeholder="Enter Front Message" maxlength="22">
 							<div class="clip-sec col-xs-6">
 								<button class="fclip-1" data-toggle="modal" data-target="#ClipArtModal" style="margin-left:-14px;">Front Start Clipart</button><br />
 								<a href="javascript:void(0)" data-toggle="collapse" data-target="#upload-1">or Upload your own art</a>
@@ -125,7 +125,7 @@
 						<div class="col-sm-5" style="margin-left:60px;">
 							<span>Back Message:</span><br />
 							<span class="note-m">* Maximum of 22 characters for both front and back</span>
-							<input type="text" name="back-text" class="band-text" value="" placeholder="Enter Back Message" maxlength="22">
+							<input id="input-back-text" type="text" name="back-text" class="band-text" value="" placeholder="Enter Back Message" maxlength="22">
 							<div class="clip-sec col-xs-6">
 								<button class="bclip-1" data-toggle="modal" data-target="#ClipArtModal" style="margin-left:-14px;">Back Start Clipart</button><br />
 								<a href="javascript:void(0)" data-toggle="collapse" data-target="#upload-3">or Upload your own art</a>
@@ -152,7 +152,7 @@
 						<div class="col-sm-8">
 						<span class="inside-m">Continuous Text:</span><br /> &nbsp;
 						* Maximum of 22 characters for message<br /> 
-						<input type="text" name="continue-text" class="band-text" value=""  placeholder="Enter Continuous Message" maxlength="22">
+						<input id="input-continue-text" type="text" name="continue-text" class="band-text" value=""  placeholder="Enter Continuous Message" maxlength="22">
 						</div>
 						<div class="clearfix"></div>
 						<div class="clip-sec" style="float:left;width:20%;margin-left:16px;">
@@ -181,7 +181,7 @@
 							<span class="inside-m">Inside Text:</span><br /> &nbsp;
 							* Maximum of 22 characters for message
 							<br /> 
-							<input type="text" name="inside-text" class="band-text" value=""  placeholder="Enter Inside Message" maxlength="22" style="width:100%;">
+							<input id="input-inside-text" type="text" name="inside-text" class="band-text" value=""  placeholder="Enter Inside Message" maxlength="22" style="width:100%;">
 							<br /><br />
 						</div>
 						<div class="clearfix"></div>
@@ -356,6 +356,9 @@
 							<div class="col-xs-4"><h4>STYLE</h4></div>
 							<div class="col-xs-4"><h4>COLOR</h4></div>
 							<div class="col-xs-4"><h4>SIZE</h4></div>
+						</div>
+						<div class="fwb-text col-md-6 hidden-sm hidden-xs text-center">
+							<div class="col-xs-12"><h4>INPUT QUANTITY</h4></div>
 						</div>
 					</div>
 					<ul class="area-conversion-list">

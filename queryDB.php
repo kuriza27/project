@@ -144,21 +144,21 @@
 
 	}
 
-	function getAddOnsPrice($addons,$size,$qty)
+	function getAddOnsPrice($addons,$qty)
 	{
-		$strWhere = "";
-		foreach ($addons as $key => $value) {
-			if($strWhere==="") {
-				$strWhere .= "'".$value."'";
-			} else {
-				$strWhere .= ",'".$value."'";
-			}
-		}
-
-		return $sql = "SELECT * 
-							FROM add_ons AS ao 
-					  JOIN price_add_ons AS pao ON ao.id = pao.add_on_id 
-					  WHERE ao.code IN (".$strWhere.") AND qty >= '20' AND qty < '50'";
+		return $sql = "	SELECT * FROM add_ons AS ao 
+						JOIN price_add_ons AS pao ON ao.id = pao.add_on_id 
+						WHERE 
+							ao.code ='" . $addons . "' 
+						AND 
+							pao.qty = (	SELECT CASE 
+												WHEN MAX(paos.qty) IS NULL 
+												THEN 0 
+												ELSE MAX(paos.qty) 
+										END as qty 
+										FROM price_add_ons AS paos 
+										WHERE paos.qty BETWEEN '0' AND '" . $qty . "' )
+						ORDER BY pao.qty ASC";
 	}
 
 ?>

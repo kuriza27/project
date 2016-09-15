@@ -1093,6 +1093,7 @@ span.fig-fc {
 .fwb-text{
     color: #659f13;
     min-height: 30px;
+    height: 35px;
     line-height: 30px;
 }
 
@@ -1103,6 +1104,7 @@ span.fig-fc {
 input.freewb  {
     border: 1px #CCCCCC dashed;
     border-radius: 5px;
+    height: 35px;
     text-align: center;
 }
 
