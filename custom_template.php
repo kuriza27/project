@@ -445,18 +445,29 @@
 						<div class="summary-table">
 							<div class="row">
 								<div class="col-md-12">
-									<p><strong>
-										Style: <u><span id="wristband_style"></span></u> <br>
-										Size: <u><span id="wristband_size"></span></u> <br><br>
-										Add-Ons Total: <u><span id="wristband_add_ons" data-addon-total="0">$0.00</span></u><br><br>
-										<!-- Free Add-Ons Total: <u><span id="wristband_free_add_ons" data-addon-total="0">$0.00</span></u><br><br> -->
-										Production Time: <u><span id="wristband_ptime" data-production-time="0" data-production-price="0">$0.00</span></u><br>
-										Shipping Time: <u><span id="wristband_stime" data-shipping-time="0" data-shipping-price="0">$0.00</span></u>
-									</strong></p>
+									<p>
+										<strong>Style : </strong>
+										<u><span id="wristband_style"></span></u>
+										<br />
+										<strong>Size : </strong>
+										<u><span id="wristband_size"></span></u>
+										<br />
+										<br />
+										<strong>Add-Ons Total : </strong>
+										<u><span id="wristband_add_ons" data-addon-total="0">$0.00</span></u>
+										<br />
+										<span id="wristband_add_on_list"></span>
+										<br />
+										<strong>Production Time : </strong>
+										<u><span id="wristband_ptime" data-production-time="0" data-production-price="0">0 Days ($0.00)</span></u>
+										<br />
+										<strong>Shipping Time : </strong>
+										<u><span id="wristband_stime" data-shipping-time="0" data-shipping-price="0">0 Days ($0.00)</span></u>
+									</p>
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-md-8 col-sm-6"><strong>Colors</strong></div>
+								<div class="col-md-8 col-sm-6"><strong>Colors : </strong></div>
 								<div class="col-md-4 col-sm-6 align-right"><strong>Subtotal</strong></div>
 							</div>
 							<div class="summary-list-item js-item-summary">
@@ -473,7 +484,7 @@
 						</div>
 					</div>
 					<hr>
-					<h1 class="align-right">Total: <span id= "totalPrice" data-total="0">$ 0.00</span></h1>
+					<h1 class="align-right">Total: <span id= "totalPrice" data-total="0">$0.00</span></h1>
 				</div>
 				<div class="col-md-12">
 					<div class="button-cart">

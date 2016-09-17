@@ -1,38 +1,59 @@
 <?php include_once 'header.php'; ?>
 <?php include_once 'queryDB.php'; ?>
 <?php
-
-	// SQL query
-	$sql = getPriceJSON();
-	$result = $conn->query($sql);
-
 	// Variables needed
-	$count_style = 0;
-	$data = $style = $style_array = [];
+	$dataJSONpriceWband = $priceWband = [];
+	$dataJSONpriceAddon = $priceAddon = [];
 
-	if ($result->num_rows > 0) {
-		while($row = $result->fetch_assoc()) {
-			$style[strtolower($row['style_code'])][$row['size_code']][$row['qty']] = $row['price'];
+	// Start :: For JSON wristband prices
+	// Get query string
+	$sql = getPriceJSON();
+	// Run SQL
+	$resultPrice = $conn->query($sql);
+	// Get results
+	if ($resultPrice->num_rows > 0) {
+		while($row = $resultPrice->fetch_assoc()) {
+			$priceWband[strtolower($row['style_code'])][$row['size_code']][$row['qty']] = $row['price'];
 		}
-		$data = $style;
+		$dataJSONpriceWband = $priceWband;
 	}
+	// End :: For JSON wristband prices
+
+
+	// Start :: For JSON add-on prices
+	// Get query string
+	$sql = getAddOnJSON();
+	// Run SQL
+	$resultAddOnPrice = $conn->query($sql);
+	// Get results
+	if ($resultAddOnPrice->num_rows > 0) {
+		while($row = $resultAddOnPrice->fetch_assoc()) {
+			$priceAddon[strtolower($row['code'])][$row['qty']] = $row['price'];
+		}
+		$dataJSONpriceAddon = $priceAddon;
+	}
+	// End :: For JSON add-on prices
+
 
 	// Get wristband style
 	$qstyle = strtolower((isset($_GET['q'])&&!empty($_GET['q'])) ? $_GET['q'] : "printed");
 	// Double check if existing
-	if(!isset($data[$qstyle])) { $qstyle = "printed"; }
+	if(!isset($dataJSONpriceWband[$qstyle])) { $qstyle = "printed"; }
 
 ?>
 
 <script>
-	var price_json = '<?php echo(json_encode($data)); ?>';
-	
+	var price_json = '<?php echo(json_encode($dataJSONpriceWband)); ?>';
+	var addon_json = '<?php echo(json_encode($dataJSONpriceAddon)); ?>';
+
 	//loader for order page
 	$(window).load(function() {
 		$(".loader").fadeOut("6000");
-	})
+	});
 </script>
+
 <div class="loader"></div>
+
 <div id="main-page-content">
 	<div class="container">
 

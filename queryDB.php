@@ -161,4 +161,10 @@
 						ORDER BY pao.qty ASC";
 	}
 
+	function getAddOnJSON()
+	{
+		$sql = "SELECT ao.id AS `id`, ao.code AS `code`, pao.qty AS `qty`, pao.price AS `price` FROM price_add_ons AS pao JOIN add_ons AS ao ON pao.add_on_id = ao.id";
+				
+		return $sql;
+	}
 ?>
