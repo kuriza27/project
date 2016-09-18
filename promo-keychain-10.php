@@ -85,6 +85,26 @@
 				<button type="button" class="btn btn-default modal-close" data-dismiss="modal" style="padding:10px 15px;">Close</button>
 			</div>
 		</div>
-		<!---------End Modal Content-------------->
+		<!-- End Modal Content -->
+	</div>
+</div>
+
+<div class="modal fade" id="modal-100-free-wristbands" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Error</h4>
+			</div>
+			<div class="modal-body text-center">
+				<h2 style="font-size:25px;padding:10px 0;">Total quantity must not be over 100 pieces.</h2>
+				<div class="clearfix"></div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default modal-close" data-dismiss="modal" style="padding:10px 15px;">Close</button>
+			</div>
+		</div>
+		<!-- End Modal Content -->
 	</div>
 </div>
