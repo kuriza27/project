@@ -328,54 +328,6 @@
 				<?php include "promo-keychain-10.php"; ?>
 			</div>
 				
-			<!-- Message 100 Free -->
-			<div class="col-md-12 message_wristband_100" style="display:none">
-				<h3>You have <strong class="js-free-bands-count">100</strong> <strong>FREE</strong> wristbands!</h3>
-				<label class="js-free-bands-accept">
-				<div class="free-wristbands"><input type="checkbox" name="add-ons-extra" data-code="free-wristbands" class="free-bands"/> <span style="margin-left:10px;">Click to claim free wristbands</span></div></label>
-			</div>
-			<!-- End message for 100 free -->
-			<!-- Box for conversion wristbands -->
-			<div  class="col-md-12 free-convert" data-free-entered="0" style="display:none;">
-				<h4>
-					<label>Free Wristbands Color, Size and Quantity</label>
-				</h4>
-				<div class="span-text-con1">
-					<div> Your free wristbands should be of the same color and size from your selections above. Please choose which color and size you want to receive, and specify the quantity below.</div>            
-				</div>
-				<div class="area-conversion">
-					<!-- <table class="fwb-title">
-						<tr>
-							<th>Style</th>
-							<th>Color</th>
-							<th>Size</th>
-						</tr>
-					</table> -->
-					<div class="row">
-						<div class="fwb-text col-md-6 col-sm-12 text-center">
-							<div class="col-xs-4"><h4>STYLE</h4></div>
-							<div class="col-xs-4"><h4>COLOR</h4></div>
-							<div class="col-xs-4"><h4>SIZE</h4></div>
-						</div>
-						<div class="fwb-text col-md-6 hidden-sm hidden-xs text-center">
-							<div class="col-xs-12"><h4>INPUT QUANTITY</h4></div>
-						</div>
-					</div>
-					<ul class="area-conversion-list">
-					</ul>
-						<div class="clearfix"></div>
-				</div>
-				<div class="js-free-bands" style="display:none">
-					<div style="color:#00C273;text-align:center;">
-						<div>Free wristband quantities have been saved.</div>
-					</div>
-				</div>
-				<div class="submit">
-					<button class="done-button-fwb btn-lg" type="button">
-						Done
-					</button>
-				</div>
-			</div>
 			<!-- End conversion wristbands -->
 			<div class="col-md-4 add-ons">
 				<div class="box-thumb"><a href="assets/images/src/add-ons/3mm-thick.png" title="3mm thick option"><img src="assets/images/src/add-ons/3mm-thick.png" class="galleryimg"></a></div>

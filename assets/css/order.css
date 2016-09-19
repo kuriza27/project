@@ -1056,10 +1056,7 @@ span.fig-fc {
 }
 
 .message_wristband_100{
-    padding:20px;
-    background: #f2fae3;
-    color: #659f13;
-    border-color: rgba(101,159,19,.3);
+    color: #ffffff;
     margin-top: 14px;
     text-align:center;
 }
@@ -1067,34 +1064,42 @@ span.fig-fc {
 .free-convert{
     margin-bottom: 15px;
     padding: 20px;
-    border: 1px dashed #ddd;
-    background: #fafafa;
-    color: #444;
+    color: #ffffff;
 }
 
 .span-text-con1{
-    color:#5F5F5F;
+    color:#FFFFFF;
     font-size: 12px;
     margin-bottom: 10px;
 }
 
 .area-conversion-list {
-    background-color: rgba(200,255,100,0.2);
-    padding: 15px 0;
+    background-color: rgb(7, 153, 182);
+    margin-bottom: 25px;
+    padding: 0;
 }
 
 .fwb-list {
+    border-bottom: 1px solid #008da9;
     font-size: 15px;
     list-style: none;
-    padding: 4px;
+    padding: 10px 0 10px 0;
     text-align: center;
 }
 
 .fwb-text{
-    color: #659f13;
-    min-height: 30px;
     height: 35px;
     line-height: 30px;
+    min-height: 30px;
+    padding: 0;
+}
+
+.fwb-text .col-xs-4{
+    height: 100%;
+}
+
+.fwb-text .fwb-text-header{
+    text-decoration: underline;
 }
 
 .fwb-text h4{
@@ -1102,7 +1107,8 @@ span.fig-fc {
 }
 
 input.freewb  {
-    border: 1px #CCCCCC dashed;
+    /*border: 1px #CCCCCC dashed;*/
+    border: none;
     border-radius: 5px;
     height: 35px;
     text-align: center;
