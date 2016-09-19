@@ -1540,7 +1540,7 @@ function getTotalData() {
 		if($qty) {
 			$qty = parseInt($qty);
 			if($qty > 0) {
-				// Variables
+				// Set variables
 				var _ref_color = $(this).attr("ref"); if(!_ref_color){ return; }
 				var _ref_color_font = $(this).parents(".qty-box").find(".fntin").attr("ref-font-color");
 				var _ref_color_title = "Custom"; if(typeof $(this).attr("reftitle") != "undefined" && $(this).attr("reftitle") != "") { _ref_color_title = $(this).attr("reftitle"); }
@@ -1577,37 +1577,89 @@ function getTotalData() {
 					$collection.items[_ref_type].qty += parseInt($qty);
 				}
 
-				// Get proper item price
-				// Set variables
-				var hasQty = false;
-
-				// Loop through json price list
-				$.each($data[$style][$size], function(_data_qty, _data_prc) {
-					// Check if already found the price
-					if(hasQty === false) {
-						// If less than or equal
-						if(parseInt(_data_qty) <= $collection.items[_ref_type].qty) {
-							$collection.items[_ref_type].price = parseFloat(_data_prc); // Get price
-						} else if($collection.items[_ref_type].qty < 20) {
-							$collection.items[_ref_type].price = parseFloat($data[$style][$size]['20']); // Get price
-						} else {
-							hasQty = true;
-						}
-					}
-				});
-
-				// Compute total price
-				$collection.items[_ref_type].total = $collection.items[_ref_type].price * $collection.items[_ref_type].qty;
-				// Populate items
-				$collection.items[_ref_type].data.push({ color:_ref_color_arr, font:_ref_color_font, name:_ref_color_title.toString().toLowerCase(), qty:$qty, size:_ref_size_name.toString().toLowerCase().replace("-qty", "") });
 				// Compute total quantity
 				$collection.total_qty += parseInt($qty);
+
+// NEW ALGO DAMAGE
+				// // Get proper item price
+				// var hasQty = false; // Set variables
+
+				// // Loop through json price list
+				// $.each($data[$style][$size], function(_data_qty, _data_prc) {
+				// 	// Check if already found the price
+				// 	if(hasQty === false) {
+				// 		// If less than or equal
+				// 		if($collection.items[_ref_type].qty < 20) {
+				// 			$collection.items[_ref_type].price = parseFloat($data[$style][$size]['20']); // Get price
+				// 		} else if(parseInt(_data_qty) <= $collection.items[_ref_type].qty) {
+				// 			$collection.items[_ref_type].price = parseFloat(_data_prc); // Get price
+				// 		} else {
+				// 			hasQty = true;
+				// 		}
+				// 	}
+				// });
+// End
+
+				// Populate items
+				$collection.items[_ref_type].data.push({ color:_ref_color_arr, font:_ref_color_font, name:_ref_color_title.toString().toLowerCase(), qty:$qty, size:_ref_size_name.toString().toLowerCase().replace("-qty", "") });
+
+				// // Compute total price
+				// $collection.items[_ref_type].total = $collection.items[_ref_type].price * $collection.items[_ref_type].qty;
 			}
 		}
 	});
 
 	// Get JSON Add-ons price list
 	var $data_addon = $.parseJSON(addon_json);
+
+// THE NEW ALGO
+	$.each($collection.items, function(i_key, i_value) {
+		// Get proper item price
+		var hasQty = false; // Set variables
+		var hasAddQty = false; // Set variables
+		// Loop through json price list
+		$.each($data[$style][$size], function(_data_qty, _data_prc) {
+			// Check if already found the price
+			if(hasQty === false) {
+				// If less than or equal
+				if($collection.total_qty < 20) {
+					$collection.items[i_key].price = parseFloat($data[$style][$size]['20']); // Get price
+				} else if(parseInt(_data_qty) <= $collection.total_qty) {
+					$collection.items[i_key].price = parseFloat(_data_prc); // Get price
+				} else {
+					hasQty = true;
+				}
+			}
+		});
+
+		// Get proper add-on price
+		if(typeof $data_addon[i_key] != "undefined") {
+			$.each($data_addon[i_key], function(_ao_qty, _ao_prc) {
+				// Check if already found the price
+				if(hasAddQty === false) {
+					// If less than or equal
+					if(parseInt(_ao_qty) <= $collection.items[i_key].qty) {
+						// Get price
+						$collection.items[i_key].add_price = parseFloat(_ao_prc);
+					} else if($collection.items[i_key].qty < 20) {
+						// Get price
+						$collection.items[i_key].add_price = parseFloat(_ao_prc);
+						hasAddQty = true;
+					} else {
+						hasAddQty = true;
+					}
+				}
+			});
+		} else {
+			$collection.items[i_key].add_price = 0;
+		}
+
+		// Compute total price
+		// $collection.items[i_key].total = $collection.items[i_key].price * $collection.items[i_key].qty;
+		$collection.items[i_key].total = ($collection.items[i_key].price + $collection.items[i_key].add_price) * $collection.items[i_key].qty;
+		$collection.total_price += parseFloat($collection.items[i_key].total);
+	});
+// End
 
 	// For add-ons
 	$("input[type='checkbox'].add-ons:checked").each(function() {
@@ -1666,14 +1718,20 @@ function getTotalData() {
 	// Add shipping & production prices to total
 	$collection.total_price += parseFloat($collection.shipping_price);
 	$collection.total_price += parseFloat($collection.production_price);
-	// Add item prices to total
-	$.each($collection.items, function(key, value) {
-		$collection.total_price += parseFloat(value.total);
-	});
+
+// NEW ALGO DAMAGE
+	// // Add item prices to total
+	// $.each($collection.items, function(key, value) {
+	// 	$collection.total_price += parseFloat(value.total);
+	// });
+// End
+
 	// Add add-on prices to total
 	$.each($collection.add_ons, function(key, value) {
 		$collection.total_price += parseFloat(value.total);
 	});
+
+console.log($collection);
 
 	// Return order collection
 	return $collection;
@@ -1689,7 +1747,7 @@ function populateTotalSection(_collection) {
 	var html_band_item = "";
 	$(".js-item-summary").html(html_band_item);
 		$.each(_collection.items, function(key, value) {
-			html_band_item += "<div class='row summary-item'><div class='col-md-8 col-sm-6'>- " + key.toLowerCase().capitalizeFirstLetter() + " (" + value.qty + " x " + formatCurrency(value.price) + " each)</div><div class='col-md-4 col-sm-6 align-right'>" + formatCurrency(value.total) + "</div></div>";
+			html_band_item += "<div class='row summary-item'><div class='col-md-8 col-sm-6'>- " + key.toLowerCase().capitalizeFirstLetter() + " (" + value.qty + " x " + formatCurrency(value.price + value.add_price) + " each)</div><div class='col-md-4 col-sm-6 align-right'>" + formatCurrency(value.total) + "</div></div>";
 		});
 	// Place items
 	$(".js-item-summary").append(html_band_item);
