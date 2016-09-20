@@ -40,7 +40,7 @@
 					Keychain<br>
 				</p>
 				<h4>Shipping Turnaround Time</h4>
-				<p> Standard Shipping (10 to 14 days): <span class="red">FREE</span><br>
+				<p> Standard Shipping (10 to 14 days)<br>
 					Rush Shipping Available (7 to 9 days): <span class="red">(Quote Upon Request)</span><br>
 					Super Rush Shipping (4 to 6 days): <span class="red">(Quote Upon Request)</span>
 				</p>
