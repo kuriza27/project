@@ -373,7 +373,7 @@ $(function(){
 	$('body').on('click', '.js-style', function() {
 
 		// Check if not yet checked
-		if($(this).find('input[type="radio"]').prop('checked')  === false) {
+		// if($(this).find('input[type="radio"]').prop('checked')  === false) {
 
 			// Uncheck others
 			$(".js-style").find("input[type='radio']").prop("checked", false);
@@ -521,14 +521,14 @@ $(function(){
 
 			// Get new price table
 			get_style_size('price_table');
-		}
+		// }
 	});
 
 	// Select wristband size event
 	$('body').on('click', '.js-size', function() {
 
 		// Check if not yet checked
-		if($(this).find('input[type="radio"]').prop('checked') === false) {
+		// if($(this).find('input[type="radio"]').prop('checked') === false) {
 
 			// Uncheck others
 			$(".js-size").find("input[type='radio']").prop("checked", false);
@@ -585,7 +585,7 @@ $(function(){
 
 			// Get new price table
 			get_style_size('price_table');
-		}
+		// }
 	});
 
 	// Adding quantity to wristband colors. Check input values on textfield
