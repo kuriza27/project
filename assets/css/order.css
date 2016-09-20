@@ -1107,9 +1107,9 @@ span.fig-fc {
 }
 
 input.freewb  {
-    /*border: 1px #CCCCCC dashed;*/
     border: none;
     border-radius: 5px;
+    color: #CCCCCC;
     height: 35px;
     text-align: center;
 }
