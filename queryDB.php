@@ -62,7 +62,8 @@
 
 	}
 
-	//get wristband price by style and size
+
+	// Get wristband price by style and size
 	function getWristbandPrice($style,$size)
 	{
 		$sql = "SELECT size_id, qty, price 
@@ -70,6 +71,7 @@
 		
 		return $sql;
 	}
+
 
 	function getPriceJSON()
 	{
@@ -82,7 +84,7 @@
 		return $sql;
 	}
 
-	//get production price by style, qty and size
+	// Get production price by style, qty and size
 	function getProductionPrice($style,$size,$qty)
 	{
 			/** $sql = "SELECT pd.qty, pd.price, pd.days 
@@ -109,11 +111,10 @@
 									WHERE ipd.qty BETWEEN '0' AND '".$qty."' )
 					ORDER BY pd.days ASC";
 			return $sql;
-
 	}
 	
 	
-	//get shipping price by style, qty and size
+	// Get shipping price by style, qty and size
 	function getShippingPrice($style,$size,$qty)
 	{
 
@@ -122,27 +123,28 @@
 					JOIN wristband_size AS wsz ON wsz.id = ps.size_id 
 					WHERE wst.code ='".$style."' AND wsz.code = '".$size."' AND qty >= '20' AND qty < '50' ORDER BY ps.days ASC"; */
 
-			$sql = "SELECT pd.qty AS qty, pd.price AS price, pd.days AS days 
-					FROM price_production AS pd 
-					JOIN wristband_style AS wst ON wst.id = pd.style_id 
-					JOIN wristband_size AS wsz ON wsz.id = pd.size_id 
+			$sql = "SELECT ps.qty AS qty, ps.price AS price, ps.days AS days 
+					FROM price_shipping AS ps 
+					JOIN wristband_style AS wst ON wst.id = ps.style_id 
+					JOIN wristband_size AS wsz ON wsz.id = ps.size_id 
 					WHERE 
-						wst.code ='".$style."' 
+						wst.code = '".$style."' 
 					AND 
 						wsz.code = '".$size."' 
 					AND 
-						pd.qty = (	SELECT 
-										CASE 
-											WHEN MAX(ipd.qty) IS NULL 
-											THEN 0 
-											ELSE MAX(ipd.qty) 
-										END as qty 
-									FROM price_production AS ipd 
-									WHERE ipd.qty BETWEEN '0' AND '".$qty."' )
-					ORDER BY pd.days ASC";
+						ps.type = '0' 
+					AND 
+						ps.qty = (	SELECT CASE 
+										WHEN MAX(ips.qty) IS NULL 
+									THEN 0 
+										ELSE MAX(ips.qty) 
+									END as qty 
+									FROM price_shipping AS ips 
+									WHERE ips.qty BETWEEN '0' AND '".$qty."' ) 
+					ORDER BY ps.days ASC ";
 			return $sql;
-
 	}
+
 
 	function getAddOnsPrice($addons,$qty)
 	{
@@ -160,6 +162,7 @@
 										WHERE paos.qty BETWEEN '0' AND '" . $qty . "' )
 						ORDER BY pao.qty ASC";
 	}
+
 
 	function getAddOnJSON()
 	{

@@ -1218,7 +1218,7 @@ $(document).ready(function() {
 		});
 		// Check
 		if(_kcQty > collectionData.total_qty) {
-			showPopupMessage("Error", "Keychains must not be greater then the total wristband quantity.");
+			showPopupMessage("Error", "Keychains must not be greater than the total wristband quantity.");
 			$(this).val("").focus();
 			// return false;
 		}
@@ -1799,11 +1799,13 @@ function getTotalData() {
 		// Set variables
 		var hasAOPrice = false;
 		var _aoCode = $(this).attr("data-code");
-		var _aoCurrentQty = $collection.total_qty;
+		var _aoConvertQty = $collection.total_qty;
+		var _aoAllConvert = true;
 		if (_aoCode == "key-chain" && $("input[type='radio'].convert-keychain-input:checked").val() == "some") {
-			_aoCurrentQty = 0;
+			_aoConvertQty = 0;
+			_aoAllConvert = false;
 			$("input.kc-some-qty").each(function() {
-				_aoCurrentQty += ($(this).val().trim() != "") ? parseInt($(this).val()) : 0;
+				_aoConvertQty += ($(this).val().trim() != "") ? parseInt($(this).val()) : 0;
 			});
 		};
 		// Get proper add-on price
@@ -1812,12 +1814,12 @@ function getTotalData() {
 				// Check if already found the price
 				if(hasAOPrice === false) {
 					// If less than or equal
-					if(parseInt(_ao_qty) <= _aoCurrentQty) {
+					if(parseInt(_ao_qty) <= _aoConvertQty) {
 						// Get price
-						$collection.add_ons[_aoCode] = { code:_aoCode, price:parseFloat(_ao_prc), qty:_aoCurrentQty, total:parseFloat(_aoCurrentQty * parseFloat(_ao_prc)) };
-					} else if(_aoCurrentQty < 20) {
+						$collection.add_ons[_aoCode] = { code:_aoCode, price:parseFloat(_ao_prc), qty:_aoConvertQty, total:parseFloat(_aoConvertQty*parseFloat(_ao_prc)) };
+					} else if(_aoConvertQty < 20) {
 						// Get price
-						$collection.add_ons[_aoCode] = { code:_aoCode, price:parseFloat(_ao_prc), qty:_aoCurrentQty, total:parseFloat(_aoCurrentQty*parseFloat(_ao_prc)) };
+						$collection.add_ons[_aoCode] = { code:_aoCode, price:parseFloat(_ao_prc), qty:_aoConvertQty, total:parseFloat(_aoConvertQty*parseFloat(_ao_prc)) };
 						hasAOPrice = true;
 					} else {
 						hasAOPrice = true;
@@ -1825,7 +1827,11 @@ function getTotalData() {
 				}
 			});
 		} else { // Ceck if add_on is not on JSON
-			$collection.add_ons[_aoCode] = { code:_aoCode, price:0, total:0 };
+			$collection.add_ons[_aoCode] = { code:_aoCode, price:0, qty:_aoConvertQty, total:0 };
+		}
+
+		if(_aoCode == "key-chain") {
+			$collection.add_ons[_aoCode].all = _aoAllConvert;
 		}
 	});
 
@@ -1896,11 +1902,22 @@ function populateTotalSection(_collection) {
 	var html_add_ons = "";
 	var total_add_ons = 0;
 	$("#wristband_add_on_list").html(html_add_ons);
-		$.each(_collection.add_ons, function(key, value) {
+	$.each(_collection.add_ons, function(key, value) {
 			if(value.code == "individual") { value.code = "individual pack"; }
-			html_add_ons += "- " + value.code.replace(/-/g, " ").toLowerCase().capitalizeFirstLetter() + " (" + value.qty + " x " + formatCurrency(value.price) + " each)<br />";
-			total_add_ons += value.total;
-		});
+		html_add_ons += "- " + value.code.replace(/-/g, " ").toLowerCase().capitalizeFirstLetter();
+			if(value.code == "key-chain") { 
+				html_add_ons += " (";
+				if(value.all == true) {
+					html_add_ons += "All";
+				} else {
+					html_add_ons += "Some";
+				}
+				html_add_ons += " Converted)";
+			}
+		html_add_ons += " (" + value.qty + " x " + formatCurrency(value.price) + " each)<br />";
+		total_add_ons += value.total;
+	});
+
 	// Place add-ons
 	$("#wristband_add_on_list").append(html_add_ons);
 	$('#wristband_add_ons').html(formatCurrency(total_add_ons));
