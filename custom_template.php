@@ -504,6 +504,8 @@
 </div>
 <!--</form> -->
 
+<?php include_once "popup_message.php"; ?>
+
 <div id="solidCustomColorSelector" class="hide" style="display:none;">
 	<div class="col-xs-4 box-color dynamic-box-color">
 		<button class="btn-close-custom-color">X</button>
@@ -556,6 +558,7 @@
 		</div>
 	</div>
 </div>
+
 <div id="segmentedCustomColorSelector" class="hide" style="display:none;">
 	<div class="col-xs-4 box-color dynamic-box-color">
 		<button class="btn-close-custom-color">X</button>
@@ -608,6 +611,7 @@
 		</div>
 	</div>
 </div>
+
 <div id="swirlCustomColorSelector" class="hide" style="display:none;">
 	<div class="col-xs-4 box-color dynamic-box-color">
 		<button class="btn-close-custom-color">X</button>
@@ -659,6 +663,7 @@
 		</div>
 	</div>
 </div>
+
 <div id="dualCustomColorSelector" class="hide" style="display:none;">
 	<div class="col-xs-4 box-color dynamic-box-color">
 		<button class="btn-close-custom-color">X</button>
@@ -704,6 +709,7 @@
 		</div>
 	</div>
 </div>
+
 <div id="solidCustomFigColorSelector" class="hide" style="display:none;">
 	<div class="col-xs-4 box-color dynamic-box-color">
 		<button class="btn-close-custom-color">X</button>
@@ -756,6 +762,7 @@
 		</div>
 	</div>
 </div>
+
 <div id="segmentedFigCustomColorSelector" class="hide" style="display:none;">
 	<div class="col-xs-4 box-color dynamic-box-color">
 		<button class="btn-close-custom-color">X</button>
@@ -808,6 +815,7 @@
 		</div>
 	</div>
 </div>
+
 <div id="swirlCustomFigColorSelector" class="hide" style="display:none;">
 	<div class="col-xs-4 box-color dynamic-box-color">
 		<button class="btn-close-custom-color">X</button>
@@ -859,6 +867,7 @@
 		</div>
 	</div>
 </div>
+
 <div class="modal fade" id="FontColorQtyModal" role="dialog">
 	<div class="modal-dialog">
 		<!-- Modal content-->

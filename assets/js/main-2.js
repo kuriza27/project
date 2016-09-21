@@ -98,12 +98,12 @@ $(document).ready(function() {
 		if($(this).find("input[type='checkbox']").attr("data-code") === "key-chain") {
 
 			if(collectionData.size !== "1/2") {
-				alert("Keychains are only available for 1/2 size.");
+				showPopupMessage("Error", "Keychains are only available for 1/2 size.");
 				return false;
 			}
 
 			if(collectionData.total_qty <= 0) {
-				alert("Please add wristband quantity first.");
+				showPopupMessage("Error", "Please add wristband quantity first.");
 				return false;
 			}
 
@@ -133,6 +133,12 @@ $(document).ready(function() {
 			}
 
 		} else {
+
+			if($(this).find("input[type='checkbox']").attr("data-code") === "3mm-thick" && collectionData.size !== "1/2") {
+				showPopupMessage("Error", "Keychains are only available for 1/2 size.");
+				return false;
+			}
+
 			if($(this).hasClass("active")) {
 				$(this).find("input[type='checkbox'].add-ons").prop("checked", false);
 				$(this).removeClass("active");
@@ -1212,7 +1218,7 @@ $(document).ready(function() {
 		});
 		// Check
 		if(_kcQty > collectionData.total_qty) {
-			alert("Keychains must not be greater then the total wristband quantity.");
+			showPopupMessage("Error", "Keychains must not be greater then the total wristband quantity.");
 			$(this).val("").focus();
 			// return false;
 		}
@@ -1946,4 +1952,10 @@ function populateTotalSection(_collection) {
 		$('.js-total').hide();
 		$('.js-no-total').fadeIn(300);
 	}
+}
+
+function showPopupMessage(_title, _content) {
+	$("#modal-message-title").html(_title);
+	$("#modal-message-content").html(_content);
+	$("#modal-message").modal("show");
 }
