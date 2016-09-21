@@ -1101,6 +1101,10 @@ li.active.select-box-col {
 	.price-sidebar li {
 		margin-left: 18px!important;
 	}
+	
+	.clip-color-list li{
+		height:50px!Important;
+	}
 }
 
 @media screen and (max-width: 350px){
@@ -1281,6 +1285,10 @@ li.active.select-box-col {
 	
 	.col-xs-99 {
 		width: 294px!important;
+	}
+	
+	.clip-color-list li{
+		height:50px!Important;
 	}
 }
 

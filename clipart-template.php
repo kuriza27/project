@@ -34,7 +34,7 @@
 	<li><a ref="Diamond.png"><img  src="assets/images/src/clipart/Diamond.png"/></a><br /><b>Diamond 1</b></li>
 	<li><a ref="Diamond-2.png"><img  src="assets/images/src/clipart/Diamond-2.png"/></a><br /><b>Diamond 2</b></li>
 	<li><a ref="Diamond-3.png"><img  src="assets/images/src/clipart/Diamond-3.png"/></a><br /><b>Diamond 3</b></li>
-	<li><a ref="Dove.png"><img  src="assets/images/src/clipart/Dove.png"/></a><<br /><b>Dove</b>/li>
+	<li><a ref="Dove.png"><img  src="assets/images/src/clipart/Dove.png"/></a><br /><b>Dove</b></li>
 	<li><a ref="Duck.png"><img  src="assets/images/src/clipart/Duck.png"/></a><br /><b>Duck</b></li>
 	<li><a ref="Eagle.png"><img  src="assets/images/src/clipart/Eagle.png"/></a><br /><b>Eagle</b></li>
 	<li><a ref="Earth.png"><img  src="assets/images/src/clipart/Earth.png"/></a><br /><b>Earth</b></li>

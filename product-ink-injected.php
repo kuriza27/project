@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="half_bg" style="width: 60%; margin: 1% 0px 1% 1%;">
 			<h1>Ink Injected Wristband</h1>
-			<p class="prodcode">Product Code: <b>RB-CF12</b> (1/2 Inch) | <b>RB-CF1</b> (1 Inch)</p>
+			<!-----<p class="prodcode">Product Code: <b>RB-CF12</b> (1/2 Inch) | <b>RB-CF1</b> (1 Inch)</p>---->
 			<p>Ink Injected wristbands are best in terms of aesthetics, If you want your message to last on the wristband longer, then color-filled wristbands are the best option for you. The message on wristband will be engraved first then it will be manually ink inject filled with the color that you have chosen to create a stand-out effect. We highly recommend this type of wristband.</p>
 			<div class="popup-gallery">
 				<div class="col-md-8">

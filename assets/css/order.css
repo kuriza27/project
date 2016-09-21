@@ -420,12 +420,14 @@ div#main-color-content {
 }
 
 .fntin{
-    /*background-image: url(/assets/images/src/clr_bg.png);*/
+    /*background-image: url(/assets/images/src/clr_bg.png);
+	    margin-top:10px;
+	*/
     border: 1px solid #079ca5;
     border-radius: 2px;
     cursor: pointer;
     height:20px;
-    margin-top:10px;
+
 }
 
 .color-text .col-sm-1{
@@ -1169,4 +1171,8 @@ table.fwb-title {
 #modal-message-content {
     font-size: 25px;
     padding: 10px 0;
+}
+
+span.fonttext-color{
+	font-size:9px;
 }

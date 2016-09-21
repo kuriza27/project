@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="half_bg" style="width: 60%; margin: 1% 0px 1% 1%;">
 			<h1>Embossed Printed Wristband</h1>
-			<p class="prodcode">Product Code: <b>RB-EMP12</b> (1/2 Inch) | <b>RB-EMP1</b> (1 Inch)</p>
+			<!----<p class="prodcode">Product Code: <b>RB-EMP12</b> (1/2 Inch) | <b>RB-EMP1</b> (1 Inch)</p>---->
 			<p>Embossed Printed wrisbands are the same as the Embossed Wristband,  the message will also be popping out or raised into the wristband. The only difference between the Embossed type and the Embossed Printed is that the message on the wristband will have a different color on the message. This is the most expensive type of wristband but also the most aesthetic one.</p>
 			<div class="popup-gallery">
 				<div class="col-md-8">

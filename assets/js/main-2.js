@@ -5,18 +5,18 @@ var default_font_color = "000000";
 $(document).ready(function() {
 
 	// For regular wristband size
-	$('.qtyin-adult-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-qtyin-adult-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
-	$('.qtyin-medium-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-qtyin-medium-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
-	$('.qtyin-youth-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-qtyin-youth-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.qtyin-adult-qty').closest('div').addClass('qty-box text-center').append('<span class="fonttext-color">Text Color</span><div class="fntin fnt-qtyin-adult-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.qtyin-medium-qty').closest('div').addClass('qty-box text-center').append('<span class="fonttext-color">Text Color</span><div class="fntin fnt-qtyin-medium-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.qtyin-youth-qty').closest('div').addClass('qty-box text-center').append('<span class="fonttext-color">Text Color</span><div class="fntin fnt-qtyin-youth-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
 
 	// For regular wristband xt size
-	$('.xt-small-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-xt-small-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
-	$('.xt-large-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-xt-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.xt-small-qty').closest('div').addClass('qty-box text-center').append('<span class="fonttext-color">Text Color</span><div class="fntin fnt-xt-small-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.xt-large-qty').closest('div').addClass('qty-box text-center').append('<span class="fonttext-color">Text Color</span><div class="fntin fnt-xt-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
 
 	// For large wristband size
-	$('.qtyin-adult-large-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-qtyin-adult-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
-	$('.qtyin-medium-large-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-qtyin-medium-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
-	$('.qtyin-youth-large-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-qtyin-youth-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.qtyin-adult-large-qty').closest('div').addClass('qty-box text-center').append('<span class="fonttext-color">Text Color</span><div class="fntin fnt-qtyin-adult-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.qtyin-medium-large-qty').closest('div').addClass('qty-box text-center').append('<span class="fonttext-color">Text Color</span><div class="fntin fnt-qtyin-medium-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+	$('.qtyin-youth-large-qty').closest('div').addClass('qty-box text-center').append('<span class="fonttext-color">Text Color</span><div class="fntin fnt-qtyin-youth-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
 
 	// For large wristband xt size
 	$('.xt-small-large-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-xt-small-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
@@ -410,6 +410,7 @@ $(document).ready(function() {
 	// Select wristband style event
 	$('body').on('click', '.js-style', function() {
 
+		
 		// Check if not yet checked
 		if(!$(this).hasClass("active")) {
 
@@ -430,7 +431,7 @@ $(document).ready(function() {
 			}else{
 				$('.fntin').hide().removeClass('active');
 			}
-
+			 
 			// Set what kind of preview to display
 			if(style === "figured") {
 				$("#front-view, #back-view, #inside-view, #continue-view").addClass("set-height-fig");
@@ -440,6 +441,17 @@ $(document).ready(function() {
 				$("#front-view, #back-view, #inside-view, #continue-view").addClass("set-height-reg");
 				$("#front-view, #back-view, #inside-view, #continue-view").removeClass("set-height-fig");
 				$(".preview-text").css("line-height", "54px");
+			}
+			
+			//Check and remove step 4 if blank style		     
+			if(style === "blank-style"){
+				$('.wrist-messsage').hide();
+				$('.step-5').hide();
+				$('.step-4').show();
+			}else{
+				$('.wrist-messsage').show();
+				$('.step-5').show();
+				$('.step-4').hide();
 			}
 			
 			// Hide all sizes first
