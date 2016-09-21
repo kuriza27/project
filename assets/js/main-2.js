@@ -103,12 +103,29 @@ $(document).ready(function() {
 		// Get order data
 		var collectionData = getTotalData();
 
-		$("#convert-keychain").hide();
-		$.each(collectionData.add_ons, function(key, value) {
-			if()
-		});
+		if($(this).find("input[type='checkbox']").attr("data-code") === "key-chain") {
+			$("#convert-keychain").hide();
 
-console.log()
+			if(collectionData.size !== "1/2") {
+				alert("Please add wristband quantity first.");
+				return;
+			}
+
+			if(collectionData.total_qty <= 0) {
+				alert("Please add wristband quantity first.");
+				return;
+			}
+
+			$.each(collectionData.add_ons, function(key, value) {
+				if(key === "key-chain") {
+					$("#convert-keychain-area-some").hide();
+					$("#convert-keychain-area-all").show();
+					$("input[type='radio']#all.convert-keychain").prop("checked", true);
+					// $(".convert-keychain").trigger("change");
+					$("#convert-keychain").show();
+				}
+			});
+		}
 
 		// Populate total section
 		populateTotalSection(collectionData);
@@ -1097,20 +1114,26 @@ console.log()
 
 	// Event for keychain convertion
 	$("body").on("change", ".convert-keychain", function(e) {
-		// e.preventDefault();
+		e.preventDefault();
 		e.stopPropagation();
-
-		$(".convert-keychain-area").hide();
-		$("#"+$(this).val()).show();
 
 		// Get order data
 		var collectionData = getTotalData();
 
+		$(".convert-keychain-area").hide();
+		$("#convert-keychain-area-"+$(this).val()).show();
+
 		// Check and set proper values
-		if($(this).val() === "convert-keychain-area-all") {
+		if($(this).val() === "all") {
+			// Show keychain quantity (all)
+			$("#convert-keychain-area-some").hide();
+			$("#convert-keychain-area-all").show();
 			// Set qty
 			$("#convert-keychain-area-all-qty").html(collectionData.total_qty);
 		} else {
+			// Show keychain quantity (some)
+			$("#convert-keychain-area-all").hide();
+			$("#convert-keychain-area-some").show();
 			// Set variable
 			var html_kc = "";
 			// Loop through all items
@@ -1129,7 +1152,7 @@ console.log()
 				});
 			});
 			// Set keychain
-			$("#convert-keychain-some-list").html(html_wb_free);
+			$("#convert-keychain-some-list").html(html_kc);
 		}
 
 	});
@@ -1771,7 +1794,7 @@ function getTotalData() {
 		$collection.total_price += parseFloat(value.total);
 	});
 
-console.log($collection);
+	// console.log($collection);
 
 	// Return order collection
 	return $collection;
