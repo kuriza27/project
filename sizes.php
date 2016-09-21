@@ -5,19 +5,28 @@
 	<div class="sizes-content">
 			<ul>
 				<li>
-						<img  src="assets/images/src/sizes/1-4InchWristband.jpg" class="galleryimg">
+						<img  src="assets/images/src/sizes/11-2InchWristband.png" class="galleryimg">
 				
 				</li>
 				<li>
-						<img src="assets/images/src/sizes/1InchWristband.jpg" class="galleryimg">
+						<img  src="assets/images/src/sizes/1-4InchWristband.png" class="galleryimg">
+				
+				</li>
+				<li>
+						<img src="assets/images/src/sizes/1InchWristband.png" class="galleryimg">
 					
 				</li>
 				<li>
-						<img src="assets/images/src/sizes/1-2InchWristband.jpg" class="galleryimg">
+						<img src="assets/images/src/sizes/1-2InchWristband.png" class="galleryimg">
+					
+				</li>
+
+				<li>
+						<img src="assets/images/src/sizes/3-4InchWristband.png" class="galleryimg">
 					
 				</li>
 				<li>
-						<img src="assets/images/src/sizes/3-4InchWristband.jpg" class="galleryimg">
+						<img src="assets/images/src/sizes/2InchWristband.png" class="galleryimg">
 					
 				</li>
 			</ul>

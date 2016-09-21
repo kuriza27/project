@@ -892,7 +892,7 @@ li.active.select-box-col {
 	}
 	
 	.col-xs-99 {
-    width: 350px!important;
+    width: 388px!important;
     float: left;
     padding: 0 36px;
 	}
@@ -907,7 +907,7 @@ li.active.select-box-col {
 	}
 	
 	.order-now-green{
-		width: 310px!important;
+		width: 324px!important;
 	}
 	
 	.col-sm-22.offerpv{
@@ -1093,6 +1093,14 @@ li.active.select-box-col {
 	.c-input{
 		margin-left: -6px!important;
 	}
+	
+	.cont-p img {
+		width: 324px!important;
+	}
+	
+	.price-sidebar li {
+		margin-left: 18px!important;
+	}
 }
 
 @media screen and (max-width: 350px){
@@ -1105,12 +1113,6 @@ li.active.select-box-col {
   
   .nav.nav-pills {
     width: 96%!important;
-	}
-	
-	.col-xs-99 {
-		width: 292px!important;
-		float: left;
-		padding: 0 15px;
 	}
 	
 	.galleryimg {
@@ -1268,11 +1270,58 @@ li.active.select-box-col {
 	.gal {
 		height: 115px;
 	}
+	
+	.cont-p img {
+		width: 250px!important;
+	}
+	
+	.price-sidebar li {
+		margin-left: -16px!important;
+	}
+	
+	.col-xs-99 {
+		width: 294px!important;
+	}
 }
 
-@media screen and (max-width: 360px){
+
+@media only screen and (min-width: 360px)and (max-width: 365px){
+
+	.price-sidebar li {
+		margin-left: -6px!important;
+	}
+	
+	.col-xs-99 {
+		width: 366px!important;
+	}
+	
+	.cont-p img {
+		width: 300px!important;
+	}
+	
+	.order-now-green {
+		width: 300px!important;
+	}
+	
+	.col-xs-99 {
+		width: 322px!important;
+		float: left;
+		padding: 0 12px!important;
+	}
+}
+
+@media only screen and (min-width: 370px) and (max-width: 400px){
 	span.fig-fc {
 		left: 140px!important;
+	}
+	
+	.price-sidebar li {
+		margin-left: -7px!important;
+	}
+	
+	.col-xs-99 {
+		width: 348px!important;
+		padding: 0 12px!important;
 	}
 }
 
