@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="half_bg" style="width: 60%; margin: 1% 0px 1% 1%;">
 			<h1>Blank Wristband</h1>
-			<p class="prodcode">Product Code: <b>RB-BK12</b> (1/2 Inch) | <b>RB-BK1</b> (1 Inch)</p>
+			<!----<p class="prodcode">Product Code: <b>RB-BK12</b> (1/2 Inch) | <b>RB-BK1</b> (1 Inch)</p>---->
 			<p>Blank Wristbands are the most used by schools and organizations. It is always available and fast to produce. It is made from 100% silicone wristbands. It is great for color coding groups for an event or activity.</p>
 			<div class="popup-gallery">
 				<div class="col-md-8">

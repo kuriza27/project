@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="half_bg" style="width: 60%; margin: 1% 0px 1% 1%;">
 			<h1>Debossed Wristband</h1>
-			<p class="prodcode">Product Code: <b>RB-D12</b> (1/2 Inch) | <b>RB-D1</b> (1 Inch)</p>
+			<!----<p class="prodcode">Product Code: <b>RB-D12</b> (1/2 Inch) | <b>RB-D1</b> (1 Inch)</p>---->
 			<p>Debossed is the most popular type of wristbands. This is similar to the yellow Livestrong wristband. Your customized message is engraved or sunken into the wristband. Our wristbands are made from 100% Pure Silicone which is Latex free and child safe.</p>
 			<div class="popup-gallery">
 				<div class="col-md-8">

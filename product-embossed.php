@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="half_bg" style="width: 60%; margin: 1% 0px 1% 1%;">
 			<h1>Embossed Wristband</h1>
-			<p class="prodcode">Product Code: <b>RB-EM12</b> (1/2 Inch) | <b>RB-EM1</b> (1 Inch)</p>
+			<!----<p class="prodcode">Product Code: <b>RB-EM12</b> (1/2 Inch) | <b>RB-EM1</b> (1 Inch)</p>---->
 			<p>Embossed Wristbands are the exact opposite of the <a href="/wristband?type=debossed">Debossed Wristband</a>. The message of the wristband will be popping out or raised into the wristband and will have the same color of the wristband. It is one of the unique wristbands out there. </p>
 			<div class="popup-gallery">
 				<div class="col-md-8">

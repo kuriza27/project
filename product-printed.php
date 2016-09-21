@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="half_bg" style="width: 60%; margin: 1% 0px 1% 1%;">
 			<h1>Printed Wristband</h1>
-			<p class="prodcode">Product Code: <b>RB-IM12</b> (1/2 Inch) | <b>RB-IM1</b> (1 Inch)</p>
+			<!----<p class="prodcode">Product Code: <b>RB-IM12</b> (1/2 Inch) | <b>RB-IM1</b> (1 Inch)</p>--->
 			<p>This is the most cost effective way to really show your design and message on the wristbands. Your message will be silk screen printed on wristband via a permanent ink technology machine. . You can select any color that you want for the message and logos that will be printed on the wristbands. </p>
 			<div class="popup-gallery">
 				<div class="col-md-8">
