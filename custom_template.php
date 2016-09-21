@@ -179,7 +179,8 @@
 						<div class="col-sm-12">
 							<br />
 							<span class="inside-m">Inside Text:</span><br /> &nbsp;
-							* Maximum of 50 characters for message
+							* Maximum of 50 characters for message <br />&nbsp;
+							* Inside Message will be embossed with the same color of the inside of the band
 							<br /> 
 							<input id="input-inside-text" type="text" name="inside-text" class="band-text" value=""  placeholder="Enter Inside Message" maxlength="50" style="width:100%;">
 							<br /><br />

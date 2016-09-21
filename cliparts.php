@@ -1,4 +1,9 @@
 <?php include_once 'header.php'; ?>
+<style>
+.clip-color-list li:first-child{
+   display: none;
+}
+</style>
 <div id="main-content" class="row homecontent">
   <div class="container">
 	<h1>Cliparts</h1>
