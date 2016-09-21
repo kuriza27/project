@@ -384,10 +384,10 @@
 						<div class="col-xs-12" style="padding:20px 0;">
 							<div class="message-selection">
 								<div class="col-sm-3 col-sm-offset-3">
-									<input type="radio" name="convert-keychain" class="convert-keychain" id="convert-keychain-input-all" value="all" checked="checked" /><h2>Convert All</h2>
+									<input type="radio" name="convert-keychain" class="convert-keychain-input" id="convert-keychain-input-all" value="all" checked="checked" /><h2>Convert All</h2>
 								</div>
 								<div class="col-sm-3">
-									<input type="radio" name="convert-keychain" class="convert-keychain" id="convert-keychain-input-some" value="some" /><h2>Convert Some</h2>
+									<input type="radio" name="convert-keychain" class="convert-keychain-input" id="convert-keychain-input-some" value="some" /><h2>Convert Some</h2>
 								</div>
 								<div class="clearfix"></div>
 							</div>

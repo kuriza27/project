@@ -1156,6 +1156,11 @@ table.fwb-title {
 
 .convert-keychain-area-some {
     background-color: rgb(7,153,182);
+    color: #ffffff;
     margin: 0 0 20px 0;
     min-height: 60px;
+}
+
+.kc-some-qty {
+    text-align: center;
 }
