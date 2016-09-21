@@ -375,6 +375,54 @@
 					<h2>Keychain</h2>
 				</div>
 			</div>
+
+			<div id="convert-keychain" class="col-md-12">
+				<div class="box-thumb clearfix" style="padding:20px 14px;">
+					<div class="row row-title">
+						<h3 style="color:#008da9;"><strong>Convert My Wristbands to Keychain.</strong></h3>
+						<span style="color:#8f8fa5;">Convert your wristbands to keychain.</span>
+						<div class="col-xs-12" style="padding:20px 0;">
+							<div class="message-selection">
+								<div class="col-sm-3 col-sm-offset-3">
+									<input type="radio" name="convert-keychain" class="convert-keychain" id="convert-keychain-all" value="convert-keychain-area-all" checked="checked" /><h2>Convert All</h2>
+								</div>
+								<div class="col-sm-3">
+									<input type="radio" name="convert-keychain" class="convert-keychain" id="convert-keychain-some" value="convert-keychain-area-some" /><h2>Convert Some</h2>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row row-content">
+						<div id="convert-keychain-area-all" class="col-md-12 convert-keychain-area" style="display:block;">
+							<div class="convert-keychain-area-all">
+								<h4><i class="glyphicon glyphicon-ok"></i> Convert all <strong id="convert-keychain-area-all-qty">0</strong> wristbands to keychain.</h4>
+							</div>
+						</div>
+						<div id="convert-keychain-area-some" class="col-md-12 convert-keychain-area" style="display:none;">
+							<div class="convert-keychain-area-some">
+								<div class="row">
+									<div class="col-md-6 col-sm-12 fwb-text fwb-text-header text-center list-header">
+										<div class="col-xs-4 key-text-header"><h4>STYLE</h4></div>
+										<div class="col-xs-4 fwb-text-header"><h4>COLOR</h4></div>
+										<div class="col-xs-4 fwb-text-header"><h4>SIZE</h4></div>
+									</div>
+									<div class="col-md-6 fwb-text fwb-text-header hidden-sm hidden-xs text-center list-header">
+										<div class="col-xs-12 fwb-text-header"><h4>INPUT QUANTITY</h4></div>
+									</div>
+								</div>
+								<ul id="convert-keychain-some-list" class="convert-keychain-some-list">
+								</ul>
+								<div class="clearfix"></div>
+							</div>
+							<div class="submit">
+								<button id="done_convert_keychain" class="btn-wristband btn-lg" type="button"><i class="glyphicon glyphicon-ok"></i>&nbsp;&nbsp;Done</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<div class="clearfix"></div>
 		</div>
 

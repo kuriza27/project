@@ -1126,3 +1126,36 @@ table.fwb-title {
     margin-left: 48px;
 }
 
+.btn-wristband {
+    color: #fff;
+    background-color: #17a589;
+    border: 1px solid #117864;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.list-header {
+    background-color: #05859e;
+    color: #ffffff;
+    border-bottom: 1px solid #4a719e;
+}
+
+#convert-keychain h3 {
+    color: #17a589;
+}
+
+#convert-keychain span {
+    color: #8f8fa5;
+}
+
+.convert-keychain-area-all {
+    background-color: rgb(7,153,182);
+    color: #fff;
+    padding: 10px 0;
+}
+
+.convert-keychain-area-some {
+    background-color: rgb(7,153,182);
+    margin: 0 0 20px 0;
+    min-height: 60px;
+}

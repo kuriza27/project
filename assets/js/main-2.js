@@ -2,12 +2,13 @@ var has_preview = {};
 var dynamic_font_color = "";
 var default_font_color = "000000";
 
-$(document).ready(function(){
+$(document).ready(function() {
 
 	// For regular wristband size
 	$('.qtyin-adult-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-qtyin-adult-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
 	$('.qtyin-medium-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-qtyin-medium-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
 	$('.qtyin-youth-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-qtyin-youth-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
+
 	// For regular wristband xt size
 	$('.xt-small-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-xt-small-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
 	$('.xt-large-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-xt-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
@@ -22,7 +23,7 @@ $(document).ready(function(){
 	$('.xt-large-large-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-xt-large-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
 
 	// For font color select event
-	$('body').on('click', '.fntin', function(){
+	$('body').on('click', '.fntin', function() {
 		e.preventDefault();
 		e.stopPropagation();
 
@@ -30,8 +31,8 @@ $(document).ready(function(){
 		$('#FontColorQtyModal').modal('show');
 	});
 
-	//font-color selection per qty
-	$('body').on('click', '#FontColorQtyModal ul.font-color-list li', function(){
+	// Font-color selection per qty
+	$('body').on('click', '#FontColorQtyModal ul.font-color-list li', function() {
 		e.preventDefault();
 		e.stopPropagation();
 
@@ -75,29 +76,40 @@ $(document).ready(function(){
 		populateTotalSection(collectionData);
 	});
 
-	//blink
-	function blink(selector){
-		$(selector).fadeOut('slow', function(){
-			$(this).fadeIn('slow', function(){
+	// Blink
+	function blink(selector) {
+		$(selector).fadeOut('slow', function() {
+			$(this).fadeIn('slow', function() {
 				blink(this);
 			});
 		});
 	}
 		
 	blink('.blink');
-	
+
 	// ADD-ON EVENTS
 	$("body").on("click", "div.add-ons", function(e) {
 		e.preventDefault();
 		e.stopPropagation();
 
-		if($(this).find("input[type='checkbox'].add-ons").prop("checked") == true) {
+		if($(this).hasClass("active")) {
 			$(this).find("input[type='checkbox'].add-ons").prop("checked", false);
+			$(this).removeClass("active");
 		} else {
 			$(this).find("input[type='checkbox'].add-ons").prop("checked", true);
+			$(this).addClass("active");
 		}
 
+		// Get order data
 		var collectionData = getTotalData();
+
+		$("#convert-keychain").hide();
+		$.each(collectionData.add_ons, function(key, value) {
+			if()
+		});
+
+console.log()
+
 		// Populate total section
 		populateTotalSection(collectionData);
 		// console.log(collectionData);
@@ -114,6 +126,7 @@ $(document).ready(function(){
             $(".free-convert").hide();
         }
 
+		// Get order data
 		var collectionData = getTotalData();
 		// Populate total section
 		populateTotalSection(collectionData);
@@ -121,23 +134,10 @@ $(document).ready(function(){
 
 	//Confirm on freewristband conversion
 	$(".done-button-fwb").on("click",function(e) {
-		// var qty = 0;
-		// var html_item="";
-		// $('.freewb').each(function() {
-		// 	qty += +$(this).val();
-		// });
-	
-		// if(qty > 100){
-		// 	alert("You have exceeded the limit number for free wristbands.");
-		// }else{
-		// 	$('.js-free-bands').show().delay(5000).hide(0);
-		// 	html_item = '<div class="row total-summary-freewb"><div class="col-md-8 col-sm-6">- Free Wristbands ('+qty+')</div><div class="clearfix"></div></div>';
-		// }
-
-		// $('.total-summary-after').html(html_item);
 		e.preventDefault();
 		e.stopPropagation();
 
+		// Get order data
 		var collectionData = getTotalData();
 		// Populate total section
 		populateTotalSection(collectionData);
@@ -147,6 +147,7 @@ $(document).ready(function(){
 	$('body').on('click', '.js-time-options', function(e) {
 		e.preventDefault();
 		e.stopPropagation();
+
 		// Get order data
 		var collectionData = getTotalData();
 		// Populate total section
@@ -158,6 +159,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		e.stopPropagation();
 
+		// Get order data
 		var collectionData = getTotalData();
 
 		var $form_data = new FormData();
@@ -169,6 +171,8 @@ $(document).ready(function(){
 		$form_data.append('file-6', $("input[type='file'].file-6")[0].files[0]);
 		$form_data.append('data', JSON.stringify(collectionData));
 
+		// console.log($collection);
+
 		jQuery.ajax({
 			url: 'submit_order.php',
 			data: $form_data,
@@ -178,8 +182,6 @@ $(document).ready(function(){
 			type: 'POST',
 			success: function(data){ }
 		});
-
-		// console.log($collection);
 	});
 
 	// Initialize wristband price table
@@ -192,13 +194,12 @@ $(document).ready(function(){
 
 		// Check if something actually changed
 		if($(this).val().trim() != "") {
-
+			// Get order data
 			var collectionData = getTotalData();
-			if(collectionData.free.keychains.qty > 10 || collectionData.free.keychains.qty < 0){
+			if(collectionData.free.keychains.qty > 10 || collectionData.free.keychains.qty < 0) {
 				$('#modal-10-free-keychains').modal('show');
 				return;
 			}
-
 			// Populate total section
 			populateTotalSection(collectionData);
 		}
@@ -211,78 +212,77 @@ $(document).ready(function(){
 
 		// Check if something actually changed
 		if($(this).val().trim() != "") {
-
+			// Get order data
 			var collectionData = getTotalData();
-
 			if(collectionData.free.wristbands.qty > 100 || collectionData.free.wristbands.qty < 0) {
 				if ($(this).val()!="") {
 					$('#modal-100-free-wristbands').modal('show');
 					return;
 				};
 			}
-
 			// Populate total section
 			populateTotalSection(collectionData);
 		}
 	});
 
-});
+// });
 
-$(function(){
+// $(function(){
 
 	var $style_value;
 	var $size_value;
 
-	$('#prod-main').click(function(){
+
+	$('#prod-main').click(function() {
 		window.location = 'product-printed.php';
 	});
-	
-	$('#prod-main2').click(function(){
+
+
+	$('#prod-main2').click(function() {
 		window.location = 'fonts.php';
 	});
 
-	//removes file 
+	// Removes file 
 	$("#remove-1").click(function() {
 		$(".file-1").val("");
 	});
 
-	//removes file 
+	// Removes file 
 	$("#remove-2").click(function() {
 		$(".file-2").val("");
 	});
 
-	//removes file 
+	// Removes file 
 	$("#remove-3").click(function() {
 		$(".file-3").val("");
 	});
 
-	//removes file 
+	// Removes file 
 	$("#remove-4").click(function() {
 		$(".file-4").val("");
 	});
 
-	//removes file 
+	// Removes file 
 	$("#remove-5").click(function() {
 		$(".file-5").val("");
 	});
 
-	//removes file 
+	// Removes file 
 	$("#remove-6").click(function() {
 		$(".file-6").val("");
 	});
 
-	//change font
+	// Change font
 	$("#fs").change(function() {
-		//alert($(this).val());
 		$('.changeMe').css("font-family", $(this).val());
 	});
 
-	//change font
+	// Change font
 	$("#size").change(function() {
 		$('#float').css("font-size", $(this).val() + "px");
 	});
 	
-	//change file-upload get value
+	// Change file-upload get value
 	$('input[class^="file"').change(function() {
 		if($(this).hasClass('file-1')){
 			$(".start-fc").html("<img width='30' height='30' src='assets/images/src/upload-icon.png'/>");
@@ -307,13 +307,13 @@ $(function(){
 		}
 	});
 	
-	//show extra band size
+	// Show extra band size
 	$(".show-content").hide();
 	$("body").on("click", ".view-more", function() {
 		$(this).next('.show-content').toggle(100);
 	});
 
-	//show front-back message selection
+	// Show front-back message selection
 	$(".front-back-select").click(function() {
 		$('.fb-select').css("display","block");
 		$('.f-input').css("display","block");
@@ -322,8 +322,8 @@ $(function(){
 		$('.cont-select').prop('checked', false)
 	});
 
-	//show continous message selection
-	$(".cont-select").click(function(){
+	// Show continous message selection
+	$(".cont-select").click(function() {
 		$('.front-back-select').prop('checked', false)
 		$('.c-select').css("display","block");
 		$('.fb-select').css("display","none");
@@ -331,8 +331,8 @@ $(function(){
 		$('.c-input').css("display","block");
 	});
 
-	//show preview image
-	$('body').on('click', '.preview-pill', function(e){
+	// Show preview image
+	$('body').on('click', '.preview-pill', function(e) {
 		$('.preview-pill').removeClass('active');
 		$('.preview-pill').removeClass('blink');
 		$(this).addClass('active');
@@ -373,7 +373,7 @@ $(function(){
 	$('body').on('click', '.js-style', function() {
 
 		// Check if not yet checked
-		// if($(this).find('input[type="radio"]').prop('checked')  === false) {
+		if(!$(this).hasClass("active")) {
 
 			// Uncheck others
 			$(".js-style").find("input[type='radio']").prop("checked", false);
@@ -521,14 +521,14 @@ $(function(){
 
 			// Get new price table
 			get_style_size('price_table');
-		// }
+		}
 	});
 
 	// Select wristband size event
 	$('body').on('click', '.js-size', function() {
 
 		// Check if not yet checked
-		// if($(this).find('input[type="radio"]').prop('checked') === false) {
+		if(!$(this).hasClass("active")) {
 
 			// Uncheck others
 			$(".js-size").find("input[type='radio']").prop("checked", false);
@@ -585,7 +585,7 @@ $(function(){
 
 			// Get new price table
 			get_style_size('price_table');
-		// }
+		}
 	});
 
 	// Adding quantity to wristband colors. Check input values on textfield
@@ -621,6 +621,7 @@ $(function(){
 			$("#preview-pane-selection").html("");
 			// $("#front-view, #back-view, #inside-view, #continue-view").attr('style', '');
 
+			// Get order data
 			var collectionData = getTotalData();
 
 			// For preview ------------
@@ -1092,6 +1093,45 @@ $(function(){
 		 }
 		
 		$("#ClipArtModal").modal('toggle');
+	});
+
+	// Event for keychain convertion
+	$("body").on("change", ".convert-keychain", function(e) {
+		// e.preventDefault();
+		e.stopPropagation();
+
+		$(".convert-keychain-area").hide();
+		$("#"+$(this).val()).show();
+
+		// Get order data
+		var collectionData = getTotalData();
+
+		// Check and set proper values
+		if($(this).val() === "convert-keychain-area-all") {
+			// Set qty
+			$("#convert-keychain-area-all-qty").html(collectionData.total_qty);
+		} else {
+			// Set variable
+			var html_kc = "";
+			// Loop through all items
+			$.each(collectionData.items, function(key_style, value_style) {
+				$.each(value_style.data, function(key, value) {
+					// For free wristbands
+					html_kc += '<li class="fwb-list convert-keychain-some-'+key_style+' convert-keychain-some-'+key_style+'-'+value.size+'-'+value.name+'" data-band-color="' + value.color.join("-") + '">';
+					html_kc += '<div class="fwb-text col-md-6 col-sm-12">';
+						html_kc += '<div class="col-xs-4">'+key_style.toUpperCase()+'</div>';
+						html_kc += '<div class="col-xs-4">'+value.name.toLowerCase().capitalizeFirstLetter()+'</div>';
+						html_kc += '<div class="col-xs-4">'+value.size.toLowerCase().capitalizeFirstLetter()+'</div>';
+					html_kc += '</div>';
+					html_kc += '<div class="align-right col-md-6 col-sm-12"><h4 class="fwb-text col-xs-12 hidden-md hidden-lg text-center fwb-text-hidden-header">INPUT QUANTITY</h4><input type="number" class="col-xs-12 kc-some-qty" id="convert-keychain-some-'+key_style+'-'+value.size+'-'+value.color.join("-")+'" name="'+key_style+'-'+value.size+'-'+value.color.join("-")+'-fwb" data-style="'+key_style+'" data-color="'+value.color.join(",")+'" data-font-color="'+value.font+'" data-name="'+value.name+'" data-size="'+value.size+'" placeholder="0" data-maxlength="3" /></div>';
+					html_kc += '<div class="clearfix"></div>';
+					html_kc += '</li>';
+				});
+			});
+			// Set keychain
+			$("#convert-keychain-some-list").html(html_wb_free);
+		}
+
 	});
 
 });
