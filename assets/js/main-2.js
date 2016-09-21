@@ -410,6 +410,7 @@ $(document).ready(function() {
 	// Select wristband style event
 	$('body').on('click', '.js-style', function() {
 
+		
 		// Check if not yet checked
 		if(!$(this).hasClass("active")) {
 
@@ -430,7 +431,7 @@ $(document).ready(function() {
 			}else{
 				$('.fntin').hide().removeClass('active');
 			}
-
+			 
 			// Set what kind of preview to display
 			if(style === "figured") {
 				$("#front-view, #back-view, #inside-view, #continue-view").addClass("set-height-fig");
@@ -440,6 +441,17 @@ $(document).ready(function() {
 				$("#front-view, #back-view, #inside-view, #continue-view").addClass("set-height-reg");
 				$("#front-view, #back-view, #inside-view, #continue-view").removeClass("set-height-fig");
 				$(".preview-text").css("line-height", "54px");
+			}
+			
+			//Check and remove step 4 if blank style		     
+			if(style === "blank-style"){
+				$('.wrist-messsage').hide();
+				$('.step-5').hide();
+				$('.step-4').show();
+			}else{
+				$('.wrist-messsage').show();
+				$('.step-5').show();
+				$('.step-4').hide();
 			}
 			
 			// Hide all sizes first

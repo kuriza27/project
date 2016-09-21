@@ -321,7 +321,8 @@
 		<!-- ADD ONS -->
 		<div class="product-add-ons">
 			<div class="row offer-bar margin-bootom-20 __web-inspector-hide-shortcut__">
-				<div class="col-xs-3 col-sm-2 offerpv float-left">Step <span class="sRename">5</span></div>
+				<div class="col-xs-3 col-sm-2 offerpv float-left step-5">Step <span class="sRename">5</span></div>
+				<div class="col-xs-3 col-sm-2 offerpv float-left step-4" style="display:none">Step <span class="sRename">4</span></div>
 				<div class="col-xs-9 col-sm-10 offer-details float-left">ADD ONS (Optional)</div>
 				<div class="clearfix"></div>
 			</div>
