@@ -89,8 +89,8 @@ $(document).ready(function() {
 
 	// ADD-ON EVENTS
 	$("body").on("click", "div.add-ons", function(e) {
-		e.preventDefault();
-		e.stopPropagation();
+		//e.preventDefault();
+		//e.stopPropagation();
 
 		// Get order data
 		var collectionData = getTotalData();
@@ -428,8 +428,10 @@ $(document).ready(function() {
 			// Show or hide custom font selector depending on selected style
 			if(style === "printed" || style === "ink-injected" || style === "embossed-printed" || style === "figured"){
 				$('.fntin').show().addClass('active');
+				$('.fonttext-color').show();
 			}else{
 				$('.fntin').hide().removeClass('active');
+				$('.fonttext-color').hide();
 			}
 			 
 			// Set what kind of preview to display
@@ -769,7 +771,7 @@ $(document).ready(function() {
 
 					// List all shipping price/day data
 					$.each(data.shipping, function(key, value) {
-						htmlShip += "<option value='" + value.days + "' data-price='" + value.price + "'>Standard Production - " + value.days + " Days (+$" + value.price + ")</option>";
+						htmlShip += "<option value='" + value.days + "' data-price='" + value.price + "'>Standard Shipping - " + value.days + " Days (+$" + value.price + ")</option>";
 					});
 					$("#ShippingTime").html(htmlShip);
 
@@ -1343,7 +1345,7 @@ function get_price_data($style, $size, type) {
 				$.each(data.production, function(key, value) { htmlProd += '<option value="'+value.days+'" data-price="'+value.price+'">Standard Production - '+value.days+' Days (+$'+value.price+')</option>'; });
 				$("#ProductionTime").html(htmlProd);
 				// List all shipping price/day data
-				$.each(data.shipping, function(key, value) { htmlShip += '<option value="'+value.days+'" data-price="'+value.price+'">Standard Production - '+value.days+' Days (+$'+value.price+')</option>'; });
+				$.each(data.shipping, function(key, value) { htmlShip += '<option value="'+value.days+'" data-price="'+value.price+'">Standard Shipping - '+value.days+' Days (+$'+value.price+')</option>'; });
 				$("#ShippingTime").html(htmlShip);
 
 				// After prod and shipping prices are fetched, Do Calculations

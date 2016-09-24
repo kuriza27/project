@@ -4,94 +4,151 @@
 	<h1>FAQ</h1>
 	<div style="padding-bottom:20px;"></div>
 	<div class="col-md-6">
-		<h4>Ordering Process</h4>
+		<h4>General</h4>
 		<ul class="accordion">
 		  <li>
-			<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-1">What is the minimum quantity I can order?</a>
-			<div id="dem-1" class="collapse">Unlike many of our competitors,
-			RapidWristbands.com doesn’t have a minimum requirement for ordering and shipping wristbands. There is also
-			no limitation on how many of each type of wristband must be ordered. Order as few as 1 wristband or as many
-			as you need.</div>
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-1">Where is your company located?</a>
+			<div id="dem-1" class="collapse">Our company is located at Elizabeth New Jersey, USA.</div>
 		  </li>
 		  <li>
-			<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-2">How much does each wristband cost?</a>
-			<div id="dem-2" class="collapse">The price of your order will depend on the
-			quantity you choose. Our Order Now page features a handy calculator that updates the cost of your order as
-			you choose the style and customization options for each type of wristband. The larger the quantity of your
-			order, the lower the cost per wristband. Depending on the quantity, some wristbands can be as low as $0.06
-			each! Visit our Price List for a breakdown of the cost of each type of wristband based on the quantity
-			ordered. The more you order, the more you save.</div>
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-2">What material are your wristbands made of?</a>
+			<div id="dem-2" class="collapse">We use 100% pure silicone material in the production of the wristbands.</div>
 		  </li>
 		  <li>
-			<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-3">Is there a fee for phrases on additional sides of my wristband?</a>
-			<div id="dem-3" class="collapse">The cost of each wristband includes a
-			message of up to 34 characters on the exterior of the band. Wristbands with 35 or more characters on
-			the exterior will be charged an additional $0.03 per band. The interior message is debossed (engraved)
-			in a simple text font that cannot be customized. Once the interior message's reaches 34 characters,
-			there is a charge of $0.03 per band for a message up to 80 characters. The font size of a message may
-			limit the amount of characters that will fit on the wristbands.</div>
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-3">How can I get a quotation?</a>
+			<div id="dem-3" class="collapse">You can instantly get a quotation by going to our website and clicking on the “Get A Quote!” tab and follow the instructions. You can also talk to oursales team by calling us at our 
+			hotline number 1-800- 989-0440 or just simply send us an email at sales@promotionalwristband.com and we will be more than willing to help you.</div>
 		  </li>
 		  <li >
-			<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-4">Is there a fee for each character in my wristband's message</a>
-			<div id="dem-4" class="collapse">No, the cost of each wristband includes a
-			message of up to 34 characters on the exterior of the band. However, wristbands with 35 or more characters
-			on the exterior will be charged an additional $0.03 per band. If you select an interior message, it will be
-			debossed (engraved) in a simple text font that cannot be customized. Once the interior message reaches 34
-			characters, there is a charge of $0.20 per band for a message up to 80 characters. The font size of a
-			message may limit the amount of characters that will fit on the wristbands.</div>
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-4">Are there a minimum number of orders?</a>
+			<div id="dem-4" class="collapse">A minimum number of at least 20 pieces of wristbands is required each order.</div>
 		  </li>
 		  <li >
-			<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-5">Can I change/upgrade my wristband(s) after I’ve placed my
-			order?</a>
-			<div id="dem-5" class="collapse">Once your order has been confirmed, the
-			design aspects may be changed as long as the order hasn’t gone into production. You will receive updates
-			bout the progress of your order via email. If you need to change or upgrade your order or aren’t sure if
-			your order has gone into production, please call us at 1 (800) 523-8078 or use live chat. (We don’t
-			recommend emailing because time is of the essence; changes/upgrades cannot be made once the order goes
-			into production.)
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-5">What&#39;s the difference between the front, back and inside message?</a>
+			<div id="dem-5" class="collapse">The front and back message will both be placed at the outside portion of the wristbands on the opposing sides while the inside message will be put at the inner portion of the 
+			wristbands. An embossed default inside message with our company’s website and contact details will be in the wristbands. However, it can be requested to be removed or changed with a modified message of your own.
+			</div>
+		  </li>
+		  <li >
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-6">What&#39;s your turnaround time?</a>
+			<div id="dem-6" class="collapse">There is a standard timeframe of 7 days for production and additional 7 days for shipping However, we can ship as fast as 2 business days through our rush production and rush shipping options. Rest assured that the delivery of your order is guaranteed on time.
+			</div>
+		  </li>
+		  <li >
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-7">How can I place an order?</a>
+			<div id="dem-7" class="collapse">You can place your order through the following ways: <br>
+			1. Online <br>
+			2. Over the phone via our hotline: 1-800- 989-0440 <br>
+			3. Thru e-mail <br>
+			4. Via Live chat <br>
+			</div>
+		  </li>
+		  <li >
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-8">What is a molding fee?</a>
+			<div id="dem-8" class="collapse">A molding fee will be charged when more than one (1) wristband size is ordered. Should the order only have one size, a molding fee will not be applied.
+			</div>
+		  </li>
+		  <li >
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-9">How will I make changes to the order I placed?</a>
+			<div id="dem-9" class="collapse">Given that the production of the wristbands hasn’t started yet, changes can be entertained. Just contact our sales team at sales@promotionalwristband.com in order to carry out such modifications.
 			</div>
 		  </li>
 		</ul>
 	</div>
 	<div class="col-md-6">
-		<h4>Design</h4>
+		<h4>Digital Proof</h4>
 		<ul class="accordion">
 		  <li>
-			<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-6">Can I order braille wristbands?</a>
-			<div id="dem-6" class="collapse">Yes, both our Embossed and Embossed
-			Printed wristband styles have the availability to have their messages customized in braille thanks to the
-			font being raised. Simply select braille as your font type!</div>
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#gem-1">What is a digital proof?</a>
+			<div id="gem-1" class="collapse">A digital proof is a preview of how the wristbands would look like. Production will only proceed upon approval of such proof.</div>
 		  </li>
 		  <li>
-			<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-7">Can I order wristbands in a color that is not listed or
-			offered on your site?</a>
-			<div id="dem-7" class="collapse">Yes! Custom colors are available for an
-			additional charge with a minimum order of 200 wristbands. If you need a custom color, call us at
-			1 (800) 523-8078, use live chat, or email us to place your order. (Custom color online ordering is
-			coming soon!)</div>
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#gem-2">How will I see a sample proof?</a>
+			<div id="gem-2" class="collapse">You can request for a sample digital proof once you place your order online. There is also an option where you can request by sending us an email at sales@promotionalwristband.com or by clicking on request free digital design on our home page.</div>
 		  </li>
 		  <li>
-			<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-8">Can I order multiple colors and sizes of wristbands with
-			the same phrase?</a>
-			<div id="dem-8" class="collapse">Yes, multiple colors and sizes with the
-			same phrase can be ordered quickly and easily on our Order Now page. To order an additional size, simply
-			add the order for the first size to your cart and use the same order page to choose a new size with the
-			same color and phrase selection in the quantity you need and click the “Add to Cart” button. When you’re
-			done, click Proceed to Checkout to select a shipping method and complete your order.</div>
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#gem-3">Is there an extra charge for changing the design of the wristbands?</a>
+			<div id="gem-3" class="collapse">A change in the design of the wristbands will be entertained and is free of charge as long as the production of the said wristbands has yet to start.</div>
 		  </li>
 		  <li>
-			<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-9">Can I add my own logo or artwork to my wristbands? </a>
-			<div id="dem-9" class="collapse">Yes! To personalize your silicone wristbands
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#gem-4">How long will I be able to get a digital proof?</a>
+			<div id="gem-4" class="collapse">Yes! To personalize your silicone wristbands
 			with your own logo or image, please call us at 1 (800) 523-8078, use live chat, or email us to place an
 			order including your custom artwork.</div>
 		  </li>
 		  <li>
-			<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-10">Can I create marbleized/swirled or multi-colored wristbands?</a>
-			<div id="dem-10" class="collapse">Yes! For a more unique wristband, choose
-			marbleized Swirl or multi-color Segmented color options our Order Now page. Wristbands can be swirled or
-			segmented using between 2 and 7 colors. If you need Swirl or Segmented wristbands in a color combination
-			that isn’t offered on our Order page, please call us at 1 (800) 523-8078, use live chat, or email us to
-			place your order.</div>
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#gem-5">Can I create marbleized/swirled or multi-colored wristbands?</a>
+			<div id="gem-5" class="collapse">Expect a digital proof will be sent in just about 10-20 minutes.</div>
+		  </li>
+		</ul>
+	</div>
+	<div class="clearfix"></div>
+	<div class="col-md-6">
+		<h4>PAYMENTS</h4>
+		<ul class="accordion">
+		  <li>
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#pem-1">How can I pay for my order?</a>
+			<div id="pem-1" class="collapse">Payments are accepted through credit cards: VISA, MasterCard, Discover or American Express. We also accept paying via PayPal. When paying using check, kindly ask for the mailing address where you can send the check. Arrangements for purchase orders from schools are also acknowledged upon approval, just call our toll-free hotline.</div>
+		  </li>
+		  <li>
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#pem-2">Will I be charge for sales tax?</a>
+			<div id="pem-2" class="collapse">No sales tax will be assessed, only the cost of the wristbands and shipping fee are charged.</div>
+		  </li>
+		  <li>
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#pem-3">Are there any hidden fees?</a>
+			<div id="pem-3" class="collapse">There will be no hidden additional fees.The cost we will state is guaranteed that will cover all the charges. The amount that is stated will also be the exact amount that will be charged to your billing statement.</div>
+		  </li>
+		  <li>
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#pem-4">How do I place an order using Purchase Order?</a>
+			<div id="pem-4" class="collapse">You can arrange an order using Purchase Order by calling our sales specialist via our toll-free number.</div>
+		  </li>
+		</ul>
+	</div>
+	<div class="col-md-6">
+		<h4>Shipping and Delivery</h4>
+		<ul class="accordion">
+		  <li>
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#sdem-1">What is the freight cost?</a>
+			<div id="sdem-1" class="collapse">The total cost we will provide already includes the shipping fee. Though, shipping fees differs depending on the place and the date of delivery.</div>
+		  </li>
+		  <li>
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#sdem-2">Do you ship to PO Box and APO/FPO Addresses?</a>
+			<div id="sdem-2" class="collapse">No, a physical address is needed to guarantee the delivery.</div>
+		  </li>
+		  <li>
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#sdem-3">When will I receive the wristbands?</a>
+			<div id="sdem-3" class="collapse">You can choose from a number of delivery options with guaranteed delivery dates.</div>
+		  </li>
+		  <li>
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#sdem-4">Do you deliver outside United States?</a>
+			<div id="sdem-4" class="collapse">We send wristbands in any part of the world.</div>
+		  </li>
+		</ul>
+	</div>
+	<div class="clearfix"></div>
+	<div class="col-md-6">
+		<h4>Order Tracking</h4>
+		<ul class="accordion">
+		  <li>
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#oem-1">How can I track my order?</a>
+			<div id="oem-1" class="collapse">The status of your order can be monitored by sending us an email at sales@promotionalwristband.com , We will also email you the tracking number once we shipped the bands out.</div>
+		  </li>
+		  <li>
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#oem-2">What is the shipping courier?</a>
+			<div id="oem-2" class="collapse">The bands can either be sent to you via USPS or DHL based on the shipping delivery you availed.</div>
+		  </li>
+		</ul>
+	</div>
+	<div class="col-md-6">
+		<h4>Discounts and Promotions</h4>
+		<ul class="accordion">
+		  <li>
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#doem-1">Do you offer discount?</a>
+			<div id="doem-1" class="collapse">Orders from non-profit organization are entitled to discounts as well as orders that will be used for fund-raising activities. Please call our hotline for further details.</div>
+		  </li>
+		  <li>
+			<a href="javascript:void(0)" data-toggle="collapse" data-target="#doem-2">Will the Free Promo be the same as my order?</a>
+			<div id="doem-2" class="collapse">The free wristbands will be exactly the same as the wristband you originally ordered. However, you can opt to divide it evenly or the other way around.</div>
 		  </li>
 		</ul>
 	</div>

@@ -5,7 +5,7 @@
 	<div class="half_bg" style="width: 60%; margin: 1% 0px 1% 1%;">
 			<h1>Dual Layer Wristband</h1>
 			<!----<p class="prodcode">Product Code: <b>RB-DL12</b> (1/2 Inch) | <b>RB-DL1</b> (1 Inch)</p>--->
-			<p>This Wristband type is one of the most flashy type of wristband. We engrave the inner part of the wristbands with the same color of the bands and we oil spray the outer part of the wristbands with your desired color. Due to the oil spray, the wristband will have a glossy texture. You can also choose the message part of the wristband as a separate color from the inside part and the outer part of the wristband. You can customized this type with whatever design and color you desire.</p>
+			<p>Dual Layer wristbands allow you to have different colors on the inner and outer portion of the wristband. You can also have your customized message placed on the bands in varying colors. The message will be engraved first and will be oil sprayed resulting to the wristband having a glossy texture. Another option is to have the color of the message part be different than that of the inner and outer portion of the wristband.</p>
 			<div class="popup-gallery">
 				<div class="col-md-8">
 				<a href="assets/images/src/Dual-Layer.png" title="Dual Layer"><img src="assets/images/src/Dual-Layer.png" class="galleryimg" ></a>

@@ -555,7 +555,7 @@ span.red {
 
 .accordion li{
 	list-style:none;
-	padding-bottom:10px;
+	padding-bottom:12px;
 }
 
 .accordion li a{
@@ -749,6 +749,32 @@ li.active.select-box-col {
 	z-index: 9999;
 	background: url('img/ajax-loader-f.gif') 50% 50% no-repeat rgb(249,249,249);
 }
+
+.content-main{
+	font-size: 15px;
+    line-height: 22px;
+    padding: 24px 14px;
+}
+
+.content-main p{
+	padding-bottom:10px;
+}
+
+.header-texttitle{
+	font-size:17px;
+	color:#079ca5;
+	font-weight: bold;
+}
+
+.col-md-6 h4{
+	font-weight:bold;
+}
+
+.accordion li div{
+	padding-left:14px;
+	padding-top: 10px;
+}
+
 
 /****
 **

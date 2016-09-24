@@ -10,7 +10,7 @@
 	<div class="half_bg" style="width: 60%; margin: 1% 0px 1% 1%;">
 			<h1>Figured Wristband</h1>
 			<!----<p class="prodcode">Product Code: <b>RB-D12</b> (1/2 Inch) | <b>RB-D1</b> (1 Inch)</p>---->
-			<p>Debossed is the most popular type of wristbands. This is similar to the yellow Livestrong wristband. Your customized message is engraved or sunken into the wristband. Our wristbands are made from 100% Pure Silicone which is Latex free and child safe.</p>
+			<p>A type of wristband known for its unique feature, the figured wristbands will let you highlight your school, company, or organizational logo or even clipart by placing it in the circle portion found in the middle of the wristband.</p>
 			<div class="popup-gallery">
 				<div class="col-md-8">
 				<a href="assets/images/src/Figured.png" title="Figured"><img src="assets/images/src/Figured.png" class="galleryimg" ></a>
