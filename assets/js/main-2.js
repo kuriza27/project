@@ -446,7 +446,7 @@ $(document).ready(function() {
 			}
 			
 			//Check and remove step 4 if blank style		     
-			if(style === "blank-style"){
+			if(style === "blank"){
 				$('.wrist-messsage').hide();
 				$('.step-5').hide();
 				$('.step-4').show();
@@ -1660,26 +1660,31 @@ function getTotalData() {
 						total_qty : 0, 
 						total_price : 0 
 					};
-	// Get text format
-	var $text_type = $("input[type='radio'].band-text-design:checked").val();
-	// Check selected text format then get all texts
-	if ($text_type == "front-back-select") {
-		$collection.text["type"] = "regular";
-		$collection.text["text_back"] = $("#input-back-text").val();
-		$collection.text["text_front"] = $("#input-front-text").val();
-		$collection.text["text_inside"] = $("#input-inside-text").val();
-	} else {
-		$collection.text["type"] = "continuous";
-		$collection.text["text_continue"] = $("#input-continue-text").val();
-		$collection.text["text_inside"] = $("#input-inside-text").val();
+
+	// Set to empty the Text & Icon properties. These should not be available for blank style
+	if($style != "blank") {
+		// Get text format
+		var $text_type = $("input[type='radio'].band-text-design:checked").val();
+		// Check selected text format then get all texts
+		if ($text_type == "front-back-select") {
+			$collection.text["type"] = "regular";
+			$collection.text["text_back"] = $("#input-back-text").val();
+			$collection.text["text_front"] = $("#input-front-text").val();
+			$collection.text["text_inside"] = $("#input-inside-text").val();
+		} else {
+			$collection.text["type"] = "continuous";
+			$collection.text["text_continue"] = $("#input-continue-text").val();
+			$collection.text["text_inside"] = $("#input-inside-text").val();
+		}
+		// Get selected icons
+		$collection.icon["front_start"]		= $(".start-fc img").attr("src");
+		$collection.icon["front_end"]		= $(".end-fc img").attr("src");
+		$collection.icon["back_start"]		= $(".back-mc img").attr("src");
+		$collection.icon["back_end"]		= $(".backend-mc img").attr("src");
+		$collection.icon["continues_start"]	= $(".start-cc img").attr("src");
+		$collection.icon["continues_end"]	= $(".end-cc img").attr("src");
 	}
-	// Get selected icons
-	$collection.icon["front_start"]		= $(".start-fc img").attr("src");
-	$collection.icon["front_end"]		= $(".end-fc img").attr("src");
-	$collection.icon["back_start"]		= $(".back-mc img").attr("src");
-	$collection.icon["back_end"]		= $(".backend-mc img").attr("src");
-	$collection.icon["continues_start"]	= $(".start-cc img").attr("src");
-	$collection.icon["continues_end"]	= $(".end-cc img").attr("src");
+
 	// Get all wristbands with quantity
 	$(".wrist_color_container:visible .js-color input[name$='-qty']").each(function() {
 		// Get quantity
@@ -1706,11 +1711,7 @@ function getTotalData() {
 				}
 
 				// Fix proper font-color
-				if ($style === "debossed") {
-					_ref_color_font = "000000";
-				} else if ($style === "embossed") {
-					_ref_color_font = "000000";
-				}
+				if ($style === "debossed" || $style === "embossed") { _ref_color_font = "000000"; }
 
 				// Check and change
 				if(_ref_type === "swirls") { _ref_type = "swirl"; }
@@ -1726,11 +1727,9 @@ function getTotalData() {
 
 				// Compute total quantity
 				$collection.total_qty += parseInt($qty);
-
-				// NEW ALGO DAMAGE
+				// // NEW ALGO DAMAGE
 				// // Get proper item price
 				// var hasQty = false; // Set variables
-
 				// // Loop through json price list
 				// $.each($data[$style][$size], function(_data_qty, _data_prc) {
 				// 	// Check if already found the price
@@ -1745,7 +1744,7 @@ function getTotalData() {
 				// 		}
 				// 	}
 				// });
-				// End
+				// // END NEW ALGO DAMAGE
 
 				// Populate items
 				$collection.items[_ref_type].data.push({ color:_ref_color_arr, font:_ref_color_font, name:_ref_color_title.toString().toLowerCase(), qty:$qty, size:_ref_size_name.toString().toLowerCase().replace("-qty", "") });
@@ -1770,16 +1769,18 @@ function getTotalData() {
 			if(hasQty === false) {
 				// If less than or equal
 				if($collection.total_qty < 20) {
-					$collection.items[i_key].price = parseFloat($data[$style][$size]['20']); // Get price
+					// Get price
+					$collection.items[i_key].price = parseFloat($data[$style][$size]['20']);
 				} else if(parseInt(_data_qty) <= $collection.total_qty) {
-					$collection.items[i_key].price = parseFloat(_data_prc); // Get price
+					// Get price
+					$collection.items[i_key].price = parseFloat(_data_prc);
 				} else {
+					// Flag if item price found
 					hasQty = true;
 				}
 			}
 		});
-
-		// Get proper add-on price
+		// Get proper additional item price
 		if(typeof $data_addon[i_key] != "undefined") {
 			$.each($data_addon[i_key], function(_ao_qty, _ao_prc) {
 				// Check if already found the price
@@ -1791,16 +1792,18 @@ function getTotalData() {
 					} else if($collection.items[i_key].qty < 20) {
 						// Get price
 						$collection.items[i_key].add_price = parseFloat(_ao_prc);
+						// Flag if additional item price found
 						hasAddQty = true;
 					} else {
+						// Flag if additional item price found
 						hasAddQty = true;
 					}
 				}
 			});
 		} else {
+			// If no proper add-on price found
 			$collection.items[i_key].add_price = 0;
 		}
-
 		// Compute total price
 		// $collection.items[i_key].total = $collection.items[i_key].price * $collection.items[i_key].qty;
 		$collection.items[i_key].total = ($collection.items[i_key].price + $collection.items[i_key].add_price) * $collection.items[i_key].qty;
@@ -1834,16 +1837,18 @@ function getTotalData() {
 					} else if(_aoConvertQty < 20) {
 						// Get price
 						$collection.add_ons[_aoCode] = { code:_aoCode, price:parseFloat(_ao_prc), qty:_aoConvertQty, total:parseFloat(_aoConvertQty*parseFloat(_ao_prc)) };
+						// Flag if add-on price found
 						hasAOPrice = true;
 					} else {
+						// Flag if add-on price found
 						hasAOPrice = true;
 					}
 				}
 			});
-		} else { // Ceck if add_on is not on JSON
+		} else { // Check if add_on is not on JSON
 			$collection.add_ons[_aoCode] = { code:_aoCode, price:0, qty:_aoConvertQty, total:0 };
 		}
-
+		// Indicator if all key-chains are converted
 		if(_aoCode == "key-chain") {
 			$collection.add_ons[_aoCode].all = _aoAllConvert;
 		}
@@ -1879,19 +1884,19 @@ function getTotalData() {
 	$collection.total_price += parseFloat($collection.shipping_price);
 	$collection.total_price += parseFloat($collection.production_price);
 
-	// NEW ALGO DAMAGE
+	// // NEW ALGO DAMAGE
 	// // Add item prices to total
 	// $.each($collection.items, function(key, value) {
 	// 	$collection.total_price += parseFloat(value.total);
 	// });
-	// End
+	// // END NEW ALGO DAMAGE
 
 	// Add add-on prices to total
 	$.each($collection.add_ons, function(key, value) {
 		$collection.total_price += parseFloat(value.total);
 	});
 
-	// console.log($collection);
+console.log($collection);
 
 	// Return order collection
 	return $collection;

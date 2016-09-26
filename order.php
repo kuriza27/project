@@ -143,10 +143,10 @@
 						<input type="radio" name="wrist_style" id="figured" class="wrist_style" value="figured" data-style="figured" <?php echo(($qstyle==="figured")?'checked="checked"':''); ?> >
 						<h2>Figured</h2>
 					</div>
-					<div class="col-md-4 prod js-style <?php echo(($qstyle==='blank')?'active':''); ?>" value="blank-style">
+					<div class="col-md-4 prod js-style <?php echo(($qstyle==='blank')?'active':''); ?>" value="blank">
 						<div class="zoom"><a href="assets/images/src/Blank.png" title="Blank Wristband"><img src="assets/images/src/zoom.png" class="galleryimg"></a></div>
 						<div class="box-thumb"><img src="assets/images/src/Blank.png"></div>
-						<input type="radio" name="wrist_style" id="blank-style" class="wrist_style" value="blank-style" data-style="blank" <?php echo(($qstyle==="blank")?'checked="checked"':''); ?> >
+						<input type="radio" name="wrist_style" id="blank-style" class="wrist_style" value="blank" data-style="blank" <?php echo(($qstyle==="blank")?'checked="checked"':''); ?> >
 						<h2>Blank</h2>
 					</div>
 					<div class="clearfix"></div>
