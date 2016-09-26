@@ -775,6 +775,9 @@ li.active.select-box-col {
 	padding-top: 10px;
 }
 
+.js-size input, .js-style input, .add-ons input {
+  touch-action: manipulation;
+}
 
 /****
 **
