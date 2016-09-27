@@ -99,7 +99,7 @@
 	</div>
 </div>
 
-<div class="modal fade" id="modal-10-free-keychains" role="dialog">
+<div id="modal-10-free-keychains" class="modal fade" role="dialog">
 	<div class="modal-dialog">
 		<!-- Modal content-->
 		<div class="modal-content">
@@ -119,7 +119,7 @@
 	</div>
 </div>
 
-<div class="col-md-12 message_wristband_100" style="display:none;">
+<div id="dv-100-free-wristbands" class="col-md-12 message_wristband_100" style="display:none;">
 	<div class="box-thumb clearfix">
 		<div class="row row-title">
 			<h1>You have <strong class="js-free-bands-count">100</strong> <strong>FREE</strong> wristbands!</h1>
@@ -176,7 +176,7 @@
 	</div>
 </div>
 
-<div class="modal fade" id="modal-100-free-wristbands" role="dialog">
+<div id="modal-100-free-wristbands" class="modal fade" role="dialog">
 	<div class="modal-dialog">
 		<!-- Modal content-->
 		<div class="modal-content">

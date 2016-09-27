@@ -15,15 +15,15 @@
 	  	  
 	   <div class="images-clips">
 			<div class="col-md-2">
-				<a href="order.php"><img src="assets/images/src/Get_A_Quote.jpg"></a>
+				<a href="quote.php"><img src="assets/images/src/Get_A_Quote.jpg"></a>
 			</div>
 			
 			<div class="col-md-2">
-				<a href="contact-us.php"><img src="assets/images/src/PO.jpg"></a>
+				<a href="school_po.php"><img src="assets/images/src/PO.jpg"></a>
 			</div>
 			
 		    <div class="col-md-2">
-				<a href="#"><img src="assets/images/src/Digital_Design.jpg"></a>
+				<a href="digital_design.php"><img src="assets/images/src/Digital_Design.jpg"></a>
 			</div>
 						
 			<div class="col-md-2">

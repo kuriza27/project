@@ -22,6 +22,20 @@ $(document).ready(function() {
 	$('.xt-small-large-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-xt-small-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
 	$('.xt-large-large-qty').closest('div').addClass('qty-box text-center').append('<div class="fntin fnt-xt-large-large-qty" data-toggle="tooltip" data-placement="bottom" title="Select font color" ref-font-color="'+default_font_color+'" style="background-color:#'+default_font_color+';"></div>');
 
+	// Initialize wristband price table
+	get_style_size("price_table");
+
+	// Blink
+	function blink(selector) {
+		$(selector).fadeOut('slow', function() {
+			$(this).fadeIn('slow', function() {
+				blink(this);
+			});
+		});
+	}
+		
+	blink('.blink');
+
 	// For font color select event
 	$('body').on('click', '.fntin', function() {
 		e.preventDefault();
@@ -75,17 +89,6 @@ $(document).ready(function() {
 		// Populate total section
 		populateTotalSection(collectionData);
 	});
-
-	// Blink
-	function blink(selector) {
-		$(selector).fadeOut('slow', function() {
-			$(this).fadeIn('slow', function() {
-				blink(this);
-			});
-		});
-	}
-		
-	blink('.blink');
 
 	// ADD-ON EVENTS
 	$("body").on("click", "div.add-ons", function(e) {
@@ -192,40 +195,6 @@ $(document).ready(function() {
 		populateTotalSection(collectionData);
 	});
 
-	//submit order form
-	$("body").on("click", "#submitOrder", function(e) {
-		e.preventDefault();
-		e.stopPropagation();
-
-		// Get order data
-		var collectionData = getTotalData();
-
-		var $form_data = new FormData();
-		$form_data.append('file-1', $("input[type='file'].file-1")[0].files[0]);
-		$form_data.append('file-2', $("input[type='file'].file-2")[0].files[0]);
-		$form_data.append('file-3', $("input[type='file'].file-3")[0].files[0]);
-		$form_data.append('file-4', $("input[type='file'].file-4")[0].files[0]);
-		$form_data.append('file-5', $("input[type='file'].file-5")[0].files[0]);
-		$form_data.append('file-6', $("input[type='file'].file-6")[0].files[0]);
-		$form_data.append('data', JSON.stringify(collectionData));
-
-		// console.log($collection);
-
-		jQuery.ajax({
-			url: 'submit_order.php',
-			data: $form_data,
-			cache: false,
-			contentType: false,
-			processData: false,
-			type: 'POST',
-			success: function(data){ }
-		});
-	});
-
-	// Initialize wristband price table
-	get_style_size("price_table");
-
-
 	$("body").on("blur", "#freekc", function(e) {
 		e.preventDefault();
 		e.stopPropagation();
@@ -248,19 +217,19 @@ $(document).ready(function() {
 		e.preventDefault();
 		e.stopPropagation();
 
-		// Check if something actually changed
-		if($(this).val().trim() != "") {
+		// // Check if something actually changed
+		// if($(this).val().trim() != "") {
 			// Get order data
 			var collectionData = getTotalData();
 			if(collectionData.free.wristbands.qty > 100 || collectionData.free.wristbands.qty < 0) {
-				if ($(this).val()!="") {
+				// if ($(this).val() != "") {
 					$('#modal-100-free-wristbands').modal('show');
 					return;
-				};
+				// };
 			}
 			// Populate total section
 			populateTotalSection(collectionData);
-		}
+		// }
 	});
 
 // });
@@ -560,6 +529,10 @@ $(document).ready(function() {
 			// Empty all quantities
 			$(".wrist_color_container:visible").find(".js-color").find("input[name$='-qty']").val("");
 
+			// Hide free
+			$('#dv-10-free-keychains').hide();
+			$('#dv-100-free-wristbands').hide();
+
 			// Empty all add-ons
 			$("#convert-keychain").hide();
 			$("div.add-ons").removeClass("active");
@@ -575,6 +548,7 @@ $(document).ready(function() {
 			// Hide total
 			$('.js-total').hide();
 			$('.js-no-total').fadeIn(300);
+
 
 			// Get new price table
 			get_style_size('price_table');
@@ -640,6 +614,10 @@ $(document).ready(function() {
 			$(".preview-panel").find("img").remove();
 			$("#preview-pane-selection").html("");
 			$("#front-view, #back-view, #inside-view, #continue-view").attr("style", "");
+
+			// Hide free
+			$('#dv-10-free-keychains').hide();
+			$('#dv-100-free-wristbands').hide();
 
 			// Hide total
 			$('.js-total').hide();
@@ -716,9 +694,9 @@ $(document).ready(function() {
 						if(!$('.conversion-wrist-' + key_style + '.free-wrist-' + key_style + '-' + value.size + '-' + value.color.join("-") ).length > 0) {
 							html_wb_free += '<li class="fwb-list conversion-wrist-'+key_style+' free-wrist-'+key_style+'-'+value.size+'-'+value.name+'" data-band-color="' + value.color.join("-") + '">';
 							html_wb_free += '<div class="fwb-text col-md-6 col-sm-12">';
-								html_wb_free += '<div class="col-xs-4">'+key_style.toUpperCase()+'</div>';
-								html_wb_free += '<div class="col-xs-4">'+value.name.toLowerCase().capitalizeFirstLetter()+'</div>';
-								html_wb_free += '<div class="col-xs-4">'+value.size.toLowerCase().capitalizeFirstLetter()+'</div>';
+								html_wb_free += '<div class="col-xs-4 fwb-text-content">'+key_style.toUpperCase()+'</div>';
+								html_wb_free += '<div class="col-xs-4 fwb-text-content">'+value.name.toLowerCase().capitalizeFirstLetter()+'</div>';
+								html_wb_free += '<div class="col-xs-4 fwb-text-content">'+value.size.toLowerCase().capitalizeFirstLetter()+'</div>';
 							html_wb_free += '</div>';
 							html_wb_free += '<div class="align-right col-md-6 col-sm-12"><h4 class="fwb-text col-xs-12 hidden-md hidden-lg text-center fwb-text-hidden-header">INPUT QUANTITY</h4><input type="number" class="freewb col-xs-12" id="freewb-'+key_style+'-'+value.size+'-'+value.color.join("-")+'" name="'+key_style+'-'+value.size+'-'+value.color.join("-")+'-fwb" data-style="'+key_style+'" data-color="'+value.color.join(",")+'" data-font-color="'+value.font+'" data-name="'+value.name+'" data-size="'+value.size+'" placeholder="0" data-maxlength="3" /></div>';
 							html_wb_free += '<div class="clearfix"></div>';
@@ -729,9 +707,9 @@ $(document).ready(function() {
 					// For wristbands convertion
 					html_ao_kc += '<li class="fwb-list convert-keychain-some-'+key_style+' convert-keychain-some-'+key_style+'-'+value.size+'-'+value.name+'" data-band-color="' + value.color.join("-") + '">';
 					html_ao_kc += '<div class="fwb-text col-md-6 col-sm-12">';
-						html_ao_kc += '<div class="col-xs-4">'+key_style.toUpperCase()+'</div>';
-						html_ao_kc += '<div class="col-xs-4">'+value.name.toLowerCase().capitalizeFirstLetter()+'</div>';
-						html_ao_kc += '<div class="col-xs-4">'+value.size.toLowerCase().capitalizeFirstLetter()+'</div>';
+						html_ao_kc += '<div class="col-xs-4 fwb-text-content">'+key_style.toUpperCase()+'</div>';
+						html_ao_kc += '<div class="col-xs-4 fwb-text-content">'+value.name.toLowerCase().capitalizeFirstLetter()+'</div>';
+						html_ao_kc += '<div class="col-xs-4 fwb-text-content">'+value.size.toLowerCase().capitalizeFirstLetter()+'</div>';
 					html_ao_kc += '</div>';
 					html_ao_kc += '<div class="align-right col-md-6 col-sm-12"><h4 class="fwb-text col-xs-12 hidden-md hidden-lg text-center fwb-text-hidden-header">INPUT QUANTITY</h4><input type="number" class="col-xs-12 kc-some-qty" id="convert-keychain-some-'+key_style+'-'+value.size+'-'+value.color.join("-")+'" name="'+key_style+'-'+value.size+'-'+value.color.join("-")+'-fwb" data-style="'+key_style+'" data-color="'+value.color.join(",")+'" data-font-color="'+value.font+'" data-name="'+value.name+'" data-size="'+value.size+'" placeholder="0" data-maxlength="3" /></div>';
 					html_ao_kc += '<div class="clearfix"></div>';
@@ -1205,9 +1183,9 @@ $(document).ready(function() {
 					// For free wristbands
 					html_kc += '<li class="fwb-list convert-keychain-some-'+key_style+' convert-keychain-some-'+key_style+'-'+value.size+'-'+value.name+'" data-band-color="' + value.color.join("-") + '">';
 					html_kc += '<div class="fwb-text col-md-6 col-sm-12">';
-						html_kc += '<div class="col-xs-4">'+key_style.toUpperCase()+'</div>';
-						html_kc += '<div class="col-xs-4">'+value.name.toLowerCase().capitalizeFirstLetter()+'</div>';
-						html_kc += '<div class="col-xs-4">'+value.size.toLowerCase().capitalizeFirstLetter()+'</div>';
+						html_kc += '<div class="col-xs-4 fwb-text-content">'+key_style.toUpperCase()+'</div>';
+						html_kc += '<div class="col-xs-4 fwb-text-content">'+value.name.toLowerCase().capitalizeFirstLetter()+'</div>';
+						html_kc += '<div class="col-xs-4 fwb-text-content">'+value.size.toLowerCase().capitalizeFirstLetter()+'</div>';
 					html_kc += '</div>';
 					html_kc += '<div class="align-right col-md-6 col-sm-12"><h4 class="fwb-text col-xs-12 hidden-md hidden-lg text-center fwb-text-hidden-header">INPUT QUANTITY</h4><input type="number" class="col-xs-12 kc-some-qty" id="convert-keychain-some-'+key_style+'-'+value.size+'-'+value.color.join("-")+'" name="'+key_style+'-'+value.size+'-'+value.color.join("-")+'-fwb" data-style="'+key_style+'" data-color="'+value.color.join(",")+'" data-font-color="'+value.font+'" data-name="'+value.name+'" data-size="'+value.size+'" placeholder="0" data-maxlength="3" /></div>';
 					html_kc += '<div class="clearfix"></div>';
@@ -1240,6 +1218,125 @@ $(document).ready(function() {
 		populateTotalSection(getTotalData());
 	});
 
+	// Submit `order` form
+	$("body").on("click", "#submitOrder", function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+
+		// Get order data
+		var collectionData = getTotalData();
+
+		var $form_data = new FormData();
+		$form_data.append('file-1', $("input[type='file'].file-1")[0].files[0]);
+		$form_data.append('file-2', $("input[type='file'].file-2")[0].files[0]);
+		$form_data.append('file-3', $("input[type='file'].file-3")[0].files[0]);
+		$form_data.append('file-4', $("input[type='file'].file-4")[0].files[0]);
+		$form_data.append('file-5', $("input[type='file'].file-5")[0].files[0]);
+		$form_data.append('file-6', $("input[type='file'].file-6")[0].files[0]);
+		$form_data.append('data', JSON.stringify(collectionData));
+
+		// console.log($collection);
+
+		jQuery.ajax({
+			url: 'submit_order.php',
+			data: $form_data,
+			cache: false,
+			contentType: false,
+			processData: false,
+			type: 'POST',
+			success: function(data){ }
+		});
+	});
+
+	// Submit `quote` form
+	$("body").on("click", "#submitQuote", function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+
+		// Get order data
+		var collectionData = getTotalData();
+
+		var $form_data = new FormData();
+		$form_data.append('file-1', $("input[type='file'].file-1")[0].files[0]);
+		$form_data.append('file-2', $("input[type='file'].file-2")[0].files[0]);
+		$form_data.append('file-3', $("input[type='file'].file-3")[0].files[0]);
+		$form_data.append('file-4', $("input[type='file'].file-4")[0].files[0]);
+		$form_data.append('file-5', $("input[type='file'].file-5")[0].files[0]);
+		$form_data.append('file-6', $("input[type='file'].file-6")[0].files[0]);
+		$form_data.append('data', JSON.stringify(collectionData));
+
+		console.log($form_data);
+
+		// jQuery.ajax({
+		// 	url: 'submit_order.php',
+		// 	data: $form_data,
+		// 	cache: false,
+		// 	contentType: false,
+		// 	processData: false,
+		// 	type: 'POST',
+		// 	success: function(data){ }
+		// });
+	});
+
+	// Submit quote form
+	$("body").on("click", "#submitSchoolPO", function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+
+		// Get order data
+		var collectionData = getTotalData();
+
+		var $form_data = new FormData();
+		$form_data.append('file-1', $("input[type='file'].file-1")[0].files[0]);
+		$form_data.append('file-2', $("input[type='file'].file-2")[0].files[0]);
+		$form_data.append('file-3', $("input[type='file'].file-3")[0].files[0]);
+		$form_data.append('file-4', $("input[type='file'].file-4")[0].files[0]);
+		$form_data.append('file-5', $("input[type='file'].file-5")[0].files[0]);
+		$form_data.append('file-6', $("input[type='file'].file-6")[0].files[0]);
+		$form_data.append('data', JSON.stringify(collectionData));
+
+		console.log($form_data);
+
+		// jQuery.ajax({
+		// 	url: 'submit_order.php',
+		// 	data: $form_data,
+		// 	cache: false,
+		// 	contentType: false,
+		// 	processData: false,
+		// 	type: 'POST',
+		// 	success: function(data){ }
+		// });
+	});
+
+	// Submit quote form
+	$("body").on("click", "#submitDDesign", function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+
+		// Get order data
+		var collectionData = getTotalData();
+
+		var $form_data = new FormData();
+		$form_data.append('file-1', $("input[type='file'].file-1")[0].files[0]);
+		$form_data.append('file-2', $("input[type='file'].file-2")[0].files[0]);
+		$form_data.append('file-3', $("input[type='file'].file-3")[0].files[0]);
+		$form_data.append('file-4', $("input[type='file'].file-4")[0].files[0]);
+		$form_data.append('file-5', $("input[type='file'].file-5")[0].files[0]);
+		$form_data.append('file-6', $("input[type='file'].file-6")[0].files[0]);
+		$form_data.append('data', JSON.stringify(collectionData));
+
+		console.log($form_data);
+
+		// jQuery.ajax({
+		// 	url: 'submit_order.php',
+		// 	data: $form_data,
+		// 	cache: false,
+		// 	contentType: false,
+		// 	processData: false,
+		// 	type: 'POST',
+		// 	success: function(data){ }
+		// });
+	});
 
 });
 
@@ -1372,7 +1469,7 @@ function get_price_data($style, $size, type) {
 					ttlPrice += parseFloat(ttlSubPrice);
 
 					// List items to total summary
-					var html_item = '<div class="row summary-item"><div class="col-md-8 col-sm-6">- '+bKey.bold().toUpperCase()+' ('+bVal.qty+' x '+formatCurrency(subPrice)+' each)</div><div class="col-md-4 col-sm-6 align-right">'+formatCurrency(ttlSubPrice)+'</div></div>';
+					var html_item = '<div class="row summary-item"><div class="col-md-8 col-xs-6">- '+bKey.bold().toUpperCase()+' ('+bVal.qty+' x '+formatCurrency(subPrice)+' each)</div><div class="col-md-4 col-xs-6 align-right">'+formatCurrency(ttlSubPrice)+'</div></div>';
 					$('.js-item-summary').append(html_item);
 
 				});
@@ -1383,7 +1480,7 @@ function get_price_data($style, $size, type) {
 					if(ttlQty >= 100) {
 						// Show free items div
 						$('#dv-10-free-keychains').show();
-						$('.message_wristband_100').show();
+						$('#dv-100-free-wristbands').show();
 						$('.total-summary-free').show();
 
 						// Count keychains available
@@ -1391,13 +1488,13 @@ function get_price_data($style, $size, type) {
 						if(free_qty === "") { free_qty = 0; }
 
 						// Show items to total summary
-						var html_item = '<div class="row summary-item"><div class="col-md-8 col-sm-6">- Keychains ('+free_qty+' piece/s)</div><div class="clearfix"></div></div>';
-							html_item += '<div class="row summary-item"><div class="col-md-8 col-sm-6">- Free wristbands</div><div class="clearfix"></div></div>';
+						var html_item = '<div class="row summary-item"><div class="col-xs-12">- Keychains ('+free_qty+' piece/s)</div><div class="clearfix"></div></div>';
+							html_item += '<div class="row summary-item"><div class="col-xs-12">- Free wristbands</div><div class="clearfix"></div></div>';
 						$('.js-free-summary').append(html_item);
 					} else {
 						// Hide free items div
 						$('#dv-10-free-keychains').hide();
-						$('.message_wristband_100').hide();
+						$('#dv-100-free-wristbands').hide();
 						$('#freekc').val('').focus();
 					}
 					// END : For free promo items
@@ -1660,7 +1757,6 @@ function getTotalData() {
 						total_qty : 0, 
 						total_price : 0 
 					};
-
 	// Set to empty the Text & Icon properties. These should not be available for blank style
 	if($style != "blank") {
 		// Get text format
@@ -1684,7 +1780,6 @@ function getTotalData() {
 		$collection.icon["continues_start"]	= $(".start-cc img").attr("src");
 		$collection.icon["continues_end"]	= $(".end-cc img").attr("src");
 	}
-
 	// Get all wristbands with quantity
 	$(".wrist_color_container:visible .js-color input[name$='-qty']").each(function() {
 		// Get quantity
@@ -1700,7 +1795,6 @@ function getTotalData() {
 				var _ref_color_arr = _ref_color.split(",");
 				var _ref_size_name = $(this).attr("name");
 				var _ref_type = $(this).parents(".tab-pane").data("color").toLowerCase();
-
 				// Fix proper type and color per type
 				if(_ref_type === "swirls") {
 					_ref_type = "swirl";
@@ -1709,13 +1803,10 @@ function getTotalData() {
 					_ref_color_font = _ref_color_arr[1];
 					_ref_color_arr = _ref_color_arr.slice(0,1);
 				}
-
 				// Fix proper font-color
 				if ($style === "debossed" || $style === "embossed") { _ref_color_font = "000000"; }
-
 				// Check and change
 				if(_ref_type === "swirls") { _ref_type = "swirl"; }
-
 				// List all items with quantity
 				if(typeof $collection.items[_ref_type] == "undefined" || $collection.items[_ref_type] == null) {
 					// Set up data
@@ -1724,40 +1815,35 @@ function getTotalData() {
 					// Add quantity
 					$collection.items[_ref_type].qty += parseInt($qty);
 				}
-
 				// Compute total quantity
 				$collection.total_qty += parseInt($qty);
-				// // NEW ALGO DAMAGE
-				// // Get proper item price
-				// var hasQty = false; // Set variables
-				// // Loop through json price list
-				// $.each($data[$style][$size], function(_data_qty, _data_prc) {
-				// 	// Check if already found the price
-				// 	if(hasQty === false) {
-				// 		// If less than or equal
-				// 		if($collection.items[_ref_type].qty < 20) {
-				// 			$collection.items[_ref_type].price = parseFloat($data[$style][$size]['20']); // Get price
-				// 		} else if(parseInt(_data_qty) <= $collection.items[_ref_type].qty) {
-				// 			$collection.items[_ref_type].price = parseFloat(_data_prc); // Get price
-				// 		} else {
-				// 			hasQty = true;
-				// 		}
-				// 	}
-				// });
-				// // END NEW ALGO DAMAGE
-
-				// Populate items
-				$collection.items[_ref_type].data.push({ color:_ref_color_arr, font:_ref_color_font, name:_ref_color_title.toString().toLowerCase(), qty:$qty, size:_ref_size_name.toString().toLowerCase().replace("-qty", "") });
-
+					// // NEW ALGO DAMAGE
+					// // Get proper item price
+					// var hasQty = false; // Set variables
+					// // Loop through json price list
+					// $.each($data[$style][$size], function(_data_qty, _data_prc) {
+					// 	// Check if already found the price
+					// 	if(hasQty === false) {
+					// 		// If less than or equal
+					// 		if($collection.items[_ref_type].qty < 20) {
+					// 			$collection.items[_ref_type].price = parseFloat($data[$style][$size]['20']); // Get price
+					// 		} else if(parseInt(_data_qty) <= $collection.items[_ref_type].qty) {
+					// 			$collection.items[_ref_type].price = parseFloat(_data_prc); // Get price
+					// 		} else {
+					// 			hasQty = true;
+					// 		}
+					// 	}
+					// });
+					// // END NEW ALGO DAMAGE
 				// // Compute total price
 				// $collection.items[_ref_type].total = $collection.items[_ref_type].price * $collection.items[_ref_type].qty;
+				// Populate items
+				$collection.items[_ref_type].data.push({ color:_ref_color_arr, font:_ref_color_font, name:_ref_color_title.toString().toLowerCase(), qty:$qty, size:_ref_size_name.toString().toLowerCase().replace("-qty", "") });
 			}
 		}
 	});
-
 	// Get JSON Add-ons price list
 	var $data_addon = $.parseJSON(addon_json);
-
 	// THE NEW ALGO
 	$.each($collection.items, function(i_key, i_value) {
 		// Get proper item price
@@ -1809,8 +1895,7 @@ function getTotalData() {
 		$collection.items[i_key].total = ($collection.items[i_key].price + $collection.items[i_key].add_price) * $collection.items[i_key].qty;
 		$collection.total_price += parseFloat($collection.items[i_key].total);
 	});
-	// End
-
+	// END OF THE NEW ALGO
 	// For add-ons
 	$("input[type='checkbox'].add-ons:checked").each(function() {
 		// Set variables
@@ -1853,7 +1938,6 @@ function getTotalData() {
 			$collection.add_ons[_aoCode].all = _aoAllConvert;
 		}
 	});
-
 	// If total quantity is equal or over 100, get all free items
 	if($collection.total_qty >= 100) {
 		// Check free wristbands quantity
@@ -1878,25 +1962,22 @@ function getTotalData() {
 			$collection.free["wristbands"].qty += ($(this).val().trim() == "") ? 0 : parseInt($(this).val().trim());
 		});
 	}
-
 	// Compute total price
 	// Add shipping & production prices to total
 	$collection.total_price += parseFloat($collection.shipping_price);
 	$collection.total_price += parseFloat($collection.production_price);
-
-	// // NEW ALGO DAMAGE
-	// // Add item prices to total
-	// $.each($collection.items, function(key, value) {
-	// 	$collection.total_price += parseFloat(value.total);
-	// });
-	// // END NEW ALGO DAMAGE
-
+		// // NEW ALGO DAMAGE
+		// // Add item prices to total
+		// $.each($collection.items, function(key, value) {
+		// 	$collection.total_price += parseFloat(value.total);
+		// });
+		// // END NEW ALGO DAMAGE
 	// Add add-on prices to total
 	$.each($collection.add_ons, function(key, value) {
 		$collection.total_price += parseFloat(value.total);
 	});
 
-console.log($collection);
+	// console.log($collection);
 
 	// Return order collection
 	return $collection;
@@ -1960,22 +2041,24 @@ function populateTotalSection(_collection) {
 		}
 		if(typeof _collection.free.wristbands != "undefined") {
 			html_item += '<div class="row summary-item"><div class="col-md-8 col-sm-6">- Wristbands (' + _collection.free.wristbands.qty + ' piece/s)</div><div class="clearfix"></div></div>';
-			$.each(_collection.free.wristbands.data, function(key, value) {
-				html_item += '<div class="row summary-item"><div class="col-md-8 col-sm-6" style="font-size:12px;">&nbsp;&nbsp;&nbsp;- ' + value.name.toLowerCase().capitalizeFirstLetter() + ' (' + value.qty + ' piece/s)</div><div class="clearfix"></div></div>';
-			});
+			if(_collection.free.wristbands.qty > 0) {
+				$.each(_collection.free.wristbands.data, function(key, value) {
+					html_item += '<div class="row summary-item"><div class="col-xs-12 free-wb-label">- ' + value.name.toLowerCase().capitalizeFirstLetter() + ' (' + value.qty + ' piece/s)</div><div class="clearfix"></div></div>';
+				});
+			}
 		}
 
 		// Show free items div
 		if(html_item !== "") {
-			$("#dv-10-free-keychains, .message_wristband_100, .total-summary-free").show();
+			$("#dv-10-free-keychains, #dv-100-free-wristbands, .total-summary-free").show();
 			// Show available free items
 			$('.js-free-summary').html(html_item);
 		} else { // Hide free items div
-			$("#dv-10-free-keychains, .free-convert, .message_wristband_100, .total-summary-free").hide();
+			$("#dv-10-free-keychains, .free-convert, #dv-100-free-wristbands, .total-summary-free").hide();
 		}
 
 	} else { // Hide free items div
-		$("#dv-10-free-keychains, .free-convert, .message_wristband_100, .total-summary-free").hide();
+		$("#dv-10-free-keychains, .free-convert, #dv-100-free-wristbands, .total-summary-free").hide();
 		// $('#freekc').val('').focus();
 	}
 

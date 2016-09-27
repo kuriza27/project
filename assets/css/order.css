@@ -1090,14 +1090,14 @@ span.fig-fc {
 }
 
 .fwb-text{
-    height: 35px;
-    line-height: 30px;
-    min-height: 30px;
+    line-height: 35px;
+    min-height: 35px;
     padding: 0;
 }
 
-.fwb-text .col-xs-4{
+.fwb-text .fwb-text-content{
     height: 100%;
+    line-height: 20px;
 }
 
 .fwb-text .fwb-text-header{
@@ -1174,5 +1174,10 @@ table.fwb-title {
 }
 
 span.fonttext-color{
-	font-size:9px;
+	font-size: 9px;
+}
+
+.summary-item .free-wb-label {
+    font-size: 13px;
+    padding-left: 25px;
 }
