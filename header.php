@@ -70,7 +70,7 @@
     <nav class="navbar navbar-inverse navbar-default">
 		<div class="container">
 			<div id="logo">
-				<a class="navbar-brand" href="#"><img src="assets/images/src/prom_logo.jpg"></a>
+				<a class="navbar-brand" href="homepage.php"><img src="assets/images/src/prom_logo.jpg"></a>
 			</div>
 			<div class="header-right-box">
 			<div id="google_trust">
@@ -131,8 +131,7 @@
 							<li class="menu-item menu-item-type-post_type"><a href="gallery.php">Photo Gallery</a></li>
 							<li class="menu-item menu-item-type-post_type"><a href="contact-us.php">Contact Us</a></li>
 							<li class="menu-item menu-item-type-post_type"><a class="live-chat" href="#">Live Chat</a>
-								<!-- <script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: 'ff8c4d2b-032b-4f3f-9c29-8411120648ad', f: true }); done = f; } }; })();</script>
-								-->
+								<script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: 'ff8c4d2b-032b-4f3f-9c29-8411120648ad', f: true }); done = f; } }; })();</script>
 							</li>
 								<div class="clearfix"></div>
 						</ul>
