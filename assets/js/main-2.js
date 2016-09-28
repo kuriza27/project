@@ -1219,10 +1219,10 @@ $(document).ready(function() {
 	});
 
 	// Submit `order` form
-	$("body").on("click", "#submitOrder", function(e) {
-		e.preventDefault();
-		e.stopPropagation();
-
+	$("body").on("click", ".submitOrder", function(e) {
+		//e.preventDefault();
+		//e.stopPropagation();
+         alert('hey');
 		// Get order data
 		var collectionData = getTotalData();
 
@@ -1235,7 +1235,7 @@ $(document).ready(function() {
 		$form_data.append('file-6', $("input[type='file'].file-6")[0].files[0]);
 		$form_data.append('data', JSON.stringify(collectionData));
 
-		// console.log($collection);
+		console.log(collectionData);
 
 		jQuery.ajax({
 			url: 'submit_order.php',

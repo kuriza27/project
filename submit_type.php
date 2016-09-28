@@ -1,27 +1,31 @@
 <?php
+	function curPageName() {
+		return substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
+	}
 
-// Check page for proper button actions
-if(substr($_SERVER['REQUEST_URI'], 1, 9) == "order.php") {
+	$url = curPageName();
+	// Check page for proper button actions
+	if($url == "order.php") {
 
-	// For order.php
-	echo("<button id='submitOrder' type='submit'>ADD TO CART</button>");
+		// For order.php
+		echo("<button class='submitOrder' type='submit'>ADD TO CART</button>");
 
-} else if(substr($_SERVER['REQUEST_URI'], 1, 9) == "quote.php") {
+	} else if($url == "quote.php") {
 
-	// For quote.php
-	echo("<button id='submitQuote' type='submit'>SUBMIT QUOTE</button>");
+		// For quote.php
+		echo("<button class='submitQuote' type='submit'>SUBMIT QUOTE</button>");
 
-} else if(substr($_SERVER['REQUEST_URI'], 1, 13) == "school_po.php") {
+	} else if($url == "school_po.php") {
 
-	// For school_po.php
-	echo("<button id='submitSchoolPO' type='submit'>SUBMIT PURCHASE ORDER</button>");
+		// For school_po.php
+		echo("<button class='submitSchoolPO' type='submit'>SUBMIT PURCHASE ORDER</button>");
 
-} else if(substr($_SERVER['REQUEST_URI'], 1, 18) == "digital_design.php") {
+	} else if($url == "digital_design.php") {
 
-	// For school_po.php
-	echo("<button id='submitDDesign' type='submit'>SUBMIT DESIGN</button>");
+		// For school_po.php
+		echo("<button class='submitDDesign' type='submit'>SUBMIT DESIGN</button>");
 
-}
+	}
 
 ?>
 
