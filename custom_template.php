@@ -245,7 +245,7 @@
 								<a href="javascript:void(0)" data-toggle="collapse" data-target="#upload-1">or Upload your own art</a>
 								<div id="upload-1" class="collapse">
 									<label for="file">Choose Photo:</label>
-									<input type="file" name="file-1" class="file-1" required><br>
+									<input type="file" name="file_array[]" class="file-1" required><br>
 									<a href="javascript:void(0)" id="remove-1">Remove File</a>
 								</div>
 							</div>
@@ -254,7 +254,7 @@
 								<a href="javascript:void(0)" data-toggle="collapse" data-target="#upload-2">or Upload your own art</a>
 								<div id="upload-2" class="collapse">
 									<label for="file">Choose Photo:</label>
-									<input type="file" name="file-2" class="file-2" required><br>
+									<input type="file" name="file_array[]" class="file-2" required><br>
 									<a href="javascript:void(0)" id="remove-2">Remove File</a>
 								</div>
 							</div>
@@ -264,7 +264,7 @@
 								<a href="javascript:void(0)" data-toggle="collapse" data-target="#upload-7">or Upload your own art</a>
 								<div id="upload-7" class="collapse">
 									<label for="file">Choose Photo:</label>
-									<input type="file" name="file-7" class="file-7" required><br>
+									<input type="file" name="file_array[]" class="file-7" required><br>
 									<a href="javascript:void(0)" id="remove-2">Remove File</a>
 								</div>
 							</div>
@@ -279,7 +279,7 @@
 								<a href="javascript:void(0)" data-toggle="collapse" data-target="#upload-3">or Upload your own art</a>
 								<div id="upload-3" class="collapse">
 									<label for="file">Choose Photo:</label>
-									<input type="file" name="file-3" class="file-3" required><br>
+									<input type="file" name="file_array[]" class="file-3" required><br>
 									<a href="javascript:void(0)" id="remove-3">Remove File</a>
 								</div>
 							</div>
@@ -288,7 +288,7 @@
 								<a href="javascript:void(0)" data-toggle="collapse" data-target="#upload-4">or Upload your own art</a>
 								<div id="upload-4" class="collapse">
 									<label for="file">Choose Photo:</label>
-									<input type="file" name="file-4" class="file-4" required><br>
+									<input type="file" name="file_array[]" class="file-4" required><br>
 									<a href="javascript:void(0)" id="remove-4">Remove File</a>
 								</div>
 								<div></div>
@@ -308,7 +308,7 @@
 							<a href="javascript:void(0)" data-toggle="collapse" data-target="#upload-5">or Upload your own art</a>
 							<div id="upload-5" class="collapse">
 								<label for="file">Choose Photo:</label>
-								<input type="file" name="file-5" class="file-5" required><br>
+								<input type="file" name="file_array[]" class="file-5" required><br>
 								<a href="javascript:void(0)" id="remove-5">Remove File</a>
 							</div>
 						</div>
@@ -317,7 +317,7 @@
 							<a href="javascript:void(0)" data-toggle="collapse" data-target="#upload-6">or Upload your own art</a>
 							<div id="upload-6" class="collapse">
 								<label for="file">Choose Photo:</label>
-								<input type="file" name="file-6" class="file-6" required><br>
+								<input type="file" name="file_array[]" class="file-6" required><br>
 								<a href="javascript:void(0)"id="remove-6">Remove File</a>
 							</div>
 						</div>
@@ -640,7 +640,7 @@
 				</div>
 				<div class="col-md-12">
 					<div class="button-cart">
-						<?php include_once "submit_type.php"; ?>
+						<?php include "submit_type.php"; ?>
 					</div>
 				</div>
 				<div class="clearfix"></div>
