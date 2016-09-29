@@ -37,7 +37,7 @@ $(document).ready(function() {
 	blink('.blink');
 
 	// For font color select event
-	$('body').on('click', '.fntin', function() {
+	$('body').on('click', '.fntin', function(e) {
 		e.preventDefault();
 		e.stopPropagation();
 
@@ -46,7 +46,7 @@ $(document).ready(function() {
 	});
 
 	// Font-color selection per qty
-	$('body').on('click', '#FontColorQtyModal ul.font-color-list li', function() {
+	$('body').on('click', '#FontColorQtyModal ul.font-color-list li', function(e) {
 		e.preventDefault();
 		e.stopPropagation();
 
@@ -232,13 +232,8 @@ $(document).ready(function() {
 		// }
 	});
 
-// });
-
-// $(function(){
-
 	var $style_value;
 	var $size_value;
-
 
 	$('#prod-main').click(function() {
 		window.location = 'product-printed.php';
@@ -1264,18 +1259,32 @@ $(document).ready(function() {
 		$form_data.append('file-5', $("input[type='file'].file-5")[0].files[0]);
 		$form_data.append('file-6', $("input[type='file'].file-6")[0].files[0]);
 		$form_data.append('data', JSON.stringify(collectionData));
+		$form_data.append('type', "quote");
 
-		console.log($form_data);
+		jQuery.ajax({
+			url: 'send_email.php',
+			type: 'POST',
+			data: $form_data,
+			cache: false,
+			contentType: false,
+			processData: false,
+			beforeSend: function() {
+				$("#submitQuote").html("SUBMITTING...").addClass("disable").prop("disabled", true);
+			},
+			success: function(data) {},
+		}).done(function(data) {
+			data = JSON.parse(data);
 
-		// jQuery.ajax({
-		// 	url: 'submit_order.php',
-		// 	data: $form_data,
-		// 	cache: false,
-		// 	contentType: false,
-		// 	processData: false,
-		// 	type: 'POST',
-		// 	success: function(data){ }
-		// });
+			if(data.status === true) {
+				showPopupMessage("Success", data.message);
+				$('html,body').scrollTop(0);
+				$(".js-style").trigger("click");
+			} else {
+				showPopupMessage("Error", data.message);
+			}
+
+			$("#submitQuote").html("SUBMIT QUOTE").removeClass("disable").prop("disabled", false);
+		});
 	});
 
 	// Submit quote form
@@ -1294,18 +1303,32 @@ $(document).ready(function() {
 		$form_data.append('file-5', $("input[type='file'].file-5")[0].files[0]);
 		$form_data.append('file-6', $("input[type='file'].file-6")[0].files[0]);
 		$form_data.append('data', JSON.stringify(collectionData));
+		$form_data.append('type', "schoolpo");
 
-		console.log($form_data);
+		jQuery.ajax({
+			url: 'send_email.php',
+			type: 'POST',
+			data: $form_data,
+			cache: false,
+			contentType: false,
+			processData: false,
+			beforeSend: function() {
+				$("#submitSchoolPO").html("SUBMITTING...").addClass("disable").prop("disabled", true);
+			},
+			success: function(data) {},
+		}).done(function(data) {
+			data = JSON.parse(data);
 
-		// jQuery.ajax({
-		// 	url: 'submit_order.php',
-		// 	data: $form_data,
-		// 	cache: false,
-		// 	contentType: false,
-		// 	processData: false,
-		// 	type: 'POST',
-		// 	success: function(data){ }
-		// });
+			if(data.status === true) {
+				showPopupMessage("Success", data.message);
+				$('html,body').scrollTop(0);
+				$(".js-style").trigger("click");
+			} else {
+				showPopupMessage("Error", data.message);
+			}
+
+			$("#submitSchoolPO").html("SUBMIT PURCHASE ORDER").removeClass("disable").prop("disabled", false);
+		});
 	});
 
 	// Submit quote form
@@ -1324,18 +1347,32 @@ $(document).ready(function() {
 		$form_data.append('file-5', $("input[type='file'].file-5")[0].files[0]);
 		$form_data.append('file-6', $("input[type='file'].file-6")[0].files[0]);
 		$form_data.append('data', JSON.stringify(collectionData));
+		$form_data.append('type', "ddesign");
 
-		console.log($form_data);
+		jQuery.ajax({
+			url: 'send_email.php',
+			type: 'POST',
+			data: $form_data,
+			cache: false,
+			contentType: false,
+			processData: false,
+			beforeSend: function() {
+				$("#submitDDesign").html("SUBMITTING...").addClass("disable").prop("disabled", true);
+			},
+			success: function(data) {},
+		}).done(function(data) {
+			data = JSON.parse(data);
 
-		// jQuery.ajax({
-		// 	url: 'submit_order.php',
-		// 	data: $form_data,
-		// 	cache: false,
-		// 	contentType: false,
-		// 	processData: false,
-		// 	type: 'POST',
-		// 	success: function(data){ }
-		// });
+			if(data.status === true) {
+				showPopupMessage("Success", data.message);
+				$('html,body').scrollTop(0);
+				$(".js-style").trigger("click");
+			} else {
+				showPopupMessage("Error", data.message);
+			}
+
+			$("#submitDDesign").html("SUBMIT DESIGN").removeClass("disable").prop("disabled", false);
+		});
 	});
 
 });

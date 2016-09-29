@@ -564,9 +564,17 @@ div#preview-textfont{
     background: #ffba23;
 }
 
+.button-cart button:hover {
+    background: #FFC107;
+}
+
+.button-cart button.disable {
+    background: #03758c;
+}
+
 select#size {
     padding: 6px;
-    color: grey;
+    color: #808080;
 }
 
 select#fs {
@@ -1169,8 +1177,13 @@ table.fwb-title {
 }
 
 #modal-message-content {
+    color: #5A5A5A!important;
     font-size: 25px;
     padding: 10px 0;
+}
+
+#modal-message-title {
+    text-transform: uppercase;
 }
 
 span.fonttext-color{

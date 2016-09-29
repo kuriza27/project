@@ -8,22 +8,22 @@
 	if($url == "order.php") {
 
 		// For order.php
-		echo("<button class='submitOrder' type='submit'>ADD TO CART</button>");
+		echo("<button id='submitOrder' type='submit'>ADD TO CART</button>");
 
 	} else if($url == "quote.php") {
 
 		// For quote.php
-		echo("<button class='submitQuote' type='submit'>SUBMIT QUOTE</button>");
+		echo("<button id='submitQuote' type='submit'>SUBMIT QUOTE</button>");
 
 	} else if($url == "school_po.php") {
 
 		// For school_po.php
-		echo("<button class='submitSchoolPO' type='submit'>SUBMIT PURCHASE ORDER</button>");
+		echo("<button id='submitSchoolPO' type='submit'>SUBMIT PURCHASE ORDER</button>");
 
 	} else if($url == "digital_design.php") {
 
 		// For school_po.php
-		echo("<button class='submitDDesign' type='submit'>SUBMIT DESIGN</button>");
+		echo("<button id='submitDDesign' type='submit'>SUBMIT DESIGN</button>");
 
 	}
 
