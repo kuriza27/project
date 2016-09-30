@@ -1194,3 +1194,10 @@ span.fonttext-color{
     font-size: 13px;
     padding-left: 25px;
 }
+
+.control-label {
+    height: 34px;
+    line-height: 34px;
+    margin-bottom: 0px;
+    width: 100%;
+}

@@ -25,6 +25,14 @@
 	$body .= "ORDER SUMMARY (" . date("m-d-Y h:i:s") . ")";
 	$body .= "<hr/><br/>";
 
+ 	if(isset($_REQUEST['name'])) {
+		$body .= "CUSTOMER NAME : " . $_REQUEST['name'] . "<br/>";
+	}
+
+ 	if(isset($_REQUEST['mail'])) {
+		$body .= "CUSTOMER EMAIL ADDRESS : " . $_REQUEST['mail'] . "<br/>";
+	}
+
 	// Email body
 	if(isset($_REQUEST['data'])) {
 

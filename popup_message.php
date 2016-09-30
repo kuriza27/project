@@ -1,5 +1,5 @@
 
-<div class="modal fade" id="modal-message" role="dialog">
+<div class="modal fade" id="modal-message" role="dialog" style="z-index:1060;">
 	<div class="modal-dialog">
 		<!-- Modal content-->
 		<div class="modal-content">

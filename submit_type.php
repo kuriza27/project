@@ -13,17 +13,17 @@
 	} else if($url == "quote.php") {
 
 		// For quote.php
-		echo("<button id='submitQuote' type='submit'>SUBMIT QUOTE</button>");
+		echo("<button id='submitEmail' type='submit' data-submit-type='quote'>SUBMIT QUOTE</button>");
 
 	} else if($url == "school_po.php") {
 
 		// For school_po.php
-		echo("<button id='submitSchoolPO' type='submit'>SUBMIT PURCHASE ORDER</button>");
+		echo("<button id='submitEmail' type='submit' data-submit-type='schoolpo'>SUBMIT PURCHASE ORDER</button>");
 
 	} else if($url == "digital_design.php") {
 
-		// For school_po.php
-		echo("<button id='submitDDesign' type='submit'>SUBMIT DESIGN</button>");
+		// For digital_design.php
+		echo("<button id='submitEmail' type='submit' data-submit-type='ddesign'>SUBMIT DESIGN</button>");
 
 	}
 

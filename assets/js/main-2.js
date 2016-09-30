@@ -229,22 +229,28 @@ $(document).ready(function() {
 		e.preventDefault();
 		e.stopPropagation();
 
+		var qty = 0;
+
+		if($(this).val().trim() == "") {
+			qty = 0;
+		} else {
+			qty = parseInt($(this).val().trim());
+		}
+
 		// // Check if something actually changed
-		// if($(this).val().trim() != "") {
+		if(qty > 0) {
 			// Get order data
 			var collectionData = getTotalData();
-			var qtyLimit = collectionData.free.wristbands.qty + 100;
-			
-			console.log("qtylimit - "+qtyLimit);
-			if(collectionData.free.wristbands.qty > qtyLimit || collectionData.free.wristbands.qty < 0) {
-				// if ($(this).val() != "") {
-					$('#modal-100-free-wristbands').modal('show');
-					return;
-				// };
+			var qtyLimit = collectionData.free.wristbands.qty;
+
+			if(collectionData.free.wristbands.qty > 100 || collectionData.free.wristbands.qty < 0) {
+				$('#modal-100-free-wristbands').modal('show');
+				$(this).val("");
+				return;
 			}
 			// Populate total section
 			populateTotalSection(collectionData);
-		// }
+		}
 	});
 
 	var $style_value;
@@ -389,7 +395,6 @@ $(document).ready(function() {
 	// Select wristband style event
 	$('body').on('click', '.js-style', function() {
 
-		
 		// Check if not yet checked
 		if(!$(this).hasClass("active")) {
 
@@ -1246,7 +1251,7 @@ $(document).ready(function() {
 	});
 
 	// Submit `order` form
-	$("body").on("click", ".submitOrder", function(e) {
+	$("body").on("click", "#submitOrder", function(e) {
 		e.preventDefault();
 		e.stopPropagation();
 
@@ -1286,6 +1291,7 @@ $(document).ready(function() {
 		});
 	});
 
+/**
 	// Submit `quote` form
 	$("body").on("click", "#submitQuote", function(e) {
 		e.preventDefault();
@@ -1416,6 +1422,97 @@ $(document).ready(function() {
 
 			$("#submitDDesign").html("SUBMIT DESIGN").removeClass("disable").prop("disabled", false);
 		});
+	});
+*/
+
+	// Submit email form
+	$("body").on("click", "#submitEmail", function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+
+		// Fill submit type
+		$("#submit_order_type").val($(this).attr("data-submit-type"));
+		// Clear fields
+		$("#submit_order_email").val("");
+		$("#submit_order_fullname").val("").focus();
+		// Make sure fields are enabled
+		$("#submit_order_fullname, #submit_order_email").prop("disabled", false);
+		// Display buttons
+		$("#modal-confirm-submit .confirm-footer-buttons").show();
+		$("#modal-confirm-submit .confirm-footer-loader").hide();
+		// Display confirmation popup modal
+		$("#modal-confirm-submit").modal("show");
+	});
+
+	// Actually submit email order
+	$("body").on("submit", "#form-submit-email", function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+
+		// Check if all fields has value
+		if($("#submit_order_type").val().length > 0 && $("#submit_order_fullname").val().length > 0 && $("#submit_order_email").val().length > 0) {
+
+			// Get order data
+			var collectionData = getTotalData();
+
+			var $form_data = new FormData();
+			$form_data.append('file-1', $("input[type='file'].file-1")[0].files[0]);
+			$form_data.append('file-2', $("input[type='file'].file-2")[0].files[0]);
+			$form_data.append('file-3', $("input[type='file'].file-3")[0].files[0]);
+			$form_data.append('file-4', $("input[type='file'].file-4")[0].files[0]);
+			$form_data.append('file-5', $("input[type='file'].file-5")[0].files[0]);
+			$form_data.append('file-6', $("input[type='file'].file-6")[0].files[0]);
+			$form_data.append('data', JSON.stringify(collectionData));
+			$form_data.append('type', $("#submit_order_type").val());
+			$form_data.append('name', $("#submit_order_fullname").val());
+			$form_data.append('mail', $("#submit_order_email").val());
+
+			jQuery.ajax({
+				url: 'send_email.php',
+				type: 'POST',
+				data: $form_data,
+				cache: false,
+				contentType: false,
+				processData: false,
+				beforeSend: function() {
+					$("#submit_order_fullname, #submit_order_email").prop("disabled", true);
+					$("#modal-confirm-submit .confirm-footer-buttons").hide();
+					$("#modal-confirm-submit .confirm-footer-loader").show();
+				},
+				success: function(data) {},
+			}).done(function(data) {
+				data = JSON.parse(data);
+
+				if(data.status === true) {
+					// Hide confirmation popup modal
+					$("#modal-confirm-submit").modal("hide");
+					//Default triggers
+					showPopupMessage("Success", data.message);
+					$('html,body').scrollTop(0);
+					// Reset order page
+					resetOrderPage();
+				} else {
+					showPopupMessage("Error", data.message);
+				}
+
+				// Make sure fields are enabled
+				$("#submit_order_fullname, #submit_order_email").prop("disabled", false);
+				// Display buttons
+				$("#modal-confirm-submit .confirm-footer-buttons").show();
+				$("#modal-confirm-submit .confirm-footer-loader").hide();
+			});
+
+		} else { // If no,
+			// Show error message
+			showPopupMessage("Error", "Kindly fill-up all fields.");
+			// Make sure fields are enabled
+			$("#submit_order_fullname, #submit_order_email").prop("disabled", false);
+			// Display buttons
+			$("#modal-confirm-submit .confirm-footer-buttons").show();
+			$("#modal-confirm-submit .confirm-footer-loader").hide();
+			return false;
+		}
+
 	});
 
 });
@@ -2157,4 +2254,170 @@ function showPopupMessage(_title, _content) {
 	$("#modal-message-title").html(_title);
 	$("#modal-message-content").html(_content);
 	$("#modal-message").modal("show");
+}
+
+function resetOrderPage() {
+
+	//check style hide size divs
+	var style = $(".js-style .wrist_style:checked").val();
+
+	// Show or hide custom font selector depending on selected style
+	if(style === "printed" || style === "ink-injected" || style === "embossed-printed" || style === "figured"){
+		$('.fntin').show().addClass('active');
+		$('.fonttext-color').show();
+	}else{
+		$('.fntin').hide().removeClass('active');
+		$('.fonttext-color').hide();
+	}
+	 
+	// Set what kind of preview to display
+	if(style === "figured") {
+		$("#front-view, #back-view, #inside-view, #continue-view").addClass("set-height-fig");
+		$("#front-view, #back-view, #inside-view, #continue-view").removeClass("set-height-reg");
+		$(".preview-text").css("line-height", "104px");
+	} else {
+		$("#front-view, #back-view, #inside-view, #continue-view").addClass("set-height-reg");
+		$("#front-view, #back-view, #inside-view, #continue-view").removeClass("set-height-fig");
+		$(".preview-text").css("line-height", "54px");
+	}
+	
+	//Check and remove step 4 if blank style		     
+	if(style === "blank"){
+		$('.wrist-messsage').hide();
+		$('.step-5').hide();
+		$('.step-4').show();
+	}else{
+		$('.wrist-messsage').show();
+		$('.step-5').show();
+		$('.step-4').hide();
+	}
+	
+	// Hide all sizes first
+	$(".js-size").removeClass('active');
+	$(".wsize-default .js-size").hide();
+	$(".wristband-view-color").hide();
+
+	// Set which sizes to display
+	if(style == "figured") {
+		// Show sizes
+		$("#half").show();
+		$("#three").show();
+		$("#one").show();
+		$(".start-fc").addClass("fig_move");
+		$(".end-fc").addClass("fig_move");
+		$(".back-mc").addClass("fig_move");
+		$(".backend-mc").addClass("fig_move");
+		$(".start-cc").addClass("fig_move");
+		$(".end-cc").addClass("fig_move");
+		$(".fig-fc").addClass("fig_move");
+		$(".figarea").show();
+		
+		// Get current checked radio button
+		var selected = $(".js-size:visible input[type='radio']:checked");
+		if(selected.length <= 0) {
+			selected = $(".js-size:visible:first input[type='radio']");
+		}
+		selected.closest('.js-size').addClass('active');
+		selected.prop("checked", true);
+
+		// Get checked style
+		var item = $(".js-size:visible .wrist_size:checked").val();
+
+		// Show items
+		if($.inArray(item, ["1/4", "1/2", "3/4"]) > 0) {
+			$(".regular-figured-size").show(); // Show regular sizes
+		} else {
+			$(".large-figured-size").show(); // Show large sizes
+		}
+	} else if(style=="dual-layer") {
+		// Show sizes
+		$("#half").show();
+		$("#three").show();
+		$(".start-fc").removeClass("fig_move");
+		$(".end-fc").removeClass("fig_move");
+		$(".back-mc").removeClass("fig_move");
+		$(".backend-mc").removeClass("fig_move");
+		$(".start-cc").removeClass("fig_move");
+		$(".end-cc").removeClass("fig_move");
+		$(".figarea").hide();
+
+		// Get current checked radio button
+		var selected = $(".js-size:visible input[type='radio']:checked");
+		if(selected.length <= 0) {
+			selected = $(".js-size:visible:first input[type='radio']");
+		}
+		selected.closest('.js-size').addClass('active');
+		selected.prop("checked", true);
+
+		// Get checked style
+		var item = $(".js-size:visible .wrist_size:checked").val();
+
+		// Show items
+		if($.inArray(item, ["1/4", "1/2"]) > 0) {
+			$(".regular-dual-size").show(); // Show regular sizes
+		} else {
+			$(".large-dual-size").show(); // Show large sizes
+		}
+	} else {
+		// Show sizes
+		$("#quarter").show();
+		$("#half").show();
+		$("#three").show();
+		$("#one").show();
+		$("#onehalf").show();
+		$("#two").show();
+		$(".start-fc").removeClass("fig_move");
+		$(".end-fc").removeClass("fig_move");
+		$(".back-mc").removeClass("fig_move");
+		$(".backend-mc").removeClass("fig_move");
+		$(".start-cc").removeClass("fig_move");
+		$(".end-cc").removeClass("fig_move");
+		$(".figarea").hide();
+
+		// Get current checked radio button
+		var selected = $(".js-size:visible input[type='radio']:checked");
+		if(selected.length <= 0) {
+			selected = $(".js-size:visible:first input[type='radio']");
+		}
+		selected.closest('.js-size').addClass('active');
+		selected.prop("checked", true);
+
+		// Get checked style
+		var item = $(".js-size:visible .wrist_size:checked").val();
+
+		// Show items
+		if($.inArray(item, ["1/4", "1/2", "3/4", "1"]) > 0) {
+			$(".regular-color-size").show(); // Show regular sizes
+		} else {
+			$(".large-color-size").show(); // Show large sizes
+		}
+	}
+
+	// Empty all quantities
+	$(".wrist_color_container:visible").find(".js-color").find("input[name$='-qty']").val("");
+
+	// Hide free
+	$('#dv-10-free-keychains').hide();
+	$('#dv-100-free-wristbands').hide();
+
+	// Empty all add-ons
+	$("#convert-keychain").hide();
+	$("div.add-ons").removeClass("active");
+	$("div.add-ons").find("input[type='checkbox']").prop("checked", false);
+
+	// Clear previews
+	$(".click-pre").hide();
+	$(".preview-panel").attr("style", "");
+	$(".preview-panel").find("img").remove();
+	$("#preview-pane-selection").html("");
+	$("#front-view, #back-view, #inside-view, #continue-view").attr("style", "");
+	$(".main-content-preview").removeClass("has-preview");
+
+	// Hide total
+	$('.js-total').hide();
+	$('.js-no-total').fadeIn(300);
+
+
+	// Get new price table
+	get_style_size('price_table');
 }

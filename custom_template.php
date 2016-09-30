@@ -656,4 +656,6 @@
 
 <?php include_once "popup_message.php"; ?>
 
+<?php include_once "popup_confirm_email.php"; ?>
+
 <?php include_once "custom_wristband.php"; ?>
