@@ -221,7 +221,10 @@ $(document).ready(function() {
 		// if($(this).val().trim() != "") {
 			// Get order data
 			var collectionData = getTotalData();
-			if(collectionData.free.wristbands.qty > 100 || collectionData.free.wristbands.qty < 0) {
+			var qtyLimit = collectionData.free.wristbands.qty + 100;
+			
+			console.log("qtylimit - "+qtyLimit);
+			if(collectionData.free.wristbands.qty > qtyLimit || collectionData.free.wristbands.qty < 0) {
 				// if ($(this).val() != "") {
 					$('#modal-100-free-wristbands').modal('show');
 					return;

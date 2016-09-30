@@ -25,7 +25,7 @@
 				</ul>
 			</div>
 			<div id="footer-text">
-				<p>Monday - Sunday | 8am - 10pm CST</p>
+				<p>Monday - Friday | 11am - 8pm EST</p>
 				<p>Customer Service 1-800- 989-0440</p>
 			</div>
 				<div class="clearfix"></div>

@@ -297,10 +297,10 @@
 						</div>
 					</div>
 					<div class="c-input" style="display:none;margin-left:52px;">
-						<div class="col-sm-8">
+						<div class="col-sm-12">
 						<span class="inside-m">Continuous Text:</span><br /> &nbsp;
 						* Maximum of 50 characters for message<br /> 
-						<input id="input-continue-text" type="text" name="continue-text" class="band-text" value=""  placeholder="Enter Continuous Message" maxlength="50">
+						<input id="input-continue-text" type="text" name="continue-text" class="band-text" value=""  placeholder="Enter Continuous Message" maxlength="50" style="width:100%;">
 						</div>
 						<div class="clearfix"></div>
 						<div class="clip-sec" style="float:left;width:20%;margin-left:16px;">

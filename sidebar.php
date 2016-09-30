@@ -1,12 +1,5 @@
 <div class="half_sm" style="width: 32%; margin: 5% 0px 1% 5%;"> 
 			<div class="addl_options">
-				<h4>Message Options</h4>
-				<p> Back Message<br>
-					Inside Message<br>
-					Add Wristband Colo<br>
-					Add Wristband Siz<br>
-					Digital Proof
-				</p>
 				<h4>Sizes</h4>
 				<p> Toddler Size (6.5 inch)<br>
 					Youth Size (7 inch)<br>

@@ -63,8 +63,8 @@
 	})(window,document,'script','dataLayer','GTM-KFHV3B');</script> -->
 	<!-- End Google Tag Manager -->
 	
-<?php include_once 'dbconfig.php'; ?>
-<?php  //include_once 'dbconfigSite.php'; ?>
+<?php //include_once 'dbconfig.php'; ?>
+<?php include_once 'dbconfigSite.php'; ?>
 <div id="main">
 <header>
     <nav class="navbar navbar-inverse navbar-default">
@@ -74,7 +74,7 @@
 			</div>
 			<div class="header-right-box">
 			<div id="google_trust">
-				<img src="assets/images/src/google_trust.jpg">
+				<!---<img src="assets/images/src/google_trust.jpg">--->
 			</div>
 			<div class="search">
 				  <div id="hour-img"><img src="assets/images/src/24-hours-delivery.jpg"></div>
