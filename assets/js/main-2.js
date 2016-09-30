@@ -70,20 +70,32 @@ $(document).ready(function() {
 			$(".preview-text").css("line-height", "54px");
 		}
 		var html_preview = "";
-		// Loop through all items
-		$.each(collectionData.items, function(key_style, value_style) {
-			$.each(value_style.data, function(key, value) {
-				//if background black and font-color black
-				if(value.color.join("-")=="000000" && value.font == "000000") {
-					value.font = "464646";
-					$("#front-view, #back-view, #inside-view, #continue-view").addClass("clipart-black");
-				}
-				// List all wristbands for preview
-				html_preview += "<li class='blink preview-pill preview-color-" + collectionData.style + "-" + value.color.join("-") + "-font-" + value.font + "'  data-type='" + key_style + "' data-font-color='" + value.font + "' data-image-link='gd/belt.php?style=" + key_style + "&type=" + collectionData.style + "&color=" + value.color.join(",") + "' style='background-image:url(\"gd/belt.php?style=" + key_style + "&color=" + value.color.join(",") + "\");background-size:30px;background-repeat:no-repeat;background-size: 100% 100%;color:#" + value.font +";'>Y</li>";
+		// Check if has items
+		if(Object.keys(collectionData.items).length > 0) {
+			// Loop through all items
+			$.each(collectionData.items, function(key_style, value_style) {
+				$.each(value_style.data, function(key, value) {
+					//if background black and font-color black
+					if(value.color.join("-")=="000000" && value.font == "000000") {
+						value.font = "464646";
+						$("#front-view, #back-view, #inside-view, #continue-view").addClass("clipart-black");
+					}
+					// List all wristbands for preview
+					html_preview += "<li class='blink preview-pill preview-color-" + collectionData.style + "-" + value.color.join("-") + "-font-" + value.font + "'  data-type='" + key_style + "' data-font-color='" + value.font + "' data-image-link='gd/belt.php?style=" + key_style + "&type=" + collectionData.style + "&color=" + value.color.join(",") + "' style='background-image:url(\"gd/belt.php?style=" + key_style + "&color=" + value.color.join(",") + "\");background-size:30px;background-repeat:no-repeat;background-size: 100% 100%;color:#" + value.font +";'>Y</li>";
+
+					if(!$(".main-content-preview").hasClass("has-preview")) {
+						$(".main-content-preview").addClass("has-preview");
+						$("#front-view, #back-view, #continue-view, #inside-view").css('background', 'url(gd/belt.php?style=' + key_style + '&type=' + collectionData.style + '&color=' + value.color.join(",") + ')');
+						$(".preview-panel").css("color", "#" + value.font);
+					}
+				});
 			});
-		});
+		} else {
+			$(".main-content-preview").removeClass("has-preview");
+			$("#front-view, #back-view, #inside-view, #continue-view").attr("style", "");
+		}
 		// Append wristbands for preview
-		$("#preview-pane-selection").append(html_preview );
+		$("#preview-pane-selection").append(html_preview);
 		// End : for preview ------------
 
 		// Populate total section
@@ -542,6 +554,7 @@ $(document).ready(function() {
 			$(".preview-panel").find("img").remove();
 			$("#preview-pane-selection").html("");
 			$("#front-view, #back-view, #inside-view, #continue-view").attr("style", "");
+			$(".main-content-preview").removeClass("has-preview");
 
 			// Hide total
 			$('.js-total').hide();
@@ -612,6 +625,7 @@ $(document).ready(function() {
 			$(".preview-panel").find("img").remove();
 			$("#preview-pane-selection").html("");
 			$("#front-view, #back-view, #inside-view, #continue-view").attr("style", "");
+			$(".main-content-preview").removeClass("has-preview");
 
 			// Hide free
 			$('#dv-10-free-keychains').hide();
@@ -652,6 +666,8 @@ $(document).ready(function() {
 		e.preventDefault();
 		e.stopPropagation();
 
+		if($(this).val().trim() == "") { $(this).val("0"); }
+
 		// Check if something actually changed
 		if($(this).val().trim() != "") {
 
@@ -676,44 +692,57 @@ $(document).ready(function() {
 			var html_preview = "";
 			var html_wb_free = "";
 			var html_ao_kc = "";
-			// Loop through all items
-			$.each(collectionData.items, function(key_style, value_style) {
-				$.each(value_style.data, function(key, value) {
-					//if background black and font-color black
-					if(value.color.join("-")=="000000" && value.font == "000000") {
-						value.font = "464646";
-						$("#front-view, #back-view, #inside-view, #continue-view").addClass("clipart-black");
-					}
-					// List all wristbands for preview
-					html_preview += "<li class='blink preview-pill preview-color-" + collectionData.style + "-" + value.color.join("-") + "-font-" + value.font + "'  data-type='" + key_style + "' data-font-color='" + value.font + "' data-image-link='gd/belt.php?style=" + key_style + "&type=" + collectionData.style + "&color=" + value.color.join(",") + "' style='background-image:url(\"gd/belt.php?style=" + key_style + "&color=" + value.color.join(",") + "\");background-size:30px;background-repeat:no-repeat;background-size: 100% 100%;color:#" + value.font +";'>Y</li>";
-
-					// For free wristbands
-					if(collectionData.total_qty >= 100) {
-						if(!$('.conversion-wrist-' + key_style + '.free-wrist-' + key_style + '-' + value.size + '-' + value.color.join("-") ).length > 0) {
-							html_wb_free += '<li class="fwb-list conversion-wrist-'+key_style+' free-wrist-'+key_style+'-'+value.size+'-'+value.name+'" data-band-color="' + value.color.join("-") + '">';
-							html_wb_free += '<div class="fwb-text col-md-6 col-sm-12">';
-								html_wb_free += '<div class="col-xs-4 fwb-text-content">'+key_style.toUpperCase()+'</div>';
-								html_wb_free += '<div class="col-xs-4 fwb-text-content">'+value.name.toLowerCase().capitalizeFirstLetter()+'</div>';
-								html_wb_free += '<div class="col-xs-4 fwb-text-content">'+value.size.toLowerCase().capitalizeFirstLetter()+'</div>';
-							html_wb_free += '</div>';
-							html_wb_free += '<div class="align-right col-md-6 col-sm-12"><h4 class="fwb-text col-xs-12 hidden-md hidden-lg text-center fwb-text-hidden-header">INPUT QUANTITY</h4><input type="number" class="freewb col-xs-12" id="freewb-'+key_style+'-'+value.size+'-'+value.color.join("-")+'" name="'+key_style+'-'+value.size+'-'+value.color.join("-")+'-fwb" data-style="'+key_style+'" data-color="'+value.color.join(",")+'" data-font-color="'+value.font+'" data-name="'+value.name+'" data-size="'+value.size+'" placeholder="0" data-maxlength="3" /></div>';
-							html_wb_free += '<div class="clearfix"></div>';
-							html_wb_free += '</li>';
+			// Check if has items
+			if(Object.keys(collectionData.items).length > 0) {
+				// Loop through all items
+				$.each(collectionData.items, function(key_style, value_style) {
+					$.each(value_style.data, function(key, value) {
+						//if background black and font-color black
+						if(value.color.join("-")=="000000" && value.font == "000000") {
+							value.font = "464646";
+							$("#front-view, #back-view, #inside-view, #continue-view").addClass("clipart-black");
 						}
-					}
+						// List all wristbands for preview
+						html_preview += "<li class='blink preview-pill preview-color-" + collectionData.style + "-" + value.color.join("-") + "-font-" + value.font + "'  data-type='" + key_style + "' data-font-color='" + value.font + "' data-image-link='gd/belt.php?style=" + key_style + "&type=" + collectionData.style + "&color=" + value.color.join(",") + "' style='background-image:url(\"gd/belt.php?style=" + key_style + "&color=" + value.color.join(",") + "\");background-size:30px;background-repeat:no-repeat;background-size: 100% 100%;color:#" + value.font +";'>Y</li>";
 
-					// For wristbands convertion
-					html_ao_kc += '<li class="fwb-list convert-keychain-some-'+key_style+' convert-keychain-some-'+key_style+'-'+value.size+'-'+value.name+'" data-band-color="' + value.color.join("-") + '">';
-					html_ao_kc += '<div class="fwb-text col-md-6 col-sm-12">';
-						html_ao_kc += '<div class="col-xs-4 fwb-text-content">'+key_style.toUpperCase()+'</div>';
-						html_ao_kc += '<div class="col-xs-4 fwb-text-content">'+value.name.toLowerCase().capitalizeFirstLetter()+'</div>';
-						html_ao_kc += '<div class="col-xs-4 fwb-text-content">'+value.size.toLowerCase().capitalizeFirstLetter()+'</div>';
-					html_ao_kc += '</div>';
-					html_ao_kc += '<div class="align-right col-md-6 col-sm-12"><h4 class="fwb-text col-xs-12 hidden-md hidden-lg text-center fwb-text-hidden-header">INPUT QUANTITY</h4><input type="number" class="col-xs-12 kc-some-qty" id="convert-keychain-some-'+key_style+'-'+value.size+'-'+value.color.join("-")+'" name="'+key_style+'-'+value.size+'-'+value.color.join("-")+'-fwb" data-style="'+key_style+'" data-color="'+value.color.join(",")+'" data-font-color="'+value.font+'" data-name="'+value.name+'" data-size="'+value.size+'" placeholder="0" data-maxlength="3" /></div>';
-					html_ao_kc += '<div class="clearfix"></div>';
-					html_ao_kc += '</li>';
+						// Check if already has a preview
+						if(!$(".main-content-preview").hasClass("has-preview")) {
+							$(".main-content-preview").addClass("has-preview");
+							$("#front-view, #back-view, #continue-view, #inside-view").css('background', 'url(gd/belt.php?style=' + key_style + '&type=' + collectionData.style + '&color=' + value.color.join(",") + ')');
+							$(".preview-panel").css("color", "#" + value.font);
+						}
+
+						// For free wristbands
+						if(collectionData.total_qty >= 100) {
+							if(!$('.conversion-wrist-' + key_style + '.free-wrist-' + key_style + '-' + value.size + '-' + value.color.join("-") ).length > 0) {
+								html_wb_free += '<li class="fwb-list conversion-wrist-'+key_style+' free-wrist-'+key_style+'-'+value.size+'-'+value.name+'" data-band-color="' + value.color.join("-") + '">';
+								html_wb_free += '<div class="fwb-text col-md-6 col-sm-12">';
+									html_wb_free += '<div class="col-xs-4 fwb-text-content">'+key_style.toUpperCase()+'</div>';
+									html_wb_free += '<div class="col-xs-4 fwb-text-content">'+value.name.toLowerCase().capitalizeFirstLetter()+'</div>';
+									html_wb_free += '<div class="col-xs-4 fwb-text-content">'+value.size.toLowerCase().capitalizeFirstLetter()+'</div>';
+								html_wb_free += '</div>';
+								html_wb_free += '<div class="align-right col-md-6 col-sm-12"><h4 class="fwb-text col-xs-12 hidden-md hidden-lg text-center fwb-text-hidden-header">INPUT QUANTITY</h4><input type="number" class="freewb col-xs-12" id="freewb-'+key_style+'-'+value.size+'-'+value.color.join("-")+'" name="'+key_style+'-'+value.size+'-'+value.color.join("-")+'-fwb" data-style="'+key_style+'" data-color="'+value.color.join(",")+'" data-font-color="'+value.font+'" data-name="'+value.name+'" data-size="'+value.size+'" placeholder="0" data-maxlength="3" /></div>';
+								html_wb_free += '<div class="clearfix"></div>';
+								html_wb_free += '</li>';
+							}
+						}
+
+						// For wristbands convertion
+						html_ao_kc += '<li class="fwb-list convert-keychain-some-'+key_style+' convert-keychain-some-'+key_style+'-'+value.size+'-'+value.name+'" data-band-color="' + value.color.join("-") + '">';
+						html_ao_kc += '<div class="fwb-text col-md-6 col-sm-12">';
+							html_ao_kc += '<div class="col-xs-4 fwb-text-content">'+key_style.toUpperCase()+'</div>';
+							html_ao_kc += '<div class="col-xs-4 fwb-text-content">'+value.name.toLowerCase().capitalizeFirstLetter()+'</div>';
+							html_ao_kc += '<div class="col-xs-4 fwb-text-content">'+value.size.toLowerCase().capitalizeFirstLetter()+'</div>';
+						html_ao_kc += '</div>';
+						html_ao_kc += '<div class="align-right col-md-6 col-sm-12"><h4 class="fwb-text col-xs-12 hidden-md hidden-lg text-center fwb-text-hidden-header">INPUT QUANTITY</h4><input type="number" class="col-xs-12 kc-some-qty" id="convert-keychain-some-'+key_style+'-'+value.size+'-'+value.color.join("-")+'" name="'+key_style+'-'+value.size+'-'+value.color.join("-")+'-fwb" data-style="'+key_style+'" data-color="'+value.color.join(",")+'" data-font-color="'+value.font+'" data-name="'+value.name+'" data-size="'+value.size+'" placeholder="0" data-maxlength="3" /></div>';
+						html_ao_kc += '<div class="clearfix"></div>';
+						html_ao_kc += '</li>';
+					});
 				});
-			});
+			} else {
+				$(".main-content-preview").removeClass("has-preview");
+				$("#front-view, #back-view, #inside-view, #continue-view").attr("style", "");
+			}
 
 			// Append wristbands for preview
 			$("#preview-pane-selection").html(html_preview); // End : for preview ------------
@@ -1218,9 +1247,9 @@ $(document).ready(function() {
 
 	// Submit `order` form
 	$("body").on("click", ".submitOrder", function(e) {
-		//e.preventDefault();
-		//e.stopPropagation();
-         alert('hey');
+		e.preventDefault();
+		e.stopPropagation();
+
 		// Get order data
 		var collectionData = getTotalData();
 
@@ -1233,7 +1262,7 @@ $(document).ready(function() {
 		$form_data.append('file-6', $("input[type='file'].file-6")[0].files[0]);
 		$form_data.append('data', JSON.stringify(collectionData));
 
-		console.log(collectionData);
+		// console.log(collectionData);
 
 		jQuery.ajax({
 			url: 'submit_order.php',
@@ -1243,6 +1272,17 @@ $(document).ready(function() {
 			processData: false,
 			type: 'POST',
 			success: function(data){ }
+		}).done(function(data) {
+			data = JSON.parse(data);
+
+			if(data.status === true) {
+				showPopupMessage("Success", data.message);
+				$('html,body').scrollTop(0);
+				$(".js-style").trigger("click");
+			} else {
+				showPopupMessage("Error", data.message);
+			}
+
 		});
 	});
 
