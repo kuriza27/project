@@ -150,11 +150,11 @@
 	   
 			<div class="banner">
 				<div id="slideshow">
-					<div id="slider-images" style="display: block;">
-						<img src="assets/images/src/banner3.jpg">
-					</div>
 					<div id="slider-images" style="display: none;">
 						<img src="assets/images/src/banner1.jpg">
+					</div>
+					<div id="slider-images" style="display: block;">
+						<img src="assets/images/src/banner3.jpg">
 					</div>
 					<div id="slider-images" style="display: none;">
 						<img src="assets/images/src/banner2.jpg">
