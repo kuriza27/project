@@ -26,7 +26,7 @@
 			</div>
 			<div id="footer-text">
 				<p>Monday - Friday | 11am - 8pm EST</p>
-				<p>Customer Service 1-800- 989-0440</p>
+				<p>Customer Service 1-800-989-0440</p>
 			</div>
 				<div class="clearfix"></div>
 
@@ -46,7 +46,7 @@
 
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 
-    <script type="text/javascript" src="assets/docs/spectrum.js"></script>
+    <!---- <script type="text/javascript" src="assets/docs/spectrum.js"></script> --->
     <script type='text/javascript' src="assets/docs/toc.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.countdown.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script>

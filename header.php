@@ -24,8 +24,8 @@
 		<link href="assets/css/magnific-popup.css" rel="stylesheet">
 
 		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-		<link rel="stylesheet" type="text/css" href="assets/docs/spectrum.css">
+		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif] -->
+		<!-- <link rel="stylesheet" type="text/css" href="assets/docs/spectrum.css"> -->
 
 		<script src="assets/js/jquery-2.2.4.min.js"></script>
 		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
