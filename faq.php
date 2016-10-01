@@ -17,7 +17,7 @@
 		  <li>
 			<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-3">How can I get a quotation?</a>
 			<div id="dem-3" class="collapse">You can instantly get a quotation by going to our website and clicking on the “Get A Quote!” tab and follow the instructions. You can also talk to oursales team by calling us at our 
-			hotline number 1-800- 989-0440 or just simply send us an email at sales@promotionalwristband.com and we will be more than willing to help you.</div>
+			hotline number 1-800-989-0440 or just simply send us an email at sales@promotionalwristband.com and we will be more than willing to help you.</div>
 		  </li>
 		  <li >
 			<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-4">Are there a minimum number of orders?</a>
@@ -72,13 +72,12 @@
 		  </li>
 		  <li>
 			<a href="javascript:void(0)" data-toggle="collapse" data-target="#gem-4">How long will I be able to get a digital proof?</a>
-			<div id="gem-4" class="collapse">Yes! To personalize your silicone wristbands
-			with your own logo or image, please call us at 1 (800) 523-8078, use live chat, or email us to place an
-			order including your custom artwork.</div>
+			<div id="gem-4" class="collapse">Expect a digital proof will be sent in just about 10-20 minutes.</div>
 		  </li>
 		  <li>
 			<a href="javascript:void(0)" data-toggle="collapse" data-target="#gem-5">Can I create marbleized/swirled or multi-colored wristbands?</a>
-			<div id="gem-5" class="collapse">Expect a digital proof will be sent in just about 10-20 minutes.</div>
+			<div id="gem-5" class="collapse">Yes! To personalize your silicone wristbands with your own logo or image, please call us at 1-800-989-0440, use live chat, or email us to place an order including your custom artwork.
+			</div>
 		  </li>
 		</ul>
 	</div>

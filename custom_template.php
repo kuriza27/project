@@ -211,6 +211,9 @@
 			<div class="wristband-view-color large-dual-size" style="display:none">
 				<?php include "wrist-largedual.php"; ?>
 			</div>
+			<div class="wristband-view-color thin-color-size" style="display:none">
+				<?php include "wrist-thinbandcolor.php"; ?>
+			</div>
 		</div>
 		<!-- END WRIST COLOR -->
 

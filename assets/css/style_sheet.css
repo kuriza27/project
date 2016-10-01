@@ -27,7 +27,7 @@ a:hover{
     font-size: 16px;
     float: left;
     width: 61%;
-    margin-top: 20px;
+    margin-top: 32px;
 }
 
 .search input {
@@ -50,11 +50,13 @@ a:hover{
 }
 
 
-#hour-img{
+#hour-img {
     position: absolute;
-    top: -22px;
-    left: 186px;
+    top: -37px;
+   /* left: 186px;*/
+    font-size: 12px;
 }
+
 /***********/
 
 
@@ -778,6 +780,18 @@ li.active.select-box-col {
 
 .js-size input, .js-style input, .add-ons input {
   touch-action: manipulation;
+}
+
+.school_po_content{
+	font-size:14px;
+	line-height:26px;
+	padding:20px;
+	margin:0 auto;
+}
+
+
+.school_po_content b{
+	font-size:14px;
 }
 
 /****

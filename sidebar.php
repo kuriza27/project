@@ -1,5 +1,12 @@
 <div class="half_sm" style="width: 32%; margin: 5% 0px 1% 5%;"> 
 			<div class="addl_options">
+				<h4>Message Options</h4> 
+				<p>Back Message<br>
+				Inside Message<br>
+				Multiple Wristband Color <br>
+				Multiple Wristband Size<br>
+				Digital Proof <br>
+				</p>
 				<h4>Sizes</h4>
 				<p> Toddler Size (6.5 inch)<br>
 					Youth Size (7 inch)<br>
@@ -26,6 +33,16 @@
 				</p>
 				<h4>Other Add-Ons</h4>
 				<p>
+					Swirl or Tiedie type <br>
+					Segmented <br>
+					Glow in the Dark <br>
+					Camo <br>
+					Glitters<br>
+					Individual Pack <br>
+					Keychain <br>
+					Thumb Ring <br>
+					Extra Thick <br>
+					Sequential Number<br>
 					3mm Thich Option<span class="red"></span><br>
 					Eco Friendly<span class="red"></span><br>
 					Glitters<span class="red"></span><br>

@@ -241,7 +241,7 @@ $(document).ready(function() {
 		if(qty > 0) {
 			// Get order data
 			var collectionData = getTotalData();
-			var qtyLimit = collectionData.free.wristbands.qty;
+			
 
 			if(collectionData.free.wristbands.qty > 100 || collectionData.free.wristbands.qty < 0) {
 				$('#modal-100-free-wristbands').modal('show');
@@ -279,6 +279,7 @@ $(document).ready(function() {
 	$("#remove-3").click(function() {
 		$(".file-3").val("");
 	});
+
 
 	// Removes file 
 	$("#remove-4").click(function() {
@@ -532,11 +533,17 @@ $(document).ready(function() {
 
 				// Get checked style
 				var item = $(".js-size:visible .wrist_size:checked").val();
-
+                
+				alert('hi');
 				// Show items
-				if($.inArray(item, ["1/4", "1/2", "3/4", "1"]) > 0) {
+				if($.inArray(item, ["1/2", "3/4", "1"]) > 0) {
 					$(".regular-color-size").show(); // Show regular sizes
-				} else {
+				}else if($.inArray(item, ["1/4"]) > 0) {
+					console.log(item);
+					alert('hey');
+					$(".thin-color-size").show(); // Show thin sizes
+				} 
+				else {
 					$(".large-color-size").show(); // Show large sizes
 				}
 			}
@@ -608,10 +615,14 @@ $(document).ready(function() {
 					$(".large-dual-size").show(); // Show large sizes
 				}		
 			} else {
+				
 				// Show items
-				if($.inArray(item, ["1/4", "1/2", "3/4", "1"]) > 0) {
+				if($.inArray(item, [, "1/2", "3/4", "1"]) > 0) {
 					$(".regular-color-size").show(); // Show regular sizes
-				} else {
+				}else if(item == "1/4") {
+					$(".thin-color-size").show(); // Show thin sizes
+				}
+				else {
 					$(".large-color-size").show(); // Show large sizes
 				}
 			}
