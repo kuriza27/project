@@ -10,7 +10,7 @@
 <div class="loader"></div>
 <div class="container school_po_content">
 	<p>
-	<b>Step 1:</b> Click on the School PO order button and select appropriate option of your order details. Once done entering all the details, click Submit My PO button below. <br>
+	<b>Step 1:</b>Fill up and select the appropriate option of your order details. Once done entering all the details, click Submit My PO button below.<br>
 
 	<b>Step 2:</b> You will received an email confirmation that we already received your PO and will be under review.<br>
 

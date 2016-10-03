@@ -77,7 +77,7 @@
 				<!---<img src="assets/images/src/google_trust.jpg">--->
 			</div>
 			<div class="search">
-				  <div id="hour-img">Office hours should be Monday - Friday | 11am - 8pm EST</div>
+				  <div id="hour-img">Monday - Friday | 11am - 8pm EST</div>
 				  <span class="fa fa-search">1-800-989-0440</span>
 				  <p><span class="fa-text">sales@promotionalwristband.com</span></p>
 				  
