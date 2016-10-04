@@ -661,15 +661,15 @@ div#order-summary {
 }
 
 .done-button-fwb{
-	background-color: #17a589;
-    color: #fff;
-    border: 1px solid  #117864 ;
+    background-color: #FFBA23;
+    color: #ffffff;
+    border: 1px solid #efa504;
     padding: 10px 50px;
     border-radius: 3px;
 }
 
 .done-button-fwb:hover{
-	background-color: #1abc9c ;
+	background-color: #FFC107;
 }
 
 button#custom-color-button {
@@ -1071,21 +1071,31 @@ span.fig-fc {
     text-align:center;
 }
 
-.free-convert{
+.free-convert, .free-convert-bands, .free-convert-chains{
     margin-bottom: 15px;
     padding: 20px;
     color: #ffffff;
 }
 
+.free-convert-bands h3, .free-convert-chains h3{
+    color: #008da9;
+    margin-top: 0px;
+}
+
+.free-convert-bands label, .free-convert-chains label{
+    text-decoration: underline;
+}
+
 .span-text-con1{
-    color:#FFFFFF;
-    font-size: 12px;
-    margin-bottom: 10px;
+    color: #8f8fa5;
+    font-size: 14px;
+    padding: 0px;
+    margin: 0 auto 10px auto;
 }
 
 .area-conversion-list {
     background-color: rgb(7, 153, 182);
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     padding: 0;
 }
 
@@ -1116,10 +1126,10 @@ span.fig-fc {
     font-weight: bolder;
 }
 
-input.freewb  {
+input.freewb, input.freekc  {
     border: none;
     border-radius: 5px;
-    color: #CCCCCC;
+    color: #333333;
     height: 35px;
     text-align: center;
 }
@@ -1190,7 +1200,7 @@ span.fonttext-color{
 	font-size: 9px;
 }
 
-.summary-item .free-wb-label {
+.summary-item .free-wb-label, .summary-item .free-kc-label {
     font-size: 13px;
     padding-left: 25px;
 }

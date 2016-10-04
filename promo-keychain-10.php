@@ -5,12 +5,13 @@
 	}
 
 	#dv-10-free-keychains .box-thumb, .message_wristband_100 .box-thumb{
-		background: #008da9;
+		background: #ffffff;
 		padding: 0px;
 	}
 
 	#dv-10-free-keychains .row-title{
 		background: #325277;
+		padding-bottom: 25px;
 	}
 
 	.message_wristband_100 .row-title{
@@ -31,7 +32,7 @@
 	}
 
 	.message_wristband_100 .fwb-text-header{
-		background-color: #325277;
+		background-color: #05859e;
 		color: #ffffff;
 		height: 100%;
 		text-decoration: underline;
@@ -46,55 +47,65 @@
 		text-decoration: underline;
 	}
 
-	#dv-10-free-keychains .row-content{
-		padding: 25px 0;
-	}
+	.fwb-text.fwb-text-header{
 
-	#dv-10-free-keychains .row-content input{
-		height: auto;
-		padding: 10px 15px;
-		text-align: center;
-	}
-
-	#dv-10-free-keychains .row-content button{
-		background-color: #17a589;
-		border-color: #117864;
-		color: #ffffff;
-		font-size: 20px;
-		margin: 0px;
-		outline: none;
-		padding: 6px 10px;
-		top: 0px;
-	}
-
-	#dv-10-free-keychains .btn-success:hover, #dv-10-free-keychains .btn-success:focus {
-		color: rgba(0,0,0,.4);
-		background-color: #449d44;
-		border-color: #398439;
-	}
-
-	#dv-10-free-keychains .btn-warning:hover, #dv-10-free-keychains .btn-warning:focus {
-		color: rgba(0,0,0,.4);
-		background-color: #ec971f;
-		border-color: #d58512;
 	}
 
 </style>
 
-<div id="dv-10-free-keychains" class="col-md-12 promo-add-ons" style="display:none;">
+<div id="dv-10-free-keychains" class="col-md-12 promo-add-ons message_wristband_100" style="display:none;">
 	<div class="box-thumb clearfix">
 		<div class="row row-title">
 			<h1>You have <strong class="js-free-bands-count">10</strong> <strong>FREE</strong> keychains!</h1>
+			<label class="js-free-bands-accept">
+				<div class="free-wristbands">
+					<input type="checkbox" name="add-ons-extra" data-code="free-keychains" class="free-chains"/>
+					<span style="font-size:20px;font-weight:normal;margin-left:10px;">Click here to claim</span>
+				</div>
+			</label>
 		</div>
 		<div class="row row-content">
-			<!-- <span>:</span> -->
-			<div class="input-group input-group col-xs-12 col-md-6 col-md-offset-3">
+			<!-- <div class="input-group input-group col-xs-12 col-md-6 col-md-offset-3">
 				<input id="freekc" class="form-control" type="number" pattern="[0-9]*" placeholder="Input keychain quantity" min="0" max="10" data-maxlength="2">
-				<!-- <input id="freekc" class="freewb-input col-xs-12 col-md-offset-3 col-md-6" type="number" pattern="[0-9]*" placeholder="Input keychain quantity" data-maxlength="2"> -->
 				<span class="input-group-btn">
 					<button id="btnfreekc" class="btn btn-success glyphicon glyphicon-ok"></button>
 				</span>
-			</div><!-- /input-group -->
+			</div> -->
+			<!-- End message for 100 free -->
+			<!-- Box for conversion wristbands -->
+			<div  class="col-md-12 free-convert-chains" data-free-entered="0" style="display:none;">
+				<h3>
+					<label>Free Keychains Color, Size and Quantity</label>
+				</h3>
+				<div class="span-text-con1">
+					<div> Your free keychains should be of the same color and size from your selections above.<br />Please choose which color and size you want to receive, and specify the quantity below.</div>            
+				</div>
+				<div class="area-conversion">
+					<div class="row">
+						<div class="col-md-6 col-sm-12 fwb-text fwb-text-header text-center list-header">
+							<div class="col-xs-4 fwb-text-header"><h4>STYLE</h4></div>
+							<div class="col-xs-4 fwb-text-header"><h4>COLOR</h4></div>
+							<div class="col-xs-4 fwb-text-header"><h4>SIZE</h4></div>
+						</div>
+						<div class="col-md-6 fwb-text fwb-text-header hidden-sm hidden-xs text-center list-header">
+							<div class="col-xs-12 fwb-text-header"><h4>INPUT QUANTITY</h4></div>
+						</div>
+					</div>
+					<ul class="area-conversion-list area-conversion-chains">
+					</ul>
+					<div class="clearfix"></div>
+				</div>
+				<div class="js-free-chains" style="display:none">
+					<div style="color:#00C273;text-align:center;">
+						<div>Free keychains quantities have been saved.</div>
+					</div>
+				</div>
+				<div class="submit">
+					<button class="done-button-fwb btn-lg" type="button">
+						Done
+					</button>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -125,39 +136,33 @@
 			<h1>You have <strong class="js-free-bands-count">100</strong> <strong>FREE</strong> wristbands!</h1>
 			<label class="js-free-bands-accept">
 				<div class="free-wristbands">
-					<input type="checkbox" name="add-ons-extra" data-code="free-wristbands" class="free-bands"/> <span style="margin-left:10px;">Click to claim free wristbands</span>
+					<input type="checkbox" name="add-ons-extra" data-code="free-wristbands" class="free-bands"/>
+					<span style="font-size:20px;font-weight:normal;margin-left:10px;">Click here to claim</span>
 				</div>
 			</label>
 		</div>
 		<div class="row row-content">
 			<!-- End message for 100 free -->
 			<!-- Box for conversion wristbands -->
-			<div  class="col-md-12 free-convert" data-free-entered="0" style="display:none;">
-				<h4>
+			<div  class="col-md-12 free-convert-bands" data-free-entered="0" style="display:none;">
+				<h3>
 					<label>Free Wristbands Color, Size and Quantity</label>
-				</h4>
+				</h3>
 				<div class="span-text-con1">
-					<div> Your free wristbands should be of the same color and size from your selections above. Please choose which color and size you want to receive, and specify the quantity below.</div>            
+					<div> Your free wristbands should be of the same color and size from your selections above.<br />Please choose which color and size you want to receive, and specify the quantity below.</div>            
 				</div>
 				<div class="area-conversion">
-					<!-- <table class="fwb-title">
-						<tr>
-							<th>Style</th>
-							<th>Color</th>
-							<th>Size</th>
-						</tr>
-					</table> -->
 					<div class="row">
-						<div class="col-md-6 col-sm-12 fwb-text fwb-text-header text-center">
+						<div class="col-md-6 col-sm-12 fwb-text fwb-text-header text-center list-header">
 							<div class="col-xs-4 fwb-text-header"><h4>STYLE</h4></div>
 							<div class="col-xs-4 fwb-text-header"><h4>COLOR</h4></div>
 							<div class="col-xs-4 fwb-text-header"><h4>SIZE</h4></div>
 						</div>
-						<div class="col-md-6 fwb-text fwb-text-header hidden-sm hidden-xs text-center">
+						<div class="col-md-6 fwb-text fwb-text-header hidden-sm hidden-xs text-center list-header">
 							<div class="col-xs-12 fwb-text-header"><h4>INPUT QUANTITY</h4></div>
 						</div>
 					</div>
-					<ul class="area-conversion-list">
+					<ul class="area-conversion-list area-conversion-bands">
 					</ul>
 						<div class="clearfix"></div>
 				</div>
