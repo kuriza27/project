@@ -236,6 +236,11 @@ $(document).ready(function() {
 			qty = parseInt($(this).val().trim());
 		}
 
+		if(qty < 0) {
+			$(this).val("").focus();
+			return;
+		}
+
 		// // Check if something actually changed
 		if(qty >= 0) {
 			// Get order data
@@ -264,12 +269,17 @@ $(document).ready(function() {
 			qty = parseInt($(this).val().trim());
 		}
 
+		if(qty < 0) {
+			$(this).val("").focus();
+			return;
+		}
+
 		// // Check if something actually changed
 		if(qty >= 0) {
 			// Get order data
 			var collectionData = getTotalData();
 
-			if(collectionData.free.wristbands.qty > 100 || collectionData.free.wristbands.qty < 0) {
+			if(collectionData.free.wristbands.qty > 200 || collectionData.free.wristbands.qty < 0) {
 				$('#modal-100-free-wristbands').modal('show');
 				$(this).val("");
 				return;
@@ -2219,7 +2229,7 @@ function getTotalData() {
 		$collection.total_price += parseFloat(value.total);
 	});
 
-	console.log($collection);
+	// console.log($collection);
 
 	// Return order collection
 	return $collection;
