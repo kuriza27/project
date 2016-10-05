@@ -21,7 +21,7 @@
 					<li><a href="privacy.php">Privacy</a></li>
 					<li><a href="#">Return Policy</a></li>
 					<li><a href="faq.php">FAQ</a></li>
-					<li><a href="#">Terms and Conditions</a></li>
+					<li><a href="terms-and-conditions.php">Terms and Conditions</a></li>
 				</ul>
 			</div>
 			<div id="footer-text">
