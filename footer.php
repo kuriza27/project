@@ -19,7 +19,7 @@
 					<li><a href="about-us.php">About Us</a></li>
 					<li><a href="#">Our Blog</a></li>
 					<li><a href="privacy.php">Privacy</a></li>
-					<li><a href="#">Return Policy</a></li>
+					<li><a href="return-policy.php">Return Policy</a></li>
 					<li><a href="faq.php">FAQ</a></li>
 					<li><a href="terms-and-conditions.php">Terms and Conditions</a></li>
 				</ul>
