@@ -38,8 +38,35 @@
 		By interacting with the Site, you, as categorized as User, signify your acceptance of this policy. If you disagree to this policy, we discourage usage or interacting with the Site. Continue to use the Site will be considered as a manifestation of your acceptance to this policy and any changes or updates occurred.
 	<br>
 	</p>
+<a href="#" id="back-to-top" title="Back to top"><span style="fnot-weight:bold;">&#8593;</span></a>
 </div>
 <!----end container---->
+<script language="javascript"><!-- 
+	$(document).ready(function() {
 
+		if ($('#back-to-top').length) {
+		var scrollTrigger = 100, // px
+			backToTop = function () {
+				var scrollTop = $(window).scrollTop();
+				if (scrollTop > scrollTrigger) {
+					$('#back-to-top').addClass('show');
+				} else {
+					$('#back-to-top').removeClass('show');
+				}
+			};
+			backToTop();
+			$(window).on('scroll', function () {
+				backToTop();
+			});
+			$('#back-to-top').on('click', function (e) {
+				e.preventDefault();
+				$('html,body').animate({
+					scrollTop: 0
+				}, 700);
+			});
+		}
+	});
+	// -->
+	</script>
 <?php include_once 'footer.php'; ?>
      
