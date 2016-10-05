@@ -203,10 +203,21 @@ $(document).ready(function() {
     });
 
 	//Confirm on freewristband conversion
+	$(".done-button-fwb-b").on("click",function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		$('.js-free-bands').show().fadeOut(5000);
+		// Get order data
+		var collectionData = getTotalData();
+		// Populate total section
+		populateTotalSection(collectionData);
+	});
+	
+	//Confirm on free keychain conversion
 	$(".done-button-fwb").on("click",function(e) {
 		e.preventDefault();
 		e.stopPropagation();
-
+		$('.js-free-chains').show().fadeOut(5000);
 		// Get order data
 		var collectionData = getTotalData();
 		// Populate total section
@@ -570,13 +581,11 @@ $(document).ready(function() {
 				// Get checked style
 				var item = $(".js-size:visible .wrist_size:checked").val();
                 
-				alert('hi');
 				// Show items
 				if($.inArray(item, ["1/2", "3/4", "1"]) > 0) {
 					$(".regular-color-size").show(); // Show regular sizes
 				}else if($.inArray(item, ["1/4"]) > 0) {
 					console.log(item);
-					alert('hey');
 					$(".thin-color-size").show(); // Show thin sizes
 				} 
 				else {

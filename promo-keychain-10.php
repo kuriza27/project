@@ -172,7 +172,7 @@
 					</div>
 				</div>
 				<div class="submit">
-					<button class="done-button-fwb btn-lg" type="button">
+					<button class="done-button-fwb-b btn-lg" type="button">
 						Done
 					</button>
 				</div>
