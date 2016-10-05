@@ -16,9 +16,9 @@
 			</div>
 			<div id="footer-link-secondary">
 				<ul id="menu-footer-secondary">
-					<li><a href="#">About Us</a></li>
+					<li><a href="about-us.php">About Us</a></li>
 					<li><a href="#">Our Blog</a></li>
-					<li><a href="#">Privacy</a></li>
+					<li><a href="privacy.php">Privacy</a></li>
 					<li><a href="#">Return Policy</a></li>
 					<li><a href="faq.php">FAQ</a></li>
 					<li><a href="#">Terms and Conditions</a></li>

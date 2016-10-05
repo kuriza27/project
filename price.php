@@ -1512,7 +1512,7 @@
 		   </div>  
 	   
 	   <!------------End container tables----------------------->
-	   <a href="#" id="back-to-top" title="Back to top">Back to top</a>
+	   <a href="#" id="back-to-top" title="Back to top"><span style="fnot-weight:bold;">&#8593;</span></a>
 	</div>
 	<!---------End Container----------------->
 	<?php $conn->close(); ?>

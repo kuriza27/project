@@ -668,9 +668,9 @@ li.active.select-box-col {
 #back-to-top {
     position: fixed;
     bottom: 0px;
-    right: 38px;
+    right: 0px;
     z-index: 9999;
-    width: 118px;
+    width: 58px;
     height: 46px;
     text-align: center;
     line-height: 46px;
@@ -797,6 +797,15 @@ body, a, [input type="radio"] , [input type="checkbox"]{
 	font-size:14px;
 }
 
+.text-content{
+	line-height:28px;
+}
+
+.text-content p{
+	font-size:14px;
+	margin-top:30px;
+	margin-bottom:50px;
+}
 /****
 **
 **** MEDIA QUERIES
