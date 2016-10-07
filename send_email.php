@@ -1,16 +1,19 @@
 <?php
 
 	require_once("assets/class/PHPMailer-master/PHPMailerAutoload.php"); // Library added in download source.
+	require_once("mail_template.php");
 
 	$mailer_username = "dummy.alibi000@gmail.com";
 	$mailer_password = "alibi000";
 
 	$subj = "Wristband Order";
-	$body  = "";
+	$body = "";
+	$body_ = "";
+	$body_total = "";
+	$data = array();
 
 	$name = "Wristband Support";
 	$mail_from = "dummy.alibi000@gmail.com";
-
 	$mail_to = "dummy.alibi000@gmail.com";
 
 	// Update subject title depeneding on submit type
@@ -37,30 +40,43 @@
 	if(isset($_REQUEST['data'])) {
 
 		$data = json_decode($_REQUEST['data'], true);
+		$first = true;
 
 		foreach($data as $key => $value) {
 
-			$body .= strtoupper(str_replace("_", " ", $key)) . " : ";
+			if($first) {
+				$first = false;
+			} else {
+				$body_ .= "<br/>";
+			}
+
+			if($key != "total_price") {
+
+				$body_ .= ucwords(strtolower(str_replace("_", " ", $key))) . " : ";
+			} else {
+
+				$body_total .= ucwords(strtolower(str_replace("_", " ", $key))) . " : ";
+			}
 
 			if($key == "add_ons") {
 
 				foreach($value as $inkey => $invalue) {
 
-					$body .= "<br/><span style='padding-left:10px;'>- " . ucwords(str_replace("_", " ", $inkey)) . " : </span>";
+					$body_ .= "<br/><span style='padding-left:10px;'>- " . ucwords(str_replace("_", " ", $inkey)) . " : </span>";
 
 					foreach($invalue as $aokey => $aovalue) {
 
 						if($aokey == "code") { continue; }
 						if($aokey == "all") { continue; }
-						$body .= "<br/>";
-						$body .= "<span style='padding-left:20px;'>- " . ucwords(str_replace("_", " ", $aokey)) . " : " . strtoupper($aovalue) . "</span>";
+						$body_ .= "<br/>";
+						$body_ .= "<span style='padding-left:20px;'>- " . ucwords(str_replace("_", " ", $aokey)) . " : " . strtoupper($aovalue) . "</span>";
 					}
 				}
 			} else if($key == "free") {
 
 				foreach($value as $inkey => $invalue) {
 
-					$body .= "<br/><span style='padding-left:10px;'>- " . ucwords(str_replace("_", " ", $inkey)) . " : </span>";
+					$body_ .= "<br/><span style='padding-left:10px;'>- " . ucwords(str_replace("_", " ", $inkey)) . " : </span>";
 
 					foreach($invalue as $frkey => $frvalue) {
 
@@ -68,54 +84,54 @@
 
 						if(is_array($frvalue)) {
 
-							$body .= "<br/>";
-							$body .= "<span style='padding-left:20px;'>- List : </span>";
+							$body_ .= "<br/>";
+							$body_ .= "<span style='padding-left:20px;'>- List : </span>";
 
 							foreach($frvalue as $datakey => $datavalue) {
 
-								$body .= "<br/>";
-								$body .= "<span style='padding-left:30px;'>- " . ucwords(str_replace("_", " ", $datavalue["name"])) . " : </span>";
+								$body_ .= "<br/>";
+								$body_ .= "<span style='padding-left:30px;'>- " . ucwords(str_replace("_", " ", $datavalue["name"])) . " : </span>";
 
 								if(isset($datavalue["qty"])) {
 
-									$body .= "<br/>";
-									$body .= "<span style='padding-left:40px;'>- Quantity : " . strtoupper($datavalue["qty"]) . "</span>";	
+									$body_ .= "<br/>";
+									$body_ .= "<span style='padding-left:40px;'>- Quantity : " . strtoupper($datavalue["qty"]) . "</span>";
 								}
 
 								if(isset($datavalue["size"])) {
 
-									$body .= "<br/>";
-									$body .= "<span style='padding-left:40px;'>- Size : " . strtoupper($datavalue["size"]) . "</span>";	
+									$body_ .= "<br/>";
+									$body_ .= "<span style='padding-left:40px;'>- Size : " . strtoupper($datavalue["size"]) . "</span>";
 								}
 
 								if(isset($datavalue["style"])) {
 
-									$body .= "<br/>";
-									$body .= "<span style='padding-left:40px;'>- Style : " . strtoupper($datavalue["style"]) . "</span>";	
+									$body_ .= "<br/>";
+									$body_ .= "<span style='padding-left:40px;'>- Style : " . strtoupper($datavalue["style"]) . "</span>";
 								}
 
 								if(isset($datavalue["font"])) {
 
-									$body .= "<br/>";
-									$body .= "<span style='padding-left:40px;'>- Font Color : #" . strtoupper($datavalue["font"]) . "</span>";	
+									$body_ .= "<br/>";
+									$body_ .= "<span style='padding-left:40px;'>- Font Color : #" . strtoupper($datavalue["font"]) . "</span>";
 								}
 
 								if(isset($datavalue["color"])) {
 
-									$body .= "<br/>";
-									$body .= "<span style='padding-left:40px;'>- Color : </span>";
+									$body_ .= "<br/>";
+									$body_ .= "<span style='padding-left:40px;'>- Color : </span>";
 
 									foreach($datavalue["color"] as $colorvalue) {
 
-										$body .= "<br/>";
-										$body .= "<span style='padding-left:50px;'>- #" . strtoupper($colorvalue) . "</span>";	
+										$body_ .= "<br/>";
+										$body_ .= "<span style='padding-left:50px;'>- #" . strtoupper($colorvalue) . "</span>";
 									}
 								}
 							}
 						} else {
 
-							$body .= "<br/>";
-							$body .= "<span style='padding-left:20px;'>- " . ucwords(str_replace("_", " ", $frkey)) . " : " . strtoupper($frvalue) . "</span>";
+							$body_ .= "<br/>";
+							$body_ .= "<span style='padding-left:20px;'>- " . ucwords(str_replace("_", " ", $frkey)) . " : " . strtoupper($frvalue) . "</span>";
 						}
 					}
 				}
@@ -140,13 +156,13 @@
 						if(isset($datavalue["size"])) {
 
 							$body .= "<br/>";
-							$body .= "<span style='padding-left:30px;'>- Size : " . strtoupper($datavalue["size"]) . "</span>";	
+							$body .= "<span style='padding-left:30px;'>- Size : " . strtoupper($datavalue["size"]) . "</span>";
 						}
 
 						if(isset($datavalue["font"])) {
 
 							$body .= "<br/>";
-							$body .= "<span style='padding-left:30px;'>- Font Color : #" . strtoupper($datavalue["font"]) . "</span>";	
+							$body .= "<span style='padding-left:30px;'>- Font Color : #" . strtoupper($datavalue["font"]) . "</span>";
 						}
 
 						if(isset($datavalue["color"])) {
@@ -157,7 +173,7 @@
 							foreach($datavalue["color"] as $colorvalue) {
 
 								$body .= "<br/>";
-								$body .= "<span style='padding-left:50px;'>- #" . strtoupper($colorvalue) . "</span>";	
+								$body .= "<span style='padding-left:50px;'>- #" . strtoupper($colorvalue) . "</span>";
 							}
 						}
 					}
@@ -169,32 +185,32 @@
 
 					if(isset($_FILES['file-1']) && $icnkey == "front_start") {
 
-						$body .= "<br/>";
-						$body .= "<span style='padding-left:20px;'>- " . ucwords(str_replace("_", " ", $icnkey)) . " : Please see attachments</span>";
+						$body_ .= "<br/>";
+						$body_ .= "<span style='padding-left:20px;'>- " . ucwords(str_replace("_", " ", $icnkey)) . " : Please see attachments</span>";
 					} else if(isset($_FILES['file-2']) && $icnkey == "front_end") {
 
-						$body .= "<br/>";
-						$body .= "<span style='padding-left:20px;'>- " . ucwords(str_replace("_", " ", $icnkey)) . " : Please see attachments</span>";
+						$body_ .= "<br/>";
+						$body_ .= "<span style='padding-left:20px;'>- " . ucwords(str_replace("_", " ", $icnkey)) . " : Please see attachments</span>";
 					} else if(isset($_FILES['file-3']) && $icnkey == "back_start") {
 
-						$body .= "<br/>";
-						$body .= "<span style='padding-left:20px;'>- " . ucwords(str_replace("_", " ", $icnkey)) . " : Please see attachments</span>";
+						$body_ .= "<br/>";
+						$body_ .= "<span style='padding-left:20px;'>- " . ucwords(str_replace("_", " ", $icnkey)) . " : Please see attachments</span>";
 					} else if(isset($_FILES['file-4']) && $icnkey == "back_end") {
 
-						$body .= "<br/>";
-						$body .= "<span style='padding-left:20px;'>- " . ucwords(str_replace("_", " ", $icnkey)) . " : Please see attachments</span>";
+						$body_ .= "<br/>";
+						$body_ .= "<span style='padding-left:20px;'>- " . ucwords(str_replace("_", " ", $icnkey)) . " : Please see attachments</span>";
 					} else if(isset($_FILES['file-5']) && $icnkey == "continues_start") {
 
-						$body .= "<br/>";
-						$body .= "<span style='padding-left:20px;'>- " . ucwords(str_replace("_", " ", $icnkey)) . " : Please see attachments</span>";
+						$body_ .= "<br/>";
+						$body_ .= "<span style='padding-left:20px;'>- " . ucwords(str_replace("_", " ", $icnkey)) . " : Please see attachments</span>";
 					} else if(isset($_FILES['file-6']) && $icnkey == "continues_end") {
 
-						$body .= "<br/>";
-						$body .= "<span style='padding-left:20px;'>- " . ucwords(str_replace("_", " ", $icnkey)) . " : Please see attachments</span>";
+						$body_ .= "<br/>";
+						$body_ .= "<span style='padding-left:20px;'>- " . ucwords(str_replace("_", " ", $icnkey)) . " : Please see attachments</span>";
 					} else {
 
-						$body .= "<br/>";
-						$body .= "<span style='padding-left:20px;'>- " . ucwords(str_replace("_", " ", $icnkey)) . " : " . $icnvalue . "</span>";
+						$body_ .= "<br/>";
+						$body_ .= "<span style='padding-left:20px;'>- " . ucwords(str_replace("_", " ", $icnkey)) . " : " . $icnvalue . "</span>";
 					}
 				}
 			}  else if($key == "text") {
@@ -203,25 +219,27 @@
 
 					if($txtkey == "type") {
 
-						$body .= "<br/>";
-						$body .= "<span style='padding-left:20px;'>- " . ucwords(str_replace("_", " ", $txtkey)) . " : " . strtoupper($txtvalue) . "</span>";
+						$body_ .= "<br/>";
+						$body_ .= "<span style='padding-left:20px;'>- " . ucwords(str_replace("_", " ", $txtkey)) . " : " . strtoupper($txtvalue) . "</span>";
 					} else {
 
-						$body .= "<br/>";
-						$body .= "<span style='padding-left:20px;'>- " . ucwords(str_replace("_", " ", $txtkey)) . " : " . $txtvalue . "</span>";
+						$body_ .= "<br/>";
+						$body_ .= "<span style='padding-left:20px;'>- " . ucwords(str_replace("_", " ", $txtkey)) . " : " . ((!empty($txtvalue)) ? strtoupper($txtvalue) : "NONE") . "</span>";
 					}
 				}
+			}  else if($key == "total_price") {
+
+					$body_total .= strtoupper($value);
 			} else {
 
-				$body .= strtoupper($value);
+				$body_ .= strtoupper($value);
 			}
-
-			$body .= "<br/>";
 		}
 	}
 
 	// Trigger
-	$result = smtpmailer($mail_to, $mail_from, $name ,$subj, $body);
+	$result = smtpmailer($mail_to, $mail_from, $name ,$subj, $body.$body_.$body_total, true, true);
+	smtpmailer(trim($_REQUEST['mail']), $mail_from, $name ,$subj, mail_template("quote", $_REQUEST['name'], $body_.$body_total, $data['total_price']));
 	echo $result;
 	die;
 
@@ -231,7 +249,7 @@
 	 *
 	 * return json string
 	 */
-	function smtpmailer($to, $from, $from_name, $subject, $body, $is_gmail=true)
+	function smtpmailer($to, $from, $from_name, $subject, $body, $is_gmail=true, $with_attachment=false)
 	{
 		$mail = new PHPMailer;
 
@@ -248,24 +266,27 @@
 		$mail->setFrom($from, $from_name);						// Add a from information
 		$mail->addAddress($to);									// Add a recipient
 
-		// Add attachments
-		if(isset($_FILES['file-1'])) {
-			$mail->addAttachment($_FILES['file-1']['tmp_name'], 'Front Start.png'); 
-		}
-		if(isset($_FILES['file-2'])) {
-			$mail->addAttachment($_FILES['file-2']['tmp_name'], 'Front End.png'); 
-		}
-		if(isset($_FILES['file-3'])) {
-			$mail->addAttachment($_FILES['file-3']['tmp_name'], 'Back Start.png'); 
-		}
-		if(isset($_FILES['file-4'])) {
-			$mail->addAttachment($_FILES['file-4']['tmp_name'], 'Back End.png'); 
-		}
-		if(isset($_FILES['file-5'])) {
-			$mail->addAttachment($_FILES['file-5']['tmp_name'], 'Continuous Start.png'); 
-		}
-		if(isset($_FILES['file-6'])) {
-			$mail->addAttachment($_FILES['file-6']['tmp_name'], 'Continuous End.png'); 
+		if($with_attachment) {
+
+			// Add attachments
+			if(isset($_FILES['file-1'])) {
+				$mail->addAttachment($_FILES['file-1']['tmp_name'], 'Front Start.png');
+			}
+			if(isset($_FILES['file-2'])) {
+				$mail->addAttachment($_FILES['file-2']['tmp_name'], 'Front End.png');
+			}
+			if(isset($_FILES['file-3'])) {
+				$mail->addAttachment($_FILES['file-3']['tmp_name'], 'Back Start.png');
+			}
+			if(isset($_FILES['file-4'])) {
+				$mail->addAttachment($_FILES['file-4']['tmp_name'], 'Back End.png');
+			}
+			if(isset($_FILES['file-5'])) {
+				$mail->addAttachment($_FILES['file-5']['tmp_name'], 'Continuous Start.png');
+			}
+			if(isset($_FILES['file-6'])) {
+				$mail->addAttachment($_FILES['file-6']['tmp_name'], 'Continuous End.png');
+			}
 		}
 
 		$mail->isHTML(true);									// Set email format to HTML
