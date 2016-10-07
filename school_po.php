@@ -25,7 +25,7 @@
 
 	<b>2.</b> Orders that are not paid 15 days after delivery will be charged collection fee of 20% on top of the original order amount.<br>
 
-	<b>3.</b>  <a class="terms-popup" href="#">ViewTerms and Conditions</a>
+	<b>3.</b>  <a class="terms-popup" href="#">View Terms and Conditions</a>
 	<p>
 </div>
 <div id="terms-conditions-popup" class="modal fade" role="dialog">
