@@ -976,13 +976,9 @@
 				   <tr>
 				   <td>
 						<tr>
-							<th>Quantity</th>
-							<th>1/4 Inch</th>
-							<th>1/2 Inch</th>
-							<th>3/4 Inch</th>
-							<th>1 Inch</th>
-							<th>1.5 Inch</th>
-							<th>2 Inch</th>
+							<th style="text-align:center">Quantity</th>
+							<th style="text-align:center">1/2 Inch</th>
+							<th style="text-align:center">3/4 Inch</th>
 						</tr>
 						
 					</td>
@@ -1001,26 +997,6 @@
 									while($row = $result->fetch_assoc()) {
 									
 										echo "<p>".$row["qty"]. "</p>";
-											}
-								} else {
-									echo "0 results";
-								}
-
-								?> 
-						</td>
-						<td>
-						
-						   <?php
-								$size = 1;
-								$style = 19;
-								$sql = getWristbandPrice($style,$size);
-								$result = $conn->query($sql);
-
-								if ($result->num_rows > 0) {
-									// output data of each row
-									while($row = $result->fetch_assoc()) {
-									
-										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1052,66 +1028,6 @@
 						
 						   <?php
 								$size = 3;
-								$style = 19;
-								$sql = getWristbandPrice($style,$size);
-								$result = $conn->query($sql);
-
-								if ($result->num_rows > 0) {
-									// output data of each row
-									while($row = $result->fetch_assoc()) {
-									
-										echo  "<p>".$row["price"]. "</p>";
-											}
-								} else {
-									echo "0 results";
-								}
-								
-								?> 
-						</td>
-						<td>
-						
-						   <?php
-								$size = 4;
-								$style = 19;
-								$sql = getWristbandPrice($style,$size);
-								$result = $conn->query($sql);
-
-								if ($result->num_rows > 0) {
-									// output data of each row
-									while($row = $result->fetch_assoc()) {
-									
-										echo  "<p>".$row["price"]. "</p>";
-											}
-								} else {
-									echo "0 results";
-								}
-								
-								?> 
-						</td>
-						<td>
-						
-						   <?php
-								$size = 5;
-								$style = 19;
-								$sql = getWristbandPrice($style,$size);
-								$result = $conn->query($sql);
-
-								if ($result->num_rows > 0) {
-									// output data of each row
-									while($row = $result->fetch_assoc()) {
-									
-										echo  "<p>".$row["price"]. "</p>";
-											}
-								} else {
-									echo "0 results";
-								}
-								
-								?> 
-						</td>
-						<td>
-						
-						   <?php
-								$size = 6;
 								$style = 19;
 								$sql = getWristbandPrice($style,$size);
 								$result = $conn->query($sql);
@@ -1163,13 +1079,10 @@
 				   <tr>
 				   <td>
 						<tr>
-							<th>Quantity</th>
-							<th>1/4 Inch</th>
-							<th>1/2 Inch</th>
-							<th>3/4 Inch</th>
-							<th>1 Inch</th>
-							<th>1.5 Inch</th>
-							<th>2 Inch</th>
+							<th style="text-align:center">Quantity</th>
+							<th style="text-align:center">1/2 Inch</th>
+							<th style="text-align:center">3/4 Inch</th>
+							<th style="text-align:center">1 Inch</th>
 						</tr>
 						
 					</td>
@@ -1188,26 +1101,6 @@
 									while($row = $result->fetch_assoc()) {
 									
 										echo "<p>".$row["qty"]. "</p>";
-											}
-								} else {
-									echo "0 results";
-								}
-
-								?> 
-						</td>
-						<td>
-						
-						   <?php
-								$size = 1;
-								$style = 21;
-								$sql = getWristbandPrice($style,$size);
-								$result = $conn->query($sql);
-
-								if ($result->num_rows > 0) {
-									// output data of each row
-									while($row = $result->fetch_assoc()) {
-									
-										echo  "<p>".$row["price"]. "</p>";
 											}
 								} else {
 									echo "0 results";
@@ -1259,46 +1152,6 @@
 						
 						   <?php
 								$size = 4;
-								$style = 21;
-								$sql = getWristbandPrice($style,$size);
-								$result = $conn->query($sql);
-
-								if ($result->num_rows > 0) {
-									// output data of each row
-									while($row = $result->fetch_assoc()) {
-									
-										echo  "<p>".$row["price"]. "</p>";
-											}
-								} else {
-									echo "0 results";
-								}
-								
-								?> 
-						</td>
-						<td>
-						
-						   <?php
-								$size = 5;
-								$style = 21;
-								$sql = getWristbandPrice($style,$size);
-								$result = $conn->query($sql);
-
-								if ($result->num_rows > 0) {
-									// output data of each row
-									while($row = $result->fetch_assoc()) {
-									
-										echo  "<p>".$row["price"]. "</p>";
-											}
-								} else {
-									echo "0 results";
-								}
-								
-								?> 
-						</td>
-						<td>
-						
-						   <?php
-								$size = 6;
 								$style = 21;
 								$sql = getWristbandPrice($style,$size);
 								$result = $conn->query($sql);

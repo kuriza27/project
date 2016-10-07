@@ -34,6 +34,15 @@ $(document).ready(function() {
 			});
 		});
 	}
+	
+	$('input[type="checkbox"]').on( 'touchstart', function(){
+       $(this).prop("checked", !$(this).prop("checked"));
+   });
+
+   
+   $('input[type="radio"]').on( 'touchstart', function(){
+       $(this).prop("checked", !$(this).prop("checked"));
+   });
 		
 	blink('.blink');
 	
