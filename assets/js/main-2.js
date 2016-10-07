@@ -36,7 +36,12 @@ $(document).ready(function() {
 	}
 		
 	blink('.blink');
-
+	
+	// click terms
+	$('.terms-popup').click(function() {
+		$('#terms-conditions-popup').modal('show');
+	});
+	
 	// For font color select event
 	$('body').on('click', '.fntin', function(e) {
 		e.preventDefault();

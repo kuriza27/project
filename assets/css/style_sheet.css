@@ -806,6 +806,19 @@ body, a, [input type="radio"] , [input type="checkbox"]{
 	margin-top:30px;
 	margin-bottom:50px;
 }
+
+#terms-conditions-popup{
+	line-height:26px;
+}
+
+.terms-center{
+	height:450px;
+	overflow:auto;
+}
+
+
+
+
 /****
 **
 **** MEDIA QUERIES

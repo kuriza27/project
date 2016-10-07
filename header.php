@@ -49,6 +49,27 @@
 				});
 			});
 		</script>
+		<!-- BEGIN: Google Trusted Stores -->
+				<script type="text/javascript">
+				  var gts = gts || [];
+
+				  gts.push(["id", "725104"]);
+				  gts.push(["badge_position", "USER_DEFINED"]);
+				  gts.push(["badge_container", "google_trust"]);
+				  gts.push(["locale", "PAGE_LANGUAGE"]);
+				  gts.push(["google_base_offer_id", "ITEM_GOOGLE_SHOPPING_ID"]);
+				  gts.push(["google_base_subaccount_id", "ITEM_GOOGLE_SHOPPING_ACCOUNT_ID"]);
+
+				  (function() {
+					var gts = document.createElement("script");
+					gts.type = "text/javascript";
+					gts.async = true;
+					gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+					var s = document.getElementsByTagName("script")[0];
+					s.parentNode.insertBefore(gts, s);
+				  })();
+				</script>
+				<!-- END: Google Trusted Stores -->
 	</head>
 
 <body>
@@ -74,26 +95,6 @@
 			</div>
 			<div class="header-right-box">
 			<div id="google_trust">
-				<!-- BEGIN: Google Trusted Stores -->
-				<script type="text/javascript">
-				  var gts = gts || [];
-
-				  gts.push(["id", "725104"]);
-				  gts.push(["badge_position", "BOTTOM_RIGHT"]);
-				  gts.push(["locale", "PAGE_LANGUAGE"]);
-				  gts.push(["google_base_offer_id", "ITEM_GOOGLE_SHOPPING_ID"]);
-				  gts.push(["google_base_subaccount_id", "ITEM_GOOGLE_SHOPPING_ACCOUNT_ID"]);
-
-				  (function() {
-					var gts = document.createElement("script");
-					gts.type = "text/javascript";
-					gts.async = true;
-					gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
-					var s = document.getElementsByTagName("script")[0];
-					s.parentNode.insertBefore(gts, s);
-				  })();
-				</script>
-				<!-- END: Google Trusted Stores -->
 			</div>
 			<div class="search">
 				  <div id="hour-img">Monday - Friday | 11am - 8pm EST</div>
