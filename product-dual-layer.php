@@ -192,7 +192,7 @@
 					Youth Size (7 inch)<br>
 					Medium Size (7.5 inch)<br>
 					Adult Size (8 inch)<br>
-					Extra Large (8.5 inch)
+					Extra Large (9.0 inch)
 				</p>
 				<h4>Wristband Widths</h4>
 				<p>

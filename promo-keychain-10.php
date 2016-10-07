@@ -133,7 +133,7 @@
 <div id="dv-100-free-wristbands" class="col-md-12 message_wristband_100" style="display:none;">
 	<div class="box-thumb clearfix">
 		<div class="row row-title">
-			<h1>You have <strong class="js-free-bands-count">200</strong> <strong>FREE</strong> wristbands!</h1>
+			<h1>You have <strong class="js-free-bands-count">100</strong> <strong>FREE</strong> wristbands!</h1>
 			<label class="js-free-bands-accept">
 				<div class="free-wristbands">
 					<input type="checkbox" name="add-ons-extra" data-code="free-wristbands" class="free-bands"/>
@@ -190,7 +190,7 @@
 				<h4 class="modal-title">Error</h4>
 			</div>
 			<div class="modal-body text-center">
-				<h2 style="font-size:25px;padding:10px 0;">Total quantity must not be over 200 pieces.</h2>
+				<h2 style="font-size:25px;padding:10px 0;">Total quantity must not be over <span class="limit-text"></span> pieces.</h2>
 				<div class="clearfix"></div>
 			</div>
 			<div class="modal-footer">

@@ -1,6 +1,7 @@
 var has_preview = {};
 var dynamic_font_color = "";
 var default_font_color = "000000";
+var qtyLimit = 0;
 
 $(document).ready(function() {
 
@@ -273,11 +274,13 @@ $(document).ready(function() {
 		e.stopPropagation();
 
 		var qty = 0;
-
+		var sumQty = 0;
+		
 		if($(this).val().trim() == "") {
 			qty = 0;
 		} else {
 			qty = parseInt($(this).val().trim());
+			sumQty = qtyLimit + 100;
 		}
 
 		if(qty < 0) {
@@ -289,9 +292,10 @@ $(document).ready(function() {
 		if(qty >= 0) {
 			// Get order data
 			var collectionData = getTotalData();
-
-			if(collectionData.free.wristbands.qty > 200 || collectionData.free.wristbands.qty < 0) {
+           
+			if(collectionData.free.wristbands.qty > sumQty || collectionData.free.wristbands.qty < 0) {
 				$('#modal-100-free-wristbands').modal('show');
+				$('.limit-text').html(sumQty);
 				$(this).val("");
 				return;
 			}
@@ -647,7 +651,7 @@ $(document).ready(function() {
 			// Decide which wristband selector to display
 			if(style == "figured") {
 				// Show items
-				if($.inArray(item, ["1/4", "1/2", "3/4"]) > 0) {
+				if($.inArray(item, ["1/4", "1/2",]) > 0) {
 					$(".regular-figured-size").show(); // Show regular sizes
 				} else {
 					$(".large-figured-size").show(); // Show large sizes
@@ -662,7 +666,7 @@ $(document).ready(function() {
 			} else {
 				
 				// Show items
-				if($.inArray(item, [, "1/2", "3/4", "1"]) > 0) {
+				if($.inArray(item, [, "1/2", ,]) > 0) {
 					$(".regular-color-size").show(); // Show regular sizes
 				}else if(item == "1/4") {
 					$(".thin-color-size").show(); // Show thin sizes
@@ -773,7 +777,10 @@ $(document).ready(function() {
 							$("#front-view, #back-view, #continue-view, #inside-view").css('background', 'url(gd/belt.php?style=' + key_style + '&type=' + collectionData.style + '&color=' + value.color.join(",") + ')');
 							$(".preview-panel").css("color", "#" + value.font);
 						}
-
+						
+						//Global Limit
+						qtyLimit = collectionData.total_qty;
+						
 						// For free wristbands
 						if(collectionData.total_qty >= 100) {
 							if(!$('.conversion-wrist-' + key_style + '.free-wrist-' + key_style + '-' + value.size + '-' + value.color.join("-") ).length > 0) {
