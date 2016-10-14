@@ -217,6 +217,11 @@ $(document).ready(function() {
 		populateTotalSection(collectionData);
     });
 
+	//show message
+	$("#done_convert_keychain").on("click",function(e) {
+		$('.js-keychain-add-ons-save').show().fadeOut(5000);
+	});
+	
 	//Confirm on freewristband conversion
 	$(".done-button-fwb-b").on("click",function(e) {
 		e.preventDefault();
@@ -307,9 +312,9 @@ $(document).ready(function() {
 			// Get order data
 			var collectionData = getTotalData();
            
-			if(collectionData.free.wristbands.qty > sumQty || collectionData.free.wristbands.qty < 0) {
+			if(collectionData.free.wristbands.qty > 100 || collectionData.free.wristbands.qty < 0) {
 				$('#modal-100-free-wristbands').modal('show');
-				$('.limit-text').html(sumQty);
+				//$('.limit-text').html('100');
 				$(this).val("");
 				return;
 			}
@@ -846,7 +851,8 @@ $(document).ready(function() {
 			$(".area-conversion-bands").html(html_wb_free);
 
 			// Add-on keychain convertion ALL
-			$("#convert-keychain-area-all-qty").html(collectionData.total_qty);
+			var sumQty = collectionData.total_qty + 100;
+			$("#convert-keychain-area-all-qty").html(sumQty);
 			// Add-on keychain convertion SOME
 			$("#convert-keychain-some-list").html(html_ao_kc);
 
@@ -1292,7 +1298,9 @@ $(document).ready(function() {
 			$("#convert-keychain-area-some").hide();
 			$("#convert-keychain-area-all").show();
 			// Set qty
-			$("#convert-keychain-area-all-qty").html(collectionData.total_qty);
+			
+			var sumQty = collectionData.total_qty + 100;
+			$("#convert-keychain-area-all-qty").html(sumQty);
 		} else {
 			// Show keychain quantity (some)
 			$("#convert-keychain-area-all").hide();
@@ -1330,8 +1338,10 @@ $(document).ready(function() {
 		$("input.kc-some-qty").each(function() {
 			_kcQty += ($(this).val().trim() != "") ? parseInt($(this).val()) : 0;
 		});
+		
+		var sumQty = collectionData.total_qty + 100;
 		// Check
-		if(_kcQty > collectionData.total_qty) {
+		if(_kcQty > sumQty) {
 			showPopupMessage("Error", "Keychains must not be greater than the total wristband quantity.");
 			$(this).val("").focus();
 			// return false;
@@ -2283,6 +2293,7 @@ function populateTotalSection(_collection) {
 	// For add-ons
 	var html_add_ons = "";
 	var total_add_ons = 0;
+	
 	$("#wristband_add_on_list").html(html_add_ons);
 	$.each(_collection.add_ons, function(key, value) {
 			if(value.code == "individual") { value.code = "individual pack"; }
@@ -2291,12 +2302,15 @@ function populateTotalSection(_collection) {
 				html_add_ons += " (";
 				if(value.all == true) {
 					html_add_ons += "All";
+					var keyQty = value.qty + 100;
 				} else {
 					html_add_ons += "Some";
+					var keyQty = value.qty;
 				}
 				html_add_ons += " Converted)";
 			}
-		html_add_ons += " (" + value.qty + " x " + formatCurrency(value.price) + " each)<br />";
+		
+		html_add_ons += " (" + keyQty + " x " + formatCurrency(value.price) + " each)<br />";
 		total_add_ons += value.total;
 	});
 

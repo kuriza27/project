@@ -568,6 +568,11 @@
 								</ul>
 								<div class="clearfix"></div>
 							</div>
+							<div class="js-keychain-add-ons-save" style="display:none">
+								<div style="color:#00C273;text-align:center;">
+									<div>Converted Keychains have been saved.</div>
+								</div>
+							</div>
 							<div class="submit">
 								<button id="done_convert_keychain" class="btn-wristband btn-lg" type="button"><i class="glyphicon glyphicon-ok"></i>&nbsp;&nbsp;Done</button>
 							</div>

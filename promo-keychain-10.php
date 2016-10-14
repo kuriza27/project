@@ -190,7 +190,7 @@
 				<h4 class="modal-title">Error</h4>
 			</div>
 			<div class="modal-body text-center">
-				<h2 style="font-size:25px;padding:10px 0;">Total quantity must not be over <span class="limit-text"></span> pieces.</h2>
+				<h2 style="font-size:25px;padding:10px 0;">Total quantity must not be over 100 pieces.</h2>
 				<div class="clearfix"></div>
 			</div>
 			<div class="modal-footer">
