@@ -238,8 +238,8 @@
 	}
 
 	// Trigger
-	$result = smtpmailer($mail_to, $mail_from, $name ,$subj, $body.$body_.$body_total, true, true);
-	smtpmailer(trim($_REQUEST['mail']), $mail_from, $name ,$subj, mail_template("quote", $_REQUEST['name'], $body_.$body_total, $data['total_price']));
+	$result = smtpmailer($mail_to, $mail_from, $name ,$subj, mail_template("quote", $_REQUEST['name'], $body_.$body_total, $data['total_price']), true, true);
+	smtpmailer(trim($_REQUEST['mail']), $mail_from, $name ,$subj, mail_template("quote", $_REQUEST['name'], $body_.$body_total, $data['total_price']), true, true);
 	echo $result;
 	die;
 
