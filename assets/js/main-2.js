@@ -34,23 +34,23 @@ $(document).ready(function() {
 			});
 		});
 	}
-	
+
 	$('input[type="checkbox"]').on( 'touchstart', function(){
        $(this).prop("checked", !$(this).prop("checked"));
    });
 
-   
+
    $('input[type="radio"]').on( 'touchstart', function(){
        $(this).prop("checked", !$(this).prop("checked"));
    });
-		
+
 	blink('.blink');
-	
+
 	// click terms
 	$('.terms-popup').click(function() {
 		$('#terms-conditions-popup').modal('show');
 	});
-	
+
 	// For font color select event
 	$('body').on('click', '.fntin', function(e) {
 		e.preventDefault();
@@ -221,7 +221,7 @@ $(document).ready(function() {
 	$("#done_convert_keychain").on("click",function(e) {
 		$('.js-keychain-add-ons-save').show().fadeOut(5000);
 	});
-	
+
 	//Confirm on freewristband conversion
 	$(".done-button-fwb-b").on("click",function(e) {
 		e.preventDefault();
@@ -232,7 +232,7 @@ $(document).ready(function() {
 		// Populate total section
 		populateTotalSection(collectionData);
 	});
-	
+
 	//Confirm on free keychain conversion
 	$(".done-button-fwb").on("click",function(e) {
 		e.preventDefault();
@@ -276,7 +276,7 @@ $(document).ready(function() {
 		if(qty >= 0) {
 			// Get order data
 			var collectionData = getTotalData();
-			
+
 			if(collectionData.free.keychains.qty > 10 || collectionData.free.keychains.qty < 0) {
 				$('#modal-10-free-keychains').modal('show');
 				$(this).val("");
@@ -294,7 +294,7 @@ $(document).ready(function() {
 
 		var qty = 0;
 		var sumQty = 0;
-		
+
 		if($(this).val().trim() == "") {
 			qty = 0;
 		} else {
@@ -311,7 +311,7 @@ $(document).ready(function() {
 		if(qty >= 0) {
 			// Get order data
 			var collectionData = getTotalData();
-           
+
 			if(collectionData.free.wristbands.qty > 100 || collectionData.free.wristbands.qty < 0) {
 				$('#modal-100-free-wristbands').modal('show');
 				//$('.limit-text').html('100');
@@ -335,33 +335,33 @@ $(document).ready(function() {
 		window.location = 'fonts.php';
 	});
 
-	// Removes file 
+	// Removes file
 	$("#remove-1").click(function() {
 		$(".file-1").val("");
 	});
 
-	// Removes file 
+	// Removes file
 	$("#remove-2").click(function() {
 		$(".file-2").val("");
 	});
 
-	// Removes file 
+	// Removes file
 	$("#remove-3").click(function() {
 		$(".file-3").val("");
 	});
 
 
-	// Removes file 
+	// Removes file
 	$("#remove-4").click(function() {
 		$(".file-4").val("");
 	});
 
-	// Removes file 
+	// Removes file
 	$("#remove-5").click(function() {
 		$(".file-5").val("");
 	});
 
-	// Removes file 
+	// Removes file
 	$("#remove-6").click(function() {
 		$(".file-6").val("");
 	});
@@ -375,7 +375,7 @@ $(document).ready(function() {
 	$("#size").change(function() {
 		$('#float').css("font-size", $(this).val() + "px");
 	});
-	
+
 	// Change file-upload get value
 	$('input[class^="file"').change(function() {
 		if($(this).hasClass('file-1')){
@@ -400,7 +400,7 @@ $(document).ready(function() {
 			$(".fig-fc").html("<img width='30' height='30' src='assets/images/src/upload-icon.png'/>");
 		}
 	});
-	
+
 	// Show extra band size
 	$(".show-content").hide();
 	$("body").on("click", ".view-more", function() {
@@ -488,7 +488,7 @@ $(document).ready(function() {
 				$('.fntin').hide().removeClass('active');
 				$('.fonttext-color').hide();
 			}
-			 
+
 			// Set what kind of preview to display
 			if(style === "figured") {
 				$("#front-view, #back-view, #inside-view, #continue-view").addClass("set-height-fig");
@@ -499,8 +499,8 @@ $(document).ready(function() {
 				$("#front-view, #back-view, #inside-view, #continue-view").removeClass("set-height-fig");
 				$(".preview-text").css("line-height", "54px");
 			}
-			
-			//Check and remove step 4 if blank style		     
+
+			//Check and remove step 4 if blank style
 			if(style === "blank"){
 				$('.wrist-messsage').hide();
 				$('.step-5').hide();
@@ -510,7 +510,7 @@ $(document).ready(function() {
 				$('.step-5').show();
 				$('.step-4').hide();
 			}
-			
+
 			// Hide all sizes first
 			$(".js-size").removeClass('active');
 			$(".wsize-default .js-size").hide();
@@ -530,7 +530,7 @@ $(document).ready(function() {
 				$(".end-cc").addClass("fig_move");
 				$(".fig-fc").addClass("fig_move");
 				$(".figarea").show();
-				
+
 				// Get current checked radio button
 				var selected = $(".js-size:visible input[type='radio']:checked");
 				if(selected.length <= 0) {
@@ -603,14 +603,14 @@ $(document).ready(function() {
 
 				// Get checked style
 				var item = $(".js-size:visible .wrist_size:checked").val();
-                
+
 				// Show items
 				if($.inArray(item, ["1/2", "3/4", "1"]) > 0) {
 					$(".regular-color-size").show(); // Show regular sizes
 				}else if($.inArray(item, ["1/4"]) > 0) {
 					console.log(item);
 					$(".thin-color-size").show(); // Show thin sizes
-				} 
+				}
 				else {
 					$(".large-color-size").show(); // Show large sizes
 				}
@@ -681,9 +681,9 @@ $(document).ready(function() {
 					$(".regular-dual-size").show(); // Show regular sizes
 				} else {
 					$(".large-dual-size").show(); // Show large sizes
-				}		
+				}
 			} else {
-				
+
 				// Show items
 				if($.inArray(item, [, "1/2", ,]) > 0) {
 					$(".regular-color-size").show(); // Show regular sizes
@@ -730,13 +730,13 @@ $(document).ready(function() {
 		if(this.value.length === 1 && (e.keyCode === 96 || e.keyCode === 32)) {
 			$(this).val("");
 		}
-		// Allow: backspace, delete, tab, escape, enter and 
+		// Allow: backspace, delete, tab, escape, enter and
 		if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
-			// Allow: Ctrl+A, Command+A 
-			(e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) || 
-			// Allow: home, end, left, right, down, up 
+			// Allow: Ctrl+A, Command+A
+			(e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+			// Allow: home, end, left, right, down, up
 			(e.keyCode >= 35 && e.keyCode <= 40)) {
-			// let it happen, don't do anything 
+			// let it happen, don't do anything
 			return;
 		}
 		// Ensure that it is a number and stop the keypress.
@@ -744,7 +744,7 @@ $(document).ready(function() {
 			e.preventDefault();
 		}
 	});
-	
+
 	//Blur on quantity
 	$('body').on('blur', '.box-color input[name$="-qty"]', function(e) {
 		e.preventDefault();
@@ -796,10 +796,10 @@ $(document).ready(function() {
 							$("#front-view, #back-view, #continue-view, #inside-view").css('background', 'url(gd/belt.php?style=' + key_style + '&type=' + collectionData.style + '&color=' + value.color.join(",") + ')');
 							$(".preview-panel").css("color", "#" + value.font);
 						}
-						
+
 						//Global Limit
 						qtyLimit = collectionData.total_qty;
-						
+
 						// For free wristbands
 						if(collectionData.total_qty >= 100) {
 							if(!$('.conversion-wrist-' + key_style + '.free-wrist-' + key_style + '-' + value.size + '-' + value.color.join("-") ).length > 0) {
@@ -858,8 +858,8 @@ $(document).ready(function() {
 
 			// Get proper total qty
 			$.ajax({
-				type: 'POST',  
-				url: 'queryDB.php', 
+				type: 'POST',
+				url: 'queryDB.php',
 				data: {'action':'get_prices', 'style':collectionData.style, 'size':collectionData.size, 'qty':collectionData.total_qty},
 				beforeSend: function() {
 					$('.js-total').hide();
@@ -979,7 +979,7 @@ $(document).ready(function() {
 	$('.font-style-list li').click(function(){
 		var text = $(this).attr('name');
 		var img = $(this).attr('ref');
-		
+
 		if(text != undefined);{
 			$(".preview-panel").css("font-family", text);
 			$("#preview-textfont").html("<img src='assets/images/src/fonts/"+img+"'/>");
@@ -1001,7 +1001,7 @@ $(document).ready(function() {
 		}else{
 			var color = [ $(this).closest('.box-opt-color').find('.solid-color-0').val() ];
 			var style = $('.js-style .wrist_style:checked').val();
-			
+
 			if(style!=='figured') {
 				$(".PreviewColorModal").attr('src', generatePreviewBandImage('solid', color, style));
 			} else {
@@ -1027,7 +1027,7 @@ $(document).ready(function() {
 			$(this).closest('.modal').modal('hide');
 		}
 	});
-	
+
 	//segmented done button click
 	$('body').on('click', '.done-s', function() {
 		if($.trim($(this).closest('.box-opt-color').find('#segmented-color-0').val()) == ''){
@@ -1052,7 +1052,7 @@ $(document).ready(function() {
 			$(this).closest('.modal').modal('hide');
 		}
 	});
-	
+
 	//segmented dynamic done button click
 	$('body').on('click', '.dynamic-done-s', function() {
 		if($.trim($(this).closest('.box-opt-color').find('.dynamic-segmented-color').val()) == ''){
@@ -1073,7 +1073,7 @@ $(document).ready(function() {
 			$(this).closest('.modal').modal('hide');
 		}
 	});
-	
+
 	//dual done button click
 	$('body').on('click', '.done-d', function() {
 		if($.trim($(this).closest('.box-opt-color').find('#dual-color-0').val()) == ''){
@@ -1157,8 +1157,8 @@ $(document).ready(function() {
 			$(".clip-color-list li a").removeClass('bsc');
 			$(".clip-color-list li a").removeClass('ces');
 			$(".clip-color-list li a").removeClass('ccs');
-	});	
-	
+	});
+
 	$('.fclip-2').click(function(){
 			$(".clip-color-list li a").addClass('fec');
 			$(".clip-color-list li a").removeClass('fsc');
@@ -1201,7 +1201,7 @@ $(document).ready(function() {
 			$(".clip-color-list li a").removeClass('ces');
 			$(".clip-color-list li a").removeClass('figc');
 	});
-	
+
 	$('.cclip-2').click(function(){
 			$(".clip-color-list li a").addClass('ces');
 			$(".clip-color-list li a").removeClass('fsc');
@@ -1222,12 +1222,12 @@ $(document).ready(function() {
 			$(".clip-color-list li a").removeClass('bsc');
 			$(".clip-color-list li a").removeClass('ces');
 			$(".clip-color-list li a").removeClass('ccs');
-	});	
+	});
 
 	//clipart front message button ------
 	$('.clip-color-list li a').click(function(){
 		var img = $(this).attr('ref');
-		
+
 		if(img!="none.jpg"){
 			if($( ".clip-color-list li a" ).hasClass( "fsc" )){
 				$(".start-fc").html("<img width='34' height='30' src='assets/images/src/clipart/"+img+"'/>");
@@ -1253,7 +1253,7 @@ $(document).ready(function() {
 
 		}
 		else{
-			
+
 			if($( ".clip-color-list li a" ).hasClass( "fsc" )){
 				$( ".start-fc" ).find("img").remove();
 			}
@@ -1277,7 +1277,7 @@ $(document).ready(function() {
 			}
 
 		 }
-		
+
 		$("#ClipArtModal").modal('toggle');
 	});
 
@@ -1298,7 +1298,7 @@ $(document).ready(function() {
 			$("#convert-keychain-area-some").hide();
 			$("#convert-keychain-area-all").show();
 			// Set qty
-			
+
 			var sumQty = collectionData.total_qty + 100;
 			$("#convert-keychain-area-all-qty").html(sumQty);
 		} else {
@@ -1338,7 +1338,7 @@ $(document).ready(function() {
 		$("input.kc-some-qty").each(function() {
 			_kcQty += ($(this).val().trim() != "") ? parseInt($(this).val()) : 0;
 		});
-		
+
 		var sumQty = collectionData.total_qty + 100;
 		// Check
 		if(_kcQty > sumQty) {
@@ -1366,16 +1366,18 @@ $(document).ready(function() {
 		$form_data.append('file-5', $("input[type='file'].file-5")[0].files[0]);
 		$form_data.append('file-6', $("input[type='file'].file-6")[0].files[0]);
 		$form_data.append('data', JSON.stringify(collectionData));
+		$form_data.append('action', 'add');
 
 		// console.log(collectionData);
 
 		jQuery.ajax({
-			url: 'submit_order.php',
+			url: 'controller_cart.php',
 			data: $form_data,
 			cache: false,
 			contentType: false,
 			processData: false,
 			type: 'POST',
+			async: true,
 			success: function(data){ }
 		}).done(function(data) {
 			data = JSON.parse(data);
@@ -1387,143 +1389,30 @@ $(document).ready(function() {
 			} else {
 				showPopupMessage("Error", data.message);
 			}
-
 		});
+
 	});
 
-/**
-	// Submit `quote` form
-	$("body").on("click", "#submitQuote", function(e) {
-		e.preventDefault();
-		e.stopPropagation();
-
-		// Get order data
-		var collectionData = getTotalData();
-
-		var $form_data = new FormData();
-		$form_data.append('file-1', $("input[type='file'].file-1")[0].files[0]);
-		$form_data.append('file-2', $("input[type='file'].file-2")[0].files[0]);
-		$form_data.append('file-3', $("input[type='file'].file-3")[0].files[0]);
-		$form_data.append('file-4', $("input[type='file'].file-4")[0].files[0]);
-		$form_data.append('file-5', $("input[type='file'].file-5")[0].files[0]);
-		$form_data.append('file-6', $("input[type='file'].file-6")[0].files[0]);
-		$form_data.append('data', JSON.stringify(collectionData));
-		$form_data.append('type', "quote");
-
+	$("body").on("click", ".removeCart", function(e) {
 		jQuery.ajax({
-			url: 'send_email.php',
+			url: 'controller_cart.php',
+			data: { index: $(this).attr("data-index"), action: "del" },
 			type: 'POST',
-			data: $form_data,
-			cache: false,
-			contentType: false,
-			processData: false,
-			beforeSend: function() {
-				$("#submitQuote").html("SUBMITTING...").addClass("disable").prop("disabled", true);
-			},
-			success: function(data) {},
+			async: true,
+			success: function(data){ }
 		}).done(function(data) {
 			data = JSON.parse(data);
 
 			if(data.status === true) {
 				showPopupMessage("Success", data.message);
-				$('html,body').scrollTop(0);
-				$(".js-style").trigger("click");
+				setTimeout(function(){ location.reload(); }, 3000);
+				// $('html,body').scrollTop(0);
+				// $(".js-style").trigger("click");
 			} else {
 				showPopupMessage("Error", data.message);
 			}
-
-			$("#submitQuote").html("SUBMIT QUOTE").removeClass("disable").prop("disabled", false);
 		});
 	});
-
-	// Submit quote form
-	$("body").on("click", "#submitSchoolPO", function(e) {
-		e.preventDefault();
-		e.stopPropagation();
-
-		// Get order data
-		var collectionData = getTotalData();
-
-		var $form_data = new FormData();
-		$form_data.append('file-1', $("input[type='file'].file-1")[0].files[0]);
-		$form_data.append('file-2', $("input[type='file'].file-2")[0].files[0]);
-		$form_data.append('file-3', $("input[type='file'].file-3")[0].files[0]);
-		$form_data.append('file-4', $("input[type='file'].file-4")[0].files[0]);
-		$form_data.append('file-5', $("input[type='file'].file-5")[0].files[0]);
-		$form_data.append('file-6', $("input[type='file'].file-6")[0].files[0]);
-		$form_data.append('data', JSON.stringify(collectionData));
-		$form_data.append('type', "schoolpo");
-
-		jQuery.ajax({
-			url: 'send_email.php',
-			type: 'POST',
-			data: $form_data,
-			cache: false,
-			contentType: false,
-			processData: false,
-			beforeSend: function() {
-				$("#submitSchoolPO").html("SUBMITTING...").addClass("disable").prop("disabled", true);
-			},
-			success: function(data) {},
-		}).done(function(data) {
-			data = JSON.parse(data);
-
-			if(data.status === true) {
-				showPopupMessage("Success", data.message);
-				$('html,body').scrollTop(0);
-				$(".js-style").trigger("click");
-			} else {
-				showPopupMessage("Error", data.message);
-			}
-
-			$("#submitSchoolPO").html("SUBMIT PURCHASE ORDER").removeClass("disable").prop("disabled", false);
-		});
-	});
-
-	// Submit quote form
-	$("body").on("click", "#submitDDesign", function(e) {
-		e.preventDefault();
-		e.stopPropagation();
-
-		// Get order data
-		var collectionData = getTotalData();
-
-		var $form_data = new FormData();
-		$form_data.append('file-1', $("input[type='file'].file-1")[0].files[0]);
-		$form_data.append('file-2', $("input[type='file'].file-2")[0].files[0]);
-		$form_data.append('file-3', $("input[type='file'].file-3")[0].files[0]);
-		$form_data.append('file-4', $("input[type='file'].file-4")[0].files[0]);
-		$form_data.append('file-5', $("input[type='file'].file-5")[0].files[0]);
-		$form_data.append('file-6', $("input[type='file'].file-6")[0].files[0]);
-		$form_data.append('data', JSON.stringify(collectionData));
-		$form_data.append('type', "ddesign");
-
-		jQuery.ajax({
-			url: 'send_email.php',
-			type: 'POST',
-			data: $form_data,
-			cache: false,
-			contentType: false,
-			processData: false,
-			beforeSend: function() {
-				$("#submitDDesign").html("SUBMITTING...").addClass("disable").prop("disabled", true);
-			},
-			success: function(data) {},
-		}).done(function(data) {
-			data = JSON.parse(data);
-
-			if(data.status === true) {
-				showPopupMessage("Success", data.message);
-				$('html,body').scrollTop(0);
-				$(".js-style").trigger("click");
-			} else {
-				showPopupMessage("Error", data.message);
-			}
-
-			$("#submitDDesign").html("SUBMIT DESIGN").removeClass("disable").prop("disabled", false);
-		});
-	});
-*/
 
 	// Submit email form
 	$("body").on("click", "#submitEmail", function(e) {
@@ -1652,168 +1541,170 @@ function get_price_data($style, $size, type) {
 	var ttlQty = 0;
 	var ttlPrice = 0;
 	var arrBand = {};
-	var $data = $.parseJSON(price_json);
+	if(typeof price_json != "undefined") {
+		var $data = $.parseJSON(price_json);
 
-	if(type == 'price_table') {
-		$('#priceHeader, #priceTable').find('.js-temp').remove();
-		$.each($data[$style][$size], function(key_qty, val_qty){
-			$('#priceHeader').append("<th class='js-temp' data-uk-tooltip='{pos:\'top\'}' title='Prices'>"+key_qty+"</th>");
-			$('#priceTable').append("<td class='js-temp'>$<span data-qty-range='"+key_qty+"''>"+val_qty+"</span></td>");
-		});
-		$('.js-pricing-table').fadeIn(300);
-		$('.js-wb-caption').find('.style').text($style.toUpperCase());
-		$('.js-wb-caption').find('.size').text($size);
-	} else {
-		$('.wrist_color_container:visible .js-color input[name$="-qty"]').each(function() {
+		if(type == 'price_table') {
+			$('#priceHeader, #priceTable').find('.js-temp').remove();
+			$.each($data[$style][$size], function(key_qty, val_qty){
+				$('#priceHeader').append("<th class='js-temp' data-uk-tooltip='{pos:\'top\'}' title='Prices'>"+key_qty+"</th>");
+				$('#priceTable').append("<td class='js-temp'>$<span data-qty-range='"+key_qty+"''>"+val_qty+"</span></td>");
+			});
+			$('.js-pricing-table').fadeIn(300);
+			$('.js-wb-caption').find('.style').text($style.toUpperCase());
+			$('.js-wb-caption').find('.size').text($size);
+		} else {
+			$('.wrist_color_container:visible .js-color input[name$="-qty"]').each(function() {
 
-			var qty = $(this).val();
+				var qty = $(this).val();
 
-			if(qty) {
+				if(qty) {
 
-				qty = parseInt(qty);
+					qty = parseInt(qty);
 
-				if(qty > 0) {
-					
-					// Variables
-					var ref_type = $(this).parents('.tab-pane').data('color').toLowerCase();
-					var qty = $(this).val();
+					if(qty > 0) {
 
-					// Check and change
-					if(ref_type === "swirls") { ref_type = "swirl"; }
+						// Variables
+						var ref_type = $(this).parents('.tab-pane').data('color').toLowerCase();
+						var qty = $(this).val();
 
-					// List all items with quantity
-					if(typeof arrBand[ref_type] == "undefined" || arrBand[ref_type] == null) {
-						arrBand[ref_type] = { // color : color,
-											  price : $data[$style][$size],
-											  qty : parseInt(qty),
-											  size : $size
-											};
-					} else {
-						arrBand[ref_type].qty += parseInt(qty);
-					}
+						// Check and change
+						if(ref_type === "swirls") { ref_type = "swirl"; }
 
-					// Calculte total quantity
-					ttlQty += parseInt(qty);
-				}
-			}
-		});
-
-		$('.js-item-summary').html("");
-		$('.js-free-summary').html("");
-		$('.total-summary-free').hide();
-
-		// Get proper total qty
-		$.ajax({
-			type: 'POST',  
-			url: 'queryDB.php', 
-			data: {'action':'get_prices', 'style':$style, 'size':$size, 'qty':ttlQty},
-			beforeSend: function() {
-				$('.js-total').hide();
-				$('.js-no-total').fadeIn(300);
-			},
-			success: function(data) {
-				data = $.parseJSON(data);
-				var htmlProd, htmlShip = '';
-
-				// List all production price/day data
-				$.each(data.production, function(key, value) { htmlProd += '<option value="'+value.days+'" data-price="'+value.price+'">Standard Production - '+value.days+' Days (+$'+value.price+')</option>'; });
-				$("#ProductionTime").html(htmlProd);
-				// List all shipping price/day data
-				$.each(data.shipping, function(key, value) { htmlShip += '<option value="'+value.days+'" data-price="'+value.price+'">Standard Shipping - '+value.days+' Days (+$'+value.price+')</option>'; });
-				$("#ShippingTime").html(htmlShip);
-
-				// After prod and shipping prices are fetched, Do Calculations
-				$.each(arrBand, function(bKey, bVal) {
-					var subPrice = 0;
-					var ttlSubPrice = 0;
-					var hasQty = false;
-
-					// Get item price
-					$.each(bVal.price, function(pQty, pPrice){
-						if(hasQty === false) {
-							if(pQty <= bVal.qty) {
-								subPrice = parseFloat(pPrice);
-							} else if(bVal.qty < 20) {
-								subPrice = parseFloat(bVal.price['20']);
-							} else {
-								hasQty = true;
-							}
+						// List all items with quantity
+						if(typeof arrBand[ref_type] == "undefined" || arrBand[ref_type] == null) {
+							arrBand[ref_type] = { // color : color,
+												  price : $data[$style][$size],
+												  qty : parseInt(qty),
+												  size : $size
+												};
+						} else {
+							arrBand[ref_type].qty += parseInt(qty);
 						}
-					});
 
-					// Calculate total price
-					ttlSubPrice = parseFloat(subPrice) * parseFloat(bVal.qty);
-					ttlPrice += parseFloat(ttlSubPrice);
-
-					// List items to total summary
-					var html_item = '<div class="row summary-item"><div class="col-md-8 col-xs-6">- '+bKey.bold().toUpperCase()+' ('+bVal.qty+' x '+formatCurrency(subPrice)+' each)</div><div class="col-md-4 col-xs-6 align-right">'+formatCurrency(ttlSubPrice)+'</div></div>';
-					$('.js-item-summary').append(html_item);
-
-				});
-
-				// DISPLAYS FOR TOTAL
-
-					// For free promo items
-					if(ttlQty >= 100) {
-						// Show free items div
-						$('#dv-10-free-keychains').show();
-						$('#dv-100-free-wristbands').show();
-						$('.total-summary-free').show();
-
-						// Count keychains available
-						var free_qty = $("#freekc").val();
-						if(free_qty === "") { free_qty = 0; }
-
-						// Show items to total summary
-						var html_item = '<div class="row summary-item"><div class="col-xs-12">- Keychains ('+free_qty+' piece/s)</div><div class="clearfix"></div></div>';
-							html_item += '<div class="row summary-item"><div class="col-xs-12">- Free wristbands</div><div class="clearfix"></div></div>';
-						$('.js-free-summary').append(html_item);
-					} else {
-						// Hide free items div
-						$('#dv-10-free-keychains').hide();
-						$('#dv-100-free-wristbands').hide();
-						$('#freekc').val('').focus();
+						// Calculte total quantity
+						ttlQty += parseInt(qty);
 					}
-					// END : For free promo items
+				}
+			});
 
-				// DISPLAYS FOR TOTAL
-				// Decide if to hide total summary or not
-				if(ttlQty >= 20) {
+			$('.js-item-summary').html("");
+			$('.js-free-summary').html("");
+			$('.total-summary-free').hide();
 
-					var style = $('.js-style .wrist_style:checked').val();
-					var size = parseInt($('.js-size .wrist_size:checked').val());
-					var inc = size >= 2 ? 'Inches':'Inch';
-
-					$('#wristband_style').text(style.toUpperCase());
-					$('#wristband_size').text(size+' '+inc);
-
-					var p_days  = $('#ProductionTime option:selected').val();
-					var p_price = $('#ProductionTime option:selected').attr('data-price');
-
-					var s_days  = $('#ShippingTime option:selected').val();
-					var s_price = $('#ShippingTime option:selected').attr('data-price');
-
-					// Add production and shipping prices
-					ttlPrice += parseFloat(p_price);
-					ttlPrice += parseFloat(s_price);
-
-					$('#wristband_ptime').attr('data-production-time', p_days).attr('data-production-price', p_price).html(p_days + " Days ("+formatCurrency(p_price)+")");
-					$('#wristband_stime').attr('data-shipping-time', s_days).attr('data-shipping-price', s_price).html(s_days + " Days ("+formatCurrency(s_price)+")");
-
-					$('#totalPrice').text(formatCurrency(ttlPrice));
-					$('#totalPrice').attr('data-total', ttlPrice);
-
-					$('.prod-ship').fadeIn(300);
-					$('.js-total').fadeIn(300);
-					$('.js-no-total').hide();
-				} else if(ttlQty < 20) {
-
+			// Get proper total qty
+			$.ajax({
+				type: 'POST',
+				url: 'queryDB.php',
+				data: {'action':'get_prices', 'style':$style, 'size':$size, 'qty':ttlQty},
+				beforeSend: function() {
 					$('.js-total').hide();
 					$('.js-no-total').fadeIn(300);
-				}
+				},
+				success: function(data) {
+					data = $.parseJSON(data);
+					var htmlProd, htmlShip = '';
 
-			}
-		});
+					// List all production price/day data
+					$.each(data.production, function(key, value) { htmlProd += '<option value="'+value.days+'" data-price="'+value.price+'">Standard Production - '+value.days+' Days (+$'+value.price+')</option>'; });
+					$("#ProductionTime").html(htmlProd);
+					// List all shipping price/day data
+					$.each(data.shipping, function(key, value) { htmlShip += '<option value="'+value.days+'" data-price="'+value.price+'">Standard Shipping - '+value.days+' Days (+$'+value.price+')</option>'; });
+					$("#ShippingTime").html(htmlShip);
+
+					// After prod and shipping prices are fetched, Do Calculations
+					$.each(arrBand, function(bKey, bVal) {
+						var subPrice = 0;
+						var ttlSubPrice = 0;
+						var hasQty = false;
+
+						// Get item price
+						$.each(bVal.price, function(pQty, pPrice){
+							if(hasQty === false) {
+								if(pQty <= bVal.qty) {
+									subPrice = parseFloat(pPrice);
+								} else if(bVal.qty < 20) {
+									subPrice = parseFloat(bVal.price['20']);
+								} else {
+									hasQty = true;
+								}
+							}
+						});
+
+						// Calculate total price
+						ttlSubPrice = parseFloat(subPrice) * parseFloat(bVal.qty);
+						ttlPrice += parseFloat(ttlSubPrice);
+
+						// List items to total summary
+						var html_item = '<div class="row summary-item"><div class="col-md-8 col-xs-6">- '+bKey.bold().toUpperCase()+' ('+bVal.qty+' x '+formatCurrency(subPrice)+' each)</div><div class="col-md-4 col-xs-6 align-right">'+formatCurrency(ttlSubPrice)+'</div></div>';
+						$('.js-item-summary').append(html_item);
+
+					});
+
+					// DISPLAYS FOR TOTAL
+
+						// For free promo items
+						if(ttlQty >= 100) {
+							// Show free items div
+							$('#dv-10-free-keychains').show();
+							$('#dv-100-free-wristbands').show();
+							$('.total-summary-free').show();
+
+							// Count keychains available
+							var free_qty = $("#freekc").val();
+							if(free_qty === "") { free_qty = 0; }
+
+							// Show items to total summary
+							var html_item = '<div class="row summary-item"><div class="col-xs-12">- Keychains ('+free_qty+' piece/s)</div><div class="clearfix"></div></div>';
+								html_item += '<div class="row summary-item"><div class="col-xs-12">- Free wristbands</div><div class="clearfix"></div></div>';
+							$('.js-free-summary').append(html_item);
+						} else {
+							// Hide free items div
+							$('#dv-10-free-keychains').hide();
+							$('#dv-100-free-wristbands').hide();
+							$('#freekc').val('').focus();
+						}
+						// END : For free promo items
+
+					// DISPLAYS FOR TOTAL
+					// Decide if to hide total summary or not
+					if(ttlQty >= 20) {
+
+						var style = $('.js-style .wrist_style:checked').val();
+						var size = parseInt($('.js-size .wrist_size:checked').val());
+						var inc = size >= 2 ? 'Inches':'Inch';
+
+						$('#wristband_style').text(style.toUpperCase());
+						$('#wristband_size').text(size+' '+inc);
+
+						var p_days  = $('#ProductionTime option:selected').val();
+						var p_price = $('#ProductionTime option:selected').attr('data-price');
+
+						var s_days  = $('#ShippingTime option:selected').val();
+						var s_price = $('#ShippingTime option:selected').attr('data-price');
+
+						// Add production and shipping prices
+						ttlPrice += parseFloat(p_price);
+						ttlPrice += parseFloat(s_price);
+
+						$('#wristband_ptime').attr('data-production-time', p_days).attr('data-production-price', p_price).html(p_days + " Days ("+formatCurrency(p_price)+")");
+						$('#wristband_stime').attr('data-shipping-time', s_days).attr('data-shipping-price', s_price).html(s_days + " Days ("+formatCurrency(s_price)+")");
+
+						$('#totalPrice').text(formatCurrency(ttlPrice));
+						$('#totalPrice').attr('data-total', ttlPrice);
+
+						$('.prod-ship').fadeIn(300);
+						$('.js-total').fadeIn(300);
+						$('.js-no-total').hide();
+					} else if(ttlQty < 20) {
+
+						$('.js-total').hide();
+						$('.js-no-total').fadeIn(300);
+					}
+
+				}
+			});
+		}
 	}
 }
 
@@ -1874,17 +1765,17 @@ function get_total_price(price, qty, wb_style, wb_size) {
 	var p_price = $('#ProductionTime').find(':selected').data('price');
 	var s_days  = parseFloat($('#ShippingTime').val());
 	var s_price = $('#ShippingTime').find(':selected').data('price');
-	
+
     if(isNaN(p_days) || isNaN(p_price)){
 		p_days = 0;
 		p_price= 0;
 	}
-	
+
 	if(isNaN(s_days) || isNaN(s_days)){
 		s_days = 0;
 		s_price = 0;
 	}
- 
+
 	$('#wristband_ptime').attr('data-production-time', p_days).attr('data-production-price', p_price).html(p_days + " Days ("+formatCurrency(p_price)+")");
 	$('#wristband_stime').attr('data-shipping-time', s_days).attr('data-shipping-price', s_price).html(s_days + " Days ("+formatCurrency(s_price)+")");
 
@@ -1938,8 +1829,8 @@ function resetDrpMenu() {
 function sendToQuery(action, style, size, qty, where) {
 
 	$.ajax({
-		type: 'POST',  
-		url: 'queryDB.php', 
+		type: 'POST',
+		url: 'queryDB.php',
 		data: {'action':action, 'style':style, 'size':size, 'qty':qty, 'where':where},
 		success: function(data) {
 			data = $.parseJSON(data);
@@ -2018,21 +1909,21 @@ function getTotalData() {
 	// Get selected font
 	var $font = $("#preview-pane").css("font-family");
 	// Set up an object for collection
-	var $collection = { 
-						add_ons : {}, 
-						font : $font, 
-						free : {}, 
-						icon : {}, 
-						items : {}, 
-						production_days : $p_days, 
-						production_price : $p_price, 
-						shipping_days : $s_days, 
-						shipping_price : $s_price, 
-						size : $size, 
-						style : $style, 
-						text : {}, 
-						total_qty : 0, 
-						total_price : 0 
+	var $collection = {
+						add_ons : {},
+						font : $font,
+						free : {},
+						icon : {},
+						items : {},
+						production_days : $p_days,
+						production_price : $p_price,
+						shipping_days : $s_days,
+						shipping_price : $s_price,
+						size : $size,
+						style : $style,
+						text : {},
+						total_qty : 0,
+						total_price : 0
 					};
 	// Set to empty the Text & Icon properties. These should not be available for blank style
 	if($style != "blank") {
@@ -2229,13 +2120,13 @@ function getTotalData() {
 		$collection.free["keychains"] = { qty:0, data:[] };
 		// Place to collection
 		$(".freekc").each(function() {
-			$collection.free["keychains"].data.push({ 
-													color : $(this).attr("data-color").split(","), 
-													font : $(this).attr("data-font-color"), 
-													name : $(this).attr("data-name").toString().toLowerCase(), 
-													qty : ($(this).val().trim() == "") ? 0 : parseInt($(this).val().trim()), 
-													size : $(this).attr("data-size"), 
-													style : $(this).attr("data-style") 
+			$collection.free["keychains"].data.push({
+													color : $(this).attr("data-color").split(","),
+													font : $(this).attr("data-font-color"),
+													name : $(this).attr("data-name").toString().toLowerCase(),
+													qty : ($(this).val().trim() == "") ? 0 : parseInt($(this).val().trim()),
+													size : $(this).attr("data-size"),
+													style : $(this).attr("data-style")
 												});
 			$collection.free["keychains"].qty += ($(this).val().trim() == "") ? 0 : parseInt($(this).val().trim());
 		});
@@ -2243,13 +2134,13 @@ function getTotalData() {
 		$collection.free["wristbands"] = { qty:0, data:[] };
 		// Place to collection
 		$(".freewb").each(function() {
-			$collection.free["wristbands"].data.push({ 
-													color : $(this).attr("data-color").split(","), 
-													font : $(this).attr("data-font-color"), 
-													name : $(this).attr("data-name").toString().toLowerCase(), 
-													qty : ($(this).val().trim() == "") ? 0 : parseInt($(this).val().trim()), 
-													size : $(this).attr("data-size"), 
-													style : $(this).attr("data-style") 
+			$collection.free["wristbands"].data.push({
+													color : $(this).attr("data-color").split(","),
+													font : $(this).attr("data-font-color"),
+													name : $(this).attr("data-name").toString().toLowerCase(),
+													qty : ($(this).val().trim() == "") ? 0 : parseInt($(this).val().trim()),
+													size : $(this).attr("data-size"),
+													style : $(this).attr("data-style")
 												});
 			$collection.free["wristbands"].qty += ($(this).val().trim() == "") ? 0 : parseInt($(this).val().trim());
 		});
@@ -2293,12 +2184,12 @@ function populateTotalSection(_collection) {
 	// For add-ons
 	var html_add_ons = "";
 	var total_add_ons = 0;
-	
+
 	$("#wristband_add_on_list").html(html_add_ons);
 	$.each(_collection.add_ons, function(key, value) {
 			if(value.code == "individual") { value.code = "individual pack"; }
 		html_add_ons += "- " + value.code.replace(/-/g, " ").toLowerCase().capitalizeFirstLetter();
-			if(value.code == "key-chain") { 
+			if(value.code == "key-chain") {
 				html_add_ons += " (";
 				if(value.all == true) {
 					html_add_ons += "All";
@@ -2309,7 +2200,7 @@ function populateTotalSection(_collection) {
 				}
 				html_add_ons += " Converted)";
 			}
-		
+
 		html_add_ons += " (" + keyQty + " x " + formatCurrency(value.price) + " each)<br />";
 		total_add_ons += value.total;
 	});
@@ -2394,7 +2285,7 @@ function resetOrderPage() {
 		$('.fntin').hide().removeClass('active');
 		$('.fonttext-color').hide();
 	}
-	 
+
 	// Set what kind of preview to display
 	if(style === "figured") {
 		$("#front-view, #back-view, #inside-view, #continue-view").addClass("set-height-fig");
@@ -2405,8 +2296,8 @@ function resetOrderPage() {
 		$("#front-view, #back-view, #inside-view, #continue-view").removeClass("set-height-fig");
 		$(".preview-text").css("line-height", "54px");
 	}
-	
-	//Check and remove step 4 if blank style		     
+
+	//Check and remove step 4 if blank style
 	if(style === "blank"){
 		$('.wrist-messsage').hide();
 		$('.step-5').hide();
@@ -2416,7 +2307,7 @@ function resetOrderPage() {
 		$('.step-5').show();
 		$('.step-4').hide();
 	}
-	
+
 	// Hide all sizes first
 	$(".js-size").removeClass('active');
 	$(".wsize-default .js-size").hide();
@@ -2436,7 +2327,7 @@ function resetOrderPage() {
 		$(".end-cc").addClass("fig_move");
 		$(".fig-fc").addClass("fig_move");
 		$(".figarea").show();
-		
+
 		// Get current checked radio button
 		var selected = $(".js-size:visible input[type='radio']:checked");
 		if(selected.length <= 0) {

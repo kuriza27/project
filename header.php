@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -45,7 +48,7 @@
 		<script>
 			$(function() {
 				$('#fs > option').hover(function() {
-					$(this).parent().css({fontFamily:$(this).val()})    
+					$(this).parent().css({fontFamily:$(this).val()})
 				});
 			});
 		</script>
@@ -83,7 +86,7 @@
 	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-KFHV3B');</script> -->
 	<!-- End Google Tag Manager -->
-	
+
 <?php include_once 'dbconfig.php'; ?>
 <?php //include_once 'dbconfigSite.php'; ?>
 <div id="main">
@@ -100,7 +103,7 @@
 				  <div id="hour-img">Monday - Friday | 11am - 8pm EST</div>
 				  <span class="fa fa-search">1-800-989-0440</span>
 				  <p><span class="fa-text">sales@promotionalwristband.com</span></p>
-				  
+
 			</div>
 				<div class="clearfix"></div>
 			</div>
@@ -143,10 +146,10 @@
 									<li><a href="fonts.php">Fonts</a></li>
 									<li><a href="cliparts.php">Cliparts</a></li>
 									<li><a href="colors.php">Color Chart</a></li>
-									<li><a href="sizes.php">Sizes</a></li> 
+									<li><a href="sizes.php">Sizes</a></li>
 								</ul>
-							
-							
+
+
 							</li>
 							<li class="menu-item menu-item-type-post_type"><a href="gallery.php">Photo Gallery</a></li>
 							<li class="menu-item menu-item-type-post_type"><a href="contact-us.php">Contact Us</a></li>
@@ -159,7 +162,7 @@
 
 			</div><!--/.navbar-collapse -->
 		</section>
-       
+
 		<!--.Banner Slideshow -->
 		 <?php
 			/*$homepage = "/promotional/homepage.php";*/
@@ -167,7 +170,7 @@
 			$currentpage = $_SERVER['REQUEST_URI'];
 			if($homepage==$currentpage) {
 			?>
-	   
+
 			<div class="banner">
 				<div id="slideshow">
 					<div id="slider-images" style="display: block;">
@@ -182,11 +185,11 @@
 				</div>
 					<div class=""></div>
 			</div>
-	   
-		   <?php 
+
+		   <?php
 				}
 			?>
-			
+
 			<!--/.Banner Slideshow -->
 			<div class="timer-area">
 			<span class="text-banner">Order 100 wristbands or more & Get 100 Free Wristbands and 10 Keychains!  Time remaining: </span>
