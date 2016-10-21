@@ -821,11 +821,24 @@ body, a, [input type="radio"] , [input type="checkbox"]{
 #coup-box{
 		background:url('img/discount.jpg') no-repeat;
 		height:400px;
-	
+		padding: 75px 94px;
 	}
-
 	
-	h1{
+#coup-box > label{
+	text-shadow:2px 2px #000;
+}
+
+.frame-box{
+	background-color: #000;
+    border: 1px solid black;
+    opacity: 0.7;
+    filter: alpha(opacity=60);
+	height:236px;
+}
+	#emf_advertisement{
+		display:none;
+	}
+ #boxes h1{
 		margin: 10px 0 15px;
 		padding-bottom:10px;
 		border-bottom: 1px dotted #ccc;

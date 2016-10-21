@@ -62,7 +62,9 @@
 		  <div id="dialog" class="window">
 		     <h1>Claim your coupon code</h1>
 			 <div id="coup-box">
-				<iframe width="100%" height="462" allowTransparency="true" frameborder="0" scrolling="no" style="border:none" src="http://www.emailmeform.com/builder/embed/N7w050dgUi25bc5IM3aE23f"></iframe>
+				<div class="frame-box">
+					<iframe width="100%" height="462" allowTransparency="true" frameborder="0" scrolling="no" style="border:none" src="http://www.emailmeform.com/builder/embed/N7w050dgUi25bc5IM3aE23f"></iframe>
+				</div>
 			 </div>
 			<div id="popupfoot"> <a href="#" class="close agree">No we don't need to save money now</a></div>
 		  </div>
