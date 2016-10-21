@@ -3,8 +3,8 @@
 	require_once("assets/class/PHPMailer-master/PHPMailerAutoload.php"); // Library added in download source.
 	require_once("mail_template.php");
 
-	$mailer_username = "dummy.alibi000@gmail.com";
-	$mailer_password = "alibi000";
+	$mailer_username = "sales@promotionalwristband.com";
+	$mailer_password = "4gKP=&FH";
 
 	$subj = "Wristband Order";
 	$body = "";
@@ -13,8 +13,8 @@
 	$data = array();
 
 	$name = "Wristband Support";
-	$mail_from = "dummy.alibi000@gmail.com";
-	$mail_to = "dummy.alibi000@gmail.com";
+	$mail_from = "sales@promotionalwristband.com";
+	$mail_to = "sales@promotionalwristband.com";
 
 	// Update subject title depeneding on submit type
 	if($_REQUEST['type'] == "quote") {

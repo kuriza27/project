@@ -1,5 +1,51 @@
 <?php include_once 'header.php'; ?>
+<script>
+		$(document).ready(function() {	
 
+		var id = '#dialog';
+			
+		//Get the screen height and width
+		var maskHeight = $(document).height();
+		var maskWidth = $(window).width();
+			
+		//Set heigth and width to mask to fill up the whole screen
+		$('#mask').css({'width':maskWidth,'height':maskHeight});
+
+		//transition effect
+		$('#mask').fadeIn(500);	
+		$('#mask').fadeTo("slow",0.9);	
+			
+		//Get the window height and width
+		var winH = $(window).height();
+		var winW = $(window).width();
+					  
+		//Set the popup window to center
+		$(id).css('top',  winH/2-$(id).height()/2);
+		$(id).css('left', winW/2-$(id).width()/2);
+			
+		//transition effect
+		$(id).fadeIn(2000); 	
+			
+		//if close button is clicked
+		$('.window .close').click(function (e) {
+		//Cancel the link behavior
+		e.preventDefault();
+
+		$('#mask').hide();
+		$('.window').hide();
+		});
+
+		//if mask is clicked
+		$('#mask').click(function () {
+		$(this).hide();
+		$('.window').hide();
+		});
+		
+    
+		$('#emf-container').css('background-color','none');		
+		$('#emf-container').css('color','#FFFFFF');		
+		});
+</script>
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron" style="display:none;">
       <div class="container">
@@ -12,7 +58,17 @@
 
     <div class="container">
       <!-- Example row of columns -->
-	  	  
+	  	<div id="boxes">
+		  <div id="dialog" class="window">
+		     <h1>Claim your coupon code</h1>
+			 <div id="coup-box">
+				<iframe width="100%" height="462" allowTransparency="true" frameborder="0" scrolling="no" style="border:none" src="http://www.emailmeform.com/builder/embed/N7w050dgUi25bc5IM3aE23f"></iframe>
+			 </div>
+			<div id="popupfoot"> <a href="#" class="close agree">No we don't need to save money now</a></div>
+		  </div>
+		  <div id="mask"></div>
+		</div>
+		
 	   <div class="images-clips">
 			<div class="col-md-2">
 				<a href="quote.php"><img src="assets/images/src/Get_A_Quote.jpg"></a>

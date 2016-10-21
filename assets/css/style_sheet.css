@@ -818,6 +818,61 @@ body, a, [input type="radio"] , [input type="checkbox"]{
 
 
 
+#coup-box{
+		background:url('img/discount.jpg') no-repeat;
+		height:400px;
+	
+	}
+
+	
+	h1{
+		margin: 10px 0 15px;
+		padding-bottom:10px;
+		border-bottom: 1px dotted #ccc;
+		font: normal 1.5em/1.0 Montserrat, sans-serif;
+		color: #888;
+		text-align:center;
+	}
+	
+	#mask {
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  z-index: 9000;
+	  background-color: #000;
+	  display: none;
+	}
+
+	#boxes .window {
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  width: 640px;
+	  height: 200px;
+	  display: none;
+	  z-index: 9999;
+	  padding: 20px;
+	  border-radius: 15px;
+	  text-align: center;
+	}
+
+	#boxes #dialog {
+	  width: 650px;
+	  height: 500px;
+	  padding: 10px;
+	  background-color: #ffffff;
+	  font-family: 'Segoe UI Light', sans-serif;
+	  font-size: 15pt;
+	}
+
+	#popupfoot a{
+	  font-size: 16pt;
+	  bottom: 0px;
+	  width: 450px;
+	  text-align:center;
+	  margin-bottom:10px;
+	}
+
 
 /****
 **
