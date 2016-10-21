@@ -87,14 +87,14 @@
 	})(window,document,'script','dataLayer','GTM-KFHV3B');</script> -->
 	<!-- End Google Tag Manager -->
 
-<?php include_once 'dbconfig.php'; ?>
-<?php //include_once 'dbconfigSite.php'; ?>
+<?php //include_once 'dbconfig.php'; ?>
+<?php include_once 'dbconfigSite.php'; ?>
 <div id="main">
 <header>
     <nav class="navbar navbar-inverse navbar-default">
 		<div class="container">
 			<div id="logo">
-				<a class="navbar-brand" href="homepage.php"><img src="assets/images/src/prom_logo.jpg"></a>
+				<a class="navbar-brand" href="index.php"><img src="assets/images/src/prom_logo.jpg"></a>
 			</div>
 			<div class="header-right-box">
 			<div id="google_trust">
@@ -126,7 +126,7 @@
 
 					<div class="primary-navigation">
 						<ul id="menu-header-menu" class="menu-item menu">
-							<li class="menu-item menu-item-type-post_type current-menu-item page_item"><a href="homepage.php">Home</a></li>
+							<li class="menu-item menu-item-type-post_type current-menu-item page_item"><a href="index.php">Home</a></li>
 							<li class="menu-item menu-item-type-post_type"><a href="order.php">Order Now</a></li>
 							<li class="menu-item menu-item-type-post_type"><a href="price.php">Prices</a></li>
 							<li class="dropdown menu-item menu-item-type-post_type"><a id="prod-main" data-toggle="dropdown" class="dropdown-toggle">Products</a>

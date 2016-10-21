@@ -3,7 +3,7 @@
 
 			<div id="footer-link-main">
 				<ul class="footer-menu-item menu">
-					<li><a href="homepage.php">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<li><a href="order.php">Order Now</a></li>
 					<li><a href="price.php">Prices</a></li>
 					<li><a href="product-printed.php">Products</a></li>
