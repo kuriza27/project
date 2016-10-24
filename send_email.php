@@ -256,7 +256,7 @@
 		//$mail->SMTPDebug = 3;									// Enable verbose debug output
 
 		$mail->isSMTP();										// Set mailer to use SMTP
-		$mail->Host = 'smtp.gmail.com';							// Specify main and backup SMTP servers
+		$mail->Host = 'smtp.mail.promotionalwristband.com';							// Specify main and backup SMTP servers
 		$mail->SMTPAuth = true;									// Enable SMTP authentication
 		$mail->Username = $GLOBALS["mailer_username"];			// SMTP username
 		$mail->Password = $GLOBALS["mailer_password"];			// SMTP password
