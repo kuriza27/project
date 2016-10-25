@@ -25,19 +25,23 @@
     // Get all order inside the cart.
     function getCart() {
         // Check if session exists.
-        if(isset($_SESSION['order_cart'])) {
+        if(!isset($_SESSION['order_cart']) || time() - $_SESSION['order_time'] > 3600) { // Check if session has been 1 hour.
+            clearCart();
+        } else {
             return json_encode(array('status'=>true, 'data'=>$_SESSION['order_cart']));
         }
+
         return json_encode(array('status'=>false, 'data'=>array()));
     }
 
     // Insert new order to cart.
     function addCart($data=null) {
         if(!is_null($data) || !is_array($data)) {
-        $a = $_SESSION['order_cart'];
+            $a = $_SESSION['order_cart'];
             $cart = (isset($_SESSION['order_cart'])) ? $_SESSION['order_cart'] : array();
             $cart[] = $data;
             $_SESSION['order_cart'] = $cart;
+            $_SESSION['order_time'] = time();
             return json_encode(array('status'=>true, 'message'=>'Order successfully added to cart.'));
         }
         return json_encode(array('status'=>false, 'message'=>'An error occurred.'));
@@ -47,6 +51,7 @@
     function clearCart() {
         if(isset($_SESSION['order_cart'])) {
             unset($_SESSION['order_cart']);
+            unset($_SESSION['order_time']);
             session_destroy();
             return json_encode(array('status'=>true, 'message'=>'Cart successfully cleared.'));
         }

@@ -207,7 +207,7 @@
 			</div>
 			<div class="wristband-view-color regular-dual-size" style="display:<?php echo (in_array($qstyle, ['dual-layer']))?'block':'none'; ?>">
 				<?php include "wrist-regulardual.php"; ?>
-			</div>	
+			</div>
 			<div class="wristband-view-color large-dual-size" style="display:none">
 				<?php include "wrist-largedual.php"; ?>
 			</div>
@@ -302,7 +302,7 @@
 					<div class="c-input" style="display:none;margin-left:52px;">
 						<div class="col-sm-12">
 						<span class="inside-m">Continuous Text:</span><br /> &nbsp;
-						* Maximum of 50 characters for message<br /> 
+						* Maximum of 50 characters for message<br />
 						<input id="input-continue-text" type="text" name="continue-text" class="band-text" value=""  placeholder="Enter Continuous Message" maxlength="50" style="width:100%;">
 						</div>
 						<div class="clearfix"></div>
@@ -332,7 +332,7 @@
 							<span class="inside-m">Inside Text:</span><br /> &nbsp;
 							* Maximum of 50 characters for message <br />&nbsp;
 							* Inside Message will be embossed with the same color of the inside of the band
-							<br /> 
+							<br />
 							<input id="input-inside-text" type="text" name="inside-text" class="band-text" value=""  placeholder="Enter Inside Message" maxlength="50" style="width:100%;">
 							<br /><br />
 						</div>
@@ -480,7 +480,7 @@
 			<div class="popup-order-gallery">
 				<?php include "promo-keychain-10.php"; ?>
 			</div>
-				
+
 			<!-- End conversion wristbands -->
 			<div class="col-md-4 add-ons">
 				<div class="box-thumb"><a href="assets/images/src/add-ons/3mm-thick.png" title="3mm thick option"><img src="assets/images/src/add-ons/3mm-thick.png" class="galleryimg"></a></div>

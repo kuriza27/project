@@ -1383,9 +1383,11 @@ $(document).ready(function() {
 			data = JSON.parse(data);
 
 			if(data.status === true) {
-				showPopupMessage("Success", data.message);
+				// showPopupMessage("Success", data.message);
 				$('html,body').scrollTop(0);
 				$(".js-style").trigger("click");
+				// window.location('/cart.php');
+				window.location.replace("/cart.php");
 			} else {
 				showPopupMessage("Error", data.message);
 			}
@@ -1406,8 +1408,6 @@ $(document).ready(function() {
 			if(data.status === true) {
 				showPopupMessage("Success", data.message);
 				setTimeout(function(){ location.reload(); }, 3000);
-				// $('html,body').scrollTop(0);
-				// $(".js-style").trigger("click");
 			} else {
 				showPopupMessage("Error", data.message);
 			}
