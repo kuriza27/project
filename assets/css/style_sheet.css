@@ -821,7 +821,7 @@ body, a, [input type="radio"] , [input type="checkbox"]{
 #coup-box{
 		background:url('img/discount.jpg') no-repeat;
 		height:400px;
-		padding: 75px 94px;
+		padding: 75px 82px;
 	}
 	
 #coup-box > label{
@@ -870,7 +870,7 @@ body, a, [input type="radio"] , [input type="checkbox"]{
 	}
 
 	#boxes #dialog {
-	  width: 650px;
+	  width: 720px;
 	  height: 500px;
 	  padding: 10px;
 	  background-color: #ffffff;
@@ -884,6 +884,12 @@ body, a, [input type="radio"] , [input type="checkbox"]{
     width: 638px;
     text-align: center;
     margin-bottom: 10px;
+	}
+	
+	#popupfoot {
+		position:relative;
+		top:12px;
+		
 	}
 
 
