@@ -188,7 +188,7 @@
 				Digital Proof <br>
 				</p>
 				<h4>Sizes</h4>
-				<p> Toddler Size (6.5 inch)<br>
+				<p> Toddler Size (6 inch)<br>
 					Youth Size (7 inch)<br>
 					Medium Size (7.5 inch)<br>
 					Adult Size (8 inch)<br>
