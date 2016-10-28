@@ -1646,7 +1646,10 @@ function get_price_data($style, $size, type) {
 						// For free promo items
 						if(ttlQty >= 100) {
 							// Show free items div
-							$('#dv-10-free-keychains').show();
+							if($size != '1/2'){
+								$('#dv-10-free-keychains').show();
+							}
+	
 							$('#dv-100-free-wristbands').show();
 							$('.total-summary-free').show();
 
@@ -2243,7 +2246,10 @@ function populateTotalSection(_collection) {
 
 		// Show free items div
 		if(html_item !== "") {
-			$("#dv-10-free-keychains, #dv-100-free-wristbands, .total-summary-free").show();
+			$("#dv-100-free-wristbands, .total-summary-free").show();
+			if(_collection.size == '1/2'){
+				$('#dv-10-free-keychains').show();
+			}
 			// Show available free items
 			$('.js-free-summary').html(html_item);
 		} else { // Hide free items div
