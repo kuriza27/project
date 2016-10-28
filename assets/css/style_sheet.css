@@ -829,10 +829,11 @@ body, a, [input type="radio"] , [input type="checkbox"]{
 }
 
 .frame-box{
-	background-color: #000;
+	background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.6);
     border: 1px solid black;
-    opacity: 0.7;
-    filter: alpha(opacity=60);
+    /*filter: alpha(opacity=70);*/
 	height:236px;
 }
 	#emf_advertisement{
@@ -879,18 +880,19 @@ body, a, [input type="radio"] , [input type="checkbox"]{
 	}
 
 	#popupfoot a {
-    font-size: 13pt;
+    font-size: 10pt;
     bottom: 0px;
-    width: 638px;
+    width: 100%;
     text-align: center;
     margin-bottom: 10px;
-	}
+    background-color: #fff;
+    padding: 10px;
+}
 	
 	#popupfoot {
-		position:relative;
-		top:12px;
-		
-	}
+    position: relative;
+    top: -166px;
+}
 
 
 /****

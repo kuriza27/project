@@ -27,7 +27,7 @@
 		$(id).fadeIn(2000); 	
 			
 		//if close button is clicked
-		$('.window .close').click(function (e) {
+		$('.window .close-button').click(function (e) {
 		//Cancel the link behavior
 		e.preventDefault();
 
@@ -63,10 +63,10 @@
 		     <h1>Claim your coupon code</h1>
 			 <div id="coup-box">
 				<div class="frame-box">
-					<iframe width="100%" height="258" allowTransparency="true" frameborder="0" scrolling="no" style="border:none" src="http://www.emailmeform.com/builder/embed/qvRh20DO854wLsb684ba0f"><a href="http://www.emailmeform.com/builder/embed/qvRh20DO854wLsb684ba0f">Fill out form.</a></iframe>
+						<iframe width="100%" height="257" allowTransparency="true" frameborder="0" scrolling="no" style="border:none" src="http://www.emailmeform.com/builder/embed/qvRh20DO854wLsb684ba0f"><a href="http://www.emailmeform.com/builder/embed/qvRh20DO854wLsb684ba0f">Fill out form.</a></iframe>
 				</div>
 			 </div>
-			<div id="popupfoot"> <a href="#" class="close agree">No we don't need to save money now</a></div>
+			<div id="popupfoot"> <a href="#" class="close-button agree">No we don't need to save money now</a></div>
 		  </div>
 		  <div id="mask"></div>
 		</div>
