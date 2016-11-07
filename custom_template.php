@@ -41,8 +41,8 @@
 ?>
 
 <script>
-	var price_json = '<?php echo(json_encode($dataJSONpriceWband)); ?>';
-	var addon_json = '<?php echo(json_encode($dataJSONpriceAddon)); ?>';
+	const price_json = '<?php echo(json_encode($dataJSONpriceWband)); ?>';
+	const addon_json = '<?php echo(json_encode($dataJSONpriceAddon)); ?>';
 </script>
 
 <div id="main-page-content">
@@ -56,22 +56,7 @@
 				<caption class="uk-margin-bottom js-wb-caption">Pricing for <span class="style">Printed</span> wristbands (&quot;<span class="size">1/2</span>&quot;) as of July, 2016</caption>
 				<thead>
 					<tr id="priceHeader">
-					<th data-uk-tooltip="{pos:'top'}" title="Quantity" class="uk-text-primary">Qty</th>
-					<!-- <th data-uk-tooltip="{pos:'top'}" title="20 to 29">20</th>
-					<th data-uk-tooltip="{pos:'top'}" title="30 to 99">30</th>
-					<th data-uk-tooltip="{pos:'top'}" title="100 to 199">100</th>
-					<th data-uk-tooltip="{pos:'top'}" title="200 to 299">200</th>
-					<th data-uk-tooltip="{pos:'top'}" title="300 to 499">300</th>
-					<th data-uk-tooltip="{pos:'top'}" title="500 to 999">500</th>
-					<th data-uk-tooltip="{pos:'top'}" title="1000 to 1999">1,000</th>
-					<th data-uk-tooltip="{pos:'top'}" title="2000 to 2999">2,000</th>
-					<th data-uk-tooltip="{pos:'top'}" title="3000 to 4999">3,000</th>
-					<th data-uk-tooltip="{pos:'top'}" title="5000 to 9999">5,000</th>
-					<th data-uk-tooltip="{pos:'top'}" title="10000 to 19999">10,000</th>
-					<th data-uk-tooltip="{pos:'top'}" title="20000 to 49999">20,000</th>
-					<th data-uk-tooltip="{pos:'top'}" title="50000 to 99999">50,000</th>
-					<th data-uk-tooltip="{pos:'top'}" title="100000 to 199999">100,000</th> -->
-					</tr>
+					<th data-uk-tooltip="{pos:'top'}" title="Quantity" class="uk-text-primary">Qty</th></tr>
 				</thead>
 				<tbody>
 					<tr id="priceTable">
@@ -193,27 +178,27 @@
 
 		<!-- WRIST COLOR -->
 		<div class="wrist-color-quantity">
-			<div class="wristband-view-color regular-color-size" style="display:<?php echo (in_array($qstyle, ['printed','debossed','ink-injected','embossed','embossed-printed','blank']))?'block':'none'; ?>">
-				<?php include "wrist-regularbandcolor.php"; ?>
+			<!-- <div class="wristband-view-color regular-color-size" style="display:<?php echo (in_array($qstyle, ['printed','debossed','ink-injected','embossed','embossed-printed','blank']))?'block':'none'; ?>">
+				<?php // include "wrist-regularbandcolor.php"; ?>
 			</div>
 			<div class="wristband-view-color large-color-size" style="display:none">
-				<?php include "wrist-largebandcolor.php"; ?>
+				<?php // include "wrist-largebandcolor.php"; ?>
 			</div>
 			<div class="wristband-view-color regular-figured-size" style="display:<?php echo (in_array($qstyle, ['figured']))?'block':'none'; ?>">
-				<?php include "wrist-regularfigured.php"; ?>
+				<?php // include "wrist-regularfigured.php"; ?>
 			</div>
 			<div class="wristband-view-color large-figured-size" style="display:none">
-				<?php include "wrist-largefigured.php"; ?>
+				<?php // include "wrist-largefigured.php"; ?>
 			</div>
 			<div class="wristband-view-color regular-dual-size" style="display:<?php echo (in_array($qstyle, ['dual-layer']))?'block':'none'; ?>">
-				<?php include "wrist-regulardual.php"; ?>
+				<?php // include "wrist-regulardual.php"; ?>
 			</div>
 			<div class="wristband-view-color large-dual-size" style="display:none">
-				<?php include "wrist-largedual.php"; ?>
+				<?php // include "wrist-largedual.php"; ?>
 			</div>
 			<div class="wristband-view-color thin-color-size" style="display:none">
-				<?php include "wrist-thinbandcolor.php"; ?>
-			</div>
+				<?php // include "wrist-thinbandcolor.php"; ?>
+			</div> -->
 		</div>
 		<!-- END WRIST COLOR -->
 
