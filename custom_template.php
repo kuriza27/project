@@ -38,6 +38,15 @@
 	$qstyle = strtolower((isset($_GET['q'])&&!empty($_GET['q'])) ? $_GET['q'] : "printed");
 	// Double check if existing
 	if(!isset($dataJSONpriceWband[$qstyle])) { $qstyle = "printed"; }
+
+	// Get wristband style
+	$styles = file_get_contents('assets/json/styles.json');
+	$styles = json_decode($styles, true);
+
+	// Get wristband style
+	$sizes = file_get_contents('assets/json/sizes.json');
+	$sizes = json_decode($sizes, true);
+
 ?>
 
 <script>
@@ -46,12 +55,11 @@
 </script>
 
 <div id="main-page-content">
+
 	<div class="container">
 
-		<!-- Example row of columns -->
-		<div id="banner-pricing">
-
-			<!-- PRINTED -->
+		<!-- WRISTBAND PRICING -->
+		<div id="wb_pricing">
 			<table class="table-area-printed-half uk-table uk-table-bordered js-pricing-table" data-pricing-tbl="" style="display:none;">
 				<caption class="uk-margin-bottom js-wb-caption">Pricing for <span class="style">Printed</span> wristbands (&quot;<span class="size">1/2</span>&quot;) as of July, 2016</caption>
 				<thead>
@@ -64,143 +72,89 @@
 					</tr>
 				</tbody>
 			</table>
-			<!-- END BLANK STYLE -->
 		</div>
-		<!-- WRIST STYLE -->
+		<!-- END : WRISTBAND PRICING -->
 
-		<!---<form id="order-form" action="" method="post" novalidate enctype="multipart/form-data">---->
-		<div class="wrist-style">
-			<div class="row offer-bar margin-bootom-20 __web-inspector-hide-shortcut__">
+		<!-- WRISTBAND STYLES -->
+		<div id="wb_style" class="wrist-style">
+			<div class="row offer-bar row-header-step">
 				<div class="col-xs-3 col-sm-2 offerpv float-left">Step <span class="sRename">1</span></div>
 				<div class="col-xs-9 col-sm-10 offer-details float-left">Select Wristband Style </div>
 				<div class="clearfix"></div>
 			</div>
 			<div class="wrist_style_container">
-				<div class="popup-order-gallery">
-					<div class="col-md-4 prod js-style <?php echo(($qstyle==='printed')?'active':''); ?>"  value="printed">
-						<div class="zoom"><a href="assets/images/src/Printed.png" title="Printed Wristband"><img src="assets/images/src/zoom.png" class="galleryimg"></a></div>
-						<div class="box-thumb"><img src="assets/images/src/Printed.png"></div>
-						<input type="radio" name="wrist_style" id="printed" class="wrist_style" value="printed" data-style="printed" <?php echo(($qstyle==="printed")?'checked="checked"':''); ?> >
-						<h2>Printed</h2>
-					</div>
-					<div class="col-md-4 prod js-style <?php echo(($qstyle==='debossed')?'active':''); ?>"  value="debossed">
-						<div class="zoom"><a href="assets/images/src/Debossed.png" title="Debossed Wristband"><img src="assets/images/src/zoom.png" class="galleryimg"></a></div>
-						<div class="box-thumb"><img src="assets/images/src/Debossed.png"></div>
-						<input type="radio" name="wrist_style" id="debossed" class="wrist_style" value="debossed" data-style="debossed" <?php echo(($qstyle==="debossed")?'checked="checked"':''); ?> >
-						<h2>Debossed</h2>
-					</div>
-					<div class="col-md-4 prod js-style <?php echo(($qstyle==='ink-injected')?'active':''); ?>"  value="ink-injected">
-						<div class="zoom"><a href="assets/images/src/Color-Filled.png" title="Color-Filled Wristband"><img src="assets/images/src/zoom.png" class="galleryimg"></a></div>
-						<div class="box-thumb"><img src="assets/images/src/Color-Filled.png"></div>
-						<input type="radio" name="wrist_style" id="ink-injected" class="wrist_style" value="ink-injected" data-style="ink-injected" <?php echo(($qstyle==="ink-injected")?'checked="checked"':''); ?> >
-						<h2>Ink Injected</h2>
-					</div>
-					<div class="col-md-4 prod js-style <?php echo(($qstyle==='embossed')?'active':''); ?>"  value="embossed">
-						<div class="zoom"><a href="assets/images/src/Embossed.png" title="Embossed Wristband"><img src="assets/images/src/zoom.png" class="galleryimg"></a></div>
-						<div class="box-thumb"><img src="assets/images/src/Embossed.png"></div>
-						<input type="radio" name="wrist_style" id="embossed" class="wrist_style" value="embossed" data-style="embossed" <?php echo(($qstyle==="embossed")?'checked="checked"':''); ?> >
-						<h2>Embossed</h2>
-					</div>
-					<div class="col-md-4 prod js-style <?php echo(($qstyle==='dual-layer')?'active':''); ?>"  value="dual-layer">
-						<div class="zoom"><a href="assets/images/src/Dual-Layer.png" title="Dual-Layer Wristband"><img src="assets/images/src/zoom.png" class="galleryimg"></a></div>
-						<div class="box-thumb"><img src="assets/images/src/Dual-Layer.png"></div>
-						<input type="radio" name="wrist_style" id="dual-layer" class="wrist_style" value="dual-layer" data-style="dual-layer" <?php echo(($qstyle==="dual-layer")?'checked="checked"':''); ?> >
-						<h2>Dual layer</h2>
-					</div>
-					<div class="col-md-4 prod js-style <?php echo(($qstyle==='embossed-printed')?'active':''); ?>" value="embossed-printed">
-						<div class="zoom"><a href="assets/images/src/Embossed-Printed.png" title="Embossed-Printed Wristband"><img src="assets/images/src/zoom.png" class="galleryimg"></a></div>
-						<div class="box-thumb"><img src="assets/images/src/Embossed-Printed.png"></div>
-						<input type="radio" name="wrist_style" id="embossed-printed" class="wrist_style" value="embossed-printed" data-style="embossed-printed" <?php echo(($qstyle==="embossed-printed")?'checked="checked"':''); ?> >
-						<h2>Embossed Printed</h2>
-					</div>
-					<div class="col-md-4 prod js-style <?php echo(($qstyle==='figured')?'active':''); ?>" value="figured">
-						<div class="zoom"><a href="assets/images/src/Figured.png" title="Figured Wristband"><img src="assets/images/src/zoom.png" class="galleryimg"></a></div>
-						<div class="box-thumb"><img src="assets/images/src/Figured.png"></div>
-						<input type="radio" name="wrist_style" id="figured" class="wrist_style" value="figured" data-style="figured" <?php echo(($qstyle==="figured")?'checked="checked"':''); ?> >
-						<h2>Figured</h2>
-					</div>
-					<div class="col-md-4 prod js-style <?php echo(($qstyle==='blank')?'active':''); ?>" value="blank">
-						<div class="zoom"><a href="assets/images/src/Blank.png" title="Blank Wristband"><img src="assets/images/src/zoom.png" class="galleryimg"></a></div>
-						<div class="box-thumb"><img src="assets/images/src/Blank.png"></div>
-						<input type="radio" name="wrist_style" id="blank-style" class="wrist_style" value="blank" data-style="blank" <?php echo(($qstyle==="blank")?'checked="checked"':''); ?> >
-						<h2>Blank</h2>
-					</div>
+				<div class="popup-order-gallery col-xs-12">
+					<?php foreach($styles as $key => $value): ?>
+						<div id="wb_style_<?php echo $value['code'] ?>" class="col-xs-6 col-md-3 prod prod-style js-style <?php if($value['code']==$qstyle) { echo('active'); }; ?>" style="margin-bottom:10px;">
+							<div class="zoom">
+								<a href="<?php echo $value['image'] ?>" title="Printed Wristband"><img src="assets/images/src/zoom.png" class="galleryimg"></a>
+							</div>
+							<div class="box-thumb"><img src="<?php echo $value['image'] ?>"></div>
+							<input class="wrist-style wb-style" data-style="<?php echo $value['code'] ?>" name="wb-style" type="radio" value="<?php echo $value['code'] ?>" <?php if($value['code']==$qstyle) { echo('checked="checked"'); }; ?> />
+							<br/>
+							<label for="wb-style">
+								<h2><?php echo $value['name'] ?></h2>
+							</label>
+						</div>
+					<?php endforeach; ?>
 					<div class="clearfix"></div>
-					<input type="hidden" name="style_info" class="style_info">
-				</div><!-- end popupgallery -->
+				</div>
 			</div>
-			<!-- END WRIST STYLE -->
 		</div>
+		<!-- END : WRISTBAND STYLES -->
+
 		<div class="clearfix"></div>
 
-		<!-- WRIST SIZE -->
-		<div class="wrist-size">
-			<div class="row offer-bar margin-bootom-20 __web-inspector-hide-shortcut__">
+		<!-- WRISTBAND SIZES -->
+		<div id="wb_size" class="wrist-size">
+			<div class="row offer-bar row-header-step">
 				<div class="col-xs-3 col-sm-2 offerpv float-left">Step <span class="sRename">2</span></div>
 				<div class="col-xs-9 col-sm-10 offer-details float-left">Select Wristband Size </div>
 				<div class="clearfix"></div>
 			</div>
 			<div class="wsize-default">
-				<div class="col-md-4 prod-size js-size" id="quarter" style="display:<?php echo (in_array($qstyle, ['printed','debossed','ink-injected','embossed','embossed-printed','blank']))?'block':'none'; ?>">
-					<div class="box-thumb"><img src="assets/images/src/sizes/1-4.png"></div>
-					<input type="radio" name="wrist_size"  class="wrist_size" value="1/4" data-size="1/4">
-					<h2>1/4 Inch</h2>
+				<?php foreach($sizes as $key => $value): ?>
+				<div id="wb_size_<?php echo $value['code'] ?>" class="col-xs-6 col-md-2 prod prod-size js-size <?php if($value['code']=='0-50inch') { echo('active'); }; ?>">
+					<div class="box-thumb"><img src="<?php echo $value['image'] ?>"></div>
+					<input class="wrist-size wb-size" data-size="<?php echo $value['code'] ?>" name="wb-size" type="radio" value="<?php echo $value['code'] ?>" <?php if($value['code']=='0-50inch') { echo('checked="checked"'); }; ?> >
+					<br/>
+					<label for="wb-style">
+						<h2><?php echo $value['name'] ?></h2>
+					</label>
 				</div>
-				<div class="col-md-4 prod-size js-size active"  id="half" style="display:<?php echo (in_array($qstyle, ['printed','debossed','ink-injected','embossed','embossed-printed','blank','dual-layer','figured']))?'block':'none'; ?>">
-					<div class="box-thumb"><img src="assets/images/src/sizes/1-2.png"></div>
-					<input type="radio" name="wrist_size" class="wrist_size" value="1/2" data-size="1/2" checked="checked">
-					<h2>1/2 Inch</h2>
-				</div>
-				<div class="col-md-4 prod-size js-size" id="three" style="display:<?php echo (in_array($qstyle, ['printed','debossed','ink-injected','embossed','embossed-printed','blank','dual-layer','figured']))?'block':'none'; ?>">
-					<div class="box-thumb"><img src="assets/images/src/sizes/3-4.png"></div>
-					<input type="radio" name="wrist_size"  class="wrist_size" value="3/4" data-size="3/4">
-					<h2>3/4 Inch</h2>
-				</div>
-				<div class="col-md-4 prod-size js-size" id="one" style="display:<?php echo (in_array($qstyle, ['printed','debossed','ink-injected','embossed','embossed-printed','blank','dual-layer']))?'block':'none'; ?>">
-					<div class="box-thumb"><img src="assets/images/src/sizes/1.png"></div>
-					<input type="radio" name="wrist_size"  class="wrist_size" value="1" data-size="1">
-					<h2>1 Inch</h2>
-				</div>
-				<div class="col-md-4 prod-size js-size" id="onehalf" style="display:<?php echo (in_array($qstyle, ['printed','debossed','ink-injected','embossed','embossed-printed','blank']))?'block':'none'; ?>">
-					<div class="box-thumb"><img src="assets/images/src/sizes/11-2.png"></div>
-					<input type="radio" name="wrist_size"  class="wrist_size" value="1.5" data-size="1.5">
-					<h2>1.5 Inch</h2>
-				</div>
-				<div class="col-md-4 prod-size js-size" id="two" style="display:<?php echo (in_array($qstyle, ['printed','debossed','ink-injected','embossed','embossed-printed','blank']))?'block':'none'; ?>">
-					<div class="box-thumb"><img src="assets/images/src/sizes/2.png"></div>
-					<input type="radio" name="wrist_size" class="wrist_size" value="2" data-size="2">
-					<h2>2 Inch</h2>
-				</div>
+				<?php endforeach; ?>
 				<div class="clearfix"></div>
 			</div>
 		</div>
-		<!-- END WRIST SIZE -->
+		<!-- END : WRISTBAND SIZES -->
 
-		<!-- WRIST COLOR -->
+		<div class="clearfix"></div>
+
+		<!-- WRISTBAND COLOR -->
 		<div class="wrist-color-quantity">
-			<!-- <div class="wristband-view-color regular-color-size" style="display:<?php echo (in_array($qstyle, ['printed','debossed','ink-injected','embossed','embossed-printed','blank']))?'block':'none'; ?>">
-				<?php // include "wrist-regularbandcolor.php"; ?>
+			<div id="wrist_color_container_regular" class="wrist-color-container regular-color-size hidden">
+				<?php include "wrist-regularbandcolor.php"; ?>
 			</div>
-			<div class="wristband-view-color large-color-size" style="display:none">
-				<?php // include "wrist-largebandcolor.php"; ?>
+			<div id="wrist_color_container_regular_large" class="wrist-color-container large-color-size hidden">
+				<?php include "wrist-largebandcolor.php"; ?>
 			</div>
-			<div class="wristband-view-color regular-figured-size" style="display:<?php echo (in_array($qstyle, ['figured']))?'block':'none'; ?>">
-				<?php // include "wrist-regularfigured.php"; ?>
+			<div id="wrist_color_container_figured" class="wrist-color-container regular-figured-size hidden">
+				<?php include "wrist-regularfigured.php"; ?>
 			</div>
-			<div class="wristband-view-color large-figured-size" style="display:none">
-				<?php // include "wrist-largefigured.php"; ?>
+			<div id="wrist_color_container_figured_large" class="wrist-color-container large-figured-size hidden">
+				<?php include "wrist-largefigured.php"; ?>
 			</div>
-			<div class="wristband-view-color regular-dual-size" style="display:<?php echo (in_array($qstyle, ['dual-layer']))?'block':'none'; ?>">
-				<?php // include "wrist-regulardual.php"; ?>
+			<div id="wrist_color_container_dual" class="wrist-color-container regular-dual-size hidden">
+				<?php include "wrist-regulardual.php"; ?>
 			</div>
-			<div class="wristband-view-color large-dual-size" style="display:none">
-				<?php // include "wrist-largedual.php"; ?>
+			<div id="wrist_color_container_dual_lg" class="wrist-color-container large-dual-size hidden">
+				<?php include "wrist-largedual.php"; ?>
 			</div>
-			<div class="wristband-view-color thin-color-size" style="display:none">
-				<?php // include "wrist-thinbandcolor.php"; ?>
-			</div> -->
+			<div id="wrist_color_container_regular_thin" class="wrist-color-container thin-color-size hidden">
+				<?php include "wrist-thinbandcolor.php"; ?>
+			</div>
 		</div>
-		<!-- END WRIST COLOR -->
+		<!-- END : WRISTBAND COLOR -->
 
 		<!-- WRISTBAND MESSAGE -->
 		<div class="wrist-messsage" style="display:<?php echo($qstyle != 'blank')?'block':'none'; ?>">

@@ -26,14 +26,12 @@ $(document).ready(function() {
 	// Initialize wristband price table
 	get_style_size("price_table");
 
-	// Blink
-	function blink(selector) {
-		$(selector).fadeOut('slow', function() {
-			$(this).fadeIn('slow', function() {
-				blink(this);
-			});
-		});
-	}
+	// Initialize checkbox & radio buttons
+    $('input').iCheck({
+        checkboxClass: 'icheckbox_square-green',
+        radioClass: 'iradio_square-green',
+        increaseArea: '20%' // optional
+    });
 
 	$('input[type="checkbox"]').on( 'touchstart', function(){
        $(this).prop("checked", !$(this).prop("checked"));
@@ -43,8 +41,6 @@ $(document).ready(function() {
    $('input[type="radio"]').on( 'touchstart', function(){
        $(this).prop("checked", !$(this).prop("checked"));
    });
-
-	blink('.blink');
 
 	// click terms
 	$('.terms-popup').click(function() {
@@ -96,7 +92,7 @@ $(document).ready(function() {
 						$("#front-view, #back-view, #inside-view, #continue-view").addClass("clipart-black");
 					}
 					// List all wristbands for preview
-					html_preview += "<li class='blink preview-pill preview-color-" + collectionData.style + "-" + value.color.join("-") + "-font-" + value.font + "'  data-type='" + key_style + "' data-font-color='" + value.font + "' data-image-link='gd/belt.php?style=" + key_style + "&type=" + collectionData.style + "&color=" + value.color.join(",") + "' style='background-image:url(\"gd/belt.php?style=" + key_style + "&color=" + value.color.join(",") + "\");background-size:30px;background-repeat:no-repeat;background-size: 100% 100%;color:#" + value.font +";'>Y</li>";
+					html_preview += "<li class='preview-pill preview-color-" + collectionData.style + "-" + value.color.join("-") + "-font-" + value.font + "'  data-type='" + key_style + "' data-font-color='" + value.font + "' data-image-link='gd/belt.php?style=" + key_style + "&type=" + collectionData.style + "&color=" + value.color.join(",") + "' style='background-image:url(\"gd/belt.php?style=" + key_style + "&color=" + value.color.join(",") + "\");background-size:30px;background-repeat:no-repeat;background-size: 100% 100%;color:#" + value.font +";'>Y</li>";
 
 					if(!$(".main-content-preview").hasClass("has-preview")) {
 						$(".main-content-preview").addClass("has-preview");
@@ -287,7 +283,6 @@ $(document).ready(function() {
 		}
 	});
 
-
 	$("body").on("blur", ".freewb", function(e) {
 		e.preventDefault();
 		e.stopPropagation();
@@ -329,7 +324,6 @@ $(document).ready(function() {
 	$('#prod-main').click(function() {
 		window.location = 'product-printed.php';
 	});
-
 
 	$('#prod-main2').click(function() {
 		window.location = 'fonts.php';
@@ -402,6 +396,7 @@ $(document).ready(function() {
 
 	// Show extra band size
 	$(".show-content").hide();
+
 	$("body").on("click", ".view-more", function() {
 		$(this).next('.show-content').toggle(100);
 	});
@@ -427,7 +422,6 @@ $(document).ready(function() {
 	// Show preview image
 	$('body').on('click', '.preview-pill', function(e) {
 		$('.preview-pill').removeClass('active');
-		$('.preview-pill').removeClass('blink');
 		$(this).addClass('active');
 
 		$("#front-view").css('background', 'url(' + $(this).attr('data-image-link') + ')');
@@ -461,7 +455,7 @@ $(document).ready(function() {
 		});
 		return false;
 	});
-
+/**
 	// Select wristband style event
 	$('body').on('click', '.js-style', function() {
 
@@ -639,12 +633,73 @@ $(document).ready(function() {
 			$('.js-total').hide();
 			$('.js-no-total').fadeIn(300);
 
-
 			// Get new price table
 			get_style_size('price_table');
 		}
 	});
+*/
+    // Change style actions.
+    $('body').on('click', '.prod-style', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
 
+        // Check if already selected.
+        if(!$(this).find('input[type=radio].wb-style').is(':checked')) {
+
+            // Clear existing active classes.
+            $('.prod-style').removeClass('active');
+            // Add active class tio parent div.
+            $(this).addClass('active');
+            // Check thec checkbox.
+            $(this).find('input[type=radio].wb-style').prop('checked', true);
+            // Reset icheck display.
+            $('#wb_style .iradio_square-green').removeClass('checked');
+            $(this).find('input[type=radio].wb-style').closest('.iradio_square-green').addClass('checked');
+            // Reset fields.
+            $('input[name="quantity[]').val("");
+            // Reset item Object.
+            items = {};
+            // Reset item previews.
+            // checkPreview();
+
+            // Main style click action.
+            loadSizes();
+            loadColors();
+            // changeWristbandColors();
+        }
+    });
+
+    $('body').on('ifClicked', 'input[type=radio].wb-style', function(e) {
+        // e.preventDefault();
+        e.stopPropagation();
+
+        // Check if already selected.
+        if(!$(this).is(':checked')) {
+
+            // Clear existing active classes.
+            $('.prod-style').removeClass('active');
+            // Add active class tio parent div.
+            $(this).closest('.prod-style').addClass('active');
+            // Check the checkbox.
+            $(this).prop('checked', true);
+            // Reset icheck display.
+            $('#wb_style .iradio_square-green').removeClass('checked');
+            $(this).closest('.iradio_square-green').addClass('checked');
+            // Reset fields.
+            $('input[name="quantity[]').val("");
+            // Reset item Object.
+            items = {};
+            // Reset item previews.
+            // checkPreview();
+
+            // Main style click action.
+            loadSizes();
+            loadColors();
+            // changeWristbandColors();
+        }
+    });
+    // END: Change style actions.
+/**
 	// Select wristband size event
 	$('body').on('click', '.js-size', function() {
 
@@ -722,6 +777,66 @@ $(document).ready(function() {
 			get_style_size('price_table');
 		}
 	});
+*/
+
+    // Change size actions.
+    $('body').on('click', '.prod-size', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        // Check if already selected.
+        if(!$(this).find('input[type=radio].wb-size').is(':checked')) {
+
+            // Clear existing active classes.
+            $('.prod-size').removeClass('active');
+            // Add active class tio parent div.
+            $(this).addClass('active');
+            // Check thec checkbox.
+            $(this).find('input[type=radio].wb-size').prop('checked', true);
+            // Reset icheck display.
+            $('#wb_size .iradio_square-green').removeClass('checked');
+            $(this).find('input[type=radio].wb-size').closest('.iradio_square-green').addClass('checked');
+            // Reset fields.
+            $('input[name="quantity[]').val("");
+            // Reset item Object.
+            items = {};
+            // Reset item previews.
+            // checkPreview();
+
+            // Main size click action.
+            loadColors();
+            // changeWristbandColors();
+        }
+    });
+
+    $('body').on('ifClicked', 'input[type=radio].wb-size', function(e) {
+        e.stopPropagation();
+
+        // Check if already selected.
+        if(!$(this).is(':checked')) {
+
+            // Clear existing active classes.
+            $('.prod-size').removeClass('active');
+            // Add active class tio parent div.
+            $(this).closest('.prod-size').addClass('active');
+            // Check the checkbox.
+            $(this).prop('checked', true);
+            // Reset icheck display.
+            $('#wb_size .iradio_square-green').removeClass('checked');
+            $(this).closest('.iradio_square-green').addClass('checked');
+            // Reset fields.
+            $('input[name="quantity[]').val("");
+            // Reset item Object.
+            items = {};
+            // Reset item previews.
+            // checkPreview();
+
+            // Main size click action.
+            loadColors();
+            // changeWristbandColors();
+        }
+    });
+    // END: Change size actions.
 
 	// Adding quantity to wristband colors. Check input values on textfield
 	$('body').on('keydown, keyup', '.box-color input[name$="-qty"]', function (e) {
@@ -1131,9 +1246,9 @@ $(document).ready(function() {
 
 	// Swirl done button click
 	$('body').on('click', '.dynamic-done-sw', function() {
-		if($.trim($(this).closest('.box-opt-color').find('.dynamic-swirl-color').val()) == ''){
+		if($.trim($(this).closest('.box-opt-color').find('.dynamic-swirl-color').val()) == '') {
 			alert('You need to choose colors');
-		}else{
+		} else {
 			var imgID = ".Preview" + $(this).closest('.modal').attr("id");
 			var color = [ 	$(this).closest('.box-opt-color').find('.swirl-color-0').val(),
 							$(this).closest('.box-opt-color').find('.swirl-color-1').val(),
@@ -1148,49 +1263,49 @@ $(document).ready(function() {
 	});
 
 	// Front message clipart button
-	$('.fclip-1').click(function(){
-			$(".clip-color-list li a").addClass('fsc');
-			$(".clip-color-list li a").removeClass('fec');
-			$(".clip-color-list li a").removeClass('bec');
-			$(".clip-color-list li a").removeClass('bsc');
-			$(".clip-color-list li a").removeClass('ces');
-			$(".clip-color-list li a").removeClass('ccs');
+	$('.fclip-1').click(function() {
+		$(".clip-color-list li a").addClass('fsc');
+		$(".clip-color-list li a").removeClass('fec');
+		$(".clip-color-list li a").removeClass('bec');
+		$(".clip-color-list li a").removeClass('bsc');
+		$(".clip-color-list li a").removeClass('ces');
+		$(".clip-color-list li a").removeClass('ccs');
 	});
 
-	$('.fclip-2').click(function(){
-			$(".clip-color-list li a").addClass('fec');
-			$(".clip-color-list li a").removeClass('fsc');
-			$(".clip-color-list li a").removeClass('bec');
-			$(".clip-color-list li a").removeClass('bsc');
-			 $(".clip-color-list li a").removeClass('ces');
-			$(".clip-color-list li a").removeClass('ccs');
+	$('.fclip-2').click(function() {
+		$(".clip-color-list li a").addClass('fec');
+		$(".clip-color-list li a").removeClass('fsc');
+		$(".clip-color-list li a").removeClass('bec');
+		$(".clip-color-list li a").removeClass('bsc');
+		$(".clip-color-list li a").removeClass('ces');
+		$(".clip-color-list li a").removeClass('ccs');
 	});
 	// END : Front message clipart button
 
 	// Back message clipart button
-	$('.bclip-1').click(function(){
-			$(".clip-color-list li a").addClass('bsc');
-			$(".clip-color-list li a").removeClass('fsc');
-			$(".clip-color-list li a").removeClass('fec');
-			$(".clip-color-list li a").removeClass('bec');
-		    $(".clip-color-list li a").removeClass('ces');
-			$(".clip-color-list li a").removeClass('ccs');
-			$(".clip-color-list li a").removeClass('figc');
+	$('.bclip-1').click(function() {
+		$(".clip-color-list li a").addClass('bsc');
+		$(".clip-color-list li a").removeClass('fsc');
+		$(".clip-color-list li a").removeClass('fec');
+		$(".clip-color-list li a").removeClass('bec');
+		$(".clip-color-list li a").removeClass('ces');
+		$(".clip-color-list li a").removeClass('ccs');
+		$(".clip-color-list li a").removeClass('figc');
 	});
 
-	$('.bclip-2').click(function(){
-			$(".clip-color-list li a").addClass('bec');
-			$(".clip-color-list li a").removeClass('fsc');
-			$(".clip-color-list li a").removeClass('fec');
-			$(".clip-color-list li a").removeClass('bsc');
-			$(".clip-color-list li a").removeClass('ces');
-			$(".clip-color-list li a").removeClass('ccs');
-			$(".clip-color-list li a").removeClass('figc');
+	$('.bclip-2').click(function() {
+		$(".clip-color-list li a").addClass('bec');
+		$(".clip-color-list li a").removeClass('fsc');
+		$(".clip-color-list li a").removeClass('fec');
+		$(".clip-color-list li a").removeClass('bsc');
+		$(".clip-color-list li a").removeClass('ces');
+		$(".clip-color-list li a").removeClass('ccs');
+		$(".clip-color-list li a").removeClass('figc');
 	});
 	// END : Back message clipart button
 
 	// Continous message clipart button
-	$('.cclip-1').click(function(){
+	$('.cclip-1').click(function() {
 			$(".clip-color-list li a").addClass('ccs');
 			$(".clip-color-list li a").removeClass('fsc');
 			$(".clip-color-list li a").removeClass('fec');
@@ -1200,7 +1315,7 @@ $(document).ready(function() {
 			$(".clip-color-list li a").removeClass('figc');
 	});
 
-	$('.cclip-2').click(function(){
+	$('.cclip-2').click(function() {
 			$(".clip-color-list li a").addClass('ces');
 			$(".clip-color-list li a").removeClass('fsc');
 			$(".clip-color-list li a").removeClass('fec');
@@ -1212,7 +1327,7 @@ $(document).ready(function() {
 	// END : Continous message clipart button
 
 	// Figured center clipart button
-	$('.fclip-3').click(function(){
+	$('.fclip-3').click(function() {
 			$(".clip-color-list li a").addClass('figc');
 			$(".clip-color-list li a").removeClass('fsc');
 			$(".clip-color-list li a").removeClass('fec');
@@ -1223,57 +1338,55 @@ $(document).ready(function() {
 	});
 
 	// Clipart front message button
-	$('.clip-color-list li a').click(function(){
+	$('.clip-color-list li a').click(function() {
 		var img = $(this).attr('ref');
 
-		if(img!="none.jpg"){
-			if($( ".clip-color-list li a" ).hasClass( "fsc" )){
+		if(img!="none.jpg") {
+			if($( ".clip-color-list li a" ).hasClass( "fsc" )) {
 				$(".start-fc").html("<img width='34' height='30' src='assets/images/src/clipart/"+img+"'/>");
 			}
-			else if($( ".clip-color-list li a" ).hasClass( "fec" )){
+			else if($( ".clip-color-list li a" ).hasClass( "fec" )) {
 				$(".end-fc").html("<img width='34' height='30' src='assets/images/src/clipart/"+img+"'/>");
 			}
-			else if($( ".clip-color-list li a" ).hasClass( "bsc" )){
+			else if($( ".clip-color-list li a" ).hasClass( "bsc" )) {
 				$(".back-mc").html("<img width='34' height='30' src='assets/images/src/clipart/"+img+"'/>");
 			}
-			else if($( ".clip-color-list li a" ).hasClass( "bec" )){
+			else if($( ".clip-color-list li a" ).hasClass( "bec" )) {
 				$(".backend-mc").html("<img width='34' height='30' src='assets/images/src/clipart/"+img+"'/>");
 			}
-			else if($( ".clip-color-list li a" ).hasClass( "ccs" )){
+			else if($( ".clip-color-list li a" ).hasClass( "ccs" )) {
 				$(".start-cc").html("<img width='34' height='30' src='assets/images/src/clipart/"+img+"'/>");
 			}
-			else if($( ".clip-color-list li a" ).hasClass( "figc" )){
+			else if($( ".clip-color-list li a" ).hasClass( "figc" )) {
 				$(".fig-fc").html("<img width='34' height='34' src='assets/images/src/clipart/"+img+"'/>");
 			}
-			else{
+			else {
 				$(".end-cc").html("<img width='34' height='34' src='assets/images/src/clipart/"+img+"'/>");
 			}
 
 		}
-		else{
-
-			if($( ".clip-color-list li a" ).hasClass( "fsc" )){
+		else {
+			if($( ".clip-color-list li a" ).hasClass( "fsc" )) {
 				$( ".start-fc" ).find("img").remove();
 			}
-			else if($( ".clip-color-list li a" ).hasClass( "fec" )){
+			else if($( ".clip-color-list li a" ).hasClass( "fec" )) {
 				$(".end-fc").find("img").remove();
 			}
-			else if($( ".clip-color-list li a" ).hasClass( "bsc" )){
+			else if($( ".clip-color-list li a" ).hasClass( "bsc" )) {
 				$(".back-mc").find("img").remove();
 			}
-			else if($( ".clip-color-list li a" ).hasClass( "bec" )){
+			else if($( ".clip-color-list li a" ).hasClass( "bec" )) {
 				$(".backend-mc").find("img").remove();
 			}
-			else if($( ".clip-color-list li a" ).hasClass( "ccs" )){
+			else if($( ".clip-color-list li a" ).hasClass( "ccs" )) {
 				$(".start-cc").find("img").remove();
 			}
-			else if($( ".clip-color-list li a" ).hasClass( "figc" )){
+			else if($( ".clip-color-list li a" ).hasClass( "figc" )) {
 				$(".fig-fc").find("img").remove();
 			}
-			else{
+			else {
 				$(".end-cc").find("img").remove();
 			}
-
 		 }
 
 		$("#ClipArtModal").modal('toggle');
@@ -1502,6 +1615,21 @@ $(document).ready(function() {
 
 	});
 
+	//Clipart clik on items
+	$('.clipart .drpMenuItems').on('click',function() {
+		$('.clipart li').removeAttr('style');
+		if($(this).hasClass('closex')) {
+			resetDrpMenu();
+			$(this).removeClass('closex');
+			$(this).addClass('open');
+			$(this).parent().find('.drpMenuItems_clipart').fadeIn(800);
+		} else {
+			$(this).removeClass('open');
+		$(this).addClass('closex');
+			$('.drpMenuItems_clipart').fadeOut(300);
+		}
+	});
+
 });
 
 function get_style_size(type) {
@@ -1534,178 +1662,178 @@ function get_style_size(type) {
 //Get Price list
 function get_price_data($style, $size, type) {
 
-	//get JSON Price list
-	var ttlQty = 0;
-	var ttlPrice = 0;
-	var arrBand = {};
-	if(typeof price_json != "undefined") {
-		var $data = $.parseJSON(price_json);
-
-		if(type == 'price_table') {
-			$('#priceHeader, #priceTable').find('.js-temp').remove();
-			$.each($data[$style][$size], function(key_qty, val_qty){
-				$('#priceHeader').append("<th class='js-temp' data-uk-tooltip='{pos:\'top\'}' title='Prices'>"+key_qty+"</th>");
-				$('#priceTable').append("<td class='js-temp'>$<span data-qty-range='"+key_qty+"''>"+val_qty+"</span></td>");
-			});
-			$('.js-pricing-table').fadeIn(300);
-			$('.js-wb-caption').find('.style').text($style.toUpperCase());
-			$('.js-wb-caption').find('.size').text($size);
-		} else {
-			$('.wrist_color_container:visible .js-color input[name$="-qty"]').each(function() {
-
-				var qty = $(this).val();
-
-				if(qty) {
-
-					qty = parseInt(qty);
-
-					if(qty > 0) {
-
-						// Variables
-						var ref_type = $(this).parents('.tab-pane').data('color').toLowerCase();
-						var qty = $(this).val();
-
-						// Check and change
-						if(ref_type === "swirls") { ref_type = "swirl"; }
-
-						// List all items with quantity
-						if(typeof arrBand[ref_type] == "undefined" || arrBand[ref_type] == null) {
-							arrBand[ref_type] = { // color : color,
-												  price : $data[$style][$size],
-												  qty : parseInt(qty),
-												  size : $size
-												};
-						} else {
-							arrBand[ref_type].qty += parseInt(qty);
-						}
-
-						// Calculte total quantity
-						ttlQty += parseInt(qty);
-					}
-				}
-			});
-
-			$('.js-item-summary').html("");
-			$('.js-free-summary').html("");
-			$('.total-summary-free').hide();
-
-			// Get proper total qty
-			$.ajax({
-				type: 'POST',
-				url: 'queryDB.php',
-				data: {'action':'get_prices', 'style':$style, 'size':$size, 'qty':ttlQty},
-				beforeSend: function() {
-					$('.js-total').hide();
-					$('.js-no-total').fadeIn(300);
-				},
-				success: function(data) {
-					data = $.parseJSON(data);
-					var htmlProd, htmlShip = '';
-
-					// List all production price/day data
-					$.each(data.production, function(key, value) { htmlProd += '<option value="'+value.days+'" data-price="'+value.price+'">Standard Production - '+value.days+' Days (+$'+value.price+')</option>'; });
-					$("#ProductionTime").html(htmlProd);
-					// List all shipping price/day data
-					$.each(data.shipping, function(key, value) { htmlShip += '<option value="'+value.days+'" data-price="'+value.price+'">Standard Shipping - '+value.days+' Days (+$'+value.price+')</option>'; });
-					$("#ShippingTime").html(htmlShip);
-
-					// After prod and shipping prices are fetched, Do Calculations
-					$.each(arrBand, function(bKey, bVal) {
-						var subPrice = 0;
-						var ttlSubPrice = 0;
-						var hasQty = false;
-
-						// Get item price
-						$.each(bVal.price, function(pQty, pPrice){
-							if(hasQty === false) {
-								if(pQty <= bVal.qty) {
-									subPrice = parseFloat(pPrice);
-								} else if(bVal.qty < 20) {
-									subPrice = parseFloat(bVal.price['20']);
-								} else {
-									hasQty = true;
-								}
-							}
-						});
-
-						// Calculate total price
-						ttlSubPrice = parseFloat(subPrice) * parseFloat(bVal.qty);
-						ttlPrice += parseFloat(ttlSubPrice);
-
-						// List items to total summary
-						var html_item = '<div class="row summary-item"><div class="col-md-8 col-xs-6">- '+bKey.bold().toUpperCase()+' ('+bVal.qty+' x '+formatCurrency(subPrice)+' each)</div><div class="col-md-4 col-xs-6 align-right">'+formatCurrency(ttlSubPrice)+'</div></div>';
-						$('.js-item-summary').append(html_item);
-
-					});
-
-					// DISPLAYS FOR TOTAL
-
-						// For free promo items
-						if(ttlQty >= 100) {
-							// Show free items div
-							if($size != '1/2'){
-								$('#dv-10-free-keychains').show();
-							}
-
-							$('#dv-100-free-wristbands').show();
-							$('.total-summary-free').show();
-
-							// Count keychains available
-							var free_qty = $("#freekc").val();
-							if(free_qty === "") { free_qty = 0; }
-
-							// Show items to total summary
-							var html_item = '<div class="row summary-item"><div class="col-xs-12">- Keychains ('+free_qty+' piece/s)</div><div class="clearfix"></div></div>';
-								html_item += '<div class="row summary-item"><div class="col-xs-12">- Free wristbands</div><div class="clearfix"></div></div>';
-							$('.js-free-summary').append(html_item);
-						} else {
-							// Hide free items div
-							$('#dv-10-free-keychains').hide();
-							$('#dv-100-free-wristbands').hide();
-							$('#freekc').val('').focus();
-						}
-						// END : For free promo items
-
-					// DISPLAYS FOR TOTAL
-					// Decide if to hide total summary or not
-					if(ttlQty >= 20) {
-
-						var style = $('.js-style .wrist_style:checked').val();
-						var size = parseInt($('.js-size .wrist_size:checked').val());
-						var inc = size >= 2 ? 'Inches':'Inch';
-
-						$('#wristband_style').text(style.toUpperCase());
-						$('#wristband_size').text(size+' '+inc);
-
-						var p_days  = $('#ProductionTime option:selected').val();
-						var p_price = $('#ProductionTime option:selected').attr('data-price');
-
-						var s_days  = $('#ShippingTime option:selected').val();
-						var s_price = $('#ShippingTime option:selected').attr('data-price');
-
-						// Add production and shipping prices
-						ttlPrice += parseFloat(p_price);
-						ttlPrice += parseFloat(s_price);
-
-						$('#wristband_ptime').attr('data-production-time', p_days).attr('data-production-price', p_price).html(p_days + " Days ("+formatCurrency(p_price)+")");
-						$('#wristband_stime').attr('data-shipping-time', s_days).attr('data-shipping-price', s_price).html(s_days + " Days ("+formatCurrency(s_price)+")");
-
-						$('#totalPrice').text(formatCurrency(ttlPrice));
-						$('#totalPrice').attr('data-total', ttlPrice);
-
-						$('.prod-ship').fadeIn(300);
-						$('.js-total').fadeIn(300);
-						$('.js-no-total').hide();
-					} else if(ttlQty < 20) {
-
-						$('.js-total').hide();
-						$('.js-no-total').fadeIn(300);
-					}
-
-				}
-			});
-		}
-	}
+	// //get JSON Price list
+	// var ttlQty = 0;
+	// var ttlPrice = 0;
+	// var arrBand = {};
+	// if(typeof price_json != "undefined") {
+	// 	var $data = $.parseJSON(price_json);
+	//
+	// 	if(type == 'price_table') {
+	// 		$('#priceHeader, #priceTable').find('.js-temp').remove();
+	// 		$.each($data[$style][$size], function(key_qty, val_qty){
+	// 			$('#priceHeader').append("<th class='js-temp' data-uk-tooltip='{pos:\'top\'}' title='Prices'>"+key_qty+"</th>");
+	// 			$('#priceTable').append("<td class='js-temp'>$<span data-qty-range='"+key_qty+"''>"+val_qty+"</span></td>");
+	// 		});
+	// 		$('.js-pricing-table').fadeIn(300);
+	// 		$('.js-wb-caption').find('.style').text($style.toUpperCase());
+	// 		$('.js-wb-caption').find('.size').text($size);
+	// 	} else {
+	// 		$('.wrist_color_container:visible .js-color input[name$="-qty"]').each(function() {
+	//
+	// 			var qty = $(this).val();
+	//
+	// 			if(qty) {
+	//
+	// 				qty = parseInt(qty);
+	//
+	// 				if(qty > 0) {
+	//
+	// 					// Variables
+	// 					var ref_type = $(this).parents('.tab-pane').data('color').toLowerCase();
+	// 					var qty = $(this).val();
+	//
+	// 					// Check and change
+	// 					if(ref_type === "swirls") { ref_type = "swirl"; }
+	//
+	// 					// List all items with quantity
+	// 					if(typeof arrBand[ref_type] == "undefined" || arrBand[ref_type] == null) {
+	// 						arrBand[ref_type] = { // color : color,
+	// 											  price : $data[$style][$size],
+	// 											  qty : parseInt(qty),
+	// 											  size : $size
+	// 											};
+	// 					} else {
+	// 						arrBand[ref_type].qty += parseInt(qty);
+	// 					}
+	//
+	// 					// Calculte total quantity
+	// 					ttlQty += parseInt(qty);
+	// 				}
+	// 			}
+	// 		});
+	//
+	// 		$('.js-item-summary').html("");
+	// 		$('.js-free-summary').html("");
+	// 		$('.total-summary-free').hide();
+	//
+	// 		// Get proper total qty
+	// 		$.ajax({
+	// 			type: 'POST',
+	// 			url: 'queryDB.php',
+	// 			data: {'action':'get_prices', 'style':$style, 'size':$size, 'qty':ttlQty},
+	// 			beforeSend: function() {
+	// 				$('.js-total').hide();
+	// 				$('.js-no-total').fadeIn(300);
+	// 			},
+	// 			success: function(data) {
+	// 				data = $.parseJSON(data);
+	// 				var htmlProd, htmlShip = '';
+	//
+	// 				// List all production price/day data
+	// 				$.each(data.production, function(key, value) { htmlProd += '<option value="'+value.days+'" data-price="'+value.price+'">Standard Production - '+value.days+' Days (+$'+value.price+')</option>'; });
+	// 				$("#ProductionTime").html(htmlProd);
+	// 				// List all shipping price/day data
+	// 				$.each(data.shipping, function(key, value) { htmlShip += '<option value="'+value.days+'" data-price="'+value.price+'">Standard Shipping - '+value.days+' Days (+$'+value.price+')</option>'; });
+	// 				$("#ShippingTime").html(htmlShip);
+	//
+	// 				// After prod and shipping prices are fetched, Do Calculations
+	// 				$.each(arrBand, function(bKey, bVal) {
+	// 					var subPrice = 0;
+	// 					var ttlSubPrice = 0;
+	// 					var hasQty = false;
+	//
+	// 					// Get item price
+	// 					$.each(bVal.price, function(pQty, pPrice){
+	// 						if(hasQty === false) {
+	// 							if(pQty <= bVal.qty) {
+	// 								subPrice = parseFloat(pPrice);
+	// 							} else if(bVal.qty < 20) {
+	// 								subPrice = parseFloat(bVal.price['20']);
+	// 							} else {
+	// 								hasQty = true;
+	// 							}
+	// 						}
+	// 					});
+	//
+	// 					// Calculate total price
+	// 					ttlSubPrice = parseFloat(subPrice) * parseFloat(bVal.qty);
+	// 					ttlPrice += parseFloat(ttlSubPrice);
+	//
+	// 					// List items to total summary
+	// 					var html_item = '<div class="row summary-item"><div class="col-md-8 col-xs-6">- '+bKey.bold().toUpperCase()+' ('+bVal.qty+' x '+formatCurrency(subPrice)+' each)</div><div class="col-md-4 col-xs-6 align-right">'+formatCurrency(ttlSubPrice)+'</div></div>';
+	// 					$('.js-item-summary').append(html_item);
+	//
+	// 				});
+	//
+	// 				// DISPLAYS FOR TOTAL
+	//
+	// 					// For free promo items
+	// 					if(ttlQty >= 100) {
+	// 						// Show free items div
+	// 						if($size != '1/2'){
+	// 							$('#dv-10-free-keychains').show();
+	// 						}
+	//
+	// 						$('#dv-100-free-wristbands').show();
+	// 						$('.total-summary-free').show();
+	//
+	// 						// Count keychains available
+	// 						var free_qty = $("#freekc").val();
+	// 						if(free_qty === "") { free_qty = 0; }
+	//
+	// 						// Show items to total summary
+	// 						var html_item = '<div class="row summary-item"><div class="col-xs-12">- Keychains ('+free_qty+' piece/s)</div><div class="clearfix"></div></div>';
+	// 							html_item += '<div class="row summary-item"><div class="col-xs-12">- Free wristbands</div><div class="clearfix"></div></div>';
+	// 						$('.js-free-summary').append(html_item);
+	// 					} else {
+	// 						// Hide free items div
+	// 						$('#dv-10-free-keychains').hide();
+	// 						$('#dv-100-free-wristbands').hide();
+	// 						$('#freekc').val('').focus();
+	// 					}
+	// 					// END : For free promo items
+	//
+	// 				// DISPLAYS FOR TOTAL
+	// 				// Decide if to hide total summary or not
+	// 				if(ttlQty >= 20) {
+	//
+	// 					var style = $('.js-style .wrist_style:checked').val();
+	// 					var size = parseInt($('.js-size .wrist_size:checked').val());
+	// 					var inc = size >= 2 ? 'Inches':'Inch';
+	//
+	// 					$('#wristband_style').text(style.toUpperCase());
+	// 					$('#wristband_size').text(size+' '+inc);
+	//
+	// 					var p_days  = $('#ProductionTime option:selected').val();
+	// 					var p_price = $('#ProductionTime option:selected').attr('data-price');
+	//
+	// 					var s_days  = $('#ShippingTime option:selected').val();
+	// 					var s_price = $('#ShippingTime option:selected').attr('data-price');
+	//
+	// 					// Add production and shipping prices
+	// 					ttlPrice += parseFloat(p_price);
+	// 					ttlPrice += parseFloat(s_price);
+	//
+	// 					$('#wristband_ptime').attr('data-production-time', p_days).attr('data-production-price', p_price).html(p_days + " Days ("+formatCurrency(p_price)+")");
+	// 					$('#wristband_stime').attr('data-shipping-time', s_days).attr('data-shipping-price', s_price).html(s_days + " Days ("+formatCurrency(s_price)+")");
+	//
+	// 					$('#totalPrice').text(formatCurrency(ttlPrice));
+	// 					$('#totalPrice').attr('data-total', ttlPrice);
+	//
+	// 					$('.prod-ship').fadeIn(300);
+	// 					$('.js-total').fadeIn(300);
+	// 					$('.js-no-total').hide();
+	// 				} else if(ttlQty < 20) {
+	//
+	// 					$('.js-total').hide();
+	// 					$('.js-no-total').fadeIn(300);
+	// 				}
+	//
+	// 			}
+	// 		});
+	// 	}
+	// }
 }
 
 //Get Total Price of wristbands
@@ -1862,26 +1990,6 @@ function sendToQuery(action, style, size, qty, where) {
 		}
 	});
 }
-
-// //Resets
-// $('[input]').on('focus',function(){
-// 	resetDrpMenu();
-// });
-
-//Clipart clik on items
-$('.clipart .drpMenuItems').on('click',function(){
-	$('.clipart li').removeAttr('style');
-	if($(this).hasClass('closex')){
-		resetDrpMenu();
-		$(this).removeClass('closex');
-	$(this).addClass('open');
-		$(this).parent().find('.drpMenuItems_clipart').fadeIn(800);
-	}else{
-		$(this).removeClass('open');
-	$(this).addClass('closex');
-		$('.drpMenuItems_clipart').fadeOut(300);
-	}
-});
 
 //Capitalize First letter
 String.prototype.capitalizeFirstLetter = function() {
@@ -2439,4 +2547,102 @@ function resetOrderPage() {
 
 	// Get new price table
 	get_style_size('price_table');
+}
+
+function loadColors($style, $size)
+{
+    // Check if $style is undefined.
+    if(typeof $style == 'undefined')
+        $style = $('#wb_style input[type=radio].wb-style:checked').val();
+
+    // Check if $size is undefined.
+    if(typeof $size == 'undefined')
+        $size = $('#wb_size input[type=radio].wb-size:checked').val();
+
+    $('.wb-color-type').addClass('hidden');
+    // Update
+    $('.wb-band').addClass('band-reg').removeClass('band-fig');
+    // Show fonts
+    $('.fonttext').addClass('hidden');
+    $('.box-color').removeClass('with-font');
+
+    // Get sizes for selected style.
+    switch ($style) {
+        case 'dual-layer':
+            if($size == '0-50inch') {
+                $('#wb_color_type_dual').removeClass('hidden');
+            } else { // 0-75inch
+                $('#wb_color_type_dual_lg').removeClass('hidden');
+            }
+            break;
+
+        case 'figured':
+            if($size == '0-50inch') {
+                $('#wb_color_type_figured').removeClass('hidden');
+            } else { // 0-75inch, 1-00inch
+                $('#wb_color_type_figured_lg').removeClass('hidden');
+            }
+            // Update
+            $('.wb-band').addClass('band-fig').removeClass('band-reg');
+            // Show fonts
+            $('.fonttext').removeClass('hidden');
+            $('.box-color').addClass('with-font');
+            break;
+
+        case 'printed':
+        case 'ink-injected':
+        case 'embossed-printed':
+            // Show fonts
+            $('.fonttext').removeClass('hidden');
+            $('.box-color').addClass('with-font');
+
+        default:
+            if($size == '0-25inch') {
+                $('#wb_color_type_regular_tn').removeClass('hidden');
+            } else if($size == '0-50inch') {
+                $('#wb_color_type_regular').removeClass('hidden');
+            } else { // 0-75inch, 1-00inch, 1-50inch, 2-00inch
+                $('#wb_color_type_regular_lg').removeClass('hidden');
+            }
+            break;
+    }
+}
+
+function loadSizes($style)
+{
+    // Check if $size is undefined.
+    if(typeof $style == 'undefined')
+        $style = $('#wb_style input[type=radio].wb-style:checked').val();
+
+    $('.prod-size').addClass('hidden');
+    // Update
+    $('.wb-band').addClass('band-reg').removeClass('band-fig');
+
+    // Get sizes for selected style.
+    switch ($style) {
+        case 'dual-layer':
+            $('#wb_size_0-50inch, #wb_size_0-75inch').removeClass('hidden');
+            break;
+
+        case 'figured':
+            $('#wb_size_0-50inch, #wb_size_0-75inch, #wb_size_1-00inch').removeClass('hidden');
+            // Update
+            $('.wb-band').addClass('band-fig').removeClass('band-reg');
+            break;
+
+        default:
+            $('#wb_size_0-25inch, #wb_size_0-50inch, #wb_size_0-75inch, #wb_size_1-00inch, #wb_size_1-50inch, #wb_size_2-00inch').removeClass('hidden');
+            break;
+    }
+
+    // Get the visible selected size.
+    $size = $('#wb_size .prod-size:visible input[type=radio].wb-size:checked').val();
+
+    // If none on all visible sizes is selected.
+    if(typeof $size == 'undefined') {
+        // Reset selection to 0-50inch.
+        $('#wb_size .iradio_square-green').removeClass('checked');
+        $('#wb_size #wb_size_0-50inch input[type=radio].wb-size').prop('checked', true).closest('.iradio_square-green').addClass('checked');
+    }
+
 }

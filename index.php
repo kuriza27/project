@@ -1,31 +1,31 @@
 <?php include_once 'header.php'; ?>
 <script>
-		$(document).ready(function() {	
+		$(document).ready(function() {
 
 		var id = '#dialog';
-			
+
 		//Get the screen height and width
 		var maskHeight = $(document).height();
 		var maskWidth = $(window).width();
-			
+
 		//Set heigth and width to mask to fill up the whole screen
 		$('#mask').css({'width':maskWidth,'height':maskHeight});
 
 		//transition effect
-		$('#mask').fadeIn(500);	
-		$('#mask').fadeTo("slow",0.9);	
-			
+		$('#mask').fadeIn(500);
+		$('#mask').fadeTo("slow",0.9);
+
 		//Get the window height and width
 		var winH = $(window).height();
 		var winW = $(window).width();
-					  
+
 		//Set the popup window to center
 		$(id).css('top',  winH/2-$(id).height()/2);
 		$(id).css('left', winW/2-$(id).width()/2);
-			
+
 		//transition effect
-		$(id).fadeIn(2000); 	
-			
+		$(id).fadeIn(2000);
+
 		//if close button is clicked
 		$('.window .close-button').click(function (e) {
 		//Cancel the link behavior
@@ -40,10 +40,10 @@
 		$(this).hide();
 		$('.window').hide();
 		});
-		
-    
-		$('#emf-container').css('background-color','none');		
-		$('#emf-container').css('color','#FFFFFF');		
+
+
+		$('#emf-container').css('background-color','none');
+		$('#emf-container').css('color','#FFFFFF');
 		});
 </script>
     <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -70,38 +70,39 @@
 		  </div>
 		  <div id="mask"></div>
 		</div>
-		
+
 	   <div class="images-clips">
-			<div class="col-md-2">
+			<div class="col-md-4" style="margin-bottom:5px;padding:0px;">
 				<a href="quote.php"><img src="assets/images/src/Get_A_Quote.jpg"></a>
 			</div>
-			
-			<div class="col-md-2">
+
+			<div class="col-md-4" style="margin-bottom:5px;padding:0px;">
 				<a href="school_po.php"><img src="assets/images/src/PO.jpg"></a>
 			</div>
-			
-		    <div class="col-md-2">
+
+		    <div class="col-md-4" style="margin-bottom:5px;padding:0px;">
 				<a href="digital_design.php"><img src="assets/images/src/Digital_Design.jpg"></a>
 			</div>
-						
-			<div class="col-md-2">
+
+			<div class="col-md-4" style="margin-bottom:5px;padding:0px;">
 				<a href="#"><img src="assets/images/src/Rush_Shipping.jpg"></a>
 			</div>
-			
-			<div class="col-md-2">
+
+			<div class="col-md-4" style="margin-bottom:5px;padding:0px;">
 				<a href="#"><img src="assets/images/src/1Day_Production.jpg"></a>
 			</div>
 
-			<div class="col-md-2">
+			<div class="col-md-4" style="margin-bottom:5px;padding:0px;">
 				<a href="#"><img src="assets/images/src/Eco_Friendly.jpg"></a>
 			</div>
 
-				<div class="clearfix"></div>
+			<div class="clearfix"></div>
 	   </div>
+
       <div id="main-content" class="row homecontent">
 			<div class="col-md-4">
 			  <div class="box-thumb"><img src="assets/images/src/Printed.png"></div>
-			  <h2>Printed</h2> 
+			  <h2>Printed</h2>
 			  <div class="prod_price">$0.09</div>
 			  <p><a class="btn btn-default" href="order.php?q=printed" role="button">Order Now</a></p>
 			</div>
@@ -119,7 +120,7 @@
 			</div>
 			<div class="col-md-4">
 			  <div class="box-thumb"><img src="assets/images/src/Embossed.png"></div>
-			  <h2>Embossed</h2> 
+			  <h2>Embossed</h2>
 			  <div class="prod_price">$0.07</div>
 			  <p><a class="btn btn-default" href="order.php?q=embossed" role="button">Order Now</a></p>
 			</div>
@@ -150,15 +151,15 @@
 			<div class="clearfix"></div>
 			<div class="container content-main">
 				<p>
-				<span class="header-texttitle">Promotional Wristbands</span> is an American company based in Elizabeth, New Jersey that produces top of the line, eco-friendly custom silicone wristbands. 
+				<span class="header-texttitle">Promotional Wristbands</span> is an American company based in Elizabeth, New Jersey that produces top of the line, eco-friendly custom silicone wristbands.
 				Custom silicone wristbands are perfect for different events such as Team Building Activities, Trade Shows, Business Conferences, Theme Parties, Birthdays, Anniversaries, Family Events and many more. Custom silicone wristbands are also a great way of promoting various awareness, information, and charity campaigns. Silicone wristbands are also one popular item being sold as merchandise at concerts &amp; sporting events worldwide
 				</p>
 				<p>
-				Promotional Wristbands offer the cheapest yet high quality customized silicone wristbands in the market. 
+				Promotional Wristbands offer the cheapest yet high quality customized silicone wristbands in the market.
 				These wristbands come in different types like those that are printed, debossed, embossed, or color filled that can be personally customized based on your preference.
 				</p>
 				<p>
-				We guarantee that our wristband production will be done with dedication and proficiency regardless of the amount of your order. 
+				We guarantee that our wristband production will be done with dedication and proficiency regardless of the amount of your order.
 				All orders should be treated equally, whether it is few or millions of customized silicone wristbands. With our competent and reliable Sales, Production and Customer Service teams, we assure that orders are properly handled and delivered to our customers on time.
 				</p>
 			</div>
@@ -178,7 +179,7 @@
 						  </li>
 						  <li>
 							<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-3">How can I get a quotation?</a>
-							<div id="dem-3" class="collapse">You can instantly get a quotation by going to our website and clicking on the “Get A Quote!” tab and follow the instructions. You can also talk to oursales team by calling us at our 
+							<div id="dem-3" class="collapse">You can instantly get a quotation by going to our website and clicking on the “Get A Quote!” tab and follow the instructions. You can also talk to oursales team by calling us at our
 							hotline number 1-800- 989-0440 or just simply send us an email at sales@promotionalwristband.com and we will be more than willing to help you.</div>
 						  </li>
 						  <li >
@@ -187,7 +188,7 @@
 						  </li>
 						  <li >
 							<a href="javascript:void(0)" data-toggle="collapse" data-target="#dem-5">What&#39;s the difference between the front, back and inside message?</a>
-							<div id="dem-5" class="collapse">The front and back message will both be placed at the outside portion of the wristbands on the opposing sides while the inside message will be put at the inner portion of the 
+							<div id="dem-5" class="collapse">The front and back message will both be placed at the outside portion of the wristbands on the opposing sides while the inside message will be put at the inner portion of the
 							wristbands. An embossed default inside message with our company’s website and contact details will be in the wristbands. However, it can be requested to be removed or changed with a modified message of your own.
 							</div>
 						  </li>
@@ -321,4 +322,3 @@
 <!----end container---->
 
 <?php include_once 'footer.php'; ?>
-     
