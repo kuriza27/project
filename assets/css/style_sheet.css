@@ -829,12 +829,13 @@ body, a, [input type="radio"] , [input type="checkbox"]{
 }
 
 .frame-box{
-	background-color: rgb(0, 0, 0);
-    /* RGBa with 0.6 opacity */
-    background-color: rgba(0, 0, 0, 0.6);
+	/*background-color: rgb(0, 0, 0);
+     RGBa with 0.6 opacity */
+   /* background-color: rgba(0, 0, 0, 0.6);
     border: 1px solid black;
     /*filter: alpha(opacity=70);*/
 	height:236px;
+	margin-left:-24px
 }
 	#emf_advertisement{
 		display:none;
@@ -894,7 +895,18 @@ body, a, [input type="radio"] , [input type="checkbox"]{
     top: -166px;
 }
 
+.validation_content {
+    font-size: 24px;
+    padding: 40px 349px;
+    margin: 10px 0;
+    background-color: #fff;
+	color:#008733;
+}
 
+.frame-box input{
+	margin-right:4px;
+
+}
 /****
 **
 **** MEDIA QUERIES

@@ -40,12 +40,9 @@
 		$(this).hide();
 		$('.window').hide();
 		});
-		
-    
-		$('#emf-container').css('background-color','none');		
-		$('#emf-container').css('color','#FFFFFF');		
 		});
 </script>
+
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron" style="display:none;">
       <div class="container">
@@ -63,7 +60,23 @@
 		     <h1>Claim your coupon code</h1>
 			 <div id="coup-box">
 				<div class="frame-box">
-						<iframe width="100%" height="257" allowTransparency="true" frameborder="0" scrolling="no" style="border:none" src="http://www.emailmeform.com/builder/embed/qvRh20DO854wLsb684ba0f"><a href="http://www.emailmeform.com/builder/embed/qvRh20DO854wLsb684ba0f">Fill out form.</a></iframe>
+					<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><form id="emf-form" target="_self" enctype="multipart/form-data" method="post" action="http://www.emailmeform.com/builder/form/qvRh20DO854wLsb684ba0f">
+					<table style="text-align:left;" cellpadding="2" cellspacing="0" border="0" bgcolor="transparent">
+					<tr>
+					<td style="" colspan="2">
+					<div style="height:80px;"></div>
+					</td>
+					</tr>
+					<tr valign="top" ><td id="td_element_label_0" style="" align="left">
+					</td><td id="td_element_field_0" style=""><input id="element_0" name="element_0" placeholder="Enter Full Name" value="" size="20" class="validate[required]" type="text" /><div style="padding-bottom:8px;color:#ffffff;"><small><font face="Arial"></font></small></div>
+					</td>
+					<td id="td_element_label_1" style="" align="left">
+					</td><td id="td_element_field_1" style=""><input placeholder="Enter Email" id="element_1" name="element_1" class="validate[required,custom[email]]" value="" size="20" type="text" /><div style="padding-bottom:8px;color:#ffffff;"><small><font face="Arial"></font></small></div>
+					</td>
+					<td colspan="2" align="auto">
+					<input name="element_counts" value="2" type="hidden" />
+					<input name="embed" value="forms" type="hidden" /><input  value="Submit" type="submit" />
+					</td></tr></table></form>
 				</div>
 			 </div>
 			<div id="popupfoot"> <a href="#" class="close-button agree">No we don't need to save money now</a></div>

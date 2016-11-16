@@ -75,6 +75,7 @@
 			.end()
 			.appendTo('#slideshow');
 		},  7000);
+
 	</script>
 	<script language="javascript"><!-- 
 	$(document).ready(function() {
@@ -95,6 +96,7 @@
 				}
 			}
 		});
+				
 	});
 	// -->
 	</script>
